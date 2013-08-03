@@ -1,0 +1,973 @@
+/* normalize.css v1.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 21, ../sass/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 31, ../sass/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 42, ../sass/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 53, ../sass/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 68, ../sass/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 83, ../sass/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+/* line 91, ../sass/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 103, ../sass/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 112, ../sass/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 123, ../sass/_normalize.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/*
+ * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 133, ../sass/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 142, ../sass/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 146, ../sass/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 154, ../sass/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */
+/* line 162, ../sass/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+/* line 172, ../sass/_normalize.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 183, ../sass/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 193, ../sass/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+/* line 203, ../sass/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+/* line 212, ../sass/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 221, ../sass/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 230, ../sass/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 237, ../sass/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 241, ../sass/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+/* line 255, ../sass/_normalize.scss */
+dl,
+menu,
+ol {
+  margin: 1em 0;
+}
+
+/* line 259, ../sass/_normalize.scss */
+ul, ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 265, ../sass/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+/* line 274, ../sass/_normalize.scss */
+menu,
+ol {
+  padding: 0 0 0 40px;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+/* line 287, ../sass/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 296, ../sass/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 308, ../sass/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+/* line 320, ../sass/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 328, ../sass/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+/* line 340, ../sass/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+/* line 357, ../sass/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 370, ../sass/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 387, ../sass/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 398, ../sass/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 410, ../sass/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 423, ../sass/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 436, ../sass/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+/* line 445, ../sass/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 455, ../sass/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 468, ../sass/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 17, ../sass/_helper-classes.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 29, ../sass/_helper-classes.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 38, ../sass/_helper-classes.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 42, ../sass/_helper-classes.scss */
+.notthere, .js #storyboard > li .deets {
+  display: none;
+}
+
+/* line 61, ../sass/_helper-classes.scss */
+img {
+  vertical-align: middle;
+}
+
+/* line 65, ../sass/_helper-classes.scss */
+textarea {
+  resize: vertical;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+/* line 36, ../sass/_grid.scss */
+.wrapper {
+  *zoom: 1;
+  max-width: 2488px;
+  _width: 2488px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1214px;
+}
+/* line 38, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 50em) {
+  /* line 36, ../sass/_grid.scss */
+  .wrapper {
+    max-width: 816px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* line 38, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media (max-width: 33.3125em) {
+  /* line 36, ../sass/_grid.scss */
+  .wrapper {
+    max-width: 398px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* line 38, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* line 47, ../sass/_grid.scss */
+#storyboard > li {
+  width: 32.79743%;
+  float: left;
+  margin-right: 0.80386%;
+  display: inline;
+}
+/* line 49, ../sass/_grid.scss */
+#storyboard > li:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+  #margin-left: -20px;
+  display: inline;
+}
+/* line 50, ../sass/_grid.scss */
+#storyboard > li img {
+  max-width: 100%;
+}
+@media (max-width: 50em) {
+  /* line 47, ../sass/_grid.scss */
+  #storyboard > li {
+    width: 48.77451%;
+    float: left;
+    margin-right: 2.45098%;
+  }
+  /* line 53, ../sass/_grid.scss */
+  #storyboard > li:nth-child(3n) {
+    float: left;
+    margin-right: 2.45098%;
+  }
+  /* line 54, ../sass/_grid.scss */
+  #storyboard > li:nth-child(2n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (max-width: 33.3125em) {
+  /* line 47, ../sass/_grid.scss */
+  #storyboard > li {
+    width: 100%;
+    float: left;
+    margin-right: 5.02513%;
+  }
+  /* line 58, ../sass/_grid.scss */
+  #storyboard > li:nth-child(2n) {
+    float: left;
+    margin-right: 5.02513%;
+  }
+}
+
+/* line 62, ../sass/_grid.scss */
+h2 {
+  margin-right: 0.80386%;
+}
+@media (max-width: 50em) {
+  /* line 62, ../sass/_grid.scss */
+  h2 {
+    width: 100%;
+    float: left;
+    margin-right: 2.45098%;
+  }
+}
+
+/* line 61, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on October 31, 2012 */
+@font-face {
+  font-family: 'league_gothicregular';
+  src: url("http://fonts.rachelnabors.com/league_gothic-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/league_gothic-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/league_gothic-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/league_gothic-webfont.svg#league_gothicregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'league_gothic_condensed_itaRg';
+  src: url("http://fonts.rachelnabors.com/leaguegothic-condenseditalic-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/leaguegothic-condenseditalic-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/leaguegothic-condenseditalic-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/leaguegothic-condenseditalic-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/leaguegothic-condenseditalic-webfont.svg#league_gothic_condensed_itaRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'league_gothic_condensedRg';
+  src: url("http://fonts.rachelnabors.com/leaguegothic-condensedregular-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/leaguegothic-condensedregular-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/leaguegothic-condensedregular-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/leaguegothic-condensedregular-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/leaguegothic-condensedregular-webfont.svg#league_gothic_condensedRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'league_gothic_italicregular';
+  src: url("http://fonts.rachelnabors.com/leaguegothic-italic-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/leaguegothic-italic-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/leaguegothic-italic-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/leaguegothic-italic-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/leaguegothic-italic-webfont.svg#league_gothic_italicregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich_sansblack';
+  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.svg#ostrich_sansblack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich_sansbold';
+  src: url("http://fonts.rachelnabors.com/ostrich-bold-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-bold-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-bold-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-bold-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-bold-webfont.svg#ostrich_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich_sans_dashedmedium';
+  src: url("http://fonts.rachelnabors.com/ostrich-dashed-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-dashed-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-dashed-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-dashed-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-dashed-webfont.svg#ostrich_sans_dashedmedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich_sanslight';
+  src: url("http://fonts.rachelnabors.com/ostrich-light-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-light-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-light-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-light-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-light-webfont.svg#ostrich_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich_sansmedium';
+  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.svg#ostrich_sansmedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich_sans_roundedmedium';
+  src: url("http://fonts.rachelnabors.com/ostrich-rounded-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-rounded-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-rounded-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-rounded-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-rounded-webfont.svg#ostrich_sans_roundedmedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 151, ../sass/_typography.scss */
+body {
+  font-family: sans-serif;
+}
+
+/* line 154, ../sass/_typography.scss */
+h1 {
+  font-family: "league_gothicregular", sans-serif;
+  font-size: 2.25em;
+  line-height: 1.33333em;
+  margin-top: 1.5em;
+}
+/* line 158, ../sass/_typography.scss */
+h1 em {
+  color: #e64988;
+  font-family: "league_gothic_italicregular";
+  font-style: normal;
+}
+
+/* line 164, ../sass/_typography.scss */
+h2 {
+  font-family: "ostrich_sans_roundedmedium", sans-serif;
+  letter-spacing: .1em;
+  font-size: 1.5em;
+  line-height: 2em;
+  line-height: 1em;
+}
+@media (max-width: 33.3125em) {
+  /* line 164, ../sass/_typography.scss */
+  h2 {
+    padding-top: 1.5em;
+  }
+}
+
+/* line 174, ../sass/_typography.scss */
+.time {
+  font-family: "league_gothicregular", sans-serif;
+  font-size: 1.5em;
+  line-height: 2em;
+  text-align: center;
+}
+
+/* line 180, ../sass/_typography.scss */
+#storyboard {
+  clear: both;
+  padding-top: 3em;
+}
+/* line 183, ../sass/_typography.scss */
+#storyboard > li {
+  padding-bottom: 3em;
+}
+/* line 186, ../sass/_typography.scss */
+#storyboard ul li {
+  list-style: disc inside;
+  padding-left: 2em;
+}
+
+/* line 191, ../sass/_typography.scss */
+.page-section {
+  padding-bottom: 4.5em;
+}
+/* line 193, ../sass/_typography.scss */
+.page-section h1 {
+  font-size: 1.5em;
+  line-height: 2em;
+  line-height: 0.66667em;
+  padding-top: 0.75em;
+  font-family: "ostrich_sans_roundedmedium", sans-serif;
+  text-align: center;
+}
+/* line 200, ../sass/_typography.scss */
+.offerings .page-section {
+  padding-top: 3em;
+}
+/* line 202, ../sass/_typography.scss */
+.offerings .page-section h1 {
+  margin-left: -20px;
+  padding-left: 20px;
+  margin-right: -20px;
+  padding-right: 20px;
+  margin-top: -3em;
+  margin-bottom: 1.5em;
+}
+
+/* line 210, ../sass/_typography.scss */
+footer {
+  background: #141f31;
+  color: #d8e32c;
+  clear: both;
+  text-align: center;
+  padding: 0 20px;
+  padding-top: 4.5em;
+  padding-bottom: 4.5em;
+}
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+/* line 25, ../sass/style.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 30, ../sass/style.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* line 40, ../sass/style.scss */
+body {
+  background: #000;
+  color: #dfeff6;
+}
+
+/* line 45, ../sass/style.scss */
+img {
+  display: block;
+  width: 100%;
+}
+
+.boards { padding-top: 2em;}
+
+/* line 47, ../sass/style.scss */
+.time {
+  display: block;
+}
+
+/* line 54, ../sass/style.scss */
+a:link, a:visited, a:hover, a:active {
+  color: #0097c0;
+}
+
+/* line 60, ../sass/style.scss */
+.fancybox-wrap img {
+  margin-bottom: 1.5em;
+}
+/* line 63, ../sass/style.scss */
+.fancybox-wrap ul li {
+  list-style: disc inside;
+  padding-left: 2em;
+  text-align: left;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  /* line 6, ../sass/_print.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 14, ../sass/_print.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 18, ../sass/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 22, ../sass/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 32, ../sass/_print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 37, ../sass/_print.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 42, ../sass/_print.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 47, ../sass/_print.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 51, ../sass/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 61, ../sass/_print.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 67, ../sass/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
