@@ -61,7 +61,7 @@
 }
 
 .filtered {
-  -webkit-filter: blur(2px) brightness(0.8) invert(1);
+  -webkit-filter: blur(1px);
 }
 
 .movie, img {
