@@ -1,5 +1,4 @@
 .DS_Store
-config.rb
 *sass
 *.sass-cache
 Gemfile.lock
