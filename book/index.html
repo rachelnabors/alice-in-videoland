@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Alice in Videoland: the Interactive Storybook</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        
+        <script type="text/javascript" src="//use.typekit.net/pxo8qyc.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        
+        <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
 
-        <link rel="stylesheet" href="style.css">
         <script type="text/javascript">
+            // First things first, swap out js class 
+            document.documentElement.className = "js";
+
+            // + analytics
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-3631048-6']);
             _gaq.push(['_trackPageview']);
@@ -22,36 +30,69 @@
         </script>
     </head>
     <body>
-        <h1>Alice in Videoland</h1>
-        <h2 class="byline">A retelling of Lewis Carroll's classic in pixels and HTML by Rachel &ldquo;the Great&rdquo; Nabors</h2>
+        <div class="loading">
+            <h1>Alice in Videoland</h1>
+            <h2 class="byline">A retelling of Lewis Carroll's classic in pixels and HTML by Rachel &ldquo;the Great&rdquo; Nabors</h2>
+            <!-- <p>Please wait while we load</p> TODO: add w/ JS-->
+        </div>
 
-        <p>Alice was beginning to get very bored, sitting by her sister in the park.</p>
+        <div class="scene-park">
+            <div class="page page_sitting-in-the-park">
+                <p class="narration">Alice was beginning to get very bored, sitting by her sister in the park.</p>
+            </div>
 
-        <p>ALICE: How can she read a book with no pictures or dialog in it?</p>
+            <div class="page page_alice-is-bored">
+                <p>Her sister was deeply engrossed in a technical book about web development.</p>
+                <p>&ldquo;<span class="dialog dialog_thought">How can she read a book with no pictures or dialog in it?</span> Alice wondered to herself.</p>
+            </div>
 
-        <p>She was just about to nod off when suddenly a white rabbit wearing a vintage tweed porkpie hat dashed by... carrying an iPhone!</p>
-        <p>PHONE: Buzz Buzz!</p>
-        <p>WHITE RABBIT: I know! I know! I’m late!</p>
+            <div class="page page_rabbit-appears">
+                <p>She was just about to nod off when suddenly a white rabbit wearing a vintage tweed porkpie hat dashed by&hellip; looking anxiously at his smartphone!</p>
+                <p>The phone chimed at him.</p>
+                <audio src="sound/iphone_alert.mp3"></audio>
+                <p>&ldquo;<span class="dialog dialog_exclamation">I know! I know! I’m late!</span>&rdquo; squeaked the rabbit, more out of annoyance than concern.</p>
+            </div>
 
-        <p>Naturally Alice had to follow the creature across the park at once.</p>
+            <div class="page page_rabbit-chase">
+                <p>Naturally Alice had to follow the creature across the park at once.</p>
+            </div>
 
-        <p>She was just in time to see him pop down a tunnel under a bank.</p>
+            <div class="page page_the-hole">
+                <p>She was just in time to see him pop down a hole between a great tree's roots.</p>
+            </div>
+        </div>
+        
+        <div class="scene-hole">
+            <div class="page page_tunnels">
+                <p>In another moment down went Alice after him without a thought as to how she’d get out again. She plummeted head over heels into what must have been an old, capped well.</p>
+            </div>
+            
+            <div class="page page_falling">
+                <p>Either the well was very deep or she fell very slowly, for she had plenty of time to look about her on the way down. At first it was too dark for her to see anything, but as her eyes adjusted, she could make out what seemed to be cupboards, bookshelves, paintings, lining the walls she was rushing past. </p>
+                <p>Down, down, down she fell. Would it never come to an end? She began to wonder how many miles she’d fallen and whether she’d end up at the center of the Earth--or come out the other side! How would she call her sister? What if she didn’t speak the language? What if they couldn’t understand her and put her in an orphanage? She’d never see her sister or her cat again! Poor Tuna! Would they remember to clean his litter box or give him his kibble? If only Tuna were with her now. There were no mice to live on in the air, but perhaps he could catch a bat. </p>
+        
+                <!-- *sleep and Tuna* -->
 
-        <!-- *action* -->
+                <p>Before she could worry too much, her eyes grew heavy and she began to nod off whispering, “Do cats eat bats?” to no one in particular. She must’ve been dreaming, because for a moment she imagined he was there with her, as large as her sister. “Oh yes, cats eat bats all the time. You wouldn’t happen to be a bat, now would you?”</p>
+            </div>
+        </div>
 
-        <p>In another moment down went Alice after him without a thought as to how she’d get out again.</p>
-        <p>At first the hole went straight on, level with ground. All at once it turned sharply downward, and Alice plummeted head over heels into what must have been an old, capped well.</p>
+        <div class="scene-cut">
+            <p>But before she could answer, her fall came to an end with a startling thump.</p>
+        </div>
 
-        <p>Either the well was very deep or she fell very slowly, for she had plenty of time to look about her on the way down. At first it was too dark for her to see anything, but as her eyes adjusted, she could make out what seemed to be cupboards, bookshelves, paintings, lining the walls she was rushing past. </p>
-        <p>Down, down, down she fell. Would it never come to an end? She began to wonder how many miles she’d fallen and whether she’d end up at the center of the Earth--or come out the other side! How would she call her sister? What if she didn’t speak the language? What if they couldn’t understand her and put her in an orphanage? She’d never see her sister or her cat again! Poor Tuna! Would they remember to clean his litter box or give him his kibble? If only Tuna were with her now. There were no mice to live on in the air, but perhaps he could catch a bat. </p>
+        <div class="scene-wonderland">
+            <div class="page page_crash-landing">
+                <p>She tumbled out onto a heap of sticks and leaves at the end of a long passage. And there, scampering to the other end, went the White Rabbit in his porkpie hat.</p>
+            </div>
+            <div class="page page_credits">
+                <p>End of story: JavaScript book and Alice in Wonderland book links. &ldquo;Genius occurs when two disparate fields overlap. Dive into a good book today.&rdquo;</p>
+            </div>
+        </div>
 
-        <!-- *sleep and Tuna* -->
-
-        <p>Before she could worry too much, her eyes grew heavy and she began to nod off whispering, “Do cats eat bats?” to no one in particular. She must’ve been dreaming, because for a moment she imagined he was there with her, as large as her sister. “Oh yes, cats eat bats all the time. You wouldn’t happen to be a bat, now would you?”</p>
-
-        <p>But before she could answer, her fall came to an end with a startling thump. She tumbled out onto a heap of sticks and leaves at the end of a long passage. And there, scampering to the other end, went the White Rabbit in his porkpie hat.</p>
-
-        <p>End of story: JavaScript book and Alice in Wonderland book links. “Genius occurs when two disparate fields overlap. Dive into a good book today.”</p>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-2.0.3.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/script.js"></script>
 
     </body>
 </html>

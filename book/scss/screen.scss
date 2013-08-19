@@ -1,0 +1,85 @@
+//@import "animation-studio";
+@import "compass/css3/";
+@import "compass/reset";
+
+// Variables
+
+
+// Extendables
+%visuallyhidden { // hidden from view, not from screen readers!
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; 
+}
+
+%visuallyshown { // overrides the above
+  position: relative; 
+  overflow: visible; 
+  clip: none; 
+  height: auto; width: auto; 
+  margin: 0; 
+}
+
+// Dialog
+
+p {
+	@extend %visuallyhidden;
+}
+
+.narration, .dialog {
+	@extend %visuallyshown;
+}
+
+.dialog {
+	display: block; // so often is a span inside hidden elements
+	position: absolute;
+}
+
+// Pages
+.page { 
+	width: 800px;
+	padding-top: 600px;
+	@include background-size(100% auto);
+}
+
+.page_sitting-in-the-park {
+	@include background(image-url("../../storyboard/storyboard1.jpg") no-repeat);
+}
+
+.page_alice-is-bored {
+	@include background(image-url("../../storyboard/storyboard2.jpg") no-repeat);
+}
+
+.page_rabbit-appears {
+	@include background(image-url("../../storyboard/storyboard3.jpg") no-repeat);
+}
+
+.page_rabbit-chase {
+	@include background(image-url("../../storyboard/storyboard4.jpg") no-repeat);
+}
+
+.page_the-hole {
+	@include background(image-url("../../storyboard/storyboard5.jpg") no-repeat);
+}
+
+.page_tunnels {
+	@include background(image-url("../../storyboard/storyboard6.jpg") no-repeat);
+}
+
+.page_falling {
+	@include background(image-url("../../storyboard/storyboard12.jpg") no-repeat);
+}
+
+.scene-cut {
+	@include background(image-url("../../storyboard/storyboard17.png") no-repeat);
+}
+
+.page_crash-landing {
+	@include background(image-url("../../storyboard/storyboard18.jpg") no-repeat);
+}
+
+.page_credits {
+	@include background(image-url("../../storyboard/storyboard19.jpg") no-repeat);
+}

@@ -2,3 +2,5 @@
 config.rb
 *sass
 *.sass-cache
+Gemfile.lock
+.ruby-version
