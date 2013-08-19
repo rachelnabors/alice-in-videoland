@@ -74,22 +74,16 @@ p {
 }
 
 /* line 17, ../scss/screen.scss */
-.narration, .dialog {
-  position: relative;
-  overflow: visible;
-  clip: none;
-  height: auto;
-  width: auto;
-  margin: 0;
+.loading, .scene:not(.scene-park) {
+  display: none !important;
 }
 
-/* line 35, ../scss/screen.scss */
-.dialog {
-  display: block;
-  position: absolute;
+/* line 21, ../scss/screen.scss */
+.scene.down-hole {
+  display: block !important;
 }
 
-/* line 41, ../scss/screen.scss */
+/* line 48, ../scss/screen.scss */
 .page {
   width: 800px;
   padding-top: 600px;
@@ -99,52 +93,52 @@ p {
   background-size: 100% auto;
 }
 
-/* line 47, ../scss/screen.scss */
+/* line 54, ../scss/screen.scss */
 .page_sitting-in-the-park {
   background: url('../img/../../storyboard/storyboard1.jpg?1375555533') no-repeat;
 }
 
-/* line 51, ../scss/screen.scss */
+/* line 58, ../scss/screen.scss */
 .page_alice-is-bored {
   background: url('../img/../../storyboard/storyboard2.jpg?1375576459') no-repeat;
 }
 
-/* line 55, ../scss/screen.scss */
+/* line 62, ../scss/screen.scss */
 .page_rabbit-appears {
   background: url('../img/../../storyboard/storyboard3.jpg?1375556126') no-repeat;
 }
 
-/* line 59, ../scss/screen.scss */
+/* line 66, ../scss/screen.scss */
 .page_rabbit-chase {
   background: url('../img/../../storyboard/storyboard4.jpg?1375556452') no-repeat;
 }
 
-/* line 63, ../scss/screen.scss */
+/* line 70, ../scss/screen.scss */
 .page_the-hole {
   background: url('../img/../../storyboard/storyboard5.jpg?1375576586') no-repeat;
 }
 
-/* line 67, ../scss/screen.scss */
+/* line 74, ../scss/screen.scss */
 .page_tunnels {
   background: url('../img/../../storyboard/storyboard6.jpg?1375563243') no-repeat;
 }
 
-/* line 71, ../scss/screen.scss */
+/* line 78, ../scss/screen.scss */
 .page_falling {
   background: url('../img/../../storyboard/storyboard12.jpg?1375561139') no-repeat;
 }
 
-/* line 75, ../scss/screen.scss */
+/* line 82, ../scss/screen.scss */
 .scene-cut {
   background: url('../img/../../storyboard/storyboard17.png?1375561755') no-repeat;
 }
 
-/* line 79, ../scss/screen.scss */
+/* line 86, ../scss/screen.scss */
 .page_crash-landing {
   background: url('../img/../../storyboard/storyboard18.jpg?1375563055') no-repeat;
 }
 
-/* line 83, ../scss/screen.scss */
+/* line 90, ../scss/screen.scss */
 .page_credits {
   background: url('../img/../../storyboard/storyboard19.jpg?1375563030') no-repeat;
 }

@@ -14,27 +14,34 @@
   margin: -1px; 
 }
 
-%visuallyshown { // overrides the above
-  position: relative; 
-  overflow: visible; 
-  clip: none; 
-  height: auto; width: auto; 
-  margin: 0; 
+%hidden {
+	display: none !important;
+}
+
+%shown {
+	display: block !important;
 }
 
 // Dialog
 
+//p:not(.caption) { revisit if you want to make a more storybook version
 p {
 	@extend %visuallyhidden;
 }
 
-.narration, .dialog {
-	@extend %visuallyshown;
+// Loading page
+.loading {
+	@extend %hidden;
 }
 
-.dialog {
-	display: block; // so often is a span inside hidden elements
-	position: absolute;
+// Scenes
+// all but the park start hidden. // actually, under loading page, it's hidden too.
+.scene:not(.scene-park) {
+	@extend %hidden;
+}
+
+.scene.down-hole {
+	@extend %shown;
 }
 
 // Pages
