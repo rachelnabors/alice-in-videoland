@@ -3,11 +3,13 @@
 @import "compass/reset";
 
 // Variables
+// Max dimensions of iPad retina: 2048-by-1536
 
 html, body {
 	background: #000;
 	height: 100%
 }
+
 // Extendables
 %visuallyhidden { // hidden from view, not from screen readers!
   position: absolute; 
@@ -29,6 +31,13 @@ html, body {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
+}
+
+// Helopers
+// For browsers that don't support animation, some props will have default styles leaving them revealed.
+// But if animation is allowed, we'll want to hide them :p
+@include keyframes(hide-if-animation-enabled) {
+    100% { opacity: 0; }
 }
 
 // Dialog
@@ -67,18 +76,62 @@ $sleepy-eyes: 'eyes';
 .page_alice-is-bored {
 	@include background(image-url("bg_park2.jpg") no-repeat);
 	.eyes {
-	  @include animation-sequence($sleepy-eyes, 1s);
+	  // @include animation-sequence($sleepy-eyes, 1s);
+	  width: 124px; height: 57px;
+	  top: 159px; left: 83px;
 	}
 }
-@include animation-sequence-sprite-generator($sleepy-eyes);
-@include animation-sequence-keyframes($sleepy-eyes);
+// @include animation-sequence-sprite-generator($sleepy-eyes);
+// @include animation-sequence-keyframes($sleepy-eyes);
 
 .page_rabbit-appears {
-	@include background(image-url("../../storyboard/storyboard3.jpg") no-repeat);
+	@include background(image-url("bg_park3.jpg") no-repeat);
+	.blink {
+		@include background(image-url("blink.svg") 0 100% no-repeat); //for animation-deprived viewers, leave eye open.
+		@include background-size(100% auto);
+		position: absolute;
+		width: 100%; height: 100%;
+		z-index: 2;
+	}
+	&.in-view .blink {
+		@include animation(scene-blink .75s steps(5) 5 -1s alternate);			
+	}
+	.rabbit {
+		@extend %imgreplace;
+		@include background(image-url("rabbit_running.png"));
+		width: 444px; height: 490px;
+		position: absolute;
+		top: 60%; margin-top: -245px;
+		left: 50%; margin-left: -244px;
+		z-index: 1;
+		@include animation(hide-if-animation-enabled .01s forwards);
+	}
+	&.in-view .rabbit {
+		@include animation(rabbit-run 10s forwards);
+	}
+}
+
+//candidate for Animation Studio sans sprite gen as SVG sprite is here already
+@include keyframes(scene-blink) {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 125%; }
+}
+
+@include keyframes(rabbit-run) {
+    0% { 
+    	left: -100%;
+    }
+    50% {
+    	top: 80%
+    }
+    100% { 
+    	top: 60%;
+    	left: 200%;
+    }
 }
 
 .page_rabbit-chase {
-	@include background(image-url("../../storyboard/storyboard4.jpg") no-repeat);
+	@include background(image-url("bg_park4.jpg") no-repeat);
 }
 
 .page_the-hole {

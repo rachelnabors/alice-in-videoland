@@ -45,7 +45,11 @@ $(".page_rabbit-appears").on('inview', function(event, visible, topOrBottomOrBot
   if(visible && (topOrBottomOrBoth == 'bottom' || (topOrBottomOrBoth == 'both'))) {
   	var phone = document.getElementById("rabbit-phone");
   	phone.volume = 0.1;
-  	phone.play();
+  	setTimeout(function(){
+  		phone.play();
+  	}, 2000);
+
+  	o.addClass("in-view");
   	o.off('inview');
   }
 });
@@ -61,9 +65,6 @@ $("#tunnel").on('inview', function(event, visible, topOrBottomOrBoth) {
       if(topOrBottomOrBoth == 'top') {
         o.data('seenTop', true);
       } else if(topOrBottomOrBoth == 'bottom') {
-        o.data('seenBottom', true);
-      } else {
-        o.data('seenTop', true);
         o.data('seenBottom', true);
       }
 
