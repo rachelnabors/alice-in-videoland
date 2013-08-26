@@ -54,6 +54,15 @@ $(".page_rabbit-appears").on('inview', function(event, visible, topOrBottomOrBot
   }
 });
 
+// play phone SFX when the rabbit appears in full view. 
+$(".page_the-hole").on('inview', function(event, visible, topOrBottomOrBoth) {
+  var o = $(this);
+  if(visible && (topOrBottomOrBoth == 'both')) {
+  	o.addClass("in-view");
+  	o.off('inview');
+  }
+});
+
 // To get to #tunnels, activate #tunnels
 $("#to-tunnels").activate(downTheHole);
 

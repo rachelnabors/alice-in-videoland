@@ -69,7 +69,7 @@ html, body {
   height: 100%;
 }
 
-/* line 14, ../scss/screen.scss */
+/* line 13, ../scss/screen.scss */
 p {
   position: absolute;
   overflow: hidden;
@@ -79,67 +79,100 @@ p {
   margin: -1px;
 }
 
-/* line 22, ../scss/screen.scss */
+/* line 21, ../scss/screen.scss */
 .loading, .scene:not(.scene-park) {
   display: none !important;
 }
 
-/* line 26, ../scss/screen.scss */
+/* line 25, ../scss/screen.scss */
 .scene.cue {
   display: block !important;
 }
 
-/* line 30, ../scss/screen.scss */
-.page_rabbit-appears .rabbit, .page, #to-tunnels {
+/* line 29, ../scss/screen.scss */
+.page_rabbit-appears .rabbit, #to-tunnels, .page {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
 @-moz-keyframes hide-if-animation-enabled {
-  /* line 40, ../scss/screen.scss */
+  /* line 39, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-webkit-keyframes hide-if-animation-enabled {
-  /* line 40, ../scss/screen.scss */
+  /* line 39, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-o-keyframes hide-if-animation-enabled {
-  /* line 40, ../scss/screen.scss */
+  /* line 39, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
 }
 
 @keyframes hide-if-animation-enabled {
-  /* line 40, ../scss/screen.scss */
+  /* line 39, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
 }
 
-/* line 55, ../scss/screen.scss */
+@-moz-keyframes show-if-animation-enabled {
+  /* line 42, ../scss/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes show-if-animation-enabled {
+  /* line 42, ../scss/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes show-if-animation-enabled {
+  /* line 42, ../scss/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-if-animation-enabled {
+  /* line 42, ../scss/screen.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 56, ../scss/screen.scss */
 .loading, .scene {
   margin: 0 auto;
   width: 800px;
 }
 
 /* line 71, ../scss/screen.scss */
+.scene-park {
+  padding-bottom: 2px;
+}
+
+/* line 76, ../scss/screen.scss */
 .page_sitting-in-the-park {
   background: url('../img/bg_park1.jpg?1377318992') no-repeat;
 }
 
-/* line 76, ../scss/screen.scss */
+/* line 81, ../scss/screen.scss */
 .page_alice-is-bored {
   background: url('../img/bg_park2.jpg?1377374754') no-repeat;
 }
-/* line 78, ../scss/screen.scss */
+/* line 83, ../scss/screen.scss */
 .page_alice-is-bored .eyes {
   width: 124px;
   height: 57px;
@@ -147,11 +180,11 @@ p {
   left: 83px;
 }
 
-/* line 87, ../scss/screen.scss */
+/* line 92, ../scss/screen.scss */
 .page_rabbit-appears {
   background: url('../img/bg_park3.jpg?1377381587') no-repeat;
 }
-/* line 89, ../scss/screen.scss */
+/* line 94, ../scss/screen.scss */
 .page_rabbit-appears .blink {
   background: url('../img/blink.svg?1377386293') 0 100% no-repeat;
   -webkit-background-size: 100% auto;
@@ -163,14 +196,14 @@ p {
   height: 100%;
   z-index: 2;
 }
-/* line 96, ../scss/screen.scss */
+/* line 101, ../scss/screen.scss */
 .page_rabbit-appears.in-view .blink {
   -webkit-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
   -moz-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
   -o-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
   animation: scene-blink 0.75s steps(5) 5 -1s alternate;
 }
-/* line 99, ../scss/screen.scss */
+/* line 104, ../scss/screen.scss */
 .page_rabbit-appears .rabbit {
   background: url('../img/rabbit_running.png?1377381538');
   width: 444px;
@@ -186,7 +219,7 @@ p {
   -o-animation: hide-if-animation-enabled 0.01s forwards;
   animation: hide-if-animation-enabled 0.01s forwards;
 }
-/* line 109, ../scss/screen.scss */
+/* line 114, ../scss/screen.scss */
 .page_rabbit-appears.in-view .rabbit {
   -webkit-animation: rabbit-run 10s forwards;
   -moz-animation: rabbit-run 10s forwards;
@@ -195,65 +228,65 @@ p {
 }
 
 @-moz-keyframes scene-blink {
-  /* line 116, ../scss/screen.scss */
+  /* line 121, ../scss/screen.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 117, ../scss/screen.scss */
+  /* line 122, ../scss/screen.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-webkit-keyframes scene-blink {
-  /* line 116, ../scss/screen.scss */
+  /* line 121, ../scss/screen.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 117, ../scss/screen.scss */
+  /* line 122, ../scss/screen.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-o-keyframes scene-blink {
-  /* line 116, ../scss/screen.scss */
+  /* line 121, ../scss/screen.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 117, ../scss/screen.scss */
+  /* line 122, ../scss/screen.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @keyframes scene-blink {
-  /* line 116, ../scss/screen.scss */
+  /* line 121, ../scss/screen.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 117, ../scss/screen.scss */
+  /* line 122, ../scss/screen.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-moz-keyframes rabbit-run {
-  /* line 121, ../scss/screen.scss */
+  /* line 126, ../scss/screen.scss */
   0% {
     left: -100%;
   }
 
-  /* line 124, ../scss/screen.scss */
+  /* line 129, ../scss/screen.scss */
   50% {
     top: 80%;
   }
 
-  /* line 127, ../scss/screen.scss */
+  /* line 132, ../scss/screen.scss */
   100% {
     top: 60%;
     left: 200%;
@@ -261,17 +294,17 @@ p {
 }
 
 @-webkit-keyframes rabbit-run {
-  /* line 121, ../scss/screen.scss */
+  /* line 126, ../scss/screen.scss */
   0% {
     left: -100%;
   }
 
-  /* line 124, ../scss/screen.scss */
+  /* line 129, ../scss/screen.scss */
   50% {
     top: 80%;
   }
 
-  /* line 127, ../scss/screen.scss */
+  /* line 132, ../scss/screen.scss */
   100% {
     top: 60%;
     left: 200%;
@@ -279,17 +312,17 @@ p {
 }
 
 @-o-keyframes rabbit-run {
-  /* line 121, ../scss/screen.scss */
+  /* line 126, ../scss/screen.scss */
   0% {
     left: -100%;
   }
 
-  /* line 124, ../scss/screen.scss */
+  /* line 129, ../scss/screen.scss */
   50% {
     top: 80%;
   }
 
-  /* line 127, ../scss/screen.scss */
+  /* line 132, ../scss/screen.scss */
   100% {
     top: 60%;
     left: 200%;
@@ -297,137 +330,259 @@ p {
 }
 
 @keyframes rabbit-run {
-  /* line 121, ../scss/screen.scss */
+  /* line 126, ../scss/screen.scss */
   0% {
     left: -100%;
   }
 
-  /* line 124, ../scss/screen.scss */
+  /* line 129, ../scss/screen.scss */
   50% {
     top: 80%;
   }
 
-  /* line 127, ../scss/screen.scss */
+  /* line 132, ../scss/screen.scss */
   100% {
     top: 60%;
     left: 200%;
   }
 }
 
-/* line 133, ../scss/screen.scss */
+/* line 138, ../scss/screen.scss */
 .page_rabbit-chase {
   background: url('../img/bg_park4.jpg?1377489323') no-repeat;
 }
 
-/* line 137, ../scss/screen.scss */
+/* line 142, ../scss/screen.scss */
 .page_the-hole {
-  background: url('../img/../../storyboard/storyboard5.jpg?1375576586') no-repeat;
+  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -webkit-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
+  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -moz-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
+  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -o-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
+  background: url('../img/bg_park5_1.png?1377532988') no-repeat, radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
+}
+/* line 145, ../scss/screen.scss */
+.page_the-hole .foreground {
+  height: 100%;
+  background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+}
+/* line 150, ../scss/screen.scss */
+.page_the-hole .rabbit {
+  background: url('../img/park5_rabbit.png?1377535949');
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  width: 117.1875px;
+  height: 248.04688px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: show-if-animation-enabled 0.01s forwards;
+  -moz-animation: show-if-animation-enabled 0.01s forwards;
+  -o-animation: show-if-animation-enabled 0.01s forwards;
+  animation: show-if-animation-enabled 0.01s forwards;
+}
+/* line 160, ../scss/screen.scss */
+.page_the-hole.in-view {
+  -webkit-animation: hole-glow 2s infinite alternate;
+  -moz-animation: hole-glow 2s infinite alternate;
+  -o-animation: hole-glow 2s infinite alternate;
+  animation: hole-glow 2s infinite alternate;
+}
+/* line 162, ../scss/screen.scss */
+.page_the-hole.in-view .rabbit {
+  -webkit-animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
+  -moz-animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
+  -o-animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
+  animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
 }
 
-/* line 141, ../scss/screen.scss */
+@-moz-keyframes rabbit-down {
+  /* line 169, ../scss/screen.scss */
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes rabbit-down {
+  /* line 169, ../scss/screen.scss */
+  100% {
+    top: 100%;
+  }
+}
+
+@-o-keyframes rabbit-down {
+  /* line 169, ../scss/screen.scss */
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes rabbit-down {
+  /* line 169, ../scss/screen.scss */
+  100% {
+    top: 100%;
+  }
+}
+
+@-moz-keyframes hole-glow {
+  /* line 173, ../scss/screen.scss */
+  0% {
+    background-size: 100% auto, 100% 100%;
+  }
+
+  /* line 174, ../scss/screen.scss */
+  100% {
+    background-size: 100% auto, 120% 120%;
+  }
+}
+
+@-webkit-keyframes hole-glow {
+  /* line 173, ../scss/screen.scss */
+  0% {
+    background-size: 100% auto, 100% 100%;
+  }
+
+  /* line 174, ../scss/screen.scss */
+  100% {
+    background-size: 100% auto, 120% 120%;
+  }
+}
+
+@-o-keyframes hole-glow {
+  /* line 173, ../scss/screen.scss */
+  0% {
+    background-size: 100% auto, 100% 100%;
+  }
+
+  /* line 174, ../scss/screen.scss */
+  100% {
+    background-size: 100% auto, 120% 120%;
+  }
+}
+
+@keyframes hole-glow {
+  /* line 173, ../scss/screen.scss */
+  0% {
+    background-size: 100% auto, 100% 100%;
+  }
+
+  /* line 174, ../scss/screen.scss */
+  100% {
+    background-size: 100% auto, 120% 120%;
+  }
+}
+
+/* line 177, ../scss/screen.scss */
+#to-tunnels {
+  position: absolute;
+  top: 13%;
+  left: 62%;
+  width: 29%;
+  height: 16%;
+}
+
+/* line 184, ../scss/screen.scss */
 .page_tunnels {
   background: url('../img/../../storyboard/storyboard6.jpg?1375563243') no-repeat;
 }
 
-/* line 145, ../scss/screen.scss */
+/* line 188, ../scss/screen.scss */
 .falling_frightened {
   background: url('../img/../../storyboard/storyboard7.jpg?1375559487') no-repeat;
 }
 
-/* line 149, ../scss/screen.scss */
+/* line 192, ../scss/screen.scss */
 .falling_curious {
   background: url('../img/../../storyboard/storyboard8.jpg?1375559676') no-repeat;
 }
 
-/* line 153, ../scss/screen.scss */
+/* line 196, ../scss/screen.scss */
 .falling_bored {
   background: url('../img/../../storyboard/storyboard9.jpg?1375559976') no-repeat;
 }
 
-/* line 157, ../scss/screen.scss */
+/* line 200, ../scss/screen.scss */
 .falling_sleeping {
   background: url('../img/../../storyboard/storyboard10.jpg?1375560220') no-repeat;
 }
 
-/* line 161, ../scss/screen.scss */
+/* line 204, ../scss/screen.scss */
 .falling_waking {
   background: url('../img/../../storyboard/storyboard11.jpg?1375560454') no-repeat;
 }
 
-/* line 165, ../scss/screen.scss */
+/* line 208, ../scss/screen.scss */
 .falling_weird {
   background: url('../img/../../storyboard/storyboard12.jpg?1375561139') no-repeat;
 }
 
-/* line 169, ../scss/screen.scss */
+/* line 212, ../scss/screen.scss */
 .falling_aftermath {
   background: url('../img/../../storyboard/storyboard13.jpg?1375561165') no-repeat;
 }
 
-/* line 173, ../scss/screen.scss */
+/* line 216, ../scss/screen.scss */
 .falling_lookit-cat {
   background: url('../img/../../storyboard/storyboard14.jpg?1375561534') no-repeat;
 }
 
-/* line 177, ../scss/screen.scss */
+/* line 220, ../scss/screen.scss */
 .falling_cat-reveal {
   background: url('../img/../../storyboard/storyboard15.jpg?1375561517') no-repeat;
 }
 
-/* line 181, ../scss/screen.scss */
+/* line 224, ../scss/screen.scss */
 .falling_cat-out {
   background: url('../img/../../storyboard/storyboard16.jpg?1375561688') no-repeat;
 }
 
-/* line 185, ../scss/screen.scss */
+/* line 228, ../scss/screen.scss */
 .scene-cut {
   background: url('../img/../../storyboard/storyboard17.png?1375561755') no-repeat;
 }
 
-/* line 189, ../scss/screen.scss */
+/* line 232, ../scss/screen.scss */
 .page_crash-landing {
   background: url('../img/../../storyboard/storyboard18.jpg?1375563055') no-repeat;
 }
 
-/* line 193, ../scss/screen.scss */
+/* line 236, ../scss/screen.scss */
 .page_credits {
   background: url('../img/../../storyboard/storyboard19.jpg?1375563030') no-repeat;
 }
 
-/* line 197, ../scss/screen.scss */
+/* line 240, ../scss/screen.scss */
 .page {
   height: 600px;
   position: relative;
   z-index: 0;
-  -webkit-background-size: auto 100%;
-  -moz-background-size: auto 100%;
-  -o-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
   -webkit-background-origin: padding;
   -moz-background-origin: padding;
   background-origin: padding-box;
 }
 
-/* line 208, ../scss/screen.scss */
-#to-tunnels {
-  position: absolute;
-  top: 175px;
-  left: 385px;
-  width: 245px;
-  height: 95px;
-}
-
-/* line 215, ../scss/screen.scss */
+/* line 252, ../scss/screen.scss */
 #tunnel {
   position: relative;
 }
 
-/* line 220, ../scss/screen.scss */
+/* line 257, ../scss/screen.scss */
 .page_falling {
   z-index: -1;
 }
 
-/* line 223, ../scss/screen.scss */
+/* line 260, ../scss/screen.scss */
 .scene-cut {
   background: #000;
   height: 100%;
@@ -442,7 +597,7 @@ p {
   transition: opacity 2s ease-out 2s;
   z-index: 10;
 }
-/* line 231, ../scss/screen.scss */
+/* line 268, ../scss/screen.scss */
 .scene-cut.cue {
   -webkit-animation: fadeOutFromNone 2s forwards;
   -moz-animation: fadeOutFromNone 2s forwards;
@@ -451,68 +606,68 @@ p {
 }
 
 @-moz-keyframes fadeOutFromNone {
-  /* line 239, ../scss/screen.scss */
+  /* line 276, ../scss/screen.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 240, ../scss/screen.scss */
+  /* line 277, ../scss/screen.scss */
   1% {
     opacity: 1;
   }
 
-  /* line 241, ../scss/screen.scss */
+  /* line 278, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-webkit-keyframes fadeOutFromNone {
-  /* line 239, ../scss/screen.scss */
+  /* line 276, ../scss/screen.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 240, ../scss/screen.scss */
+  /* line 277, ../scss/screen.scss */
   1% {
     opacity: 1;
   }
 
-  /* line 241, ../scss/screen.scss */
+  /* line 278, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
 }
 
 @-o-keyframes fadeOutFromNone {
-  /* line 239, ../scss/screen.scss */
+  /* line 276, ../scss/screen.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 240, ../scss/screen.scss */
+  /* line 277, ../scss/screen.scss */
   1% {
     opacity: 1;
   }
 
-  /* line 241, ../scss/screen.scss */
+  /* line 278, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
 }
 
 @keyframes fadeOutFromNone {
-  /* line 239, ../scss/screen.scss */
+  /* line 276, ../scss/screen.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 240, ../scss/screen.scss */
+  /* line 277, ../scss/screen.scss */
   1% {
     opacity: 1;
   }
 
-  /* line 241, ../scss/screen.scss */
+  /* line 278, ../scss/screen.scss */
   100% {
     opacity: 0;
   }
