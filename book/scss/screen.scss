@@ -104,10 +104,13 @@ $sleepy-eyes: 'eyes';
 		top: 60%; margin-top: -245px;
 		left: 50%; margin-left: -244px;
 		z-index: 1;
-		.cssanimations & { @include opacity: 0;}
+		.cssanimations & { 
+			left: -50%;
+		}
 	}
 	&.in-view .rabbit {
-		@include animation(rabbit-run 10s forwards);
+		left: 200%;
+		@include transition(left 5s ease-in);
 	}
 }
 
@@ -115,19 +118,6 @@ $sleepy-eyes: 'eyes';
 @include keyframes(scene-blink) {
     0% { background-position: 0 0; }
     100% { background-position: 0 125%; }
-}
-
-@include keyframes(rabbit-run) {
-    0% { 
-    	left: -100%;
-    }
-    50% {
-    	top: 80%
-    }
-    100% { 
-    	top: 60%;
-    	left: 200%;
-    }
 }
 
 .page_rabbit-chase {
@@ -190,7 +180,7 @@ $sleepy-eyes: 'eyes';
 		width: $percent-width*300px; height: $percent-height*635px;
 		@include opacity(0);
 		z-index: -1;
-		.cssanimations & { @include opacity: 1;}
+		.cssanimations & { @include opacity(1);}
 	}
 	&.in-view {
 		@include animation(hole-glow 2s infinite alternate);
