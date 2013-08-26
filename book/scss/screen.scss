@@ -149,15 +149,15 @@ $sleepy-eyes: 'eyes';
 		// once in view, the rabbit should run into the distance in frame 2
 		.rabbit1 {
 			@include transition(transform 2s ease-in);
-			@include scale(.8, .8, 0);
+			@include scale(.5, .5, 0);
 		}
 		// and in frame three they should both runn off page after a small delay for the above to finish
 		.rabbit2 {
-			@include transition(left 3s ease-in 3s);
+			@include transition(left 3s ease-in 1.5s);
 			left: 100%;
 		}
 		.alice {
-			@include transition(left 3s ease-in 3.5s);
+			@include transition(left 3s ease-in 2s);
 			left: 100%;
 		}
 	}
