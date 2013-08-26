@@ -1,751 +1,86 @@
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 14, ../scss/screen.scss */
-html, body {
-  background: #000;
-  height: 100%;
-}
-
-/* line 19, ../scss/screen.scss */
-p {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-}
-
-/* line 27, ../scss/screen.scss */
-.loading, .scene:not(.scene-park) {
-  display: none !important;
-}
-
-/* line 31, ../scss/screen.scss */
-.scene.cue {
-  display: block !important;
-}
-
-/* line 35, ../scss/screen.scss */
-.page_rabbit-appears .rabbit, #to-tunnels, .page {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-@-moz-keyframes hide-if-animation-enabled {
-  /* line 45, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes hide-if-animation-enabled {
-  /* line 45, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes hide-if-animation-enabled {
-  /* line 45, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes hide-if-animation-enabled {
-  /* line 45, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes show-if-animation-enabled {
-  /* line 48, ../scss/screen.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes show-if-animation-enabled {
-  /* line 48, ../scss/screen.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes show-if-animation-enabled {
-  /* line 48, ../scss/screen.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes show-if-animation-enabled {
-  /* line 48, ../scss/screen.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-/* line 63, ../scss/screen.scss */
-.loading, .scene {
-  margin: 0 auto;
-  width: 800px;
-}
-
-/* line 78, ../scss/screen.scss */
-.scene-park {
-  padding-bottom: 2px;
-}
-
-/* line 83, ../scss/screen.scss */
-.page_sitting-in-the-park {
-  background: url('../img/bg_park1.jpg?1377318992') no-repeat;
-}
-
-/* line 88, ../scss/screen.scss */
-.page_alice-is-bored {
-  background: url('../img/bg_park2.jpg?1377374754') no-repeat;
-}
-/* line 90, ../scss/screen.scss */
-.page_alice-is-bored .eyes {
-  width: 124px;
-  height: 57px;
-  top: 159px;
-  left: 83px;
-}
-
-/* line 99, ../scss/screen.scss */
-.page_rabbit-appears {
-  background: url('../img/bg_park3.jpg?1377381587') no-repeat;
-}
-/* line 101, ../scss/screen.scss */
-.page_rabbit-appears .blink {
-  background: url('../img/blink.svg?1377386293') 0 100% no-repeat;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  background-size: 100% auto;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-/* line 108, ../scss/screen.scss */
-.page_rabbit-appears.in-view .blink {
-  -webkit-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
-  -moz-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
-  -o-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
-  animation: scene-blink 0.75s steps(5) 5 -1s alternate;
-}
-/* line 111, ../scss/screen.scss */
-.page_rabbit-appears .rabbit {
-  background: url('../img/rabbit_running.png?1377546276');
-  width: 444px;
-  height: 490px;
-  position: absolute;
-  top: 60%;
-  margin-top: -245px;
-  left: 50%;
-  margin-left: -244px;
-  z-index: 1;
-  -webkit-animation: hide-if-animation-enabled 0.01s forwards;
-  -moz-animation: hide-if-animation-enabled 0.01s forwards;
-  -o-animation: hide-if-animation-enabled 0.01s forwards;
-  animation: hide-if-animation-enabled 0.01s forwards;
-}
-/* line 121, ../scss/screen.scss */
-.page_rabbit-appears.in-view .rabbit {
-  -webkit-animation: rabbit-run 10s forwards;
-  -moz-animation: rabbit-run 10s forwards;
-  -o-animation: rabbit-run 10s forwards;
-  animation: rabbit-run 10s forwards;
-}
-
-@-moz-keyframes scene-blink {
-  /* line 128, ../scss/screen.scss */
-  0% {
-    background-position: 0 0;
-  }
-
-  /* line 129, ../scss/screen.scss */
-  100% {
-    background-position: 0 125%;
-  }
-}
-
-@-webkit-keyframes scene-blink {
-  /* line 128, ../scss/screen.scss */
-  0% {
-    background-position: 0 0;
-  }
-
-  /* line 129, ../scss/screen.scss */
-  100% {
-    background-position: 0 125%;
-  }
-}
-
-@-o-keyframes scene-blink {
-  /* line 128, ../scss/screen.scss */
-  0% {
-    background-position: 0 0;
-  }
-
-  /* line 129, ../scss/screen.scss */
-  100% {
-    background-position: 0 125%;
-  }
-}
-
-@keyframes scene-blink {
-  /* line 128, ../scss/screen.scss */
-  0% {
-    background-position: 0 0;
-  }
-
-  /* line 129, ../scss/screen.scss */
-  100% {
-    background-position: 0 125%;
-  }
-}
-
-@-moz-keyframes rabbit-run {
-  /* line 133, ../scss/screen.scss */
-  0% {
-    left: -100%;
-  }
-
-  /* line 136, ../scss/screen.scss */
-  50% {
-    top: 80%;
-  }
-
-  /* line 139, ../scss/screen.scss */
-  100% {
-    top: 60%;
-    left: 200%;
-  }
-}
-
-@-webkit-keyframes rabbit-run {
-  /* line 133, ../scss/screen.scss */
-  0% {
-    left: -100%;
-  }
-
-  /* line 136, ../scss/screen.scss */
-  50% {
-    top: 80%;
-  }
-
-  /* line 139, ../scss/screen.scss */
-  100% {
-    top: 60%;
-    left: 200%;
-  }
-}
-
-@-o-keyframes rabbit-run {
-  /* line 133, ../scss/screen.scss */
-  0% {
-    left: -100%;
-  }
-
-  /* line 136, ../scss/screen.scss */
-  50% {
-    top: 80%;
-  }
-
-  /* line 139, ../scss/screen.scss */
-  100% {
-    top: 60%;
-    left: 200%;
-  }
-}
-
-@keyframes rabbit-run {
-  /* line 133, ../scss/screen.scss */
-  0% {
-    left: -100%;
-  }
-
-  /* line 136, ../scss/screen.scss */
-  50% {
-    top: 80%;
-  }
-
-  /* line 139, ../scss/screen.scss */
-  100% {
-    top: 60%;
-    left: 200%;
-  }
-}
-
-/* line 145, ../scss/screen.scss */
-.page_rabbit-chase {
-  background: url('../img/bg_park4.jpg?1377489323') no-repeat;
-}
-/* line 147, ../scss/screen.scss */
-.page_rabbit-chase .alice {
-  background: url('../img/park4_alice.png?1377546135');
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-  position: absolute;
-  bottom: 0;
-  left: 34%;
-  width: 189.84375px;
-  height: 154.6875px;
-}
-/* line 152, ../scss/screen.scss */
-.csstransitions .page_rabbit-chase .alice {
-  left: -50%;
-}
-/* line 155, ../scss/screen.scss */
-.page_rabbit-chase .rabbit1 {
-  background: url('../img/park4_rabbit1.png?1377546166');
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 33%;
-  left: 46%;
-  width: 66.79688px;
-  height: 194.14063px;
-}
-/* line 162, ../scss/screen.scss */
-.page_rabbit-chase .rabbit2 {
-  background: url('../img/park4_rabbit2.png?1377546242');
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-  position: absolute;
-  bottom: 0;
-  left: 70%;
-  width: 162.10938px;
-  height: 148.82813px;
-}
-/* line 167, ../scss/screen.scss */
-.csstransitions .page_rabbit-chase .rabbit2 {
-  left: -50%;
-}
-/* line 172, ../scss/screen.scss */
-.csstransitions .page_rabbit-chase.in-view .rabbit1 {
-  -webkit-transition: -webkit-transform 2s ease-in;
-  -moz-transition: -moz-transform 2s ease-in;
-  -o-transition: -o-transform 2s ease-in;
-  transition: transform 2s ease-in;
-  -webkit-transform: perspective(0) scale(0.8, 0.8);
-  -moz-transform: perspective(0) scale(0.8, 0.8);
-  -ms-transform: perspective(0) scale(0.8, 0.8);
-  -o-transform: perspective(0) scale(0.8, 0.8);
-  transform: perspective(0) scale(0.8, 0.8);
-}
-/* line 177, ../scss/screen.scss */
-.csstransitions .page_rabbit-chase.in-view .rabbit2 {
-  -webkit-transition: left 3s ease-in;
-  -webkit-transition-delay: 3s;
-  -moz-transition: left 3s ease-in 3s;
-  -o-transition: left 3s ease-in 3s;
-  transition: left 3s ease-in 3s;
-  left: 100%;
-}
-/* line 181, ../scss/screen.scss */
-.csstransitions .page_rabbit-chase.in-view .alice {
-  -webkit-transition: left 3s ease-in;
-  -webkit-transition-delay: 3.5s;
-  -moz-transition: left 3s ease-in 3.5s;
-  -o-transition: left 3s ease-in 3.5s;
-  transition: left 3s ease-in 3.5s;
-  left: 100%;
-}
-
-/* line 188, ../scss/screen.scss */
-.page_the-hole {
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -webkit-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -moz-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -o-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
-}
-/* line 192, ../scss/screen.scss */
-.page_the-hole .foreground {
-  height: 100%;
-  background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  background-size: 100% auto;
-}
-/* line 197, ../scss/screen.scss */
-.page_the-hole .rabbit {
-  background: url('../img/park5_rabbit.png?1377535949');
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 15%;
-  left: 60%;
-  width: 117.1875px;
-  height: 248.04688px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  z-index: -1;
-  -webkit-animation: show-if-animation-enabled 0.01s forwards;
-  -moz-animation: show-if-animation-enabled 0.01s forwards;
-  -o-animation: show-if-animation-enabled 0.01s forwards;
-  animation: show-if-animation-enabled 0.01s forwards;
-}
-/* line 207, ../scss/screen.scss */
-.page_the-hole.in-view {
-  -webkit-animation: hole-glow 2s infinite alternate;
-  -moz-animation: hole-glow 2s infinite alternate;
-  -o-animation: hole-glow 2s infinite alternate;
-  animation: hole-glow 2s infinite alternate;
-}
-/* line 209, ../scss/screen.scss */
-.page_the-hole.in-view .rabbit {
-  -webkit-animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
-  -moz-animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
-  -o-animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
-  animation: show-if-animation-enabled 0.01s forwards, rabbit-down 3s forwards;
-}
-
-@-moz-keyframes rabbit-down {
-  /* line 216, ../scss/screen.scss */
-  100% {
-    top: 100%;
-  }
-}
-
-@-webkit-keyframes rabbit-down {
-  /* line 216, ../scss/screen.scss */
-  100% {
-    top: 100%;
-  }
-}
-
-@-o-keyframes rabbit-down {
-  /* line 216, ../scss/screen.scss */
-  100% {
-    top: 100%;
-  }
-}
-
-@keyframes rabbit-down {
-  /* line 216, ../scss/screen.scss */
-  100% {
-    top: 100%;
-  }
-}
-
-@-moz-keyframes hole-glow {
-  /* line 220, ../scss/screen.scss */
-  0% {
-    background-size: 100% auto, 100% 100%;
-  }
-
-  /* line 221, ../scss/screen.scss */
-  100% {
-    background-size: 100% auto, 120% 120%;
-  }
-}
-
-@-webkit-keyframes hole-glow {
-  /* line 220, ../scss/screen.scss */
-  0% {
-    background-size: 100% auto, 100% 100%;
-  }
-
-  /* line 221, ../scss/screen.scss */
-  100% {
-    background-size: 100% auto, 120% 120%;
-  }
-}
-
-@-o-keyframes hole-glow {
-  /* line 220, ../scss/screen.scss */
-  0% {
-    background-size: 100% auto, 100% 100%;
-  }
-
-  /* line 221, ../scss/screen.scss */
-  100% {
-    background-size: 100% auto, 120% 120%;
-  }
-}
-
-@keyframes hole-glow {
-  /* line 220, ../scss/screen.scss */
-  0% {
-    background-size: 100% auto, 100% 100%;
-  }
-
-  /* line 221, ../scss/screen.scss */
-  100% {
-    background-size: 100% auto, 120% 120%;
-  }
-}
-
-/* line 224, ../scss/screen.scss */
-#to-tunnels {
-  position: absolute;
-  top: 13%;
-  left: 62%;
-  width: 29%;
-  height: 16%;
-}
-
-/* line 231, ../scss/screen.scss */
-.page_tunnels {
-  background: url('../img/../../storyboard/storyboard6.jpg?1375563243') no-repeat;
-}
-
-/* line 235, ../scss/screen.scss */
-.falling_frightened {
-  background: url('../img/../../storyboard/storyboard7.jpg?1375559487') no-repeat;
-}
-
-/* line 239, ../scss/screen.scss */
-.falling_curious {
-  background: url('../img/../../storyboard/storyboard8.jpg?1375559676') no-repeat;
-}
-
-/* line 243, ../scss/screen.scss */
-.falling_bored {
-  background: url('../img/../../storyboard/storyboard9.jpg?1375559976') no-repeat;
-}
-
-/* line 247, ../scss/screen.scss */
-.falling_sleeping {
-  background: url('../img/../../storyboard/storyboard10.jpg?1375560220') no-repeat;
-}
-
-/* line 251, ../scss/screen.scss */
-.falling_waking {
-  background: url('../img/../../storyboard/storyboard11.jpg?1375560454') no-repeat;
-}
-
-/* line 255, ../scss/screen.scss */
-.falling_weird {
-  background: url('../img/../../storyboard/storyboard12.jpg?1375561139') no-repeat;
-}
-
-/* line 259, ../scss/screen.scss */
-.falling_aftermath {
-  background: url('../img/../../storyboard/storyboard13.jpg?1375561165') no-repeat;
-}
-
-/* line 263, ../scss/screen.scss */
-.falling_lookit-cat {
-  background: url('../img/../../storyboard/storyboard14.jpg?1375561534') no-repeat;
-}
-
-/* line 267, ../scss/screen.scss */
-.falling_cat-reveal {
-  background: url('../img/../../storyboard/storyboard15.jpg?1375561517') no-repeat;
-}
-
-/* line 271, ../scss/screen.scss */
-.falling_cat-out {
-  background: url('../img/../../storyboard/storyboard16.jpg?1375561688') no-repeat;
-}
-
-/* line 275, ../scss/screen.scss */
-.scene-cut {
-  background: url('../img/../../storyboard/storyboard17.png?1375561755') no-repeat;
-}
-
-/* line 279, ../scss/screen.scss */
-.page_crash-landing {
-  background: url('../img/../../storyboard/storyboard18.jpg?1375563055') no-repeat;
-}
-
-/* line 283, ../scss/screen.scss */
-.page_credits {
-  background: url('../img/../../storyboard/storyboard19.jpg?1375563030') no-repeat;
-}
-
-/* line 287, ../scss/screen.scss */
-.page {
-  height: 600px;
-  position: relative;
-  z-index: 0;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  background-size: 100% auto;
-  -webkit-background-origin: padding;
-  -moz-background-origin: padding;
-  background-origin: padding-box;
-}
-
-/* line 299, ../scss/screen.scss */
-#tunnel {
-  position: relative;
-}
-
-/* line 304, ../scss/screen.scss */
-.page_falling {
-  z-index: -1;
-}
-
-/* line 307, ../scss/screen.scss */
-.scene-cut {
-  background: #000;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  margin-left: -400px;
-  -webkit-transition: opacity 2s ease-out;
-  -webkit-transition-delay: 2s;
-  -moz-transition: opacity 2s ease-out 2s;
-  -o-transition: opacity 2s ease-out 2s;
-  transition: opacity 2s ease-out 2s;
-  z-index: 10;
-}
-/* line 315, ../scss/screen.scss */
-.scene-cut.cue {
-  -webkit-animation: fadeOutFromNone 2s forwards;
-  -moz-animation: fadeOutFromNone 2s forwards;
-  -o-animation: fadeOutFromNone 2s forwards;
-  animation: fadeOutFromNone 2s forwards;
-}
-
-@-moz-keyframes fadeOutFromNone {
-  /* line 323, ../scss/screen.scss */
-  0% {
-    opacity: 1;
-  }
-
-  /* line 324, ../scss/screen.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 325, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadeOutFromNone {
-  /* line 323, ../scss/screen.scss */
-  0% {
-    opacity: 1;
-  }
-
-  /* line 324, ../scss/screen.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 325, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes fadeOutFromNone {
-  /* line 323, ../scss/screen.scss */
-  0% {
-    opacity: 1;
-  }
-
-  /* line 324, ../scss/screen.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 325, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOutFromNone {
-  /* line 323, ../scss/screen.scss */
-  0% {
-    opacity: 1;
-  }
-
-  /* line 324, ../scss/screen.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 325, ../scss/screen.scss */
-  100% {
-    opacity: 0;
-  }
-}
+/*
+Syntax error: Invalid CSS after "...include opacity": expected "}", was ": 0;}"
+        on line 107 of /Users/rachel/Animation Projects/Alice in Videoland/project/book/scss/screen.scss
+
+Backtrace:
+/Users/rachel/Animation Projects/Alice in Videoland/project/book/scss/screen.scss:107
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1147:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1083:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1078:in `tok!'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:535:in `block'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:528:in `ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:590:in `declaration_or_ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1121:in `call'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1121:in `rethrow'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:591:in `declaration_or_ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:553:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:545:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:534:in `block'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:528:in `ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:590:in `declaration_or_ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1121:in `call'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:1121:in `rethrow'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:591:in `declaration_or_ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:553:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:545:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:534:in `block'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:528:in `ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:552:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:545:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:82:in `stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/scss/parser.rb:27:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/engine.rb:342:in `_to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:146:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:145:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/logger.rb:46:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:144:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:124:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:109:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:106:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/compiler.rb:24:in `compile'
+(__FORWARDABLE__):3:in `__send__'
+(__FORWARDABLE__):3:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:92:in `sass_modified'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:85:in `sass_callback'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/forwardable.rb:148:in `to_proc'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `run_callback'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:78:in `listen_callback'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `listen_callback'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `listen_callback'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/forwardable.rb:148:in `to_proc'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:212:in `call'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:212:in `on_change'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:221:in `initialize_adapter'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `start'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `initialize'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `new'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `start'
+/Library/Ruby/Gems/1.8/gems/listen-0.7.3/lib/listen/listener.rb:49:in `start'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:31:in `watch!'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/commands/watch_project.rb:48:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/bin/compass:30
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/bin/compass:44:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.4/bin/compass:44
+/usr/bin/compass:19:in `load'
+/usr/bin/compass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"...include opacity\": expected \"}\", was \": 0;}\"\A         on line 107 of /Users/rachel/Animation Projects/Alice in Videoland/project/book/scss/screen.scss"; }

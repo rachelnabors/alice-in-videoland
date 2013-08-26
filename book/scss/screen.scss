@@ -38,18 +38,6 @@ html, body {
 	overflow: hidden;
 }
 
-// Helopers
-// For browsers that don't support animation, some props will have default styles leaving them revealed.
-// But if animation is allowed, we'll want to hide them :p
-@include keyframes(hide-if-animation-enabled) {
-    100% { opacity: 0; }
-}
-@include keyframes(show-if-animation-enabled) {
-    100% { opacity: 1; }
-}
-
-// Dialog
-
 //p:not(.caption) { revisit if you want to make a more storybook version
 p {
 	@extend %visuallyhidden;
@@ -116,7 +104,7 @@ $sleepy-eyes: 'eyes';
 		top: 60%; margin-top: -245px;
 		left: 50%; margin-left: -244px;
 		z-index: 1;
-		@include animation(hide-if-animation-enabled .01s forwards);
+		.cssanimations & { @include opacity: 0;}
 	}
 	&.in-view .rabbit {
 		@include animation(rabbit-run 10s forwards);
@@ -202,12 +190,12 @@ $sleepy-eyes: 'eyes';
 		width: $percent-width*300px; height: $percent-height*635px;
 		@include opacity(0);
 		z-index: -1;
-		@include animation(show-if-animation-enabled .01s forwards);
+		.cssanimations & { @include opacity: 1;}
 	}
 	&.in-view {
 		@include animation(hole-glow 2s infinite alternate);
 		.rabbit {
-			@include animation(show-if-animation-enabled .01s forwards, rabbit-down 3s forwards);
+			@include animation(rabbit-down 3s forwards);
 		}
 	}
 }
