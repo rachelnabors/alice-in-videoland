@@ -3,7 +3,13 @@
 @import "compass/reset";
 
 // Variables
-// Max dimensions of iPad retina: 2048-by-1536
+// Max dimensions of iPad retina, the highest target device: 2048-by-1536
+$max-width : 2048px;
+$max-height: 1536px;
+$min-width: 800px;
+$min-height: 600px;
+$percent-width: $min-width/$max-width;
+$percent-height: $min-height/$max-height;
 
 html, body {
 	background: #000;
@@ -41,6 +47,7 @@ html, body {
 @include keyframes(show-if-animation-enabled) {
     100% { opacity: 1; }
 }
+
 // Dialog
 
 //p:not(.caption) { revisit if you want to make a more storybook version
@@ -137,11 +144,51 @@ $sleepy-eyes: 'eyes';
 
 .page_rabbit-chase {
 	@include background(image-url("bg_park4.jpg") no-repeat);
+	.alice {
+		@include background(image-url("park4_alice.png"));
+		@include background-size(100% 100%);
+		position: absolute;
+		bottom: 0; left: 34%;
+		.csstransitions & { left: -50%;}
+		width: $percent-width*486px; height: $percent-height*396px;	
+	}
+	.rabbit1 {
+		@include background(image-url("park4_rabbit1.png"));
+		@include background-size(100% 100%);
+		position: absolute;
+		top: 33%; left: 46%;
+		width: $percent-width*171px; height: $percent-height*497px;
+	}
+	.rabbit2 {
+		@include background(image-url("park4_rabbit2.png"));
+		@include background-size(100% 100%);
+		position: absolute;
+		bottom: 0; left: 70%;
+		.csstransitions & { left: -50%;}
+		width: $percent-width*415px; height: $percent-height*381px;
+	}
+	.csstransitions &.in-view {
+		// once in view, the rabbit should run into the distance in frame 2
+		.rabbit1 {
+			@include transition(transform 2s ease-in);
+			@include scale(.8, .8, 0);
+		}
+		// and in frame three they should both runn off page after a small delay for the above to finish
+		.rabbit2 {
+			@include transition(left 3s ease-in 3s);
+			left: 100%;
+		}
+		.alice {
+			@include transition(left 3s ease-in 3.5s);
+			left: 100%;
+		}
+	}
 }
 
 .page_the-hole {
 	@include background(image-url("bg_park5_1.png") no-repeat,
 		radial-gradient(70% 60%, circle closest-side, #eb125d, #000));
+		// rad grad ref: http://www.css3files.com/gradient/
 	.foreground {
 		height: 100%;
 		@include background(image-url("bg_park5_2.png") no-repeat 100% 100%);
@@ -152,7 +199,7 @@ $sleepy-eyes: 'eyes';
 		@include background-size(100% 100%);
 		position: absolute;
 		top: 15%; left: 60%;
-		width: 800/2048*300px; height: 600/1536*635px;
+		width: $percent-width*300px; height: $percent-height*635px;
 		@include opacity(0);
 		z-index: -1;
 		@include animation(show-if-animation-enabled .01s forwards);

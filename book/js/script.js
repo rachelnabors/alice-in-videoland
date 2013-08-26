@@ -55,7 +55,7 @@ $(".page_rabbit-appears").on('inview', function(event, visible, topOrBottomOrBot
 });
 
 // play phone SFX when the rabbit appears in full view. 
-$(".page_the-hole").on('inview', function(event, visible, topOrBottomOrBoth) {
+$(".page_the-hole, .page_rabbit-chase").on('inview', function(event, visible, topOrBottomOrBoth) {
   var o = $(this);
   if(visible && (topOrBottomOrBoth == 'both')) {
   	o.addClass("in-view");
