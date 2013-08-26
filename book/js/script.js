@@ -6,12 +6,14 @@ $.fn.activate = function(runFunc) {
 
 	$(this).on('touchend', function(e){
 		$(this).addClass("touched");
+		alert("Tapped!");
 		runFunc();
 		e.preventDefault();
 	});
 
 	$(this).on('click', function(e){
 		if (!($(this).hasClass('touched'))) {
+			alert("Clicked!");
 			runFunc();
 			e.preventDefault();
 			e.stopPropagation();
@@ -42,7 +44,7 @@ var downTheHole = function() {
 // play phone SFX when the rabbit appears in full view. 
 $(".page_rabbit-appears").on('inview', function(event, visible, topOrBottomOrBoth) {
   var o = $(this);
-  if(visible && (topOrBottomOrBoth == 'bottom' || (topOrBottomOrBoth == 'both'))) {
+  if(visible) {
   	var phone = document.getElementById("rabbit-phone");
   	phone.volume = 0.1;
   	setTimeout(function(){
