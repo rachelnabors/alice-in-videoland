@@ -1,0 +1,43 @@
+.page_the-hole {
+	@include background(image-url("bg_park5_1.png") no-repeat,
+		radial-gradient(70% 60%, circle closest-side, #eb125d, #000));
+		// rad grad ref: http://www.css3files.com/gradient/
+	.foreground {
+		height: 100%;
+		@include background(image-url("bg_park5_2.png") no-repeat 100% 100%);
+		@include background-size(100% auto);
+	}
+	.rabbit {
+		//@include sprites-sprite(park5_rabbit);
+		@include background(image-url("park5_rabbit.png"));
+		@include background-size(100% 100%);
+		position: absolute;
+		top: 15%; left: 60%;
+		width: $percent-width*300px; height: $percent-height*635px;
+		@include opacity(0);
+		z-index: -1;
+		.cssanimations & { @include opacity(1);}
+	}
+	&.in-view {
+		@include animation(hole-glow 2s infinite alternate);
+		.rabbit {
+			@include animation(rabbit-down 3s forwards);
+		}
+	}
+}
+
+@include keyframes(rabbit-down) {
+    100% { top: 100% }
+}
+
+@include keyframes(hole-glow) {
+    0% { background-size: 100% auto, 100% 100%; }
+    100% { background-size: 100% auto, 120% 120%; }
+}
+
+#to-tunnels {
+	@extend %imgreplace;
+	position: absolute;
+	top: 34%; left: 53%;
+	width: 29%; height: 16%;
+}

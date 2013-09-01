@@ -1,0 +1,9 @@
+html, body {
+	background: #000;
+	height: 100%
+}
+
+//p:not(.caption) { revisit if you want to make a more storybook version
+p {
+	@extend %visuallyhidden;
+}

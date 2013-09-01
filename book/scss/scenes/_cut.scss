@@ -1,0 +1,21 @@
+// Cut
+.scene-cut { 
+	background: #000;
+	height: 100%;
+	position: fixed;
+	top: 0; left: 50%;
+	margin-left: -400px;
+	@include transition(opacity 2s ease-out 2s);
+	z-index: 10;
+	&.cue {
+		@include animation(fadeOutFromNone 2s forwards);
+	}
+}
+
+@include keyframes(fadeOutFromNone) {
+	// because transitioning from display: none doesn't work. 
+	//http://stackoverflow.com/questions/8449933/animation-css3-display-opacity
+    0% { opacity: 1;}
+    1% { opacity: 1;}
+    100% { opacity: 0; }
+}

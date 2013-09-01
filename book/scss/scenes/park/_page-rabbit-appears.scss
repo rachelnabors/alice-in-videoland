@@ -1,0 +1,35 @@
+.page_rabbit-appears {
+	@include background(image-url("bg_park3.jpg") no-repeat);
+	.blink {
+		@include background(image-url("blink.svg") 0 100% no-repeat); //for animation-deprived viewers, leave eye open.
+		@include background-size(100% auto);
+		position: absolute;
+		width: 100%; height: 100%;
+		z-index: 2;
+	}
+	&.in-view .blink {
+		@include animation(scene-blink .75s steps(5) 5 -1s alternate);			
+	}
+	.rabbit {
+		@extend %imgreplace;
+		@include background(image-url("rabbit_running.png"));
+		width: 444px; height: 490px;
+		position: absolute;
+		top: 60%; margin-top: -245px;
+		left: 50%; margin-left: -244px;
+		z-index: 1;
+		.cssanimations & { 
+			left: -50%;
+		}
+	}
+	&.in-view .rabbit {
+		left: 200%;
+		@include transition(left 5s ease-in);
+	}
+}
+
+//candidate for Animation Studio sans sprite gen as SVG sprite is here already
+@include keyframes(scene-blink) {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 125%; }
+}

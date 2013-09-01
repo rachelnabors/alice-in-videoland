@@ -1,0 +1,22 @@
+// Extendables
+%visuallyhidden { // hidden from view, not from screen readers!
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; 
+}
+
+%hidden {
+	display: none !important;
+}
+
+%shown {
+	display: block !important;
+}
+
+%imgreplace {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}

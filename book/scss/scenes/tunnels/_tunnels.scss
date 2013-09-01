@@ -1,0 +1,80 @@
+.page.page_tunnels {
+	@include background(image-url("tunnels.svg") no-repeat,
+		image-url("bg_tunnel-specks.png"),
+		#033
+		);
+	@include background-size(100% auto, auto auto);
+}
+
+// The Tunnel
+
+#tunnel {
+	position: relative;
+}
+
+//let Alice and Cheshire hover above
+.page_falling { z-index: -1;}
+
+.falling_frightened {
+	@include background(image-url("../../storyboard/storyboard7.jpg") no-repeat);
+}
+
+.falling_curious {
+	@include background(image-url("../../storyboard/storyboard8.jpg") no-repeat);
+}
+
+.falling_bored {
+	@include background(image-url("../../storyboard/storyboard9.jpg") no-repeat);
+}
+
+.falling_sleeping {
+	@include background(image-url("../../storyboard/storyboard10.jpg") no-repeat);
+}
+
+.falling_waking {
+	@include background(image-url("../../storyboard/storyboard11.jpg") no-repeat);
+}
+
+.falling_weird {
+	@include background(image-url("../../storyboard/storyboard12.jpg") no-repeat);
+}
+
+.falling_aftermath {
+	@include background(image-url("../../storyboard/storyboard13.jpg") no-repeat);
+}
+
+.falling_lookit-cat {
+	@include background(image-url("../../storyboard/storyboard14.jpg") no-repeat);
+}
+
+.falling_cat-reveal {
+	@include background(image-url("../../storyboard/storyboard15.jpg") no-repeat);
+}
+
+.falling_cat-out {
+	@include background(image-url("../../storyboard/storyboard16.jpg") no-repeat);
+}
+
+// Characters
+
+// .alice-falling {
+// 	background: #666;
+// 	width: 200px; height: 200px;
+// 	position: absolute;
+// 	top: 0; left: 50%;
+// 	margin-left: -200px;
+// }
+
+// .cheshire-cat {
+// 	background: red;
+// 	width: 100px; height: 50px;
+// 	position: absolute;
+// 	bottom: 0; right: 50%;
+// 	margin-right: -200px; 
+// }
+
+// #tunnel.in-view {
+// 	.alice-falling, .cheshire-cat {
+// 		position: fixed;
+// 	}
+// }

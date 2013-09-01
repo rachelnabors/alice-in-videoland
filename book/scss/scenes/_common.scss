@@ -1,0 +1,20 @@
+// all but the park start hidden. 
+.scene:not(.scene-park) {
+	@extend %hidden;
+}
+
+// Scenes that get ".cue"-d are shown upon cue. 
+// Cue must actively be added with JS.
+.scene.cue {
+	@extend %shown;
+}
+
+// Common to All Pages
+.scene .page { // .scene for specificity
+	@extend %imgreplace;
+	height:600px;
+	position: relative;
+	z-index: 0;
+	@include background-size( 100% auto);
+	@include background-origin( padding-box);
+}
