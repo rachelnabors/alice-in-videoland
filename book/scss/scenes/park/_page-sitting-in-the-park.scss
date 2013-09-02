@@ -1,15 +1,3 @@
 .page_sitting-in-the-park {
 	@include background(image-url("bg_park1.jpg") no-repeat);
 }
-
-$sleepy-eyes: 'eyes';
-.page_alice-is-bored {
-	@include background(image-url("bg_park2.jpg") no-repeat);
-	.eyes {
-	  // @include animation-sequence($sleepy-eyes, 1s);
-	  width: 124px; height: 57px;
-	  top: 159px; left: 83px;
-	}
-}
-// @include animation-sequence-sprite-generator($sleepy-eyes);
-// @include animation-sequence-keyframes($sleepy-eyes);

@@ -126,11 +126,11 @@ html, body {
   background: url('../img/bg_park1.jpg?1377318992') no-repeat;
 }
 
-/* line 6, ../scss/scenes/park/_page-sitting-in-the-park.scss */
+/* line 2, ../scss/scenes/park/_page-alice-is-bored.scss */
 .page_alice-is-bored {
   background: url('../img/bg_park2.jpg?1377374754') no-repeat;
 }
-/* line 8, ../scss/scenes/park/_page-sitting-in-the-park.scss */
+/* line 4, ../scss/scenes/park/_page-alice-is-bored.scss */
 .page_alice-is-bored .eyes {
   width: 124px;
   height: 57px;
