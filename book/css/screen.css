@@ -116,11 +116,6 @@ html, body {
   background-origin: padding-box;
 }
 
-/* line 2, ../scss/scenes/park/_scene-park.scss */
-.scene-park {
-  padding-bottom: 2px;
-}
-
 /* line 1, ../scss/scenes/park/_page-sitting-in-the-park.scss */
 .page_sitting-in-the-park {
   background: url('../img/bg_park1.jpg?1377318992') no-repeat;
@@ -195,6 +190,10 @@ html, body {
   -moz-animation-direction: alternate;
   -o-animation-direction: alternate;
   animation-direction: alternate;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
   position: absolute;
   top: 24%;
   left: 10%;
@@ -204,6 +203,13 @@ html, body {
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
   background-size: 100% auto;
+}
+/* line 16, ../scss/scenes/park/_page-alice-is-bored.scss */
+.page_alice-is-bored.in-view .eyes {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
 }
 
 /* line 1, ../scss/scenes/park/_page-rabbit-appears.scss */
@@ -416,19 +422,19 @@ html, body {
   opacity: 0;
   z-index: -1;
 }
-/* line 19, ../scss/scenes/park/_page-the-hole.scss */
+/* line 18, ../scss/scenes/park/_page-the-hole.scss */
 .cssanimations .page_the-hole .rabbit {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 21, ../scss/scenes/park/_page-the-hole.scss */
+/* line 20, ../scss/scenes/park/_page-the-hole.scss */
 .page_the-hole.in-view {
   -webkit-animation: hole-glow 2s infinite alternate;
   -moz-animation: hole-glow 2s infinite alternate;
   -o-animation: hole-glow 2s infinite alternate;
   animation: hole-glow 2s infinite alternate;
 }
-/* line 23, ../scss/scenes/park/_page-the-hole.scss */
+/* line 22, ../scss/scenes/park/_page-the-hole.scss */
 .page_the-hole.in-view .rabbit {
   -webkit-animation: rabbit-down 3s forwards;
   -moz-animation: rabbit-down 3s forwards;
@@ -437,82 +443,82 @@ html, body {
 }
 
 @-moz-keyframes rabbit-down {
-  /* line 30, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 29, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     top: 100%;
   }
 }
 
 @-webkit-keyframes rabbit-down {
-  /* line 30, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 29, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     top: 100%;
   }
 }
 
 @-o-keyframes rabbit-down {
-  /* line 30, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 29, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     top: 100%;
   }
 }
 
 @keyframes rabbit-down {
-  /* line 30, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 29, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     top: 100%;
   }
 }
 
 @-moz-keyframes hole-glow {
-  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 33, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 35, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
 @-webkit-keyframes hole-glow {
-  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 33, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 35, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
 @-o-keyframes hole-glow {
-  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 33, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 35, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
 @keyframes hole-glow {
-  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 33, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 35, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 34, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
-/* line 38, ../scss/scenes/park/_page-the-hole.scss */
+/* line 37, ../scss/scenes/park/_page-the-hole.scss */
 #to-tunnels {
   position: absolute;
   top: 34%;

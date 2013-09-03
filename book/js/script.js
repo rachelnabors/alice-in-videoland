@@ -1,4 +1,8 @@
 /* Alice in Videoland JS! */
+var loaded = function() {
+	var myScroll = new iScroll('scroll-wrapper');
+}
+$(window).load(loaded());
 
 // To map click events to "touch events", I put together this based on the feedback here: http://stackoverflow.com/questions/7018919/how-to-bind-touchstart-and-click-events-but-not-respond-to-both
 
@@ -6,14 +10,12 @@ $.fn.activate = function(runFunc) {
 
 	$(this).on('touchend', function(e){
 		$(this).addClass("touched");
-		alert("Tapped!");
 		runFunc();
 		e.preventDefault();
 	});
 
 	$(this).on('click', function(e){
 		if (!($(this).hasClass('touched'))) {
-			alert("Clicked!");
 			runFunc();
 			e.preventDefault();
 			e.stopPropagation();
@@ -44,7 +46,6 @@ var downTheHole = function() {
 // How to guess which frame is "being read".
 var beingRead = function() {
 	// It would be approximately centered, of equal distance from top as from bottom.	
-	
 	var $screenHeight = $.waypoints('viewportHeight');
 	var $pageHeight = $(".page").height();
 	var offset = ($pageHeight - $screenHeight) / 2 * -1;
@@ -54,24 +55,41 @@ var beingRead = function() {
 	// What if we force the pages to always be the same height as the screen?
 }
 
+// To get to #tunnels, activate #tunnels
+$("#to-tunnels").activate(downTheHole);
+
 // play phone SFX when the rabbit appears in full view. 
 $(".page_rabbit-appears").waypoint(function() {
-	var phone = document.getElementById("rabbit-phone");
-	phone.volume = 0.1;
-	setTimeout(function(){
-		phone.play();
-	}, 2000);
+		if ($(this).hasClass("in-view")){
+			console.log($(this).hasClass("in-view"))
+			var phone = document.getElementById("rabbit-phone");
+			phone.volume = 0.1;
+			setTimeout(function(){
+				phone.play();
+			}, 2000);
+		}
 });
 
-// all pages get in-view classes 
-$(".page").waypoint(function() {
- 	$(this).addClass("in-view");
+// all pages get in-view classes while they're centered in the viewport 
+$(".page").waypoint(function(direction) {
+	if (direction === "up") { // if scrolling up
+ 		$(this).addClass("in-view").removeClass("scrolled-past")
+ 		.waypoint('next').removeClass("in-view");
+	} else { // else, assuming we're not scrolling at all or are scrolling down
+ 		$(this).addClass("in-view").removeClass("scrolled-past")
+ 		.waypoint('prev').removeClass("in-view").addClass("scrolled-past");		
+	}
 }, {
   offset: beingRead()
 });
 
-// // To get to #tunnels, activate #tunnels
-// $("#to-tunnels").activate(downTheHole);
+// $('.page').waypoint(function() {
+//   $(this).removeClass("in-view").addClass("scrolled-past");
+// }, {
+//   offset: function() {
+//     return -$(this).height();
+//   }
+// });
 
 // // when in tunnels, give them a class of in-view. 
 // $("#tunnel").waypoint(function(direction) {

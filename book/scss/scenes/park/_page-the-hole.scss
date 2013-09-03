@@ -8,7 +8,6 @@
 		@include background-size(100% auto);
 	}
 	.rabbit {
-		//@include sprites-sprite(park5_rabbit);
 		@include background(image-url("park5_rabbit.png"));
 		@include background-size(100% 100%);
 		position: absolute;

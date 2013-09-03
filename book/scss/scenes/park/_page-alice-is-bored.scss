@@ -7,9 +7,13 @@ $sleepy-eyes: 'eyes';
 	.eyes {
 		@include animation-sequence($sleepy-eyes, 1.5s, "sleepz");
 		@include animation-direction(alternate);
+		@include animation-play-state(paused);
 		position: absolute;
 		top: 24%; left: 10%;
 		width: 124px; height: 57px;
 		@include background-size( 100% auto);
+	}
+	&.in-view .eyes { // run animation only  while inview
+		@include animation-play-state(running);
 	}
 }
