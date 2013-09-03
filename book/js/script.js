@@ -41,61 +41,51 @@ var downTheHole = function() {
 	// TODO: Add enticing "scroll down" arrow that activates to move down.
 }
 
-// play phone SFX when the rabbit appears in full view. 
-$(".page_rabbit-appears").on('inview', function(event, visible, topOrBottomOrBoth) {
-  var o = $(this);
-  if(visible) {
-  	var phone = document.getElementById("rabbit-phone");
-  	phone.volume = 0.1;
-  	setTimeout(function(){
-  		phone.play();
-  	}, 2000);
+// How to guess which frame is "being read".
+var beingRead = function() {
+	// It would be approximately centered, of equal distance from top as from bottom.	
+	
+	var $screenHeight = $.waypoints('viewportHeight');
+	var $pageHeight = $(".page").height();
+	var offset = ($pageHeight - $screenHeight) / 2 * -1;
 
-  	o.addClass("in-view");
-  	o.off('inview');
-  }
-});
+	return offset;
+	// What if the the screen is shorter than the page?
+	// What if we force the pages to always be the same height as the screen?
+}
 
 // play phone SFX when the rabbit appears in full view. 
-$(".page_the-hole, .page_rabbit-chase").on('inview', function(event, visible, topOrBottomOrBoth) {
-  var o = $(this);
-  if(visible) {
-  	o.addClass("in-view");
-  	o.off('inview');
-  }
+$(".page_rabbit-appears").waypoint(function() {
+	var phone = document.getElementById("rabbit-phone");
+	phone.volume = 0.1;
+	setTimeout(function(){
+		phone.play();
+	}, 2000);
 });
 
-// To get to #tunnels, activate #tunnels
-$("#to-tunnels").activate(downTheHole);
-
-// when in tunnels, give them a class of in-view. 
-$("#tunnel").on('inview', function(event, visible, topOrBottomOrBoth) {
-  var o = $(this);
-
-  if(visible) {
-      if(topOrBottomOrBoth == 'top') {
-        o.data('seenTop', true);
-      } else if(topOrBottomOrBoth == 'bottom') {
-        o.data('seenBottom', true);
-      }
-
-      if(o.data('seenTop') && o.data('seenBottom')) {
-      	// dereg handler
-        o.off('inview');
-
-		// when scrolled past, give the tunnels a class of scrolled-past
-        o.removeClass("in-view").addClass("scrolled-past");
-
-		// Once you get to the end of the tunnels, cue cut and wonderland behind it
-        $(".scene-cut, .scene-wonderland").addClass("cue");
-        	// pull crash scene under cut
-					var scrolledHeight = $(window).scrollTop(); // current offset from top
-					var windowHeight = $(window).height(); //window's height
-					var newOffset = scrolledHeight + windowHeight; 
-					$("html,body").scrollTop(newOffset);
-      } 
-  }
+// all pages get in-view classes 
+$(".page").waypoint(function() {
+ 	$(this).addClass("in-view");
+}, {
+  offset: beingRead()
 });
+
+// // To get to #tunnels, activate #tunnels
+// $("#to-tunnels").activate(downTheHole);
+
+// // when in tunnels, give them a class of in-view. 
+// $("#tunnel").waypoint(function(direction) {
+// 	$("#tunnel").addClass("in-view");
+// 	// when scrolled past, give the tunnels a class of scrolled-past so you can stop the animation and dump the characters at the bottom
+
+// 	// Once you get to the end of the tunnels, cue cut and wonderland behind it
+// 	$(".scene-cut, .scene-wonderland").addClass("cue");
+// 		// pull crash scene under cut
+// 		var scrolledHeight = $(window).scrollTop(); // current offset from top
+// 		var windowHeight = $(window).height(); //window's height
+// 		var newOffset = scrolledHeight + windowHeight; 
+// 		$("html,body").scrollTop(newOffset);
+// });
 
 
 // Change attitude as you "fall"
