@@ -126,16 +126,84 @@ html, body {
   background: url('../img/bg_park1.jpg?1377318992') no-repeat;
 }
 
-/* line 2, ../scss/scenes/park/_page-alice-is-bored.scss */
+/* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+.page_alice-is-bored .eyes {
+  background: url('../img/eyes-s087e210706.png') 0 0 no-repeat;
+}
+
+@-moz-keyframes sleepz {
+  /* line 55, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 58, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+@-webkit-keyframes sleepz {
+  /* line 55, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 58, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+@-o-keyframes sleepz {
+  /* line 55, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 58, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+@keyframes sleepz {
+  /* line 55, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  0% {
+    background-position: 0 0;
+  }
+
+  /* line 58, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
+  100% {
+    background-position: 0 150%;
+  }
+}
+
+/* line 5, ../scss/scenes/park/_page-alice-is-bored.scss */
 .page_alice-is-bored {
   background: url('../img/bg_park2.jpg?1377374754') no-repeat;
 }
-/* line 4, ../scss/scenes/park/_page-alice-is-bored.scss */
+/* line 7, ../scss/scenes/park/_page-alice-is-bored.scss */
 .page_alice-is-bored .eyes {
+  height: 142px;
+  width: 310px;
+  -webkit-animation: sleepz 1.5s steps(3) infinite;
+  -moz-animation: sleepz 1.5s steps(3) infinite;
+  -o-animation: sleepz 1.5s steps(3) infinite;
+  animation: sleepz 1.5s steps(3) infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  position: absolute;
+  top: 24%;
+  left: 10%;
   width: 124px;
   height: 57px;
-  top: 159px;
-  left: 83px;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
 }
 
 /* line 1, ../scss/scenes/park/_page-rabbit-appears.scss */
@@ -455,7 +523,7 @@ html, body {
 
 /* line 1, ../scss/scenes/tunnels/_tunnels.scss */
 .page.page_tunnels {
-  background: url('../img/tunnels.svg?1377638711') no-repeat, url('../img/bg_tunnel-specks.png?1374696235'), #003333;
+  background: url('../img/tunnels.svg?1377638711') no-repeat, url('../img/bg_tunnel-specks.png?1374696235'), #5a4f4a;
   -webkit-background-size: 100% auto, auto auto;
   -moz-background-size: 100% auto, auto auto;
   -o-background-size: 100% auto, auto auto;
@@ -464,62 +532,107 @@ html, body {
 
 /* line 11, ../scss/scenes/tunnels/_tunnels.scss */
 #tunnel {
+  background: #5A4F4A;
   position: relative;
 }
 
 /* line 16, ../scss/scenes/tunnels/_tunnels.scss */
+.tunnel_bg_wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+@-moz-keyframes fall {
+  /* line 23, ../scss/scenes/tunnels/_tunnels.scss */
+  0% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 26, ../scss/scenes/tunnels/_tunnels.scss */
+  100% {
+    -moz-transform: translate(0, -900px);
+    transform: translate(0, -900px);
+  }
+}
+
+@-webkit-keyframes fall {
+  /* line 23, ../scss/scenes/tunnels/_tunnels.scss */
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 26, ../scss/scenes/tunnels/_tunnels.scss */
+  100% {
+    -webkit-transform: translate(0, -900px);
+    transform: translate(0, -900px);
+  }
+}
+
+@-o-keyframes fall {
+  /* line 23, ../scss/scenes/tunnels/_tunnels.scss */
+  0% {
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /* line 26, ../scss/scenes/tunnels/_tunnels.scss */
+  100% {
+    -o-transform: translate(0, -900px);
+    transform: translate(0, -900px);
+  }
+}
+
+@keyframes fall {
+  /* line 23, ../scss/scenes/tunnels/_tunnels.scss */
+  0% {
+    transform: translate(0, 0);
+  }
+
+  /* line 26, ../scss/scenes/tunnels/_tunnels.scss */
+  100% {
+    transform: translate(0, -900px);
+  }
+}
+
+/* line 31, ../scss/scenes/tunnels/_tunnels.scss */
+.tunnel_bg {
+  -webkit-animation: fall 6s linear infinite;
+  -moz-animation: fall 6s linear infinite;
+  -o-animation: fall 6s linear infinite;
+  animation: fall 6s linear infinite;
+  background: url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png);
+  background-size: 20px 150px,  20px 150px,  100% 900px, auto auto;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -400px;
+  height: 900px;
+  width: 800px;
+}
+
+/* line 50, ../scss/scenes/tunnels/_tunnels.scss */
+.tunnel_bg2 {
+  top: 900px;
+}
+
+/* line 54, ../scss/scenes/tunnels/_tunnels.scss */
+.tunnel_bg3 {
+  top: 1800px;
+}
+
+/* line 59, ../scss/scenes/tunnels/_tunnels.scss */
 .page_falling {
   z-index: -1;
 }
 
-/* line 18, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_frightened {
-  background: url('../img/../../storyboard/storyboard7.jpg?1375559487') no-repeat;
-}
-
-/* line 22, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_curious {
-  background: url('../img/../../storyboard/storyboard8.jpg?1375559676') no-repeat;
-}
-
-/* line 26, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_bored {
-  background: url('../img/../../storyboard/storyboard9.jpg?1375559976') no-repeat;
-}
-
-/* line 30, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_sleeping {
-  background: url('../img/../../storyboard/storyboard10.jpg?1375560220') no-repeat;
-}
-
-/* line 34, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_waking {
-  background: url('../img/../../storyboard/storyboard11.jpg?1375560454') no-repeat;
-}
-
-/* line 38, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_weird {
-  background: url('../img/../../storyboard/storyboard12.jpg?1375561139') no-repeat;
-}
-
-/* line 42, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_aftermath {
-  background: url('../img/../../storyboard/storyboard13.jpg?1375561165') no-repeat;
-}
-
-/* line 46, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_lookit-cat {
-  background: url('../img/../../storyboard/storyboard14.jpg?1375561534') no-repeat;
-}
-
-/* line 50, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_cat-reveal {
-  background: url('../img/../../storyboard/storyboard15.jpg?1375561517') no-repeat;
-}
-
-/* line 54, ../scss/scenes/tunnels/_tunnels.scss */
-.falling_cat-out {
-  background: url('../img/../../storyboard/storyboard16.jpg?1375561688') no-repeat;
+/* line 120, ../scss/scenes/tunnels/_tunnels.scss */
+#tunnel.in-view .alice-falling, #tunnel.in-view .cheshire-cat, #tunnel.in-view .tunnel_bg_wrapper {
+  position: fixed;
 }
 
 /* line 2, ../scss/scenes/_cut.scss */

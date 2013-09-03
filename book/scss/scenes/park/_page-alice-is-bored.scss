@@ -1,11 +1,15 @@
 $sleepy-eyes: 'eyes';
+@include animation-sequence-sprite-generator($sleepy-eyes);
+@include animation-sequence-keyframes($sleepy-eyes, "sleepz");
+
 .page_alice-is-bored {
 	@include background(image-url("bg_park2.jpg") no-repeat);
 	.eyes {
-	  // @include animation-sequence($sleepy-eyes, 1s);
-	  width: 124px; height: 57px;
-	  top: 159px; left: 83px;
+		@include animation-sequence($sleepy-eyes, 1.5s, "sleepz");
+		@include animation-direction(alternate);
+		position: absolute;
+		top: 24%; left: 10%;
+		width: 124px; height: 57px;
+		@include background-size( 100% auto);
 	}
 }
-// @include animation-sequence-sprite-generator($sleepy-eyes);
-// @include animation-sequence-keyframes($sleepy-eyes);
