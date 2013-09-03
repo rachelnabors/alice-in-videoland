@@ -1,8 +1,8 @@
 /* Alice in Videoland JS! */
-var loaded = function() {
-	var myScroll = new iScroll('scroll-wrapper');
-}
-$(window).load(loaded());
+// var loaded = function() {
+// 	var myScroll = new iScroll('scroll-wrapper');
+// }
+// $(window).load(loaded());
 
 // To map click events to "touch events", I put together this based on the feedback here: http://stackoverflow.com/questions/7018919/how-to-bind-touchstart-and-click-events-but-not-respond-to-both
 
