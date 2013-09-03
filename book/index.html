@@ -6,7 +6,12 @@
 
         var myScroll;
         function loaded() {
-            myScroll = new iScroll('wrapper');
+            myScroll = new iScroll('wrapper', {
+                snap: '.page',
+                momentum: false,
+                hScrollbar: false,
+                vScrollbar: false 
+            });
         }
 
         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);

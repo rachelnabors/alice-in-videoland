@@ -1,8 +1,4 @@
 /* Alice in Videoland JS! */
-// var loaded = function() {
-// 	var myScroll = new iScroll('scroll-wrapper');
-// }
-// $(window).load(loaded());
 
 // To map click events to "touch events", I put together this based on the feedback here: http://stackoverflow.com/questions/7018919/how-to-bind-touchstart-and-click-events-but-not-respond-to-both
 
@@ -38,6 +34,10 @@ var downTheHole = function() {
 		scrollTop: newOffset // animate new offset to scroll past the tunnels
 	}, 2000, function(){
 		$("#tunnel").addClass("in-view");
+		// iscroll only
+		setTimeout(function () {
+			myScroll.refresh();
+		}, 0);
 	});
 
 	// TODO: Add enticing "scroll down" arrow that activates to move down.

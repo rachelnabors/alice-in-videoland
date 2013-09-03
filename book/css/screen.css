@@ -635,29 +635,27 @@ html, body {
   background: url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png);
   background-size: 20px 150px,  20px 150px,  100% 900px, auto auto;
   position: absolute;
-  left: 50%;
   top: 0;
-  margin-left: -400px;
   height: 900px;
   width: 800px;
 }
 
-/* line 50, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 49, ../scss/scenes/tunnels/_tunnels.scss */
 .tunnel_bg2 {
   top: 900px;
 }
 
-/* line 54, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 53, ../scss/scenes/tunnels/_tunnels.scss */
 .tunnel_bg3 {
   top: 1800px;
 }
 
-/* line 59, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 58, ../scss/scenes/tunnels/_tunnels.scss */
 .page_falling {
   z-index: -1;
 }
 
-/* line 120, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 119, ../scss/scenes/tunnels/_tunnels.scss */
 #tunnel.in-view .alice-falling, #tunnel.in-view .cheshire-cat, #tunnel.in-view .tunnel_bg_wrapper {
   position: fixed;
 }
