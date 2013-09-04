@@ -1,11 +1,8 @@
 // Variables
 
 // Max dimensions of iPad retina, the highest target device: 2048-by-1536
-$max-width : 2048px;
-$max-height: 1536px;
+$max-width : 2048;
+$max-height: 1536;
 
-$min-width: 800px;
-$min-height: 600px;
-
-$percent-width: $min-width/$max-width;
-$percent-height: $min-height/$max-height;
+$min-width: 800;
+$min-height: 600;

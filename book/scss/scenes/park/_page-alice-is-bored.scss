@@ -10,7 +10,8 @@ $sleepy-eyes: 'eyes';
 		@include animation-play-state(paused);
 		position: absolute;
 		top: 24%; left: 10%;
-		width: 124px; height: 57px;
+		width: percentage(124/800); height: 0;
+		padding-top: percentage(57/800);
 		@include background-size( 100% auto);
 	}
 	&.in-view .eyes { // run animation only  while inview

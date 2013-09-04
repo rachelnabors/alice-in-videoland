@@ -6,14 +6,14 @@
 		position: absolute;
 		bottom: 0; left: 34%;
 		.csstransitions & { left: -50%;}
-		width: $percent-width*486px; height: $percent-height*396px;	
+		width: percentage(486/$max-width); padding-top: percentage(396/$max-width);	
 	}
 	.rabbit1 {
 		@include background(image-url("park4_rabbit1.png"));
 		@include background-size(100% 100%);
 		position: absolute;
 		top: 33%; left: 46%;
-		width: $percent-width*171px; height: $percent-height*497px;
+		width: percentage(171/$max-width); padding-top: percentage(497/$max-width);
 	}
 	.rabbit2 {
 		@include background(image-url("park4_rabbit2.png"));
@@ -21,7 +21,7 @@
 		position: absolute;
 		bottom: 0; left: 70%;
 		.csstransitions & { left: -50%;}
-		width: $percent-width*415px; height: $percent-height*381px;
+		width: percentage(415/$max-width); padding-top: percentage(381/$max-width);
 	}
 	.csstransitions &.in-view {
 		// once in view, the rabbit should run into the distance in frame 2

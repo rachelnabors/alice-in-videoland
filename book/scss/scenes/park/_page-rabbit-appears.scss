@@ -4,6 +4,7 @@
 		@include background(image-url("blink.svg") 0 100% no-repeat); //for animation-deprived viewers, leave eye open.
 		@include background-size(100% auto);
 		position: absolute;
+		top: 0;
 		width: 100%; height: 100%;
 		z-index: 2;
 	}

@@ -12,7 +12,7 @@
 // Common to All Pages
 .scene .page { // .scene for specificity
 	@extend %imgreplace;
-	height:600px;
+	padding-top: 75%; //maintain a 3 to 4 ratio 
 	position: relative;
 	z-index: 0;
 	@include background-size( 100% auto);
