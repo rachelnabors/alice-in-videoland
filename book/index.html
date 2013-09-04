@@ -81,34 +81,34 @@
             <div id="tunnel">
                 <div class="alice-falling"></div>
                 <div class="cheshire-cat"></div>
-                <div class="page page_falling falling_frightened">
+                <div class="page page_falling falling_frightened" data-mood="frightened">
                     <!-- Need 9 animation kicks -->
                     <p>Either the well was very deep or she fell very slowly, for she had plenty of time to look about her on the way down.</p>
                 </div>
-                <div class="page page_falling falling_curious">
+                <div class="page page_falling falling_curious" data-mood="curious">
                     <p>At first it was too dark for her to see anything, but as her eyes adjusted, she could make out what seemed to be cupboards, bookshelves, paintings, lining the walls she was rushing past. </p>
                 </div>
-                <div class="page page_falling falling_bored">
+                <div class="page page_falling falling_bored" data-mood="bored">
                     <p>Down, down, down she fell. Would it never come to an end? She began to wonder how many miles she’d fallen and whether she’d end up at the center of the Earth&mdash;or come out the other side!</p>
                 </div>
-                <div class="page page_falling falling_sleeping">
+                <div class="page page_falling falling_sleeping" data-mood="sleeping">
                     <p>How would she call her sister? What if she didn’t speak the language? What if they couldn’t understand her and put her in an orphanage? She’d never see her sister or her cat again!</p>
                 </div>
-                <div class="page page_falling falling_waking">
+                <div class="page page_falling falling_waking" data-mood="waking">
                     <p>Poor Tuna! Would they remember to clean his litter box or give him his kibble? If only Tuna were with her now. There were no mice to live on in the air, but perhaps he could catch a bat. </p>
                 </div>
                     <!-- *sleep and Tuna* -->
 
                     <!-- Wait 3 seconds or so for the video to end. Then return to the scene -->
-                <div class="page page_falling falling_weird">
-                    <p>Before she could worry too much, her eyes grew heavy and she began to nod off whispering, “Do cats eat bats?” to no one in particular.
+                <div class="page page_falling falling_weird" data-mood="weird">
+                    <p>Before she could worry too much, her eyes grew heavy and she began to nod off whispering, “Do cats eat bats?” to no one in particular.</p>
                 </div>
-                <div class="page page_falling falling_aftermath">
+                <div class="page page_falling falling_aftermath" data-mood="jolted">
                     <p>She must’ve been dreaming, because for a moment she imagined he was there with her, as large as her sister.</p>
                 </div>
-                <div class="page page_falling falling_lookit-cat"></div>
-                <div class="page page_falling falling_cat-reveal"></div>
-                <div class="page page_falling falling_cat-out">
+                <div class="page page_falling falling_lookit-cat" data-mood="jolted"></div>
+                <div class="page page_falling falling_cat-reveal" data-mood="jolted"></div>
+                <div class="page page_falling falling_cat-out" data-mood="jolted">
                     <p>&ldquo;Oh yes, cats eat bats all the time. You wouldn’t happen to be a bat, now would you?&rdquo;</p>
                 </div>
                 <div class="tunnel_bg_wrapper">
@@ -135,6 +135,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="js/skrollr.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

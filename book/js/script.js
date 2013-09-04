@@ -25,6 +25,18 @@ var downTheHole = function() {
 	// reveal the tunnels w/ class
 	$("#tunnels").addClass("cue");
 
+	// calculate the height of the tunnels
+	var tunnelTop = $("#tunnel").offset().top;
+	var tunnelTopData = "data-" + tunnelTop;
+	var tunnelBottomData =  "data-" + (tunnelTop + $("#tunnel").height());
+
+	// Give Falling Alice her skrollr measurements as data attributes
+	$("#tunnel").find(".alice-falling").attr(tunnelTopData, "top:-10%").attr(tunnelBottomData, "top:80%");
+
+	//Start up the skrollr object
+	var s = skrollr.init();
+
+
 	// gently animate down the page
 	var scrolledHeight = $(window).scrollTop(); // current offset from top
 	var windowHeight = $(window).height(); //window's height
@@ -34,9 +46,12 @@ var downTheHole = function() {
 		scrollTop: newOffset // animate new offset to scroll past the tunnels
 	}, 2000, function(){
 		$("#tunnel").addClass("in-view");
+		$.waypoints('refresh');// recalculate the new waypoints
+		
+		//make sure it's set to the correct body class.
+		var mood = $("#tunnel").children(".page").first().data("mood");
+		$("body").removeClass().addClass(mood);
 	});
-
-	// TODO: Add enticing "scroll down" arrow that activates to move down.
 }
 
 // How to guess which frame is "being read".
@@ -47,8 +62,6 @@ var beingRead = function() {
 	var offset = ($pageHeight - $screenHeight) / 2 * -1;
 
 	return offset;
-	// What if the the screen is shorter than the page?
-	// What if we force the pages to always be the same height as the screen?
 }
 
 // To get to #tunnels, activate #tunnels
@@ -76,6 +89,10 @@ $(".page").waypoint(function(direction) {
 	} else { // else, assuming we're not scrolling at all or are scrolling down
  		$(this).addClass("in-view").removeClass("scrolled-past")
  		.waypoint('prev').removeClass("in-view").addClass("scrolled-past");		
+	}
+	if ($(this).parent("#tunnel")){
+		var mood = $(this).data("mood");
+		$("body").removeClass().addClass(mood);		
 	}
 }, {
   offset: beingRead()
@@ -105,6 +122,7 @@ $(".page").waypoint(function(direction) {
 
 
 // Change attitude as you "fall"
+// Add class to body that mirrors the class of the page.
 
 
 // After cut, show wonderland

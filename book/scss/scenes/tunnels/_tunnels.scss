@@ -1,7 +1,10 @@
+@import "alice-fall/*.png";
+$alice-fall-use-percentages: true;
+
 .page.page_tunnels {
 	@include background(image-url("tunnels.svg") no-repeat,
 		image-url("bg_tunnel-specks.png"),
-		#5A4F4A
+		$earth
 		);
 	@include background-size(100% auto, auto auto);
 }
@@ -9,104 +12,107 @@
 // The Tunnel
 
 #tunnel {
-	background: #5A4F4A;
 	position: relative;
-}
-
-.tunnel_bg_wrapper {
-	height: 100%; width: 100%;
-	overflow: hidden;
-	top: 0; left: 0;
-}
-
-@include keyframes(fall) {
-  0% { 
-    @include translate(0, 0);
-  }
-  100% {
-    @include translate(0, -900px);
-  }
-}
-
-.tunnel_bg {
-	@include animation(fall 6s linear infinite);
 	@include background(
 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y,
 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y,
 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y,
-		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png)
+		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png),
+		$earth
 	);
 	background-size: 
 		20px 150px, 
 		20px 150px, 
-		100% 900px,
+		80% auto,
 		auto auto;
-	position: absolute;
-	left: 50%; top: 0;
-	margin-left: -400px;
-	height: 900px; width: 800px;
 }
 
-.tunnel_bg2 {
-  top: 900px;
-}
+// .tunnel_bg_wrapper {
+// 	height: 100%; width: 100%;
+// 	overflow: hidden;
+// 	top: 0; left: 0;
+// }
 
-.tunnel_bg3 {
-  top: 1800px;
-}
+// @include keyframes(fall) {
+//   0% { 
+//     @include translate(0, 0);
+//   }
+//   100% {
+//     @include translate(0, -900px);
+//   }
+// }
+
+// .tunnel_bg {
+// 	@include animation(fall 6s linear infinite);
+// 	@include background(
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y,
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y,
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y,
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png)
+// 	);
+// 	background-size: 
+// 		20px 150px, 
+// 		20px 150px, 
+// 		100% 900px,
+// 		auto auto;
+// 	position: absolute;
+// 	left: 50%; top: 0;
+// 	margin-left: -400px;
+// 	height: 900px; width: 800px;
+// }
+
+// .tunnel_bg2 {
+//   top: 900px;
+// }
+
+// .tunnel_bg3 {
+//   top: 1800px;
+// }
 
 //let Alice and Cheshire hover above
 .page_falling { z-index: -1;}
 
-.falling_frightened {
-	// @include background(image-url("../../storyboard/storyboard7.jpg") no-repeat);
+.curious .alice-falling {
+	@include alice-fall-sprite(curious);
 }
 
-.falling_curious {
-	// @include background(image-url("../../storyboard/storyboard8.jpg") no-repeat);
+.bored .alice-falling {
+	@include alice-fall-sprite(sleepy);
 }
 
-.falling_bored {
-	// @include background(image-url("../../storyboard/storyboard9.jpg") no-repeat);
+.sleeping .alice-falling {
+	@include alice-fall-sprite(sleeping);
 }
 
-.falling_sleeping {
-	// @include background(image-url("../../storyboard/storyboard10.jpg") no-repeat);
+.waking .alice-falling {
+	@include alice-fall-sprite(waking);
 }
 
-.falling_waking {
-	// @include background(image-url("../../storyboard/storyboard11.jpg") no-repeat);
+.weird .alice-falling {
+	@include alice-fall-sprite(awake);
 }
 
-.falling_weird {
-	// @include background(image-url("../../storyboard/storyboard12.jpg") no-repeat);
+.jolted .alice-falling {
+	@include alice-fall-sprite(jolted);
 }
-
-.falling_aftermath {
-	// @include background(image-url("../../storyboard/storyboard13.jpg") no-repeat);
-}
-
-.falling_lookit-cat {
-	// @include background(image-url("../../storyboard/storyboard14.jpg") no-repeat);
-}
-
-.falling_cat-reveal {
-	// @include background(image-url("../../storyboard/storyboard15.jpg") no-repeat);
-}
-
-.falling_cat-out {
-	// @include background(image-url("../../storyboard/storyboard16.jpg") no-repeat);
-}
-
 // Characters
 
-// .alice-falling {
-// 	background: #666;
-// 	width: 200px; height: 200px;
-// 	position: absolute;
-// 	top: 0; left: 50%;
-// 	margin-left: -200px;
-// }
+$frightened-alice: 'alice-frightened';
+@include animation-sequence-sprite-generator($frightened-alice);
+@include animation-sequence-keyframes($frightened-alice, "freak-out");
+
+.frightened .alice-falling {
+	@include animation-sequence($frightened-alice, 1.5s, "freak-out");
+}
+
+#tunnel .alice-falling {
+	@include background-size( 100% auto);
+	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
+	height: 0;
+	position: absolute;
+	top: 0; left: 50%;
+	margin-left: (percentage(640/$max-width) * -.5 );
+}
 
 // .cheshire-cat {
 // 	background: red;
