@@ -42,7 +42,8 @@
 		100% 900px,
 		auto auto;
 	position: absolute;
-	top: 0;
+	left: 50%; top: 0;
+	margin-left: -400px;
 	height: 900px; width: 800px;
 }
 

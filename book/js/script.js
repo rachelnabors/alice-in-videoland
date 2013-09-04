@@ -34,10 +34,6 @@ var downTheHole = function() {
 		scrollTop: newOffset // animate new offset to scroll past the tunnels
 	}, 2000, function(){
 		$("#tunnel").addClass("in-view");
-		// iscroll only
-		setTimeout(function () {
-			myScroll.refresh();
-		}, 0);
 	});
 
 	// TODO: Add enticing "scroll down" arrow that activates to move down.
@@ -60,14 +56,16 @@ $("#to-tunnels").activate(downTheHole);
 
 // play phone SFX when the rabbit appears in full view. 
 $(".page_rabbit-appears").waypoint(function() {
-		if ($(this).hasClass("in-view")){
-			console.log($(this).hasClass("in-view"))
-			var phone = document.getElementById("rabbit-phone");
-			phone.volume = 0.1;
-			setTimeout(function(){
-				phone.play();
-			}, 2000);
-		}
+	if ($(this).hasClass("in-view")){
+		console.log($(this).hasClass("in-view"))
+		var phone = document.getElementById("rabbit-phone");
+		phone.volume = 0.1;
+		setTimeout(function(){
+			phone.play();
+		}, 2000);
+	}
+}, {
+  offset: beingRead()
 });
 
 // all pages get in-view classes while they're centered in the viewport 
