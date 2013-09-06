@@ -533,7 +533,7 @@ html, body {
 }
 
 /* line 4, ../scss/scenes/tunnels/_tunnels.scss */
-.page.page_tunnels {
+.page_tunnels {
   background: url('../img/tunnels.svg?1377638711') no-repeat, url('../img/bg_tunnel-specks.png?1374696235'), #6c373f;
   -webkit-background-size: 100% auto, auto auto;
   -moz-background-size: 100% auto, auto auto;
@@ -548,37 +548,37 @@ html, body {
   background-size: 20px 150px,  20px 150px,  80% auto, auto auto;
 }
 
-/* line 73, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 31, ../scss/scenes/tunnels/_tunnels.scss */
 .page_falling {
   z-index: -1;
 }
 
-/* line 75, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 33, ../scss/scenes/tunnels/_tunnels.scss */
 .curious .alice-falling {
   background-position: 0 20%;
 }
 
-/* line 79, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 37, ../scss/scenes/tunnels/_tunnels.scss */
 .bored .alice-falling {
   background-position: 0 80%;
 }
 
-/* line 83, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 41, ../scss/scenes/tunnels/_tunnels.scss */
 .sleeping .alice-falling {
   background-position: 0 60%;
 }
 
-/* line 87, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 45, ../scss/scenes/tunnels/_tunnels.scss */
 .waking .alice-falling {
   background-position: 0 100%;
 }
 
-/* line 91, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 49, ../scss/scenes/tunnels/_tunnels.scss */
 .weird .alice-falling {
   background-position: 0 0;
 }
 
-/* line 95, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 53, ../scss/scenes/tunnels/_tunnels.scss */
 .jolted .alice-falling {
   background-position: 0 40%;
 }
@@ -636,7 +636,7 @@ html, body {
   }
 }
 
-/* line 104, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 62, ../scss/scenes/tunnels/_tunnels.scss */
 .frightened .alice-falling {
   height: 998px;
   width: 640px;
@@ -646,7 +646,7 @@ html, body {
   animation: freak-out 1.5s steps(2) infinite;
 }
 
-/* line 108, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 66, ../scss/scenes/tunnels/_tunnels.scss */
 #tunnel .alice-falling {
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
@@ -661,8 +661,8 @@ html, body {
   margin-left: -15.625%;
 }
 
-/* line 126, ../scss/scenes/tunnels/_tunnels.scss */
-#tunnel.in-view .alice-falling, #tunnel.in-view .cheshire-cat, #tunnel.in-view .tunnel_bg_wrapper {
+/* line 87, ../scss/scenes/tunnels/_tunnels.scss */
+#tunnel.in-view .alice-falling, #tunnel.in-view .cheshire-cat {
   position: fixed;
 }
 

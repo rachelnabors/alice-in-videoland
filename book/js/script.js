@@ -22,36 +22,40 @@ $.fn.activate = function(runFunc) {
 
 // Reveal the rabbit tunnel and move the page down to #tunnel
 var downTheHole = function() {
+	var $tunnel = $("#tunnel");
+
 	// reveal the tunnels w/ class
 	$("#tunnels").addClass("cue");
 
 	// calculate the height of the tunnels
-	var tunnelTop = $("#tunnel").offset().top;
+	var tunnelTop = Math.round($tunnel.offset().top);
 	var tunnelTopData = "data-" + tunnelTop;
-	var tunnelBottomData =  "data-" + (tunnelTop + $("#tunnel").height());
+	var tunnelBottomData =  "data-" + (tunnelTop + Math.round($tunnel.height()));
 
 	// Give Falling Alice her skrollr measurements as data attributes
-	$("#tunnel").find(".alice-falling").attr(tunnelTopData, "top:-10%").attr(tunnelBottomData, "top:80%");
+	$tunnel.find(".alice-falling").attr(tunnelTopData, "top:-10%").attr(tunnelBottomData, "top:80%");
+
+	//make sure it's set to the correct body class.
+	var mood = $tunnel.find(".page").first().data("mood");
+	$("body").removeClass().addClass(mood);
 
 	//Start up the skrollr object
-	var s = skrollr.init();
+	skrollr.init({
+		forceHeight: false
+	});
 
+	// recalculate the new waypoints since this part was hidden
+	$.waypoints('refresh');
+	$tunnel.addClass("in-view");
 
 	// gently animate down the page
 	var scrolledHeight = $(window).scrollTop(); // current offset from top
 	var windowHeight = $(window).height(); //window's height
-	var tunnelsHeight = $(".page_the-hole").outerHeight(); // all "pages" are the same height...
+	var tunnelsHeight = $("#tunnels").outerHeight(); // all "pages" are the same height...
 	var newOffset = scrolledHeight + tunnelsHeight + windowHeight; 
 	$("html,body").animate({
 		scrollTop: newOffset // animate new offset to scroll past the tunnels
-	}, 2000, function(){
-		$("#tunnel").addClass("in-view");
-		$.waypoints('refresh');// recalculate the new waypoints
-		
-		//make sure it's set to the correct body class.
-		var mood = $("#tunnel").children(".page").first().data("mood");
-		$("body").removeClass().addClass(mood);
-	});
+	}, 20000);
 }
 
 // How to guess which frame is "being read".
@@ -70,7 +74,6 @@ $("#to-tunnels").activate(downTheHole);
 // play phone SFX when the rabbit appears in full view. 
 $(".page_rabbit-appears").waypoint(function() {
 	if ($(this).hasClass("in-view")){
-		console.log($(this).hasClass("in-view"))
 		var phone = document.getElementById("rabbit-phone");
 		phone.volume = 0.1;
 		setTimeout(function(){
@@ -83,13 +86,8 @@ $(".page_rabbit-appears").waypoint(function() {
 
 // all pages get in-view classes while they're centered in the viewport 
 $(".page").waypoint(function(direction) {
-	if (direction === "up") { // if scrolling up
- 		$(this).addClass("in-view").removeClass("scrolled-past")
- 		.waypoint('next').removeClass("in-view");
-	} else { // else, assuming we're not scrolling at all or are scrolling down
- 		$(this).addClass("in-view").removeClass("scrolled-past")
- 		.waypoint('prev').removeClass("in-view").addClass("scrolled-past");		
-	}
+// else, assuming we're not scrolling at all or are scrolling down
+	$(this).addClass("in-view");
 	if ($(this).parent("#tunnel")){
 		var mood = $(this).data("mood");
 		$("body").removeClass().addClass(mood);		

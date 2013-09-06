@@ -1,7 +1,7 @@
 @import "alice-fall/*.png";
 $alice-fall-use-percentages: true;
 
-.page.page_tunnels {
+.page_tunnels {
 	@include background(image-url("tunnels.svg") no-repeat,
 		image-url("bg_tunnel-specks.png"),
 		$earth
@@ -26,48 +26,6 @@ $alice-fall-use-percentages: true;
 		80% auto,
 		auto auto;
 }
-
-// .tunnel_bg_wrapper {
-// 	height: 100%; width: 100%;
-// 	overflow: hidden;
-// 	top: 0; left: 0;
-// }
-
-// @include keyframes(fall) {
-//   0% { 
-//     @include translate(0, 0);
-//   }
-//   100% {
-//     @include translate(0, -900px);
-//   }
-// }
-
-// .tunnel_bg {
-// 	@include animation(fall 6s linear infinite);
-// 	@include background(
-// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y,
-// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y,
-// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y,
-// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png)
-// 	);
-// 	background-size: 
-// 		20px 150px, 
-// 		20px 150px, 
-// 		100% 900px,
-// 		auto auto;
-// 	position: absolute;
-// 	left: 50%; top: 0;
-// 	margin-left: -400px;
-// 	height: 900px; width: 800px;
-// }
-
-// .tunnel_bg2 {
-//   top: 900px;
-// }
-
-// .tunnel_bg3 {
-//   top: 1800px;
-// }
 
 //let Alice and Cheshire hover above
 .page_falling { z-index: -1;}
@@ -122,8 +80,56 @@ $frightened-alice: 'alice-frightened';
 // 	margin-right: -200px; 
 // }
 
-#tunnel.in-view {
-	.alice-falling, .cheshire-cat, .tunnel_bg_wrapper {
-		position: fixed;
+#tunnel {
+	.alice-falling, .cheshire-cat {
+	}
+	&.in-view {
+		.alice-falling, .cheshire-cat {
+			position: fixed;
+		}
 	}
 }
+
+
+
+// .tunnel_bg_wrapper {
+// 	height: 100%; width: 100%;
+// 	overflow: hidden;
+// 	top: 0; left: 0;
+// }
+
+// @include keyframes(fall) {
+//   0% { 
+//     @include translate(0, 0);
+//   }
+//   100% {
+//     @include translate(0, -900px);
+//   }
+// }
+
+// .tunnel_bg {
+// 	@include animation(fall 6s linear infinite);
+// 	@include background(
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y,
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y,
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y,
+// 		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png)
+// 	);
+// 	background-size: 
+// 		20px 150px, 
+// 		20px 150px, 
+// 		100% 900px,
+// 		auto auto;
+// 	position: absolute;
+// 	left: 50%; top: 0;
+// 	margin-left: -400px;
+// 	height: 900px; width: 800px;
+// }
+
+// .tunnel_bg2 {
+//   top: 900px;
+// }
+
+// .tunnel_bg3 {
+//   top: 1800px;
+// }
