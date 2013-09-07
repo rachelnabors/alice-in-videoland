@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <script src="js/prefixfree.min.js"></script>
+
+  <title>CodePen - A Pen by rachelnabors</title>
+
+  <style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+</style>
+
+    <style>
+/* And excerpt from my upcoming Front End Masters Workshop: https://frontendmasters.com/workshops/animated-css3-html5/ */
+#tunnel {
+  position: relative;
+  top: 0; left: 0;
+  background: #6c373f;
+}
+
+.page {
+  /* Each page has a 3/4 ratio */
+  padding-top: 75%;
+  /* Hide the text */
+  text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.alice-falling {
+  background-color: red;
+  width: 31.25%;
+  padding-top: 48.73047%;
+  top: -10%;
+  left: 50%;
+  margin-left: -15.625%;
+  position: fixed;
+  z-index: 20;
+}
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="alice-falling"></div>
+<div id="skrollr-body">
+  <div id="tunnel" class="frightened">
+      <div class="page page_falling falling_frightened" data-mood="frightened">
+          <p>Either the well was very deep or she fell very slowly, for she had plenty of time to look about her on the way down.</p>
+      </div>
+      <div class="page page_falling falling_curious" data-mood="curious">
+          <p>At first it was too dark for her to see anything, but as her eyes adjusted, she could make out what seemed to be cupboards, bookshelves, paintings, lining the walls she was rushing past. </p>
+      </div>
+      <div class="page page_falling falling_bored" data-mood="bored">
+          <p>Down, down, down she fell. Would it never come to an end? She began to wonder how many miles she’d fallen and whether she’d end up at the center of the Earth&mdash;or come out the other side!</p>
+      </div>
+      <div class="page page_falling falling_sleeping" data-mood="sleeping">
+          <p>How would she call her sister? What if she didn’t speak the language? What if they couldn’t understand her and put her in an orphanage? She’d never see her sister or her cat again!</p>
+      </div>
+      <div class="page page_falling falling_waking" data-mood="waking">
+          <p>Poor Tuna! Would they remember to clean his litter box or give him his kibble? If only Tuna were with her now. There were no mice to live on in the air, but perhaps he could catch a bat. </p>
+      </div>
+
+          <!-- Wait 3 seconds or so for the video to end. Then return to the scene -->
+      <div class="page page_falling falling_weird" data-mood="weird">
+          <p>Before she could worry too much, her eyes grew heavy and she began to nod off whispering, “Do cats eat bats?” to no one in particular.</p>
+      </div>
+      <div class="page page_falling falling_aftermath" data-mood="jolted">
+          <p>She must’ve been dreaming, because for a moment she imagined he was there with her, as large as her sister.</p>
+      </div>
+      <div class="page page_falling falling_lookit-cat" data-mood="jolted"></div>
+      <div class="page page_falling falling_cat-reveal" data-mood="jolted"></div>
+      <div class="page page_falling falling_cat-out" data-mood="jolted">
+          <p>&ldquo;Oh yes, cats eat bats all the time. You wouldn’t happen to be a bat, now would you?&rdquo;</p>
+      </div>
+  </div>
+</div><!--/#tunnel-->
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+
+  <script src='http://stash.rachelnabors.com/codepen/alice/jquery.waypoints.min.js'></script>
+  <script src='http://stash.rachelnabors.com/codepen/alice/skrollr.min.js'></script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
