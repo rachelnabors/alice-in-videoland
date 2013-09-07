@@ -1,3 +1,4 @@
+$(window).load(function() {
 /* Alice in Videoland JS! */
 
 var $hole = $("#to-tunnels"),
@@ -125,3 +126,4 @@ $(".page").waypoint(function(direction) {
 
 	// Once you get to the end of the tunnels, cue cut and wonderland behind it
 	// $(".scene-cut, .scene-wonderland").addClass("cue");
+});
