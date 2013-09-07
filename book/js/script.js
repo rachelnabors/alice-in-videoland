@@ -1,61 +1,22 @@
 /* Alice in Videoland JS! */
 
-// To map click events to "touch events", I put together this based on the feedback here: http://stackoverflow.com/questions/7018919/how-to-bind-touchstart-and-click-events-but-not-respond-to-both
+var $hole = $("#to-tunnels"),
+		$tunnels = $("#tunnels"),
+		$tunnel = $("#tunnel");
 
-$.fn.activate = function(runFunc) {
-
-	$(this).on('touchend', function(e){
-		$(this).addClass("touched");
-		runFunc();
-		e.preventDefault();
-	});
-
-	$(this).on('click', function(e){
-		if (!($(this).hasClass('touched'))) {
-			runFunc();
-			e.preventDefault();
-			e.stopPropagation();
-		};
-	});
-
-}
-
-// Reveal the rabbit tunnel and move the page down to #tunnel
+// Reveal the rabbit tunnel
 var downTheHole = function() {
-	var $tunnel = $("#tunnel");
 
 	// reveal the tunnels w/ class
-	$("#tunnels").addClass("cue");
-
-	// calculate the height of the tunnels
-	var tunnelTop = Math.round($tunnel.offset().top);
-	var tunnelTopData = "data-" + tunnelTop;
-	var tunnelBottomData =  "data-" + (tunnelTop + Math.round($tunnel.height()));
-
-	// Give Falling Alice her skrollr measurements as data attributes
-	$tunnel.find(".alice-falling").attr(tunnelTopData, "top:-10%").attr(tunnelBottomData, "top:80%");
-
-	//make sure it's set to the correct body class.
-	var mood = $tunnel.find(".page").first().data("mood");
-	$("body").removeClass().addClass(mood);
-
-	//Start up the skrollr object
-	skrollr.init({
-		forceHeight: false
-	});
+	$tunnels.addClass("cue");
 
 	// recalculate the new waypoints since this part was hidden
-	$.waypoints('refresh');
+	$('.page').waypoint('disable');
+	$.waypoints('refresh'); //refreshing recalculates where the waypoints are, but it also fires all their callbacks! 
+	$('.page').waypoint('enable');
+
 	$tunnel.addClass("in-view");
 
-	// gently animate down the page
-	var scrolledHeight = $(window).scrollTop(); // current offset from top
-	var windowHeight = $(window).height(); //window's height
-	var tunnelsHeight = $("#tunnels").outerHeight(); // all "pages" are the same height...
-	var newOffset = scrolledHeight + tunnelsHeight + windowHeight; 
-	$("html,body").animate({
-		scrollTop: newOffset // animate new offset to scroll past the tunnels
-	}, 20000);
 }
 
 // How to guess which frame is "being read".
@@ -68,8 +29,65 @@ var beingRead = function() {
 	return offset;
 }
 
-// To get to #tunnels, activate #tunnels
-$("#to-tunnels").activate(downTheHole);
+var gentleScroll = function(duration, scrollPast) {
+		// gently animate down the page
+		var scrolledHeight = $(window).scrollTop(); // current offset from top
+		var windowHeight = $(window).height(); //window's height
+		if (scrollPast) {
+			var scrollPastHeight = $(scrollPast).outerHeight(); // all "pages" are the same height...
+			var newOffset = scrolledHeight + scrollPastHeight + windowHeight; 
+		} else {
+			var newOffset = scrolledHeight + windowHeight; 			
+		}
+		$("html,body").animate({
+			scrollTop: newOffset // animate new offset to scroll past the tunnels
+		}, duration, function(){
+			//make sure it's set to the correct body class.
+			var mood = $tunnel.find(".page").first().data("mood");
+			$("body").removeClass().addClass(mood);
+		});
+}
+
+// For people touching the screen
+$hole.on('touchend', function(e){
+	$(this).addClass("touched");
+	
+	$(".alice-falling").addClass("touched");
+
+	downTheHole();
+
+	gentleScroll(20000, $tunnels);
+
+	e.preventDefault();
+});
+
+// For people using mice
+$hole.on('click', function(e){
+	if (!($(this).hasClass('touched'))) {
+		//make Alice sticky
+		$(".alice-falling").waypoint('sticky');
+
+		downTheHole();
+
+		// calculate the height of the tunnels
+		var tunnelTop = Math.round($tunnel.offset().top);
+		var tunnelTopData = "data-" + tunnelTop;
+		var tunnelBottomData =  "data-" + (tunnelTop + Math.round($tunnel.height()));
+
+		// Give Falling Alice her skrollr measurements as data attributes
+		$tunnel.find(".alice-falling").attr(tunnelTopData, "top:0%").attr(tunnelBottomData, "top:80%");
+		
+		//Start up the skrollr object
+		skrollr.init({
+			forceHeight: false
+		});
+
+		gentleScroll(2000);
+		
+		e.preventDefault();
+		e.stopPropagation();
+	};
+});
 
 // play phone SFX when the rabbit appears in full view. 
 $(".page_rabbit-appears").waypoint(function() {
@@ -84,44 +102,26 @@ $(".page_rabbit-appears").waypoint(function() {
   offset: beingRead()
 });
 
+
 // all pages get in-view classes while they're centered in the viewport 
 $(".page").waypoint(function(direction) {
-// else, assuming we're not scrolling at all or are scrolling down
 	$(this).addClass("in-view");
+
+	// Change attitude as you "fall"
 	if ($(this).parent("#tunnel")){
 		var mood = $(this).data("mood");
 		$("body").removeClass().addClass(mood);		
 	}
 }, {
-  offset: beingRead()
+  offset: beingRead() //makes sure the frame is centered before adding class
 });
 
-// $('.page').waypoint(function() {
-//   $(this).removeClass("in-view").addClass("scrolled-past");
-// }, {
-//   offset: function() {
-//     return -$(this).height();
-//   }
-// });
 
-// // when in tunnels, give them a class of in-view. 
-// $("#tunnel").waypoint(function(direction) {
-// 	$("#tunnel").addClass("in-view");
-// 	// when scrolled past, give the tunnels a class of scrolled-past so you can stop the animation and dump the characters at the bottom
+	// Have Tuna float up
 
-// 	// Once you get to the end of the tunnels, cue cut and wonderland behind it
-// 	$(".scene-cut, .scene-wonderland").addClass("cue");
-// 		// pull crash scene under cut
-// 		var scrolledHeight = $(window).scrollTop(); // current offset from top
-// 		var windowHeight = $(window).height(); //window's height
-// 		var newOffset = scrolledHeight + windowHeight; 
-// 		$("html,body").scrollTop(newOffset);
-// });
+	// Add Tuna craziness
 
+	// Have Tuna float away
 
-// Change attitude as you "fall"
-// Add class to body that mirrors the class of the page.
-
-
-// After cut, show wonderland
-// Roll credits
+	// Once you get to the end of the tunnels, cue cut and wonderland behind it
+	// $(".scene-cut, .scene-wonderland").addClass("cue");

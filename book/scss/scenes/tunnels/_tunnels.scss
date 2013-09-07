@@ -67,28 +67,28 @@ $frightened-alice: 'alice-frightened';
 	@include background-size( 100% auto);
 	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
 	height: 0;
-	position: absolute;
-	top: 0; left: 50%;
+	left: 50%;
 	margin-left: (percentage(640/$max-width) * -.5 );
 }
 
-// .cheshire-cat {
-// 	background: red;
-// 	width: 100px; height: 50px;
-// 	position: absolute;
-// 	bottom: 0; right: 50%;
-// 	margin-right: -200px; 
-// }
-
-#tunnel {
-	.alice-falling, .cheshire-cat {
-	}
-	&.in-view {
-		.alice-falling, .cheshire-cat {
-			position: fixed;
-		}
-	}
+.alice-falling { 
+	position: absolute; 
+	top: 100%; 
 }
+
+.touched.alice-falling {
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	top: 30%; left: 10%;
+}
+
+.stuck.alice-falling {
+	position: fixed;
+}
+
+
 
 
 

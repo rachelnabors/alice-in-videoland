@@ -655,14 +655,28 @@ html, body {
   width: 31.25%;
   padding-top: 48.73047%;
   height: 0;
-  position: absolute;
-  top: 0;
   left: 50%;
   margin-left: -15.625%;
 }
 
+/* line 74, ../scss/scenes/tunnels/_tunnels.scss */
+.alice-falling {
+  position: absolute;
+  top: 100%;
+}
+
+/* line 79, ../scss/scenes/tunnels/_tunnels.scss */
+.touched.alice-falling {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  top: 30%;
+  left: 10%;
+}
+
 /* line 87, ../scss/scenes/tunnels/_tunnels.scss */
-#tunnel.in-view .alice-falling, #tunnel.in-view .cheshire-cat {
+.stuck.alice-falling {
   position: fixed;
 }
 
