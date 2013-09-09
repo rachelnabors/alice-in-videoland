@@ -527,25 +527,38 @@ html, body {
 }
 
 /* line 87, alice-fall/*.png */
-.alice-fall-sprite, .curious .alice-falling, .bored .alice-falling, .sleeping .alice-falling, .waking .alice-falling, .weird .alice-falling, .jolted .alice-falling {
+.alice-fall-sprite {
   background-image: url('../img/alice-fall-saebaba4ad9.png');
   background-repeat: no-repeat;
 }
 
 /* line 4, ../scss/scenes/tunnels/_tunnels.scss */
-.page_tunnels {
-  background: url('../img/tunnels.svg?1377638711') no-repeat, url('../img/bg_tunnel-specks.png?1374696235'), #6c373f;
-  -webkit-background-size: 100% auto, auto auto;
-  -moz-background-size: 100% auto, auto auto;
-  -o-background-size: 100% auto, auto auto;
-  background-size: 100% auto, auto auto;
+.scene-hole {
+  background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+  -webkit-background-size: 4.88281% auto, 4.88281% auto, auto auto;
+  -moz-background-size: 4.88281% auto, 4.88281% auto, auto auto;
+  -o-background-size: 4.88281% auto, 4.88281% auto, auto auto;
+  background-size: 4.88281% auto, 4.88281% auto, auto auto;
 }
 
-/* line 14, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 16, ../scss/scenes/tunnels/_tunnels.scss */
+.scene .page_tunnels {
+  background: url('../img/tunnels.svg?1378752484') no-repeat;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  padding-top: 48.82813%;
+}
+
+/* line 24, ../scss/scenes/tunnels/_tunnels.scss */
 #tunnel {
   position: relative;
-  background: url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y, url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png), #6c373f;
-  background-size: 20px 150px,  20px 150px,  80% auto, auto auto;
+  background: url('../img/bg-tunnel-furniture.svg?1378753027') center 0 repeat-y;
+  -webkit-background-size: 87.89063% auto;
+  -moz-background-size: 87.89063% auto;
+  -o-background-size: 87.89063% auto;
+  background-size: 87.89063% auto;
 }
 
 /* line 31, ../scss/scenes/tunnels/_tunnels.scss */
@@ -553,38 +566,8 @@ html, body {
   z-index: -1;
 }
 
-/* line 33, ../scss/scenes/tunnels/_tunnels.scss */
-.curious .alice-falling {
-  background-position: 0 20%;
-}
-
-/* line 37, ../scss/scenes/tunnels/_tunnels.scss */
-.bored .alice-falling {
-  background-position: 0 80%;
-}
-
-/* line 41, ../scss/scenes/tunnels/_tunnels.scss */
-.sleeping .alice-falling {
-  background-position: 0 60%;
-}
-
-/* line 45, ../scss/scenes/tunnels/_tunnels.scss */
-.waking .alice-falling {
-  background-position: 0 100%;
-}
-
-/* line 49, ../scss/scenes/tunnels/_tunnels.scss */
-.weird .alice-falling {
-  background-position: 0 0;
-}
-
-/* line 53, ../scss/scenes/tunnels/_tunnels.scss */
-.jolted .alice-falling {
-  background-position: 0 40%;
-}
-
 /* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
-.frightened .alice-falling {
+#tunnel .alice-falling {
   background: url('../img/alice-frightened-s41f9b8ddd1.png') 0 0 no-repeat;
 }
 
@@ -636,18 +619,14 @@ html, body {
   }
 }
 
-/* line 62, ../scss/scenes/tunnels/_tunnels.scss */
-.frightened .alice-falling {
+/* line 64, ../scss/scenes/tunnels/_tunnels.scss */
+#tunnel .alice-falling {
   height: 998px;
   width: 640px;
   -webkit-animation: freak-out 1.5s steps(2) infinite;
   -moz-animation: freak-out 1.5s steps(2) infinite;
   -o-animation: freak-out 1.5s steps(2) infinite;
   animation: freak-out 1.5s steps(2) infinite;
-}
-
-/* line 66, ../scss/scenes/tunnels/_tunnels.scss */
-#tunnel .alice-falling {
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
@@ -659,25 +638,16 @@ html, body {
   margin-left: -15.625%;
 }
 
-/* line 74, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 73, ../scss/scenes/tunnels/_tunnels.scss */
 .alice-falling {
   position: absolute;
-  top: 100%;
+  top: 0;
 }
 
-/* line 79, ../scss/scenes/tunnels/_tunnels.scss */
-.touched.alice-falling {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  top: 30%;
-  left: 10%;
-}
-
-/* line 87, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 78, ../scss/scenes/tunnels/_tunnels.scss */
 .stuck.alice-falling {
   position: fixed;
+  top: 0;
 }
 
 /* line 2, ../scss/scenes/_cut.scss */

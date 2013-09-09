@@ -1,69 +1,68 @@
 @import "alice-fall/*.png";
 $alice-fall-use-percentages: true;
 
-.page_tunnels {
-	@include background(image-url("tunnels.svg") no-repeat,
-		image-url("bg_tunnel-specks.png"),
-		$earth
-		);
-	@include background-size(100% auto, auto auto);
+.scene-hole {
+	@include background(
+		image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
+		image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
+		image-url("bg_tunnel-specks.png") repeat,
+		$earth);
+	@include background-size(
+		percentage(100/$max-width) auto, 
+		percentage(100/$max-width) auto, 
+		auto auto);
+}
+
+.scene .page_tunnels { //.scene for specificity
+	@include background(image-url("tunnels.svg") no-repeat);
+	@include background-size(100% auto);
+	padding-top: percentage(1000/$max-width);
 }
 
 // The Tunnel
 
 #tunnel {
 	position: relative;
-	@include background(
-		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-left.svg?1) 0 0 repeat-y,
-		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-border-right.svg?1) 100% 0 repeat-y,
-		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-furniture-comp900.svg) top center repeat-y,
-		url(http://stash.rachelnabors.com/codepen/alice/bg-tunnel-specks.png),
-		$earth
-	);
-	background-size: 
-		20px 150px, 
-		20px 150px, 
-		80% auto,
-		auto auto;
+	@include background(image-url("bg-tunnel-furniture.svg") center 0 repeat-y);
+	@include background-size(percentage(1800/$max-width) auto);
 }
 
 //let Alice and Cheshire hover above
 .page_falling { z-index: -1;}
 
-.curious .alice-falling {
-	@include alice-fall-sprite(curious);
-}
+//for use in a later exploit! When I can change her class with the scrolling
 
-.bored .alice-falling {
-	@include alice-fall-sprite(sleepy);
-}
+// .curious .alice-falling {
+// 	@include alice-fall-sprite(curious);
+// }
 
-.sleeping .alice-falling {
-	@include alice-fall-sprite(sleeping);
-}
+// .bored .alice-falling {
+// 	@include alice-fall-sprite(sleepy);
+// }
 
-.waking .alice-falling {
-	@include alice-fall-sprite(waking);
-}
+// .sleeping .alice-falling {
+// 	@include alice-fall-sprite(sleeping);
+// }
 
-.weird .alice-falling {
-	@include alice-fall-sprite(awake);
-}
+// .waking .alice-falling {
+// 	@include alice-fall-sprite(waking);
+// }
 
-.jolted .alice-falling {
-	@include alice-fall-sprite(jolted);
-}
+// .weird .alice-falling {
+// 	@include alice-fall-sprite(awake);
+// }
+
+// .jolted .alice-falling {
+// 	@include alice-fall-sprite(jolted);
+// }
 // Characters
 
 $frightened-alice: 'alice-frightened';
 @include animation-sequence-sprite-generator($frightened-alice);
 @include animation-sequence-keyframes($frightened-alice, "freak-out");
 
-.frightened .alice-falling {
-	@include animation-sequence($frightened-alice, 1.5s, "freak-out");
-}
-
 #tunnel .alice-falling {
+	@include animation-sequence($frightened-alice, 1.5s, "freak-out");
 	@include background-size( 100% auto);
 	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
 	height: 0;
@@ -73,19 +72,12 @@ $frightened-alice: 'alice-frightened';
 
 .alice-falling { 
 	position: absolute; 
-	top: 100%; 
-}
-
-.touched.alice-falling {
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
-	top: 30%; left: 10%;
+	top: 0; 
 }
 
 .stuck.alice-falling {
 	position: fixed;
+	top: 0;
 }
 
 
