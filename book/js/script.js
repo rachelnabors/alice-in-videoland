@@ -3,7 +3,8 @@
 $(window).load(function() {
 
 var $tunnels = $("#tunnels"),
-		$tunnel = $("#tunnel");
+		$tunnel = $("#tunnel"),
+ 	  $screenHeight = $.waypoints('viewportHeight');
 
 	// Rodney Rehm's improved method for mapping click and touch: https://gist.github.com/rodneyrehm/6464641
   function touch(event) {
@@ -51,14 +52,28 @@ var $tunnels = $("#tunnels"),
 		$tunnel.addClass("in-view");
 
 		// gently animate down the page
-		var scrolledHeight = $(window).scrollTop(); // current offset from top
-		var windowHeight = $(window).height(); //window's height
+		var parkHeight = $(".scene-park").outerHeight();
 		var tunnelsHeight = $(".page_tunnels").outerHeight(); // all "pages" are the same height...
-		var newOffset = scrolledHeight + tunnelsHeight + windowHeight; 
+		var newOffset = parkHeight + tunnelsHeight;
 		$("html,body").animate({
 			scrollTop: newOffset // animate new offset to scroll past the tunnels
 		}, 4000, function(){
-		
+			$(".scene-hole").waypoint(function(direction) {
+			  if (direction==="down") {
+					// gently animate down the page
+					var tunnelHeight = $tunnel.height(); // current offset from top
+					var newOffset2 = tunnelHeight + newOffset; 
+			  	$(this).next(".scene").addClass("cue");
+			  	$(".scene-wonderland").delay(2000).addClass("cue");
+			  	$("html,body").delay(2000).animate({
+						scrollTop: newOffset2
+					}, 3000);
+				}
+			}, {
+			  offset: function() {
+			    return -($tunnels.height() - $screenHeight);
+			  }
+			});
 			//Start up the skrollr object
 			skrollr.init({
 				forceHeight: false,

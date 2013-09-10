@@ -654,10 +654,10 @@ html, body {
 .scene-cut {
   background: #000;
   height: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 50%;
-  margin-left: -400px;
+  left: 0;
   -webkit-transition: opacity 2s ease-out;
   -webkit-transition-delay: 2s;
   -moz-transition: opacity 2s ease-out 2s;
@@ -665,77 +665,105 @@ html, body {
   transition: opacity 2s ease-out 2s;
   z-index: 10;
 }
-/* line 10, ../scss/scenes/_cut.scss */
+/* line 9, ../scss/scenes/_cut.scss */
 .scene-cut.cue {
-  -webkit-animation: fadeOutFromNone 2s forwards;
-  -moz-animation: fadeOutFromNone 2s forwards;
-  -o-animation: fadeOutFromNone 2s forwards;
-  animation: fadeOutFromNone 2s forwards;
+  -webkit-animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
+  -moz-animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
+  -o-animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
+  animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
 }
 
-@-moz-keyframes fadeOutFromNone {
+@-moz-keyframes fadeToBlack {
+  /* line 17, ../scss/scenes/_cut.scss */
+  0% {
+    opacity: 0;
+  }
+
   /* line 18, ../scss/scenes/_cut.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeToBlack {
+  /* line 17, ../scss/scenes/_cut.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 18, ../scss/scenes/_cut.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeToBlack {
+  /* line 17, ../scss/scenes/_cut.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 18, ../scss/scenes/_cut.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeToBlack {
+  /* line 17, ../scss/scenes/_cut.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 18, ../scss/scenes/_cut.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromBlack {
+  /* line 25, ../scss/scenes/_cut.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 19, ../scss/scenes/_cut.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 20, ../scss/scenes/_cut.scss */
+  /* line 26, ../scss/scenes/_cut.scss */
   100% {
     opacity: 0;
   }
 }
 
-@-webkit-keyframes fadeOutFromNone {
-  /* line 18, ../scss/scenes/_cut.scss */
+@-webkit-keyframes fadeInFromBlack {
+  /* line 25, ../scss/scenes/_cut.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 19, ../scss/scenes/_cut.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 20, ../scss/scenes/_cut.scss */
+  /* line 26, ../scss/scenes/_cut.scss */
   100% {
     opacity: 0;
   }
 }
 
-@-o-keyframes fadeOutFromNone {
-  /* line 18, ../scss/scenes/_cut.scss */
+@-o-keyframes fadeInFromBlack {
+  /* line 25, ../scss/scenes/_cut.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 19, ../scss/scenes/_cut.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 20, ../scss/scenes/_cut.scss */
+  /* line 26, ../scss/scenes/_cut.scss */
   100% {
     opacity: 0;
   }
 }
 
-@keyframes fadeOutFromNone {
-  /* line 18, ../scss/scenes/_cut.scss */
+@keyframes fadeInFromBlack {
+  /* line 25, ../scss/scenes/_cut.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 19, ../scss/scenes/_cut.scss */
-  1% {
-    opacity: 1;
-  }
-
-  /* line 20, ../scss/scenes/_cut.scss */
+  /* line 26, ../scss/scenes/_cut.scss */
   100% {
     opacity: 0;
   }
@@ -743,7 +771,7 @@ html, body {
 
 /* line 2, ../scss/scenes/wonderland/_wonderland.scss */
 .page_crash-landing {
-  background: url('../img/../../storyboard/storyboard18.jpg?1375563055') no-repeat;
+  background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
 }
 
 /* line 6, ../scss/scenes/wonderland/_wonderland.scss */
