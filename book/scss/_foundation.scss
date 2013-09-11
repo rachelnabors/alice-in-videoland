@@ -4,6 +4,6 @@ html, body {
 }
 
 //p:not(.caption) { revisit if you want to make a more storybook version
-p {
+.page > p {
 	@extend %visuallyhidden;
 }

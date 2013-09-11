@@ -18,3 +18,5 @@
 	@include background-size( 100% auto);
 	@include background-origin( padding-box);
 }
+
+.cue {	@extend %imgreplace;}

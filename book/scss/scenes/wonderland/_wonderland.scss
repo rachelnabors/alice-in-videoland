@@ -1,8 +1,23 @@
+@import "credits/*.png";
+$credits-use-percentages: true;
 
 .page_crash-landing {
 	@include background(image-url("bg_wonderland1.jpg") no-repeat);
 }
 
-.page_credits {
-	@include background(image-url("../../storyboard/storyboard19.jpg") no-repeat);
+.scene-wonderland .page_credits { // .scene for specificity
+	@include background(#a22882 image-url("pat_argyle.svg"));
+	@include background-size(25%, auto);
+	.alice {
+		@include credits-sprite(credits-alice);
+		position: absolute;
+		left: -20%; top: 20%;
+		width: percentage(769/$max-width); padding-top: percentage(996/$max-width);
+	}
+	.rabbit {
+		@include credits-sprite(credits-rabbit);
+		position: absolute;
+		right: -20%; top: 20%;
+		width: percentage(816/$max-width); padding-top: percentage(900/$max-width);
+	}
 }

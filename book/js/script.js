@@ -59,16 +59,18 @@ var $tunnels = $("#tunnels"),
 			scrollTop: newOffset // animate new offset to scroll past the tunnels
 		}, 4000, function(){
 			$(".scene-hole").waypoint(function(direction) {
-			  if (direction==="down") {
-					// gently animate down the page
-					var tunnelHeight = $tunnel.height(); // current offset from top
-					var newOffset2 = tunnelHeight + newOffset; 
-			  	$(this).next(".scene").addClass("cue");
-			  	$(".scene-wonderland").delay(2000).addClass("cue");
-			  	$("html,body").delay(2000).animate({
-						scrollTop: newOffset2
-					}, 3000);
-				}
+				// Disable waypoint so people can scroll up if they want to.
+				$(".scene-hole").waypoint('disable');
+				// gently animate down the page
+				var tunnelHeight = $tunnel.height(); // current offset from top
+				var newOffset2 = tunnelHeight + newOffset; 
+		  	$(this).next(".scene").addClass("cue");
+		  	window.setTimeout(function(){
+		  		$(".scene-wonderland").addClass("cue");
+		  	}, 2000);
+		  	$("html,body").delay(2000).animate({
+					scrollTop: newOffset2
+				}, 3000);
 			}, {
 			  offset: function() {
 			    return -($tunnels.height() - $screenHeight);

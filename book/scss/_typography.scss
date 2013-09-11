@@ -1,0 +1,73 @@
+// Think my typography is nice? Here's a tutuorial: http://atendesigngroup.com/blog/vertical-rhythm-compass
+
+@import "compass/typography/vertical_rhythm";
+ 
+$base-font-size: 18px;
+$base-line-height: 24px;
+
+// Typography
+$font-fancy: "blue-goblet-alt";
+$font-fancy-bold: "700";
+
+$font-slab: "hellenic-wide";
+
+$font-copy: "nueva-std-extended";
+$font-copy-weight: "300";
+
+@include establish-baseline;
+
+body {
+	color: $wonderland-purple;
+	font-family: $font-copy;
+	font-weight: $font-copy-weight;
+}
+
+.continued {
+	@include box-sizing(border-box);
+	background: $wonderland-pink;
+	position: absolute;
+	text-indent: 0;
+	top: 10%;
+	left: 50%; margin-left: -40%;
+	padding: rhythm(2);
+	white-space: normal;
+	width: 80%;
+	h2 {
+		font-family: $font-slab;
+		margin-bottom: 1em;
+		@include adjust-font-size-to(42px);
+	}
+	ul li {
+		padding-left: rhythm(1);
+		margin-bottom: rhythm(1);
+	}
+	blockquote {
+		font-family: $font-fancy;
+		@include adjust-font-size-to(27px);
+		margin-bottom: rhythm(1, 27px);
+	}
+	a:link, a:visited, a:hover, a:active {
+		color: #64044b;
+		padding: .1em .1em .05em;
+		text-decoration: none;
+		border-bottom: dotted 1px #64044b;
+	}
+	a:hover, a:active {
+		color: #ffeef4;
+		background: darken($wonderland-pink, 10%);
+		border: 0;
+	}
+	.author {
+		background: $wonderland-purple;
+		color: $wonderland-pink;
+		font-family: $font-fancy;
+		letter-spacing: .05em;
+		@include adjust-font-size-to(27px);
+		width: 40%;
+		padding: rhythm(1);
+		@include rotate(12deg);
+		position: absolute;
+		bottom: -(rhythm(6)); right: rhythm(2);
+	}
+}
+
