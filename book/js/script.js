@@ -1,6 +1,26 @@
 /* Alice in Videoland JS! */
 
+// First and foremost, get that loader in place.
+var loadingSaucer= '<div id="loader"><svg version="1.1" id="brew" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="266px" height="25px" viewBox="0 0 266 25" enable-background="new 0 0 266 25" xml:space="preserve"><ellipse fill="#903741" cx="133" cy="12.5" rx="133" ry="12.5"/></svg><p>Please wait while we load</p></div><div class="saucer"></div>';
+$(".loading-card").append(loadingSaucer);
+
 $(window).load(function() {
+
+  setTimeout(function(){ 
+    // change state to loaded
+    $("body").addClass("loaded").removeClass("loading");
+    
+    // Show park scene.
+    $(".scene-park").addClass("cue");
+    
+    // all pages get in-view classes while they're centered in the viewport 
+		$(".scene-park .page").waypoint(function() {
+			$(this).addClass("in-view");
+		}, {
+		  offset: beingRead()
+		});
+  }, 5000); //gotta wait a lil' bit
+
 
 var $tunnels = $("#tunnels"),
 		$tunnel = $("#tunnel"),
@@ -52,25 +72,20 @@ var $tunnels = $("#tunnels"),
 		$tunnel.addClass("in-view");
 
 		// gently animate down the page
-		var parkHeight = $(".scene-park").outerHeight();
-		var tunnelsHeight = $(".page_tunnels").outerHeight(); // all "pages" are the same height...
-		var newOffset = parkHeight + tunnelsHeight;
 		$("html,body").animate({
-			scrollTop: newOffset // animate new offset to scroll past the tunnels
+			scrollTop: $("#tunnel").offset().top // animate new offset to scroll past the tunnels
 		}, 4000, function(){
 			$(".scene-hole").waypoint(function(direction) {
 				// Disable waypoint so people can scroll up if they want to.
 				$(".scene-hole").waypoint('disable');
 				// gently animate down the page
-				var tunnelHeight = $tunnel.height(); // current offset from top
-				var newOffset2 = tunnelHeight + newOffset; 
 		  	$(this).next(".scene").addClass("cue");
 		  	window.setTimeout(function(){
 		  		$(".scene-wonderland").addClass("cue");
+			  	$("html,body").animate({
+						scrollTop: $(".scene-wonderland").offset().top
+					}, 2500);
 		  	}, 2000);
-		  	$("html,body").delay(2000).animate({
-					scrollTop: newOffset2
-				}, 3000);
 			}, {
 			  offset: function() {
 			    return -($tunnels.height() - $screenHeight);
@@ -111,13 +126,4 @@ var $tunnels = $("#tunnels"),
 		}
 	});
 
-	// all pages get in-view classes while they're centered in the viewport 
-	$(".page").waypoint(function() {
-		$(this).addClass("in-view");
-	}, {
-	  offset: beingRead()
-	});
-
-	// After cut, show wonderland
-	// Roll credits
 });

@@ -1,5 +1,5 @@
 // all but the park start hidden. 
-.scene:not(.scene-park) {
+.scene:not(.loading) {
 	@extend %hidden;
 }
 

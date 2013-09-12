@@ -1,1 +1,11 @@
 // For the Park Scene
+
+// It's opacity is 0 onload
+.loaded .scene-park {
+	opacity: 0;
+}
+
+.scene-park.cue {
+	opacity: 1;
+	@include transition(opacity 3s 2s);
+}

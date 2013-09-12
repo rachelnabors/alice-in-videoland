@@ -1,3 +1,136 @@
-.loading {
-	@extend %hidden;
+.loading-card {
+	@include background(#a22882 image-url("pat_argyle.svg") repeat);
+	background-size: 25% auto;
+	@extend %imgreplace;
+	padding-top: 75%; //maintain a 3 to 4 ratio 
+	position: fixed;
+	@include background-origin( padding-box);
+	width: 100%;
+	z-index: 20;
+	text-indent: 0;
+	text-align: center;
+	white-space: normal;
+}
+
+.loaded .loading-card {
+	padding-top: 0;
+	@include transition(padding-top 2s ease-in 4s);
+}
+
+h1 {
+	background: #a22882;
+	@include box-sizing(border-box);
+	color: #431236;
+	font-family: $font-slab;
+	@include adjust-font-size-to(36px);
+	padding: 1em 1em .5em;
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+.byline {
+	background: #20b3aa;
+	@include box-sizing(border-box);
+	color: #00232b;
+	font-size: 16px;
+	position: absolute;
+	bottom: 0;
+	font-family: $font-copy;
+	font-weight: 400;
+	padding: .5em;
+	width: 100%;
+	z-index: 3;
+}
+
+#loader {
+	@include animation(cup-drop 1.5s cubic-bezier(.11,1.06,.21,.99) 1.5s forwards);
+	@include background(image-url("teacup.svg") 0 0 no-repeat);
+	@include background-size(100% 100%);
+	width: percentage(440/$max-width); padding-top: percentage(326/$max-width);
+	position: absolute;
+	top: -100%; left: 50%;
+	margin-left: -9%;
+	z-index: 2;
+	@include transform(scale3d(1,1,1));
+}
+
+#loader p {
+	font-family: "blue-goblet-alt",fantasy;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 24px;
+	position: absolute;
+	top: 40%; left: 8%;
+	width: 60%;
+}
+
+.saucer {
+	@include animation(saucer-drop 3s cubic-bezier(.11,1.06,.87,1.06) 2s forwards);
+	@include background(image-url("saucer.svg") 0 0 no-repeat);
+	@include background-size(auto 100%);
+	width: percentage(520/$max-width); padding-top: percentage(140/$max-width);
+	position: absolute;
+	top: -100%; left: 50%;
+	margin-left: -13.5%;
+	z-index: 1;
+}
+
+.loaded .saucer {
+	@include animation(saucer-done 1s .5s forwards);
+	top: 62%;
+}
+
+.loaded #loader {
+	@include animation(cup-done 1s cubic-bezier(1,1.18,.30,-0.19) 1s forwards);
+	top: 45%;
+}
+
+#brew {
+	@include animation(pour-tea 5s 1 3s forwards);
+	position: absolute;
+	bottom: 78%; left: 50%;
+	margin-left: -52%;
+	width: 80%; height: percentage(140/$max-width);
+	@include transform-origin(50%, 50%);
+}
+
+@include keyframes(pour-tea) {
+  100% {
+    @include scale(1.3, 1.75);
+    bottom: 83%;
+  }
+}
+
+@include keyframes(cup-drop) {
+  100% {
+    top: 45%;
+  }
+}
+
+@include keyframes(saucer-drop) {
+  100% {
+    top: 62%;
+    @include rotate(360deg);
+  }
+}
+
+@include keyframes(saucer-done) {
+  100% {
+    top: 100%;
+  }
+}
+
+@include keyframes(cup-done) {
+	15% {
+		@include rotate(7deg);
+	}
+	65% {
+		@include rotate(-11deg);
+	}
+	100% {
+		@include rotate(0deg);
+		top: 100%;
+	}
 }
