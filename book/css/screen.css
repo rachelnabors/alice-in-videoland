@@ -704,8 +704,8 @@ h1 {
 .cssanimations .page_rabbit-appears .rabbit {
   left: -50%;
 }
-/* line 26, ../scss/scenes/park/_page-rabbit-appears.scss */
-.page_rabbit-appears.in-view .rabbit {
+/* line 27, ../scss/scenes/park/_page-rabbit-appears.scss */
+.cssanimations .page_rabbit-appears.in-view .rabbit {
   left: 200%;
   -webkit-transition: left 5s ease-in;
   -moz-transition: left 5s ease-in;
@@ -714,48 +714,48 @@ h1 {
 }
 
 @-moz-keyframes scene-blink {
-  /* line 34, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-webkit-keyframes scene-blink {
-  /* line 34, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-o-keyframes scene-blink {
-  /* line 34, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @keyframes scene-blink {
-  /* line 34, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
@@ -984,7 +984,7 @@ h1 {
 }
 
 /* line 87, alice-fall/*.png */
-.alice-fall-sprite {
+.alice-fall-sprite, .curious .alice-falling, .bored .alice-falling, .sleeping .alice-falling, .waking .alice-falling, .weird .alice-falling, .jolted .alice-falling {
   background-image: url('../img/alice-fall-saebaba4ad9.png');
   background-repeat: no-repeat;
 }
@@ -1023,8 +1023,38 @@ h1 {
   z-index: -1;
 }
 
+/* line 33, ../scss/scenes/tunnels/_tunnels.scss */
+.curious .alice-falling {
+  background-position: 0 20%;
+}
+
+/* line 37, ../scss/scenes/tunnels/_tunnels.scss */
+.bored .alice-falling {
+  background-position: 0 80%;
+}
+
+/* line 41, ../scss/scenes/tunnels/_tunnels.scss */
+.sleeping .alice-falling {
+  background-position: 0 60%;
+}
+
+/* line 45, ../scss/scenes/tunnels/_tunnels.scss */
+.waking .alice-falling {
+  background-position: 0 100%;
+}
+
+/* line 49, ../scss/scenes/tunnels/_tunnels.scss */
+.weird .alice-falling {
+  background-position: 0 0;
+}
+
+/* line 53, ../scss/scenes/tunnels/_tunnels.scss */
+.jolted .alice-falling {
+  background-position: 0 40%;
+}
+
 /* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
-#tunnel .alice-falling {
+.frightened .alice-falling {
   background: url('../img/alice-frightened-s41f9b8ddd1.png') 0 0 no-repeat;
 }
 
@@ -1076,8 +1106,23 @@ h1 {
   }
 }
 
-/* line 64, ../scss/scenes/tunnels/_tunnels.scss */
-#tunnel .alice-falling {
+/* line 62, ../scss/scenes/tunnels/_tunnels.scss */
+.alice-falling {
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  width: 31.25%;
+  padding-top: 48.73047%;
+  height: 0;
+  left: 50%;
+  margin-left: -15.625%;
+  position: absolute;
+  top: 0;
+}
+
+/* line 72, ../scss/scenes/tunnels/_tunnels.scss */
+.frightened .alice-falling {
   height: 998px;
   width: 640px;
   -webkit-animation: freak-out 1.5s steps(2) infinite;
@@ -1091,17 +1136,9 @@ h1 {
   width: 31.25%;
   padding-top: 48.73047%;
   height: 0;
-  left: 50%;
-  margin-left: -15.625%;
 }
 
-/* line 73, ../scss/scenes/tunnels/_tunnels.scss */
-.alice-falling {
-  position: absolute;
-  top: 0;
-}
-
-/* line 78, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 79, ../scss/scenes/tunnels/_tunnels.scss */
 .stuck.alice-falling {
   position: fixed;
   top: 0;

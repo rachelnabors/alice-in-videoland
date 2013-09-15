@@ -30,49 +30,50 @@ $alice-fall-use-percentages: true;
 //let Alice and Cheshire hover above
 .page_falling { z-index: -1;}
 
-//for use in a later exploit! When I can change her class with the scrolling
+.curious .alice-falling {
+	@include alice-fall-sprite(curious);
+}
 
-// .curious .alice-falling {
-// 	@include alice-fall-sprite(curious);
-// }
+.bored .alice-falling {
+	@include alice-fall-sprite(sleepy);
+}
 
-// .bored .alice-falling {
-// 	@include alice-fall-sprite(sleepy);
-// }
+.sleeping .alice-falling {
+	@include alice-fall-sprite(sleeping);
+}
 
-// .sleeping .alice-falling {
-// 	@include alice-fall-sprite(sleeping);
-// }
+.waking .alice-falling {
+	@include alice-fall-sprite(waking);
+}
 
-// .waking .alice-falling {
-// 	@include alice-fall-sprite(waking);
-// }
+.weird .alice-falling {
+	@include alice-fall-sprite(awake);
+}
 
-// .weird .alice-falling {
-// 	@include alice-fall-sprite(awake);
-// }
-
-// .jolted .alice-falling {
-// 	@include alice-fall-sprite(jolted);
-// }
+.jolted .alice-falling {
+	@include alice-fall-sprite(jolted);
+}
 // Characters
 
 $frightened-alice: 'alice-frightened';
 @include animation-sequence-sprite-generator($frightened-alice);
 @include animation-sequence-keyframes($frightened-alice, "freak-out");
 
-#tunnel .alice-falling {
-	@include animation-sequence($frightened-alice, 1.5s, "freak-out");
+.alice-falling {
 	@include background-size( 100% auto);
 	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
 	height: 0;
 	left: 50%;
 	margin-left: (percentage(640/$max-width) * -.5 );
-}
-
-.alice-falling { 
 	position: absolute; 
 	top: 0; 
+}
+
+.frightened .alice-falling {
+	@include animation-sequence($frightened-alice, 1.5s, "freak-out");
+	@include background-size( 100% auto);
+	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
+	height: 0;
 }
 
 .stuck.alice-falling {

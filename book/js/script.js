@@ -1,14 +1,57 @@
 /* Alice in Videoland JS! */
 
+var $tunnels = $("#tunnels"),
+		$tunnel = $("#tunnel"),
+ 	  $screenHeight = $.waypoints('viewportHeight');
+
 // First and foremost, get that loader in place.
 var loadingSaucer= '<div id="loader"><svg version="1.1" id="brew" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="266px" height="25px" viewBox="0 0 266 25" enable-background="new 0 0 266 25" xml:space="preserve"><ellipse fill="#903741" cx="133" cy="12.5" rx="133" ry="12.5"/></svg><p>Please wait while we load</p></div><div class="saucer"></div>';
 $(".loading-card").append(loadingSaucer);
 
 $(window).load(function() {
 
+	// if the page's height is greater than the window's height, just scroll to its top edge
+	var topOffset = function(page) {
+		var $topCorner = $(page).offset().top,
+				diff = ($(page).outerHeight() - $screenHeight) / 2;
+		if(diff >= 0) { 
+			return $topCorner;
+		} else {
+			return $topCorner + diff;
+		}
+	}
+
+	var scrollPageIntoCenter = function(toPage) {
+		// Then animate that sucker.
+		$("html, body").animate({
+				scrollTop: topOffset(toPage)
+			}, 500);
+	};
+
+	// is this a touch-enabled device?
+	var is_touch_device = 'ontouchstart' in document.documentElement;
+
+	// if it is, let's use hammer.js to detect gestures!
+	if(is_touch_device){
+		//prevent scrolling 
+		// ev.gesture.preventDefault();
+		$(document).hammer({drag_block_vertical: true}).on("swipeup", ".page", function(event) {
+			// alert("swiped!")
+			var $nextPage = $(this).next(".page");
+			scrollPageIntoCenter($nextPage);
+		});
+
+		//Swipe to previous page
+		$(document).hammer({drag_block_vertical: true}).on("swipedown", ".page", function(event) {
+			var $prevPage = $(this).prev(".page");
+			scrollPageIntoCenter($prevPage);
+		});
+
+	}
+
   setTimeout(function(){ 
     // change state to loaded
-    $("body").addClass("loaded").removeClass("loading");
+    $("html").addClass("loaded").removeClass("loading");
     
     // Show park scene.
     $(".scene-park").addClass("cue");
@@ -20,11 +63,6 @@ $(window).load(function() {
 		  offset: beingRead()
 		});
   }, 5000); //gotta wait a lil' bit
-
-
-var $tunnels = $("#tunnels"),
-		$tunnel = $("#tunnel"),
- 	  $screenHeight = $.waypoints('viewportHeight');
 
 	// Rodney Rehm's improved method for mapping click and touch: https://gist.github.com/rodneyrehm/6464641
   function touch(event) {
@@ -66,10 +104,17 @@ var $tunnels = $("#tunnels"),
 
 
 		// recalculate the new waypoints since this part was hidden
-		$.waypoints('refresh');
+		$tunnel.find(".page").waypoint(function() {
+			$(this).addClass("in-view");
+			var mood = $(this).data("mood");
+			$("body").removeClass().addClass(mood);		
+		}, {
+		  offset: beingRead()
+		});
 
 		// Give the parent tunnel an in-view class
-		$tunnel.addClass("in-view");
+		$tunnel.addClass("in-view")
+		.find(".page:first").addClass("in-view");// and give it's first page an in-view class ;)
 
 		// gently animate down the page
 		$("html,body").animate({
@@ -78,13 +123,16 @@ var $tunnels = $("#tunnels"),
 			$(".scene-hole").waypoint(function(direction) {
 				// Disable waypoint so people can scroll up if they want to.
 				$(".scene-hole").waypoint('disable');
+
 				// gently animate down the page
 		  	$(this).next(".scene").addClass("cue");
 		  	window.setTimeout(function(){
 		  		$(".scene-wonderland").addClass("cue");
 			  	$("html,body").animate({
 						scrollTop: $(".scene-wonderland").offset().top
-					}, 2500);
+					}, 2500, function() {
+						$(".scene-cut").remove();
+					});
 		  	}, 2000);
 			}, {
 			  offset: function() {

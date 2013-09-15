@@ -23,7 +23,8 @@
 			left: -50%;
 		}
 	}
-	&.in-view .rabbit {
+
+	.cssanimations &.in-view .rabbit {
 		left: 200%;
 		@include transition(left 5s ease-in);
 	}
