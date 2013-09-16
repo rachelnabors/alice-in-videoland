@@ -23,7 +23,7 @@ $alice-fall-use-percentages: true;
 
 #tunnel {
 	position: relative;
-	@include background(image-url("bg-tunnel-furniture.svg") center 0 repeat-y);
+	@include background(image-url("bg_tunnel-furniture_ios.svg") center 0 repeat-y);
 	@include background-size(percentage(1800/$max-width) auto);
 }
 
@@ -60,6 +60,7 @@ $frightened-alice: 'alice-frightened';
 @include animation-sequence-keyframes($frightened-alice, "freak-out");
 
 .alice-falling {
+	@include alice-fall-sprite(frightened);
 	@include background-size( 100% auto);
 	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
 	height: 0;

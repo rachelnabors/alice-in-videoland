@@ -983,9 +983,9 @@ h1 {
   height: 16%;
 }
 
-/* line 87, alice-fall/*.png */
-.alice-fall-sprite, .curious .alice-falling, .bored .alice-falling, .sleeping .alice-falling, .waking .alice-falling, .weird .alice-falling, .jolted .alice-falling {
-  background-image: url('../img/alice-fall-saebaba4ad9.png');
+/* line 95, alice-fall/*.png */
+.alice-fall-sprite, .curious .alice-falling, .bored .alice-falling, .sleeping .alice-falling, .waking .alice-falling, .weird .alice-falling, .jolted .alice-falling, .alice-falling {
+  background-image: url('../img/alice-fall-s4db96ce9a4.png');
   background-repeat: no-repeat;
 }
 
@@ -1011,7 +1011,7 @@ h1 {
 /* line 24, ../scss/scenes/tunnels/_tunnels.scss */
 #tunnel {
   position: relative;
-  background: url('../img/bg-tunnel-furniture.svg?1378753027') center 0 repeat-y;
+  background: url('../img/bg_tunnel-furniture_ios.svg?1379267001') center 0 repeat-y;
   -webkit-background-size: 87.89063% auto;
   -moz-background-size: 87.89063% auto;
   -o-background-size: 87.89063% auto;
@@ -1025,17 +1025,17 @@ h1 {
 
 /* line 33, ../scss/scenes/tunnels/_tunnels.scss */
 .curious .alice-falling {
-  background-position: 0 20%;
+  background-position: 0 16.66667%;
 }
 
 /* line 37, ../scss/scenes/tunnels/_tunnels.scss */
 .bored .alice-falling {
-  background-position: 0 80%;
+  background-position: 0 83.33333%;
 }
 
 /* line 41, ../scss/scenes/tunnels/_tunnels.scss */
 .sleeping .alice-falling {
-  background-position: 0 60%;
+  background-position: 0 66.66667%;
 }
 
 /* line 45, ../scss/scenes/tunnels/_tunnels.scss */
@@ -1050,7 +1050,7 @@ h1 {
 
 /* line 53, ../scss/scenes/tunnels/_tunnels.scss */
 .jolted .alice-falling {
-  background-position: 0 40%;
+  background-position: 0 50%;
 }
 
 /* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.2/stylesheets/animation-studio/_animation-sequence.scss */
@@ -1108,6 +1108,7 @@ h1 {
 
 /* line 62, ../scss/scenes/tunnels/_tunnels.scss */
 .alice-falling {
+  background-position: 0 33.33333%;
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
@@ -1121,7 +1122,7 @@ h1 {
   top: 0;
 }
 
-/* line 72, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 73, ../scss/scenes/tunnels/_tunnels.scss */
 .frightened .alice-falling {
   height: 998px;
   width: 640px;
@@ -1138,7 +1139,7 @@ h1 {
   height: 0;
 }
 
-/* line 79, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 80, ../scss/scenes/tunnels/_tunnels.scss */
 .stuck.alice-falling {
   position: fixed;
   top: 0;
