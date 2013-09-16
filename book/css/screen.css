@@ -1011,7 +1011,7 @@ h1 {
 /* line 24, ../scss/scenes/tunnels/_tunnels.scss */
 #tunnel {
   position: relative;
-  background: url('../img/bg_tunnel-furniture_ios.svg?1379267001') center 0 repeat-y;
+  background: url('../img/bg_tunnel-furniture.svg?1379267001') center 0 repeat-y;
   -webkit-background-size: 87.89063% auto;
   -moz-background-size: 87.89063% auto;
   -o-background-size: 87.89063% auto;

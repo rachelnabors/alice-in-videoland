@@ -23,7 +23,7 @@ $alice-fall-use-percentages: true;
 
 #tunnel {
 	position: relative;
-	@include background(image-url("bg_tunnel-furniture_ios.svg") center 0 repeat-y);
+	@include background(image-url("bg_tunnel-furniture.svg") center 0 repeat-y);
 	@include background-size(percentage(1800/$max-width) auto);
 }
 
