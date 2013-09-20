@@ -1269,7 +1269,7 @@ h1 {
 }
 
 /* line 55, credits/*.png */
-.credits-sprite, .scene-wonderland .page_credits .alice, .scene-wonderland .page_credits .rabbit {
+.credits-sprite {
   background-image: url('../img/credits-s628fd48b8d.png');
   background-repeat: no-repeat;
 }
@@ -1288,20 +1288,45 @@ h1 {
   background-size: 25%, auto;
 }
 /* line 11, ../scss/scenes/wonderland/_wonderland.scss */
-.scene-wonderland .page_credits .alice {
-  background-position: 0 0;
+.scene-wonderland .page_credits .alice, .scene-wonderland .page_credits .rabbit {
+  background: url('../img/sprite_credits.svg?1379666519') no-repeat;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
   position: absolute;
-  left: -20%;
   top: 20%;
+  z-index: 1;
+}
+/* line 18, ../scss/scenes/wonderland/_wonderland.scss */
+.scene-wonderland .page_credits .alice {
   width: 37.54883%;
   padding-top: 48.63281%;
+  background-size: 106.11183%;
+  left: -30%;
 }
-/* line 17, ../scss/scenes/wonderland/_wonderland.scss */
+/* line 23, ../scss/scenes/wonderland/_wonderland.scss */
 .scene-wonderland .page_credits .rabbit {
-  background-position: 0 100%;
-  position: absolute;
-  right: -20%;
-  top: 20%;
   width: 39.84375%;
   padding-top: 43.94531%;
+  background-position: 0 100%;
+  right: -9%;
+}
+/* line 29, ../scss/scenes/wonderland/_wonderland.scss */
+.scene-wonderland .page_credits.in-view .alice {
+  -webkit-transition: left ease-in 1.25s;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition: left ease-in 1.25s 0.25s;
+  -o-transition: left ease-in 1.25s 0.25s;
+  transition: left ease-in 1.25s 0.25s;
+  left: -23%;
+}
+/* line 33, ../scss/scenes/wonderland/_wonderland.scss */
+.scene-wonderland .page_credits.in-view .rabbit {
+  -webkit-transition: right ease-in;
+  -webkit-transition-delay: 1s;
+  -moz-transition: right ease-in 1s;
+  -o-transition: right ease-in 1s;
+  transition: right ease-in 1s;
+  right: -20%;
 }

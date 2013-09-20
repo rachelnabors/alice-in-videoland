@@ -8,16 +8,31 @@ $credits-use-percentages: true;
 .scene-wonderland .page_credits { // .scene for specificity
 	@include background(#a22882 image-url("pat_argyle.svg"));
 	@include background-size(25%, auto);
-	.alice {
-		@include credits-sprite(credits-alice);
+	.alice, .rabbit {
+		@include background(image-url("sprite_credits.svg") no-repeat);
+		@include background-size( 100% auto);
 		position: absolute;
-		left: -20%; top: 20%;
+		top: 20%;
+		z-index: 1;
+	}
+	.alice {
 		width: percentage(769/$max-width); padding-top: percentage(996/$max-width);
+		background-size: percentage(816/769);
+		left: -30%;
 	}
 	.rabbit {
-		@include credits-sprite(credits-rabbit);
-		position: absolute;
-		right: -20%; top: 20%;
 		width: percentage(816/$max-width); padding-top: percentage(900/$max-width);
+		background-position: 0 100%;
+		right: -9%;
+	}
+	&.in-view {
+		.alice {
+			@include transition(left ease-in 1.25s .25s);
+			left: -23%;
+		}
+		.rabbit{
+			@include transition(right ease-in 1s);
+			right: -20%;
+		}
 	}
 }
