@@ -690,21 +690,25 @@ h1 {
 }
 /* line 14, ../scss/scenes/park/_page-rabbit-appears.scss */
 .page_rabbit-appears .rabbit {
-  background: url('../img/rabbit_running.png?1377546276');
-  width: 444px;
-  height: 490px;
+  background: url('../img/rabbit_running.png?1379664786');
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  width: 55.41992%;
+  padding-top: 61.23047%;
   position: absolute;
-  top: 60%;
+  top: 70%;
   margin-top: -245px;
   left: 50%;
   margin-left: -244px;
   z-index: 1;
 }
-/* line 22, ../scss/scenes/park/_page-rabbit-appears.scss */
+/* line 23, ../scss/scenes/park/_page-rabbit-appears.scss */
 .cssanimations .page_rabbit-appears .rabbit {
   left: -50%;
 }
-/* line 27, ../scss/scenes/park/_page-rabbit-appears.scss */
+/* line 28, ../scss/scenes/park/_page-rabbit-appears.scss */
 .cssanimations .page_rabbit-appears.in-view .rabbit {
   left: 200%;
   -webkit-transition: left 5s ease-in;
@@ -714,48 +718,48 @@ h1 {
 }
 
 @-moz-keyframes scene-blink {
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-webkit-keyframes scene-blink {
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-o-keyframes scene-blink {
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @keyframes scene-blink {
-  /* line 35, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }

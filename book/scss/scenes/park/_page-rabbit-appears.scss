@@ -14,9 +14,10 @@
 	.rabbit {
 		@extend %imgreplace;
 		@include background(image-url("rabbit_running.png"));
-		width: 444px; height: 490px;
+		@include background-size(100% auto);
+		width: percentage(1135/$max-width); padding-top: percentage(1254/$max-width);
 		position: absolute;
-		top: 60%; margin-top: -245px;
+		top: 70%; margin-top: -245px;
 		left: 50%; margin-left: -244px;
 		z-index: 1;
 		.cssanimations & { 
