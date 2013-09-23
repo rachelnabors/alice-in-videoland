@@ -47,38 +47,6 @@
 			}, 500);
 	};
 
-	// if touch is enabled, let's use hammer.js to detect gestures!
-	if(Modernizr.touch) {
-		//prevent scrolling 
-		// ev.gesture.preventDefault();
-		$(document).hammer({drag_block_vertical: true}).on("swipeup", ".page", function(event) {
-			// alert("swiped!")
-			var $nextPage = $(this).next(".page");
-			scrollPageIntoCenter($nextPage);
-		});
-
-		//Swipe to previous page
-		$(document).hammer({drag_block_vertical: true}).on("swipedown", ".page", function(event) {
-			var $prevPage = $(this).prev(".page");
-			scrollPageIntoCenter($prevPage);
-		});
-
-	}
-
-	setTimeout(function(){ 
-		// change state to loaded
-		$("html").addClass("loaded").removeClass("loading");
-
-		// Show park scene.
-		$(".scene-park").addClass("cue");
-
-		// all pages get in-view classes while they're centered in the viewport 
-		$(".scene-park .page").waypoint(function() {
-			$(this).addClass("in-view");
-		}, {
-		  offset: beingRead()
-		});
-	}, 5000); //gotta wait a lil' bit
 
 	// Reveal the rabbit tunnel and move the page down to #tunnel
 	var downTheHole = function() {
@@ -175,6 +143,23 @@
 	});
 
 	$(window).load(function() {
+		// if touch is enabled, let's use hammer.js to detect gestures!
+		if(Modernizr.touch) {
+			//prevent scrolling 
+			// ev.gesture.preventDefault();
+			$(document).hammer({drag_block_vertical: true}).on("swipeup", ".page", function(event) {
+				// alert("swiped!")
+				var $nextPage = $(this).next(".page");
+				scrollPageIntoCenter($nextPage);
+			});
+
+			//Swipe to previous page
+			$(document).hammer({drag_block_vertical: true}).on("swipedown", ".page", function(event) {
+				var $prevPage = $(this).prev(".page");
+				scrollPageIntoCenter($prevPage);
+			});
+
+		}
 
 	  setTimeout(function(){ 
 	    // change state to loaded
