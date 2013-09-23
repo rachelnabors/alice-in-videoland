@@ -4,6 +4,14 @@
 			$tunnel = $("#tunnel"),
 	 	  $screenHeight = $.waypoints('viewportHeight');
 
+	var recalcWaypoints = function() {
+		$(".page").waypoint({
+		  offset: beingRead()
+		});
+	}
+
+  window.addEventListener('orientationchange', recalcWaypoints);
+
 	// First and foremost, get that loader in place.
 	var loadingSaucer= '<div id="loader"><svg version="1.1" id="brew" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="266px" height="25px" viewBox="0 0 266 25" enable-background="new 0 0 266 25" xml:space="preserve"><ellipse fill="#903741" cx="133" cy="12.5" rx="133" ry="12.5"/></svg><p>Please wait while we load</p></div><div class="saucer"></div>';
 	$(".loading-card").append(loadingSaucer);
