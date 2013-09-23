@@ -2,7 +2,7 @@
 	@include background(#a22882 image-url("pat_argyle.svg") repeat);
 	background-size: 25% auto;
 	@extend %imgreplace;
-	padding-top: 75%; //maintain a 3 to 4 ratio 
+	height: 100%;
 	position: fixed;
 	@include background-origin( padding-box);
 	width: 100%;
@@ -10,11 +10,12 @@
 	text-indent: 0;
 	text-align: center;
 	white-space: normal;
+
 }
 
 .loaded .loading-card {
-	padding-top: 0;
-	@include transition(padding-top 2s ease-in 4s);
+	height: 0;
+	@include transition(height 2s ease-in 4s);
 }
 
 h1 {

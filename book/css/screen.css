@@ -180,7 +180,7 @@ body {
 .loading-card {
   background: #a22882 url('../img/pat_argyle.svg?1378830277') repeat;
   background-size: 25% auto;
-  padding-top: 75%;
+  height: 100%;
   position: fixed;
   -webkit-background-origin: padding;
   -moz-background-origin: padding;
@@ -192,17 +192,17 @@ body {
   white-space: normal;
 }
 
-/* line 15, ../scss/_loader.scss */
+/* line 16, ../scss/_loader.scss */
 .loaded .loading-card {
-  padding-top: 0;
-  -webkit-transition: padding-top 2s ease-in;
+  height: 0;
+  -webkit-transition: height 2s ease-in;
   -webkit-transition-delay: 4s;
-  -moz-transition: padding-top 2s ease-in 4s;
-  -o-transition: padding-top 2s ease-in 4s;
-  transition: padding-top 2s ease-in 4s;
+  -moz-transition: height 2s ease-in 4s;
+  -o-transition: height 2s ease-in 4s;
+  transition: height 2s ease-in 4s;
 }
 
-/* line 20, ../scss/_loader.scss */
+/* line 21, ../scss/_loader.scss */
 h1 {
   background: #a22882;
   -webkit-box-sizing: border-box;
@@ -220,7 +220,7 @@ h1 {
   z-index: 3;
 }
 
-/* line 33, ../scss/_loader.scss */
+/* line 34, ../scss/_loader.scss */
 .byline {
   background: #20b3aa;
   -webkit-box-sizing: border-box;
@@ -237,7 +237,7 @@ h1 {
   z-index: 3;
 }
 
-/* line 47, ../scss/_loader.scss */
+/* line 48, ../scss/_loader.scss */
 #loader {
   -webkit-animation: cup-drop 1.5s cubic-bezier(0.11, 1.06, 0.21, 0.99) 1.5s forwards;
   -moz-animation: cup-drop 1.5s cubic-bezier(0.11, 1.06, 0.21, 0.99) 1.5s forwards;
@@ -262,7 +262,7 @@ h1 {
   transform: scale3d(1, 1, 1);
 }
 
-/* line 59, ../scss/_loader.scss */
+/* line 60, ../scss/_loader.scss */
 #loader p {
   font-family: "blue-goblet-alt",fantasy;
   font-style: italic;
@@ -274,7 +274,7 @@ h1 {
   width: 60%;
 }
 
-/* line 69, ../scss/_loader.scss */
+/* line 70, ../scss/_loader.scss */
 .saucer {
   -webkit-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
   -moz-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
@@ -294,7 +294,7 @@ h1 {
   z-index: 1;
 }
 
-/* line 80, ../scss/_loader.scss */
+/* line 81, ../scss/_loader.scss */
 .loaded .saucer {
   -webkit-animation: saucer-done 1s 0.5s forwards;
   -moz-animation: saucer-done 1s 0.5s forwards;
@@ -303,7 +303,7 @@ h1 {
   top: 62%;
 }
 
-/* line 85, ../scss/_loader.scss */
+/* line 86, ../scss/_loader.scss */
 .loaded #loader {
   -webkit-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
   -moz-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
@@ -312,7 +312,7 @@ h1 {
   top: 45%;
 }
 
-/* line 90, ../scss/_loader.scss */
+/* line 91, ../scss/_loader.scss */
 #brew {
   -webkit-animation: pour-tea 5s 1 3s forwards;
   -moz-animation: pour-tea 5s 1 3s forwards;
@@ -332,7 +332,7 @@ h1 {
 }
 
 @-moz-keyframes pour-tea {
-  /* line 100, ../scss/_loader.scss */
+  /* line 101, ../scss/_loader.scss */
   100% {
     -moz-transform: scale(1.3, 1.75);
     transform: scale(1.3, 1.75);
@@ -341,7 +341,7 @@ h1 {
 }
 
 @-webkit-keyframes pour-tea {
-  /* line 100, ../scss/_loader.scss */
+  /* line 101, ../scss/_loader.scss */
   100% {
     -webkit-transform: scale(1.3, 1.75);
     transform: scale(1.3, 1.75);
@@ -350,7 +350,7 @@ h1 {
 }
 
 @-o-keyframes pour-tea {
-  /* line 100, ../scss/_loader.scss */
+  /* line 101, ../scss/_loader.scss */
   100% {
     -o-transform: scale(1.3, 1.75);
     transform: scale(1.3, 1.75);
@@ -359,7 +359,7 @@ h1 {
 }
 
 @keyframes pour-tea {
-  /* line 100, ../scss/_loader.scss */
+  /* line 101, ../scss/_loader.scss */
   100% {
     transform: scale(1.3, 1.75);
     bottom: 83%;
@@ -367,35 +367,35 @@ h1 {
 }
 
 @-moz-keyframes cup-drop {
-  /* line 107, ../scss/_loader.scss */
+  /* line 108, ../scss/_loader.scss */
   100% {
     top: 45%;
   }
 }
 
 @-webkit-keyframes cup-drop {
-  /* line 107, ../scss/_loader.scss */
+  /* line 108, ../scss/_loader.scss */
   100% {
     top: 45%;
   }
 }
 
 @-o-keyframes cup-drop {
-  /* line 107, ../scss/_loader.scss */
+  /* line 108, ../scss/_loader.scss */
   100% {
     top: 45%;
   }
 }
 
 @keyframes cup-drop {
-  /* line 107, ../scss/_loader.scss */
+  /* line 108, ../scss/_loader.scss */
   100% {
     top: 45%;
   }
 }
 
 @-moz-keyframes saucer-drop {
-  /* line 113, ../scss/_loader.scss */
+  /* line 114, ../scss/_loader.scss */
   100% {
     top: 62%;
     -moz-transform: rotate(360deg);
@@ -404,7 +404,7 @@ h1 {
 }
 
 @-webkit-keyframes saucer-drop {
-  /* line 113, ../scss/_loader.scss */
+  /* line 114, ../scss/_loader.scss */
   100% {
     top: 62%;
     -webkit-transform: rotate(360deg);
@@ -413,7 +413,7 @@ h1 {
 }
 
 @-o-keyframes saucer-drop {
-  /* line 113, ../scss/_loader.scss */
+  /* line 114, ../scss/_loader.scss */
   100% {
     top: 62%;
     -o-transform: rotate(360deg);
@@ -422,7 +422,7 @@ h1 {
 }
 
 @keyframes saucer-drop {
-  /* line 113, ../scss/_loader.scss */
+  /* line 114, ../scss/_loader.scss */
   100% {
     top: 62%;
     transform: rotate(360deg);
@@ -430,47 +430,47 @@ h1 {
 }
 
 @-moz-keyframes saucer-done {
-  /* line 120, ../scss/_loader.scss */
+  /* line 121, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @-webkit-keyframes saucer-done {
-  /* line 120, ../scss/_loader.scss */
+  /* line 121, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @-o-keyframes saucer-done {
-  /* line 120, ../scss/_loader.scss */
+  /* line 121, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @keyframes saucer-done {
-  /* line 120, ../scss/_loader.scss */
+  /* line 121, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @-moz-keyframes cup-done {
-  /* line 126, ../scss/_loader.scss */
+  /* line 127, ../scss/_loader.scss */
   15% {
     -moz-transform: rotate(7deg);
     transform: rotate(7deg);
   }
 
-  /* line 129, ../scss/_loader.scss */
+  /* line 130, ../scss/_loader.scss */
   65% {
     -moz-transform: rotate(-11deg);
     transform: rotate(-11deg);
   }
 
-  /* line 132, ../scss/_loader.scss */
+  /* line 133, ../scss/_loader.scss */
   100% {
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -479,19 +479,19 @@ h1 {
 }
 
 @-webkit-keyframes cup-done {
-  /* line 126, ../scss/_loader.scss */
+  /* line 127, ../scss/_loader.scss */
   15% {
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
   }
 
-  /* line 129, ../scss/_loader.scss */
+  /* line 130, ../scss/_loader.scss */
   65% {
     -webkit-transform: rotate(-11deg);
     transform: rotate(-11deg);
   }
 
-  /* line 132, ../scss/_loader.scss */
+  /* line 133, ../scss/_loader.scss */
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -500,19 +500,19 @@ h1 {
 }
 
 @-o-keyframes cup-done {
-  /* line 126, ../scss/_loader.scss */
+  /* line 127, ../scss/_loader.scss */
   15% {
     -o-transform: rotate(7deg);
     transform: rotate(7deg);
   }
 
-  /* line 129, ../scss/_loader.scss */
+  /* line 130, ../scss/_loader.scss */
   65% {
     -o-transform: rotate(-11deg);
     transform: rotate(-11deg);
   }
 
-  /* line 132, ../scss/_loader.scss */
+  /* line 133, ../scss/_loader.scss */
   100% {
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -521,17 +521,17 @@ h1 {
 }
 
 @keyframes cup-done {
-  /* line 126, ../scss/_loader.scss */
+  /* line 127, ../scss/_loader.scss */
   15% {
     transform: rotate(7deg);
   }
 
-  /* line 129, ../scss/_loader.scss */
+  /* line 130, ../scss/_loader.scss */
   65% {
     transform: rotate(-11deg);
   }
 
-  /* line 132, ../scss/_loader.scss */
+  /* line 133, ../scss/_loader.scss */
   100% {
     transform: rotate(0deg);
     top: 100%;
@@ -550,6 +550,13 @@ h1 {
   -webkit-background-origin: padding;
   -moz-background-origin: padding;
   background-origin: padding-box;
+}
+@media (max-height: 75vw) {
+  /* line 13, ../scss/scenes/_common.scss */
+  .scene .page {
+    margin: 0 auto;
+    width: 133.3333vh;
+  }
 }
 
 /* line 4, ../scss/scenes/park/_scene-park.scss */

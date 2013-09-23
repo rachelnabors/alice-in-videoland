@@ -7,6 +7,9 @@ $max-height: 1536;
 $min-width: 800;
 $min-height: 600;
 
+// Media Queries and size ratios
+$breakpoint-short: (max-height 75vw);
+
 // Colors
 
 $earth: #6c373f; //#a36f77;
