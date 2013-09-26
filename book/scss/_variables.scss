@@ -8,7 +8,7 @@ $min-width: 800;
 $min-height: 600;
 
 // Media Queries and size ratios
-$breakpoint-short: (max-height 75vw);
+$breakpoint-short: (min-aspect-ratio "4/3");
 
 // Colors
 

@@ -551,10 +551,12 @@ h1 {
   -moz-background-origin: padding;
   background-origin: padding-box;
 }
-@media (max-height: 75vw) {
+@media (min-aspect-ratio: 4 / 3) {
   /* line 13, ../scss/scenes/_common.scss */
   .scene .page {
+    height: 100vh;
     margin: 0 auto;
+    padding: 0;
     width: 133.3333vh;
   }
 }
