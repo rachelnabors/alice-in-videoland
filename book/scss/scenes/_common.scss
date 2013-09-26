@@ -11,6 +11,7 @@
 
 // Common to All Pages
 .scene .page { // .scene for specificity
+	@include transform(scale3d(1,1,1));
 	@extend %imgreplace;
 	padding-top: 75%; //maintain a 3 to 4 ratio 
 	position: relative;

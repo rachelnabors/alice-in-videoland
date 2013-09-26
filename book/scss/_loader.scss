@@ -97,7 +97,7 @@ h1 {
 #brew {
 	@include animation(pour-tea 5s 1 3s forwards);
 	position: absolute;
-	bottom: 6.4em;
+	bottom: 6.4em; left: 50%;
 	margin-left: -5.5em;
 	width: 8em; height: 140em/$saucer-sizer*1em;
 	@include transform-origin(50%, 50%);
