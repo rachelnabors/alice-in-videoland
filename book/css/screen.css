@@ -482,7 +482,7 @@ h1 {
   100% {
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
-    top: 150%;
+    top: 200%;
   }
 }
 
@@ -503,7 +503,7 @@ h1 {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    top: 150%;
+    top: 200%;
   }
 }
 
@@ -524,7 +524,7 @@ h1 {
   100% {
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    top: 150%;
+    top: 200%;
   }
 }
 
@@ -542,7 +542,7 @@ h1 {
   /* line 139, ../scss/_loader.scss */
   100% {
     transform: rotate(0deg);
-    top: 150%;
+    top: 200%;
   }
 }
 
