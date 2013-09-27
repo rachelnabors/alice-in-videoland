@@ -2,29 +2,52 @@
 $alice-fall-use-percentages: true;
 
 .scene-hole {
-	@include background(
-		image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
-		image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
-		image-url("bg_tunnel-specks.png") repeat,
-		$earth);
-	@include background-size(
-		percentage(100/$max-width) auto, 
-		percentage(100/$max-width) auto, 
-		auto auto);
+	@include breakpoint($breakpoint-short) {
+		margin: 0 auto;
+    	width: 133.3333vh;
+  	}
 }
 
 .scene .page_tunnels { //.scene for specificity
-	@include background(image-url("tunnels.svg") no-repeat);
-	@include background-size(100% auto);
-	padding-top: percentage(1000/$max-width);
+	@include background(
+		image-url("tunnels.svg") no-repeat,
+		image-url("bg_tunnel-specks.png") repeat,
+		$earth);
+	@include background-size(
+		100% auto, 
+		auto auto);
+	padding-top: percentage(1000/$max-width); // 1536
+	@include breakpoint($breakpoint-short) {
+	    height: 65.104167vh; 
+	    padding: 0;
+  	}
 }
 
 // The Tunnel
 
 #tunnel {
 	position: relative;
-	@include background(image-url("bg_tunnel-furniture.svg") center 0 repeat-y);
-	@include background-size(percentage(1800/$max-width) auto);
+	z-index:0; //allows us to z-index alice locally.
+  	.page {
+		@include background(
+			image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
+			image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
+			image-url("bg_tunnel-furniture.svg") center 0 no-repeat,
+			image-url("bg_tunnel-specks.png") repeat,
+			$earth);
+		@include background-size(
+			percentage(100/$max-width) auto, 
+			percentage(100/$max-width) auto, 
+			percentage(1800/$max-width) auto, 
+			auto auto);
+		padding-top: 161%;
+		@include breakpoint($breakpoint-short) {
+		    height: 214.843707vh; // 	244.444382  	  Xvh = 1650
+			margin: 0 auto;
+		    padding: 0;
+	    	width: 133.3333vh; // 133.3vh = 900
+	  	}
+	}
 }
 
 //let Alice and Cheshire hover above
@@ -68,6 +91,13 @@ $frightened-alice: 'alice-frightened';
 	margin-left: (percentage(640/$max-width) * -.5 );
 	position: absolute; 
 	top: 0; 
+	z-index: 1;
+	@include breakpoint($breakpoint-short) {
+		padding:0;
+	    height: 60.484848vh; // 	  	  Xvh = 998/1650
+    	width: 38.787879vh; // 133.3vh = 640/1650
+		margin-left: 38.787879vh * -.5 ;
+  	}
 }
 
 .frightened .alice-falling {
@@ -75,6 +105,17 @@ $frightened-alice: 'alice-frightened';
 	@include background-size( 100% auto);
 	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
 	height: 0;
+	@include breakpoint($breakpoint-short) {
+		padding:0;
+	    height: 60.484848vh; // 	  	  Xvh = 998/1650
+    	width: 38.787879vh; // 133.3vh = 640/1650
+		margin-left: 38.787879vh * -.5 ;
+  	}
+}
+
+.sticky-wrapper {
+	position: absolute;// take wrapper out of flow.
+	width: 100%;
 }
 
 .stuck.alice-falling {
