@@ -141,3 +141,12 @@ h1 {
 		top: 200%;
 	}
 }
+
+.loading .scene {
+	@extend %shown;
+	opacity: 0;
+}
+
+.loading {
+	overflow: hidden;
+}

@@ -79,7 +79,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 14, ../scss/_extends.scss */
-.scene.cue {
+.loading .scene, .scene.cue {
   display: block !important;
 }
 
@@ -544,6 +544,16 @@ h1 {
     transform: rotate(0deg);
     top: 200%;
   }
+}
+
+/* line 145, ../scss/_loader.scss */
+.loading .scene {
+  opacity: 0;
+}
+
+/* line 150, ../scss/_loader.scss */
+.loading {
+  overflow: hidden;
 }
 
 /* line 13, ../scss/scenes/_common.scss */
