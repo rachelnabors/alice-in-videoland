@@ -1,0 +1,84 @@
+/* Credits Page */
+@import "credits/*.png";
+$credits-use-percentages: true;
+
+.scene-wonderland .page_credits { // .scene for specificity
+	@include background(#a22882 image-url("pat_argyle.svg"));
+	@include background-size(25%, auto);
+	.alice, .rabbit {
+		@include background(image-url("sprite_credits.svg") no-repeat);
+		@include background-size( 100% auto);
+		position: absolute;
+		top: 20%;
+		z-index: 1;
+	}
+	.alice {
+		width: percentage(769/$max-width); padding-top: percentage(996/$max-width);
+		background-size: percentage(816/769);
+		left: -30%;
+	}
+	.rabbit {
+		width: percentage(816/$max-width); padding-top: percentage(900/$max-width);
+		background-position: 0 100%;
+		right: -9%;
+	}
+	&.in-view {
+		.alice {
+			@include transition(left ease-in 1.25s .25s);
+			left: -23%;
+		}
+		.rabbit{
+			@include transition(right ease-in 1s);
+			right: -20%;
+		}
+	}
+}
+
+.continued {
+	@include box-sizing(border-box);
+	background: $wonderland-pink;
+	position: absolute;
+	text-indent: 0;
+	top: 10%;
+	left: 50%; margin-left: -40%;
+	padding: rhythm(2);
+	white-space: normal;
+	width: 80%;
+	h2 {
+		font-family: $font-slab;
+		margin-bottom: 1em;
+		@include adjust-font-size-to(42px);
+	}
+	ul li {
+		padding-left: rhythm(1);
+		margin-bottom: rhythm(1);
+	}
+	blockquote {
+		font-family: $font-fancy;
+		@include adjust-font-size-to(27px);
+		margin-bottom: rhythm(1, 27px);
+	}
+	a:link, a:visited, a:hover, a:active {
+		color: #64044b;
+		padding: .1em .1em .05em;
+		text-decoration: none;
+		border-bottom: dotted 1px #64044b;
+	}
+	a:hover, a:active {
+		color: #ffeef4;
+		background: darken($wonderland-pink, 10%);
+		border: 0;
+	}
+	.author {
+		background: $wonderland-purple;
+		color: $wonderland-pink;
+		font-family: $font-fancy;
+		letter-spacing: .05em;
+		@include adjust-font-size-to(27px);
+		width: 40%;
+		padding: rhythm(1);
+		@include rotate(12deg);
+		position: absolute;
+		bottom: -(rhythm(6)); right: rhythm(2);
+	}
+}

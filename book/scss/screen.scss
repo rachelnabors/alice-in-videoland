@@ -1,6 +1,14 @@
 @import "compass/css3/"; // css3 helpers
-@import "animation-studio"; // animation helpers
-@import "breakpoint"; // media queries
+
+// animation helpers w/ Animation Studio
+@import "animation-studio"; 
+
+// grids w/ Singularity
+@import "singularitygs"; 
+@import "singularity-extras"; // golden ratio grid extension
+
+// media queries w/ Breakpoint
+@import "breakpoint";
 
 // Import reset to blow away all styles ever. Don't need them.
 @import "compass/reset";
@@ -12,6 +20,7 @@
 // General styles for background + shared styles for universal elements. 
 @import "foundation";
 @import "typography";
+@import "grids";
 
 // Loading page
 @import "loader";

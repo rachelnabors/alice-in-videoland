@@ -109,73 +109,6 @@ body {
   font-weight: "300";
 }
 
-/* line 25, ../scss/_typography.scss */
-.continued {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: #f090b1;
-  position: absolute;
-  text-indent: 0;
-  top: 10%;
-  left: 50%;
-  margin-left: -40%;
-  padding: 2.66667em;
-  white-space: normal;
-  width: 80%;
-}
-/* line 35, ../scss/_typography.scss */
-.continued h2 {
-  font-family: "hellenic-wide";
-  margin-bottom: 1em;
-  font-size: 2.33333em;
-  line-height: 1.14286em;
-}
-/* line 40, ../scss/_typography.scss */
-.continued ul li {
-  padding-left: 1.33333em;
-  margin-bottom: 1.33333em;
-}
-/* line 44, ../scss/_typography.scss */
-.continued blockquote {
-  font-family: "blue-goblet-alt";
-  font-size: 1.5em;
-  line-height: 1.77778em;
-  margin-bottom: 0.88889em;
-}
-/* line 49, ../scss/_typography.scss */
-.continued a:link, .continued a:visited, .continued a:hover, .continued a:active {
-  color: #64044b;
-  padding: .1em .1em .05em;
-  text-decoration: none;
-  border-bottom: dotted 1px #64044b;
-}
-/* line 55, ../scss/_typography.scss */
-.continued a:hover, .continued a:active {
-  color: #ffeef4;
-  background: #ea6391;
-  border: 0;
-}
-/* line 60, ../scss/_typography.scss */
-.continued .author {
-  background: #431236;
-  color: #f090b1;
-  font-family: "blue-goblet-alt";
-  letter-spacing: .05em;
-  font-size: 1.5em;
-  line-height: 1.77778em;
-  width: 40%;
-  padding: 1.33333em;
-  -webkit-transform: rotate(12deg);
-  -moz-transform: rotate(12deg);
-  -ms-transform: rotate(12deg);
-  -o-transform: rotate(12deg);
-  transform: rotate(12deg);
-  position: absolute;
-  bottom: -8em;
-  right: 2.66667em;
-}
-
 /* line 1, ../scss/_loader.scss */
 .loading-card {
   background: #a22882 url('../img/pat_argyle.svg?1378830277') repeat;
@@ -1345,65 +1278,7 @@ h1 {
   }
 }
 
-/* line 55, credits/*.png */
-.credits-sprite {
-  background-image: url('../img/credits-s628fd48b8d.png');
-  background-repeat: no-repeat;
-}
-
-/* line 4, ../scss/scenes/wonderland/_wonderland.scss */
+/* line 1, ../scss/scenes/wonderland/_wonderland.scss */
 .page_crash-landing {
   background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
-}
-
-/* line 8, ../scss/scenes/wonderland/_wonderland.scss */
-.scene-wonderland .page_credits {
-  background: #a22882 url('../img/pat_argyle.svg?1378830277');
-  -webkit-background-size: 25%, auto;
-  -moz-background-size: 25%, auto;
-  -o-background-size: 25%, auto;
-  background-size: 25%, auto;
-}
-/* line 11, ../scss/scenes/wonderland/_wonderland.scss */
-.scene-wonderland .page_credits .alice, .scene-wonderland .page_credits .rabbit {
-  background: url('../img/sprite_credits.svg?1379666519') no-repeat;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  background-size: 100% auto;
-  position: absolute;
-  top: 20%;
-  z-index: 1;
-}
-/* line 18, ../scss/scenes/wonderland/_wonderland.scss */
-.scene-wonderland .page_credits .alice {
-  width: 37.54883%;
-  padding-top: 48.63281%;
-  background-size: 106.11183%;
-  left: -30%;
-}
-/* line 23, ../scss/scenes/wonderland/_wonderland.scss */
-.scene-wonderland .page_credits .rabbit {
-  width: 39.84375%;
-  padding-top: 43.94531%;
-  background-position: 0 100%;
-  right: -9%;
-}
-/* line 29, ../scss/scenes/wonderland/_wonderland.scss */
-.scene-wonderland .page_credits.in-view .alice {
-  -webkit-transition: left ease-in 1.25s;
-  -webkit-transition-delay: 0.25s;
-  -moz-transition: left ease-in 1.25s 0.25s;
-  -o-transition: left ease-in 1.25s 0.25s;
-  transition: left ease-in 1.25s 0.25s;
-  left: -23%;
-}
-/* line 33, ../scss/scenes/wonderland/_wonderland.scss */
-.scene-wonderland .page_credits.in-view .rabbit {
-  -webkit-transition: right ease-in;
-  -webkit-transition-delay: 1s;
-  -moz-transition: right ease-in 1s;
-  -o-transition: right ease-in 1s;
-  transition: right ease-in 1s;
-  right: -20%;
 }
