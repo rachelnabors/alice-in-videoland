@@ -3,6 +3,18 @@
 $credits-use-percentages: true;
 
 .scene-wonderland .page_credits { // .scene for specificity
+	opacity: 1;
+	z-index: 20;
+
+	// let the credits grow as long as they need
+	height: auto;
+	min-height: 75vw; //maintain a 3 to 4 ratio 
+	padding-top: 0;
+	@include breakpoint($breakpoint-short) {
+	    height: auto;
+	    min-height: 100vh;
+  	}
+
 	@include background(#a22882 image-url("pat_argyle.svg"));
 	@include background-size(25%, auto);
 	.alice, .rabbit {
@@ -35,50 +47,163 @@ $credits-use-percentages: true;
 }
 
 .continued {
-	@include box-sizing(border-box);
 	background: $wonderland-pink;
-	position: absolute;
 	text-indent: 0;
-	top: 10%;
-	left: 50%; margin-left: -40%;
-	padding: rhythm(2);
+	margin: 0 auto;
+	@include margin-trailer(2);	
+	@include margin-leader(2);	
 	white-space: normal;
 	width: 80%;
+	@include breakpoint($breakpoint-not-narrow) {
+		.tbc {
+			@include box-sizing('border-box');
+			float: left;
+			width: 38.2%; // full width: 38.2
+		}
+	}
+	.action {
+		@include breakpoint($breakpoint-not-narrow) {
+			@include box-sizing('border-box');
+			float: right;
+			width: 61.5%;
+			padding: 0 5.5742968% 0 0;
+		}
+		@include breakpoint($breakpoint-narrow) {
+			border-bottom: dotted 1px $wonderland-burgundy;
+			margin: 0 14.5924% rhythm(1);
+		}
+		ul {
+			margin: 0 0 rhythm(.75);
+		}
+		li {
+			margin-bottom: rhythm(.25);
+			@include breakpoint($breakpoint-not-narrow) {
+				padding-left: 5.5742968%;
+			}
+			a {
+				@include border-radius(.5em);
+				@extend %clearfix;
+				display: block;
+				min-height: 3em;
+				padding-left: 5.5742968%;
+				padding-top: rhythm(.5);
+				padding-bottom: rhythm(.5);
+				position: relative;
+			}
+			span { 
+				display: block;
+				padding-left: 3.5em;
+			}
+			strong {
+				font-weight: 700;
+			}
+			em {
+				font-style: italic;
+			}
+			svg {
+				width: 3em;
+				height: 3em;
+				position: absolute;
+				top: rhythm(.5); left: 2.75%;
+			}
+			a:link, a:visited, a:hover, a:active {
+				color: $wonderland-burgundy;
+				text-decoration: none;
+			}
+			a:hover, a:active, a:focus {
+				color: $pink-white;
+				background-color: darken($wonderland-pink, 10%);
+				path { 
+					fill: $pink-white !important;
+				}
+			}
+		}
+		h3 {
+			@include breakpoint($breakpoint-not-narrow) {
+				padding-left: 8.25%;
+				@include rhythm(0, 1, .25, 0, 36px);
+			}
+			@include adjust-font-size-to(36px, 3/2);
+			@include padding-trailer(.25, 36px);
+			font-weight: $font-copy-bold;
+		}
+	}
+
 	h2 {
+		@include box-sizing('border-box');
+		background: #64044b;
+		color: $pink-white;
 		font-family: $font-slab;
-		margin-bottom: 1em;
-		@include adjust-font-size-to(42px);
+		padding: rhythm(1, 48px) 14.5924%;
+		@include adjust-font-size-to(48px, 3/2);
+		@include margin-trailer(1, 48px);
+		strong {
+			@include adjust-font-size-to(24px, 1, 48px);
+			padding-top: rhythm(.25, 24px);
+			display: block;
+		}
+		span { display: inline-block}
 	}
-	ul li {
-		padding-left: rhythm(1);
-		margin-bottom: rhythm(1);
-	}
-	blockquote {
-		font-family: $font-fancy;
-		@include adjust-font-size-to(27px);
-		margin-bottom: rhythm(1, 27px);
-	}
-	a:link, a:visited, a:hover, a:active {
-		color: #64044b;
-		padding: .1em .1em .05em;
-		text-decoration: none;
-		border-bottom: dotted 1px #64044b;
-	}
-	a:hover, a:active {
-		color: #ffeef4;
-		background: darken($wonderland-pink, 10%);
-		border: 0;
+	.newsletter {
+		@include box-sizing('border-box');
+		margin: 0 14.5924% rhythm(1);
+		@include breakpoint($breakpoint-narrow) {
+			border-bottom: dotted 1px $wonderland-burgundy;
+		}
+		@include padding-trailer();
+		a:link, a:visited, a:hover, a:active {
+			position: relative;
+			@include border-radius(.5em);
+			color: $pink-white;
+			background: darken(adjust-saturation($wonderland-pink, 10%), 10%);
+			padding: rhythm(.5) 5.5742968%;
+			display: block;
+			text-decoration: none;
+			text-align: center;
+			@include margin-leader(.5);
+		}
+		a:hover, a:active, a:focus {
+			color: #fff;
+			background: darken(adjust-saturation($wonderland-pink, 15%), 15%);
+			@include transition(top .5s, left .5s);
+			top: .15em; left: .15em;
+		}
 	}
 	.author {
-		background: $wonderland-purple;
-		color: $wonderland-pink;
-		font-family: $font-fancy;
-		letter-spacing: .05em;
-		@include adjust-font-size-to(27px);
-		width: 40%;
-		padding: rhythm(1);
-		@include rotate(12deg);
-		position: absolute;
-		bottom: -(rhythm(6)); right: rhythm(2);
+		@include box-sizing('border-box');
+		@extend %clearfix;
+		@include breakpoint($breakpoint-not-narrow) {
+			@include adjust-font-size-to(14px);
+			clear: both;
+			padding: 0 5.5742968% rhythm(1, 14px);
+			@include adjust-leading-to(1);
+		}
+		padding: rhythm(1) 14.5924%;
+		a:link, a:visited, a:hover, a:active {
+			color: #64044b;
+			padding: .1em .1em .05em;
+			text-decoration: none;
+			border-bottom: dotted 1px $wonderland-burgundy;
+		}
+		a:hover, a:active {
+			color: #ffeef4;
+			background: darken($wonderland-pink, 10%);
+			border: 0;
+		}
 	}
+	.img-wrap {
+		background: $wonderland-grape;
+		@include border-radius(50%);
+		display: block;
+		float: left;
+		margin-right: 1em;
+		margin-top: -(rhythm(1));
+		overflow: hidden;
+		width: 5em; height: 5em;
+	}
+	img {
+		margin: 0 auto;
+		width: 4.5em;  height: auto;
+	}
+	
 }

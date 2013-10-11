@@ -3,10 +3,6 @@
 // animation helpers w/ Animation Studio
 @import "animation-studio"; 
 
-// grids w/ Singularity
-@import "singularitygs"; 
-@import "singularity-extras"; // golden ratio grid extension
-
 // media queries w/ Breakpoint
 @import "breakpoint";
 
@@ -20,7 +16,6 @@
 // General styles for background + shared styles for universal elements. 
 @import "foundation";
 @import "typography";
-@import "grids";
 
 // Loading page
 @import "loader";

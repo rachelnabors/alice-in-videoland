@@ -6,13 +6,14 @@ $base-font-size: 18px;
 $base-line-height: 24px;
 
 // Typography
-$font-fancy: "blue-goblet-alt";
-$font-fancy-bold: "700";
+// $font-fancy: "blue-goblet-alt";
+// $font-fancy-bold: "700";
 
 $font-slab: "hellenic-wide";
 
 $font-copy: "nueva-std-extended";
-$font-copy-weight: "300";
+$font-copy-weight: 400;
+$font-copy-bold: 700;
 
 @include establish-baseline;
 

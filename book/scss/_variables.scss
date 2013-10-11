@@ -1,5 +1,6 @@
 // Variables
 
+
 // Max dimensions of iPad retina, the highest target device: 2048-by-1536
 $max-width : 2048;
 $max-height: 1536;
@@ -9,6 +10,8 @@ $min-height: 600;
 
 // Media Queries and size ratios
 $breakpoint-short: (min-aspect-ratio "4/3");
+$breakpoint-not-narrow: (525/16*1em);
+$breakpoint-narrow: (max-width 525/16*1em);
 
 // saucer ratios
 $saucer-sizer: 32em;
@@ -17,3 +20,9 @@ $saucer-sizer: 32em;
 $earth: #6c373f; //#a36f77;
 $wonderland-pink: #f090b1;
 $wonderland-purple: #431236;
+$wonderland-grape: #a22782;
+$wonderland-burgundy: #82002d;
+$pink-white: #ffeef4;
+
+$park-green: #20b3aa;
+$park-mint: #73ebc5;

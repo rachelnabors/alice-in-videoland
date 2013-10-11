@@ -20,3 +20,13 @@
 	white-space: nowrap;
 	overflow: hidden;
 }
+
+%clearfix:before,
+%clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+%clearfix:after {
+    clear: both;
+}
