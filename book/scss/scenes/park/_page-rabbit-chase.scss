@@ -5,7 +5,7 @@
 		@include background-size(100% 100%);
 		position: absolute;
 		bottom: 0; left: 34%;
-		.csstransitions & { left: -50%;}
+		.csstransitions & { left: -(percentage(486/$max-width));}
 		width: percentage(486/$max-width); padding-top: percentage(396/$max-width);	
 	}
 	.rabbit1 {
@@ -20,7 +20,7 @@
 		@include background-size(100% 100%);
 		position: absolute;
 		bottom: 0; left: 70%;
-		.csstransitions & { left: -50%;}
+		.csstransitions & { left: -(percentage(415/$max-width));}
 		width: percentage(415/$max-width); padding-top: percentage(381/$max-width);
 	}
 	.csstransitions &.in-view {
@@ -31,12 +31,12 @@
 		}
 		// and in frame three they should both runn off page after a small delay for the above to finish
 		.rabbit2 {
-			@include transition(left 3s ease-in 1.5s);
-			left: 100%;
+			@include transition(transform 3s ease-in 1.5s);
+			@include translate(percentage(($max-width+450)/415), 0);
 		}
 		.alice {
-			@include transition(left 3s ease-in 2s);
-			left: 100%;
+			@include transition(transform 3s ease-in 3s);
+			@include translate(percentage(($max-width+500)/486), 0);
 		}
 	}
 }

@@ -1,6 +1,6 @@
 .page_the-hole {
-	@include background(image-url("bg_park5_1.png") no-repeat,
-		radial-gradient(70% 60%, circle closest-side, #eb125d, #000));
+	@include background(image-url("bg_park5_1.png") no-repeat);
+		// radial-gradient(70% 60%, circle closest-side, #eb125d, #000));
 		// rad grad ref: http://www.css3files.com/gradient/
 	.foreground {
 		height: 100%;
@@ -21,7 +21,7 @@
 		.cssanimations & { @include opacity(1);}
 	}
 	&.in-view {
-		@include animation(hole-glow 2s infinite alternate);
+		// @include animation(hole-glow 2s infinite alternate);
 		.rabbit {
 			@include animation(rabbit-down 3s forwards);
 		}
@@ -29,7 +29,9 @@
 }
 
 @include keyframes(rabbit-down) {
-    100% { top: 100% }
+    100% {
+    	@include translate(0, 100%);
+    }
 }
 
 @include keyframes(hole-glow) {

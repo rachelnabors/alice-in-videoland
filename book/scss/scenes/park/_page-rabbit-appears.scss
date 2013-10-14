@@ -17,17 +17,18 @@
 		@include background-size(100% auto);
 		width: percentage(1135/$max-width); padding-top: percentage(1254/$max-width);
 		position: absolute;
-		top: 70%; margin-top: -245px;
-		left: 50%; margin-left: -244px;
+		top: 70%;
+		left: 50%; 
+		@include translate(-50%, -50%);
 		z-index: 1;
 		.cssanimations & { 
 			left: -50%;
 		}
 	}
 
-	.cssanimations &.in-view .rabbit {
-		left: 200%;
-		@include transition(left 5s ease-in);
+	.csstransitions &.in-view .rabbit {
+		@include translate(percentage(($max-width+1135)/1135), -50%);
+		@include transition(transform 5s ease-in);
 	}
 }
 

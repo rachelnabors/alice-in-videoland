@@ -1,8 +1,8 @@
 /* Alice in Videoland JS! */
 (function(window, document, $){ // Use an IIFE http://gregfranko.com/blog/i-love-my-iife/
 	var $tunnels = $("#tunnels"),
-			$tunnel = $("#tunnel"),
-	 	  $screenHeight = $.waypoints('viewportHeight');
+		$tunnel = $("#tunnel"),
+	 	$screenHeight = $.waypoints('viewportHeight');
 
 	var recalcWaypoints = function() {
 		$(".page").waypoint({

@@ -35,7 +35,6 @@ h1 {
 	background: #20b3aa;
 	@include box-sizing(border-box);
 	color: #00232b;
-	font-size: 16px;
 	position: absolute;
 	bottom: 0;
 	font-family: $font-copy;
@@ -46,12 +45,11 @@ h1 {
 }
 
 #loader {
-	@include transform(scale3d(1,1,1));
 	@include animation(cup-drop 1.5s cubic-bezier(.11,1.06,.21,.99) 1.5s forwards);
 	width: 440em/($saucer-sizer)*1em; height: 326em/$saucer-sizer*1em;
 	position: absolute;
 	top: -100%; left: 50%;
-	margin-left: -(440em/($saucer-sizer)*.5em);
+	@include translate(-50%, 0);
 	margin-top: -(326em/$saucer-sizer*.5em);
 	z-index:2;
 }
@@ -63,10 +61,10 @@ h1 {
 	margin-left: 1.5em;
 	width: 100%; height: 100%;
 	p {
-		font-family: "blue-goblet-alt",fantasy;
-		font-style: italic;
-		font-weight: 400;
-		font-size: 24px;
+		font-family: $font-fancy, fantasy;
+		// font-weight: $font-fancy-bold;
+		// font-style: italic;
+		@include adjust-font-size-to(24px, 1);
 		position: absolute;
 		top: 40%; left: 8%;
 		width: 60%;
@@ -131,13 +129,13 @@ h1 {
 
 @include keyframes(cup-done) {
 	15% {
-		@include rotate(7deg);
+		@include transform(rotate(7deg) translate(-50%, 0));
 	}
 	65% {
-		@include rotate(-11deg);
+		@include transform(rotate(-11deg) translate(-50%, 0));
 	}
 	100% {
-		@include rotate(0deg);
+		@include transform(rotate(0deg) translate(-50%, 0));
 		top: 200%;
 	}
 }

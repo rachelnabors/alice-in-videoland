@@ -175,7 +175,6 @@ h1 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #00232b;
-  font-size: 16px;
   position: absolute;
   bottom: 0;
   font-family: "nueva-std-extended";
@@ -185,13 +184,8 @@ h1 {
   z-index: 3;
 }
 
-/* line 48, ../scss/_loader.scss */
+/* line 47, ../scss/_loader.scss */
 #loader {
-  -webkit-transform: scale3d(1, 1, 1);
-  -moz-transform: scale3d(1, 1, 1);
-  -ms-transform: scale3d(1, 1, 1);
-  -o-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
   -webkit-animation: cup-drop 1.5s cubic-bezier(0.11, 1.06, 0.21, 0.99) 1.5s forwards;
   -moz-animation: cup-drop 1.5s cubic-bezier(0.11, 1.06, 0.21, 0.99) 1.5s forwards;
   -o-animation: cup-drop 1.5s cubic-bezier(0.11, 1.06, 0.21, 0.99) 1.5s forwards;
@@ -201,12 +195,16 @@ h1 {
   position: absolute;
   top: -100%;
   left: 50%;
-  margin-left: -6.875em;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   margin-top: -5.09375em;
   z-index: 2;
 }
 
-/* line 59, ../scss/_loader.scss */
+/* line 57, ../scss/_loader.scss */
 .cup {
   background: url('../img/teacup.svg?1378873015') 0 0 no-repeat;
   -webkit-background-size: 100% 100%;
@@ -218,19 +216,18 @@ h1 {
   width: 100%;
   height: 100%;
 }
-/* line 65, ../scss/_loader.scss */
+/* line 63, ../scss/_loader.scss */
 .cup p {
-  font-family: "blue-goblet-alt",fantasy;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 24px;
+  font-family: "blue-goblet-alt", fantasy;
+  font-size: 1.33333em;
+  line-height: 1em;
   position: absolute;
   top: 40%;
   left: 8%;
   width: 60%;
 }
 
-/* line 76, ../scss/_loader.scss */
+/* line 74, ../scss/_loader.scss */
 .saucer {
   -webkit-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
   -moz-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
@@ -250,7 +247,7 @@ h1 {
   z-index: -1;
 }
 
-/* line 87, ../scss/_loader.scss */
+/* line 85, ../scss/_loader.scss */
 .loaded .saucer {
   -webkit-animation: saucer-done 1s 0.5s forwards;
   -moz-animation: saucer-done 1s 0.5s forwards;
@@ -259,7 +256,7 @@ h1 {
   top: 80%;
 }
 
-/* line 92, ../scss/_loader.scss */
+/* line 90, ../scss/_loader.scss */
 .loaded #loader {
   -webkit-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
   -moz-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
@@ -268,7 +265,7 @@ h1 {
   top: 60%;
 }
 
-/* line 97, ../scss/_loader.scss */
+/* line 95, ../scss/_loader.scss */
 #brew {
   -webkit-animation: pour-tea 5s 1 3s forwards;
   -moz-animation: pour-tea 5s 1 3s forwards;
@@ -288,7 +285,7 @@ h1 {
 }
 
 @-moz-keyframes pour-tea {
-  /* line 107, ../scss/_loader.scss */
+  /* line 105, ../scss/_loader.scss */
   100% {
     -moz-transform: scale(1.2, 1.5);
     transform: scale(1.2, 1.5);
@@ -297,7 +294,7 @@ h1 {
 }
 
 @-webkit-keyframes pour-tea {
-  /* line 107, ../scss/_loader.scss */
+  /* line 105, ../scss/_loader.scss */
   100% {
     -webkit-transform: scale(1.2, 1.5);
     transform: scale(1.2, 1.5);
@@ -306,7 +303,7 @@ h1 {
 }
 
 @-o-keyframes pour-tea {
-  /* line 107, ../scss/_loader.scss */
+  /* line 105, ../scss/_loader.scss */
   100% {
     -o-transform: scale(1.2, 1.5);
     transform: scale(1.2, 1.5);
@@ -315,7 +312,7 @@ h1 {
 }
 
 @keyframes pour-tea {
-  /* line 107, ../scss/_loader.scss */
+  /* line 105, ../scss/_loader.scss */
   100% {
     transform: scale(1.2, 1.5);
     bottom: 6.6em;
@@ -323,35 +320,35 @@ h1 {
 }
 
 @-moz-keyframes cup-drop {
-  /* line 114, ../scss/_loader.scss */
+  /* line 112, ../scss/_loader.scss */
   100% {
     top: 60%;
   }
 }
 
 @-webkit-keyframes cup-drop {
-  /* line 114, ../scss/_loader.scss */
+  /* line 112, ../scss/_loader.scss */
   100% {
     top: 60%;
   }
 }
 
 @-o-keyframes cup-drop {
-  /* line 114, ../scss/_loader.scss */
+  /* line 112, ../scss/_loader.scss */
   100% {
     top: 60%;
   }
 }
 
 @keyframes cup-drop {
-  /* line 114, ../scss/_loader.scss */
+  /* line 112, ../scss/_loader.scss */
   100% {
     top: 60%;
   }
 }
 
 @-moz-keyframes saucer-drop {
-  /* line 120, ../scss/_loader.scss */
+  /* line 118, ../scss/_loader.scss */
   100% {
     top: 80%;
     -moz-transform: rotate(360deg);
@@ -360,7 +357,7 @@ h1 {
 }
 
 @-webkit-keyframes saucer-drop {
-  /* line 120, ../scss/_loader.scss */
+  /* line 118, ../scss/_loader.scss */
   100% {
     top: 80%;
     -webkit-transform: rotate(360deg);
@@ -369,7 +366,7 @@ h1 {
 }
 
 @-o-keyframes saucer-drop {
-  /* line 120, ../scss/_loader.scss */
+  /* line 118, ../scss/_loader.scss */
   100% {
     top: 80%;
     -o-transform: rotate(360deg);
@@ -378,7 +375,7 @@ h1 {
 }
 
 @keyframes saucer-drop {
-  /* line 120, ../scss/_loader.scss */
+  /* line 118, ../scss/_loader.scss */
   100% {
     top: 80%;
     transform: rotate(360deg);
@@ -386,120 +383,120 @@ h1 {
 }
 
 @-moz-keyframes saucer-done {
-  /* line 127, ../scss/_loader.scss */
+  /* line 125, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @-webkit-keyframes saucer-done {
-  /* line 127, ../scss/_loader.scss */
+  /* line 125, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @-o-keyframes saucer-done {
-  /* line 127, ../scss/_loader.scss */
+  /* line 125, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @keyframes saucer-done {
-  /* line 127, ../scss/_loader.scss */
+  /* line 125, ../scss/_loader.scss */
   100% {
     top: 100%;
   }
 }
 
 @-moz-keyframes cup-done {
-  /* line 133, ../scss/_loader.scss */
+  /* line 131, ../scss/_loader.scss */
   15% {
-    -moz-transform: rotate(7deg);
-    transform: rotate(7deg);
+    -moz-transform: rotate(7deg) translate(-50%, 0);
+    transform: rotate(7deg) translate(-50%, 0);
   }
 
-  /* line 136, ../scss/_loader.scss */
+  /* line 134, ../scss/_loader.scss */
   65% {
-    -moz-transform: rotate(-11deg);
-    transform: rotate(-11deg);
+    -moz-transform: rotate(-11deg) translate(-50%, 0);
+    transform: rotate(-11deg) translate(-50%, 0);
   }
 
-  /* line 139, ../scss/_loader.scss */
+  /* line 137, ../scss/_loader.scss */
   100% {
-    -moz-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -moz-transform: rotate(0deg) translate(-50%, 0);
+    transform: rotate(0deg) translate(-50%, 0);
     top: 200%;
   }
 }
 
 @-webkit-keyframes cup-done {
-  /* line 133, ../scss/_loader.scss */
+  /* line 131, ../scss/_loader.scss */
   15% {
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg) translate(-50%, 0);
+    transform: rotate(7deg) translate(-50%, 0);
   }
 
-  /* line 136, ../scss/_loader.scss */
+  /* line 134, ../scss/_loader.scss */
   65% {
-    -webkit-transform: rotate(-11deg);
-    transform: rotate(-11deg);
+    -webkit-transform: rotate(-11deg) translate(-50%, 0);
+    transform: rotate(-11deg) translate(-50%, 0);
   }
 
-  /* line 139, ../scss/_loader.scss */
+  /* line 137, ../scss/_loader.scss */
   100% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) translate(-50%, 0);
+    transform: rotate(0deg) translate(-50%, 0);
     top: 200%;
   }
 }
 
 @-o-keyframes cup-done {
-  /* line 133, ../scss/_loader.scss */
+  /* line 131, ../scss/_loader.scss */
   15% {
-    -o-transform: rotate(7deg);
-    transform: rotate(7deg);
+    -o-transform: rotate(7deg) translate(-50%, 0);
+    transform: rotate(7deg) translate(-50%, 0);
   }
 
-  /* line 136, ../scss/_loader.scss */
+  /* line 134, ../scss/_loader.scss */
   65% {
-    -o-transform: rotate(-11deg);
-    transform: rotate(-11deg);
+    -o-transform: rotate(-11deg) translate(-50%, 0);
+    transform: rotate(-11deg) translate(-50%, 0);
   }
 
-  /* line 139, ../scss/_loader.scss */
+  /* line 137, ../scss/_loader.scss */
   100% {
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -o-transform: rotate(0deg) translate(-50%, 0);
+    transform: rotate(0deg) translate(-50%, 0);
     top: 200%;
   }
 }
 
 @keyframes cup-done {
-  /* line 133, ../scss/_loader.scss */
+  /* line 131, ../scss/_loader.scss */
   15% {
-    transform: rotate(7deg);
+    transform: rotate(7deg) translate(-50%, 0);
   }
 
-  /* line 136, ../scss/_loader.scss */
+  /* line 134, ../scss/_loader.scss */
   65% {
-    transform: rotate(-11deg);
+    transform: rotate(-11deg) translate(-50%, 0);
   }
 
-  /* line 139, ../scss/_loader.scss */
+  /* line 137, ../scss/_loader.scss */
   100% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translate(-50%, 0);
     top: 200%;
   }
 }
 
-/* line 145, ../scss/_loader.scss */
+/* line 143, ../scss/_loader.scss */
 .loading .scene {
   opacity: 0;
 }
 
-/* line 150, ../scss/_loader.scss */
+/* line 148, ../scss/_loader.scss */
 .loading {
   overflow: hidden;
 }
@@ -679,67 +676,74 @@ h1 {
   padding-top: 61.23047%;
   position: absolute;
   top: 70%;
-  margin-top: -245px;
   left: 50%;
-  margin-left: -244px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
-/* line 23, ../scss/scenes/park/_page-rabbit-appears.scss */
+/* line 24, ../scss/scenes/park/_page-rabbit-appears.scss */
 .cssanimations .page_rabbit-appears .rabbit {
   left: -50%;
 }
-/* line 28, ../scss/scenes/park/_page-rabbit-appears.scss */
-.cssanimations .page_rabbit-appears.in-view .rabbit {
-  left: 200%;
-  -webkit-transition: left 5s ease-in;
-  -moz-transition: left 5s ease-in;
-  -o-transition: left 5s ease-in;
-  transition: left 5s ease-in;
+/* line 29, ../scss/scenes/park/_page-rabbit-appears.scss */
+.csstransitions .page_rabbit-appears.in-view .rabbit {
+  -webkit-transform: translate(280.44053%, -50%);
+  -moz-transform: translate(280.44053%, -50%);
+  -ms-transform: translate(280.44053%, -50%);
+  -o-transform: translate(280.44053%, -50%);
+  transform: translate(280.44053%, -50%);
+  -webkit-transition: -webkit-transform 5s ease-in;
+  -moz-transition: -moz-transform 5s ease-in;
+  -o-transition: -o-transform 5s ease-in;
+  transition: transform 5s ease-in;
 }
 
 @-moz-keyframes scene-blink {
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 38, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-webkit-keyframes scene-blink {
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 38, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @-o-keyframes scene-blink {
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 38, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
 }
 
 @keyframes scene-blink {
-  /* line 36, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
   0% {
     background-position: 0 0;
   }
 
-  /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
+  /* line 38, ../scss/scenes/park/_page-rabbit-appears.scss */
   100% {
     background-position: 0 125%;
   }
@@ -764,7 +768,7 @@ h1 {
 }
 /* line 8, ../scss/scenes/park/_page-rabbit-chase.scss */
 .csstransitions .page_rabbit-chase .alice {
-  left: -50%;
+  left: -23.73047%;
 }
 /* line 11, ../scss/scenes/park/_page-rabbit-chase.scss */
 .page_rabbit-chase .rabbit1 {
@@ -794,7 +798,7 @@ h1 {
 }
 /* line 23, ../scss/scenes/park/_page-rabbit-chase.scss */
 .csstransitions .page_rabbit-chase .rabbit2 {
-  left: -50%;
+  left: -20.26367%;
 }
 /* line 28, ../scss/scenes/park/_page-rabbit-chase.scss */
 .csstransitions .page_rabbit-chase.in-view .rabbit1 {
@@ -810,29 +814,34 @@ h1 {
 }
 /* line 33, ../scss/scenes/park/_page-rabbit-chase.scss */
 .csstransitions .page_rabbit-chase.in-view .rabbit2 {
-  -webkit-transition: left 3s ease-in;
+  -webkit-transition: -webkit-transform 3s ease-in;
   -webkit-transition-delay: 1.5s;
-  -moz-transition: left 3s ease-in 1.5s;
-  -o-transition: left 3s ease-in 1.5s;
-  transition: left 3s ease-in 1.5s;
-  left: 100%;
+  -moz-transition: -moz-transform 3s ease-in 1.5s;
+  -o-transition: -o-transform 3s ease-in 1.5s;
+  transition: transform 3s ease-in 1.5s;
+  -webkit-transform: translate(601.92771%, 0);
+  -moz-transform: translate(601.92771%, 0);
+  -ms-transform: translate(601.92771%, 0);
+  -o-transform: translate(601.92771%, 0);
+  transform: translate(601.92771%, 0);
 }
 /* line 37, ../scss/scenes/park/_page-rabbit-chase.scss */
 .csstransitions .page_rabbit-chase.in-view .alice {
-  -webkit-transition: left 3s ease-in;
-  -webkit-transition-delay: 2s;
-  -moz-transition: left 3s ease-in 2s;
-  -o-transition: left 3s ease-in 2s;
-  transition: left 3s ease-in 2s;
-  left: 100%;
+  -webkit-transition: -webkit-transform 3s ease-in;
+  -webkit-transition-delay: 3s;
+  -moz-transition: -moz-transform 3s ease-in 3s;
+  -o-transition: -o-transform 3s ease-in 3s;
+  transition: transform 3s ease-in 3s;
+  -webkit-transform: translate(524.27984%, 0);
+  -moz-transform: translate(524.27984%, 0);
+  -ms-transform: translate(524.27984%, 0);
+  -o-transform: translate(524.27984%, 0);
+  transform: translate(524.27984%, 0);
 }
 
 /* line 1, ../scss/scenes/park/_page-the-hole.scss */
 .page_the-hole {
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -webkit-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -moz-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, -o-radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
-  background: url('../img/bg_park5_1.png?1377532988') no-repeat, radial-gradient(70% 60%, circle closest-side, #eb125d, #000000);
+  background: url('../img/bg_park5_1.png?1377532988') no-repeat;
 }
 /* line 5, ../scss/scenes/park/_page-the-hole.scss */
 .page_the-hole .foreground {
@@ -867,13 +876,6 @@ h1 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 23, ../scss/scenes/park/_page-the-hole.scss */
-.page_the-hole.in-view {
-  -webkit-animation: hole-glow 2s infinite alternate;
-  -moz-animation: hole-glow 2s infinite alternate;
-  -o-animation: hole-glow 2s infinite alternate;
-  animation: hole-glow 2s infinite alternate;
-}
 /* line 25, ../scss/scenes/park/_page-the-hole.scss */
 .page_the-hole.in-view .rabbit {
   -webkit-animation: rabbit-down 3s forwards;
@@ -885,80 +887,83 @@ h1 {
 @-moz-keyframes rabbit-down {
   /* line 32, ../scss/scenes/park/_page-the-hole.scss */
   100% {
-    top: 100%;
+    -moz-transform: translate(0, 100%);
+    transform: translate(0, 100%);
   }
 }
 
 @-webkit-keyframes rabbit-down {
   /* line 32, ../scss/scenes/park/_page-the-hole.scss */
   100% {
-    top: 100%;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
   }
 }
 
 @-o-keyframes rabbit-down {
   /* line 32, ../scss/scenes/park/_page-the-hole.scss */
   100% {
-    top: 100%;
+    -o-transform: translate(0, 100%);
+    transform: translate(0, 100%);
   }
 }
 
 @keyframes rabbit-down {
   /* line 32, ../scss/scenes/park/_page-the-hole.scss */
   100% {
-    top: 100%;
+    transform: translate(0, 100%);
   }
 }
 
 @-moz-keyframes hole-glow {
-  /* line 36, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 38, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 37, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 39, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
 @-webkit-keyframes hole-glow {
-  /* line 36, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 38, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 37, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 39, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
 @-o-keyframes hole-glow {
-  /* line 36, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 38, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 37, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 39, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
 @keyframes hole-glow {
-  /* line 36, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 38, ../scss/scenes/park/_page-the-hole.scss */
   0% {
     background-size: 100% auto, 100% 100%;
   }
 
-  /* line 37, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 39, ../scss/scenes/park/_page-the-hole.scss */
   100% {
     background-size: 100% auto, 120% 120%;
   }
 }
 
-/* line 40, ../scss/scenes/park/_page-the-hole.scss */
+/* line 42, ../scss/scenes/park/_page-the-hole.scss */
 #to-tunnels {
   position: absolute;
   top: 34%;
