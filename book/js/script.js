@@ -6,7 +6,7 @@
 
 	var recalcWaypoints = function() {
 		$(".page").waypoint({
-		  offset: beingRead()
+			offset: beingRead()
 		});
 	}
 

@@ -144,10 +144,10 @@ body {
 .loaded .loading-card {
   height: 0;
   -webkit-transition: height 2s ease-in;
-  -webkit-transition-delay: 4s;
-  -moz-transition: height 2s ease-in 4s;
-  -o-transition: height 2s ease-in 4s;
-  transition: height 2s ease-in 4s;
+  -webkit-transition-delay: 1.5s;
+  -moz-transition: height 2s ease-in 1.5s;
+  -o-transition: height 2s ease-in 1.5s;
+  transition: height 2s ease-in 1.5s;
 }
 
 /* line 21, ../scss/_loader.scss */
@@ -537,11 +537,11 @@ h1 {
 /* line 8, ../scss/scenes/park/_scene-park.scss */
 .scene-park.cue {
   opacity: 1;
-  -webkit-transition: opacity 3s;
+  -webkit-transition: opacity 2s;
   -webkit-transition-delay: 2s;
-  -moz-transition: opacity 3s 2s;
-  -o-transition: opacity 3s 2s;
-  transition: opacity 3s 2s;
+  -moz-transition: opacity 2s 2s;
+  -o-transition: opacity 2s 2s;
+  transition: opacity 2s 2s;
 }
 
 /* line 1, ../scss/scenes/park/_page-sitting-in-the-park.scss */

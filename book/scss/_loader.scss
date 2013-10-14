@@ -15,7 +15,7 @@
 
 .loaded .loading-card {
 	height: 0;
-	@include transition(height 2s ease-in 4s);
+	@include transition(height 2s ease-in 1.5s);
 }
 
 h1 {
