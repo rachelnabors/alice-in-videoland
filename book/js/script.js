@@ -3,14 +3,37 @@
 	var $tunnels = $("#tunnels"),
 		$tunnel = $("#tunnel"),
 	 	$screenHeight = $.waypoints('viewportHeight');
-
+	 	pagesNum = $(".page").length;
+	if(Modernizr.touch) {
+		// variables only needed for touch context Hammer functions at bottom
+		var cutFired = false,
+			downHole = false,
+			currentPage,
+			nextPage,
+			prevPage;
+	}
 	var recalcWaypoints = function() {
 		$(".page").waypoint({
 			offset: beingRead()
 		});
 	}
+	
+	// only for mobile swiping
+	var calcPrevNext = function(current) {
+		if (prevPage < 1) {
+			prevPage = current;
+		} else {
+			prevPage = current - 1;
+		}
 
-  window.addEventListener('orientationchange', recalcWaypoints);
+		if (nextPage === pagesNum) {
+			nextPage = current;
+		} else {
+			nextPage = current + 1;
+		}
+	}
+		
+	window.addEventListener('orientationchange', recalcWaypoints);
 
 	// First and foremost, get that loader in place.
 	var loadingSaucer= '<div id="loader"><div class="cup"><svg version="1.1" id="brew" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="266px" height="25px" viewBox="0 0 266 25" enable-background="new 0 0 266 25" xml:space="preserve"><ellipse fill="#903741" cx="133" cy="12.5" rx="133" ry="12.5"/></svg><p>Please wait while we load</p></div><div class="saucer"></div></div>';
@@ -48,17 +71,44 @@
 		}
 	}
 
-	var scrollPageIntoCenter = function(toPage) {
-		// Then animate that sucker.
-		$("html, body").animate({
-				scrollTop: topOffset(toPage)
-			}, 500);
-	};
+	var cutToWonderland = function() {
+		if(Modernizr.touch) {
+			cutFired = true;
+			currentPage = nextPage;					
+			calcPrevNext(currentPage);
+		}
+		// Disable waypoint so people can scroll up if they want to.
+		$(".scene-hole").waypoint('disable');
+
+		// Give the .cut scene its cue
+	  	$(this).next(".scene").addClass("cue");
+
+	  	// wait a little bit
+	  	window.setTimeout(function(){
+	  		// give first wonderland page its cue
+	  		$(".scene-wonderland").addClass("cue")
+	  		.find(".page").waypoint(function() {
+				$(this).addClass("in-view");
+			}, {
+			  offset: beingRead()
+			});
+
+		  	$("html,body").animate({
+					scrollTop: $(".scene-wonderland").offset().top
+				}, 2500, function() {
+					$(".scene-cut").remove();
+				});
+	  	}, 2000);
+	}
 
 
 	// Reveal the rabbit tunnel and move the page down to #tunnel
 	var downTheHole = function() {
-
+		if(Modernizr.touch) {
+			currentPage = $(".falling_frightened").index(".page");
+			downHole = true;
+			calcPrevNext(currentPage);
+		}
 		var $alice = $tunnel.find(".alice-falling");
 
 		// reveal the tunnels w/ class
@@ -90,28 +140,10 @@
 		$("html,body").animate({
 			scrollTop: $("#tunnel").offset().top // animate new offset to scroll past the tunnels
 		}, 4000, function(){
-			$(".scene-hole").waypoint(function(direction) {
-				// Disable waypoint so people can scroll up if they want to.
-				$(".scene-hole").waypoint('disable');
-
-				// gently animate down the page
-		  	$(this).next(".scene").addClass("cue");
-		  	window.setTimeout(function(){
-		  		$(".scene-wonderland").addClass("cue")
-		  		.find(".page").waypoint(function() {
-					$(this).addClass("in-view");
-				}, {
-				  offset: beingRead()
-				});
-
-			  	$("html,body").animate({
-						scrollTop: $(".scene-wonderland").offset().top
-					}, 2500, function() {
-						$(".scene-cut").remove();
-					});
-		  	}, 2000);
-			}, {
+			// cut to wonderland
+			$(".scene-hole").waypoint(cutToWonderland, {
 			  offset: function() {
+			  	// this sez "when bottom of tunnels is at bottom of screen"
 			    return -($tunnels.height() - $screenHeight);
 			  }
 			});
@@ -153,18 +185,54 @@
 	$(window).load(function() {
 		// if touch is enabled, let's use hammer.js to detect gestures!
 		if(Modernizr.touch) {
-			//prevent scrolling 
-			// ev.gesture.preventDefault();
-			$(document).hammer({drag_block_vertical: true}).on("swipeup", ".page", function(event) {
-				// alert("swiped!")
-				var $nextPage = $(this).next(".page");
-				scrollPageIntoCenter($nextPage);
+			// set current page
+			// needs to infer the "current page" on position
+			// loop through all .pages and stop on the first one that returns true.
+			// will need to run post page load... so set timeout to like
+			var scrollPageIntoCenter = function(toPage) {
+				// Then animate that sucker.
+				$("html, body").animate({
+						scrollTop: topOffset(toPage)
+					}, 500);
+			};
+
+			var visiblePages = [];
+			$('.page').filter(":visible").each(function(i) { 
+				if ($(this).visible(true)) {
+					visiblePages.push(i);
+				}
+			});
+			// if more than 2 pages are on the screen, use the second
+			if (visiblePages > 2) {
+				currentPage = visiblePages[1];
+				calcPrevNext(visiblePages[1]);
+			} else { // otherwise go for the first
+				currentPage = visiblePages[0];
+				calcPrevNext(visiblePages[0]);
+			}
+
+			$(document).hammer({prevent_default:true}).on("swipeup", function(event) {
+				// using index() to get the index of our current page,
+				// we can eq() the next or previous .page in the set of matched elements.
+
+				// check if this is the last tunnel scene, and if so fire cutToWonderland 
+				if ($(".page").eq(currentPage).hasClass("page_the-hole")  && !downHole ) {
+					currentPage = currentPage;
+					calcPrevNext(currentPage);
+				// } else if ($(".page").eq(currentPage).hasClass("falling_weird") && !cutFired) {
+				// 	cutToWonderland();
+				} else {
+					scrollPageIntoCenter($(".page").get(nextPage));
+					currentPage = nextPage;					
+					calcPrevNext(currentPage);
+				}
 			});
 
 			//Swipe to previous page
-			$(document).hammer({drag_block_vertical: true}).on("swipedown", ".page", function(event) {
-				var $prevPage = $(this).prev(".page");
-				scrollPageIntoCenter($prevPage);
+			$(document).hammer({prevent_default:true}).on("swipedown", function(event) {
+				scrollPageIntoCenter($(".page").get(prevPage));
+				currentPage = prevPage;
+				calcPrevNext(currentPage);
 			});
 
 		}
