@@ -71,36 +71,15 @@
 		}
 	}
 
-	var cutToWonderland = function() {
-		if(Modernizr.touch) {
-			cutFired = true;
-			currentPage = nextPage;					
-			calcPrevNext(currentPage);
-		}
-		// Disable waypoint so people can scroll up if they want to.
-		$(".scene-hole").waypoint('disable');
+	// How to guess which frame is "being read".
+	var beingRead = function() {
+		// It would be approximately centered, of equal distance from top as from bottom.	
+		var $screenHeight = $.waypoints('viewportHeight');
+		var $pageHeight = $(".page").height();
+		var offset = ($pageHeight - $screenHeight) / 2 * -1;
 
-		// Give the .cut scene its cue
-	  	$(this).next(".scene").addClass("cue");
-
-	  	// wait a little bit
-	  	window.setTimeout(function(){
-	  		// give first wonderland page its cue
-	  		$(".scene-wonderland").addClass("cue")
-	  		.find(".page").waypoint(function() {
-				$(this).addClass("in-view");
-			}, {
-			  offset: beingRead()
-			});
-
-		  	$("html,body").animate({
-					scrollTop: $(".scene-wonderland").offset().top
-				}, 2500, function() {
-					$(".scene-cut").remove();
-				});
-	  	}, 2000);
+		return offset;
 	}
-
 
 	// Reveal the rabbit tunnel and move the page down to #tunnel
 	var downTheHole = function() {
@@ -158,14 +137,34 @@
 		});
 	}
 
-	// How to guess which frame is "being read".
-	var beingRead = function() {
-		// It would be approximately centered, of equal distance from top as from bottom.	
-		var $screenHeight = $.waypoints('viewportHeight');
-		var $pageHeight = $(".page").height();
-		var offset = ($pageHeight - $screenHeight) / 2 * -1;
+	var cutToWonderland = function() {
+		if(Modernizr.touch) {
+			cutFired = true;
+			currentPage = nextPage;					
+			calcPrevNext(currentPage);
+		}
+		// Disable waypoint so people can scroll up if they want to.
+		$(".scene-hole").waypoint('disable');
 
-		return offset;
+		// Give the .cut scene its cue
+	  	$(".scene-cut").addClass("cue").addClass("cue");
+
+	  	// wait a little bit
+	  	window.setTimeout(function(){
+	  		// give first wonderland page its cue
+	  		$(".scene-wonderland").addClass("cue")
+	  		.find(".page").waypoint(function() {
+				$(this).addClass("in-view");
+			}, {
+			  offset: beingRead()
+			});
+
+		  	$("html,body").animate({
+					scrollTop: $(".scene-wonderland").offset().top
+				}, 2500, function() {
+					$(".scene-cut").remove();
+				});
+	  	}, 2000);
 	}
 
 	// To get to #tunnels, activate #tunnels
@@ -219,8 +218,8 @@
 				if ($(".page").eq(currentPage).hasClass("page_the-hole")  && !downHole ) {
 					currentPage = currentPage;
 					calcPrevNext(currentPage);
-				// } else if ($(".page").eq(currentPage).hasClass("falling_weird") && !cutFired) {
-				// 	cutToWonderland();
+				} else if ($(".page").eq(currentPage).hasClass("falling_weird") && !cutFired) {
+					cutToWonderland();
 				} else {
 					scrollPageIntoCenter($(".page").get(nextPage));
 					currentPage = nextPage;					
