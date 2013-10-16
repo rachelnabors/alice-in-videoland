@@ -1,0 +1,399 @@
+@font-face {
+  font-family: 'OstrichSansBlack';
+  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.svg#OstrichSansBlack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OstrichSansMedium';
+  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.svg#OstrichSansMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$franklin: franklin-gothic-urw, sans-serif;
+    $bold: 700;
+    $normal: 400;
+$ostblk: 'OstrichSansBlack', sans-serif;
+$ostmed: 'OstrichSansMedium', sans-serif;
+
+$black: #3f4752;
+$highlight: #d6e549; //green
+$highlightContrast: #313b02; //dark green
+$link: #1CCEFF; //turquoise
+$linkVisited: #0097C0; // dark turq
+$callout: #e64988; // pink
+$magenta: #a52469;
+
+$canvas: #dfeff6;
+$canvas_black: #141f31;
+$grey: #858585;
+
+%ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+.deck-container {
+	font-family: $franklin;
+	font-weight: $normal;
+	font-size:1.75em;
+	background:#ccc url(../../img/bg_pinstripe.png);
+
+	.self-portrait, .talk-title {
+		margin-top: 3em;
+	}
+	.self-portrait{
+		width: 33.33333%;
+		float: left;
+		img {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+		figcaption {
+			@extend %ir;
+			background-image: url(../../img/logo.png);
+			margin: 0 auto;
+			width: 264px; height: 117px;
+		}
+	}
+
+	.talk-title {
+		float: right;
+		width: 64.44444%;
+		h1 {
+			font-size: 3em !important;
+			margin: 0;
+		}
+		h2 { 
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	.slide {
+		color: #3C3C3C;
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: normal;
+			text-align: left;
+		}
+		h1 {
+			font-family: $ostblk;
+			font-size: 4em;
+			font-weight: normal;
+			margin-top: 1em;
+			position:relative;
+			top:auto;
+			padding:0;
+			-webkit-transform:none;
+			-moz-transform:none;
+			-ms-transform:none;
+			-o-transform:none;
+			transform:none;
+			&.vcenter { margin: 0;}
+		}
+		.vtop {
+			.slide-title {
+				font-family: $ostmed;
+				font-size: 4em;
+				font-weight: normal;
+				color: $canvas;
+				box-sizing: border-box;
+				background: rgba($canvas_black,.5);
+				border: 0;
+				margin: 0;
+				padding: .25em .25em;
+				position: absolute;
+				top: 0; left: 0;
+				text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+				-webkit-transform:none;
+				-moz-transform:none;
+				-ms-transform:none;
+				-o-transform:none;
+				transform:none;
+				width: 100%;
+			}
+			.slide-tagline {
+				color: $canvas;
+				background: rgba($canvas_black,.5);
+				box-sizing: border-box;
+				font-size: 2em;
+				text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+				margin: 0;
+				left: 0;
+				position: absolute;
+				padding: 0 .5em;
+				bottom: 0;
+				width: 100%;
+				small { 
+					font-size: .25em;
+					font-style: italic;
+					display: block;
+				}
+			}
+		}
+		.vcenter {
+			h1, h2, .tagline { 
+				margin: 0;
+				padding: 0;
+			}
+			h2, .tagline { 
+				border: 0;
+				border-top: 3px solid #888;
+				font-size: 3em;
+				padding-top: .25em;
+				text-align: left;
+			}
+			blockquote {
+				border: 0;
+				cite {color:#fff}
+			}
+		}
+
+		h2, .tagline {
+			font-family: $ostmed;
+			border-bottom-color:$grey;
+			line-height: .8em;
+		}
+
+		h2 { 
+			font-size: 1.5em;
+			margin-bottom: .25em;
+		}
+
+		h3 {
+			font-family: $ostblk;
+			color:#888;
+		}
+		h4 {
+			margin-top: 2em;
+		}
+		pre {
+			border-color:$grey;
+			em { color: $callout;}
+		}
+
+		code {
+			color:#888;
+		}
+
+		figure {
+			margin-bottom: 1em;
+			text-align: center;
+		}
+		figcaption { font-style: italic;}
+
+		blockquote {
+			font-size:2em;
+			font-style:italic;
+			padding:1em 2em;
+			color:#000;
+			border-left:5px solid $grey;
+
+			p {
+				margin:0;
+			}
+
+			cite {
+				font-size:.5em;
+				font-style:normal;
+				font-weight:bold;
+				color:#888;
+				display: block;
+				text-align: right;
+				&:before { content:"\2014";}	
+			}
+		}
+
+		::-moz-selection{ background:$magenta; color:#fff; }
+		::selection { background:$magenta; color:#fff; }
+
+		a {
+			border-bottom: 1px dotted $link;
+			padding: 1px 1px 0 1px;
+			text-decoration: none;
+		}
+		a:link {
+			color:  $link;
+		}
+
+		a:visited {
+			border-color: $linkVisited;
+			color: $linkVisited;
+		}
+
+		a:hover, a:active {
+			color: $highlightContrast;
+			background: $highlight;
+			border: 0;
+		}
+
+	}
+	
+	> .slide {
+		.deck-before, .deck-previous {
+			opacity:0.4;
+			
+			&:not(.deck-child-current) {
+				.deck-before, .deck-previous {
+					opacity:1;
+				}
+			}
+		}
+		
+		.deck-child-current {
+			opacity:1;
+		}
+	} 
+	
+	.cover {
+		.vcenter {
+			color: $canvas;
+			background: rgba($canvas_black,.5);
+			box-sizing: border-box;
+			padding: .5em 48px 1em;
+			text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+			line-height: 3em;
+		}
+		.vcenter em, .vtop em {
+			font-style: normal;
+			display: block;
+			font-family: $franklin;
+			font-weight: 400;
+			font-size: .4em;
+		}
+		.vtop em {
+			font-size: .3em;
+			line-height: 0;
+		}
+		a:link, a:visited, a:hover, a:active { 
+			color: lighten($link, 20%);
+		}
+		a:hover, a:active { 
+			background: $canvas_black;
+		}
+	}
+
+	.deck-prev-link, .deck-next-link {
+		background:$grey;
+		font-family:serif; // sans-serif arrows x-browser fail
+		
+		&, &:hover, &:focus, &:active, &:visited {
+			color:#fff;
+		}
+		
+		&:hover, &:focus {
+			background:$callout;
+			text-decoration:none;
+		}
+	}
+	
+	.deck-status {
+		font-size:0.6666em;
+	}
+	
+	&.deck-menu {
+		.slide {
+			background:#eee;
+		}
+		
+		.deck-current, .no-touch & .slide:hover {
+			background:#ddf;
+		}
+	}
+}
+
+//History slides
+.cover.disney {
+	background: url(../../img/cover_disney.jpg) no-repeat 0 25%;
+	background-size: cover;
+}
+
+.cover.iwerks {
+	background: url(../../img/cover_iwerks.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.technology {
+	background: url(../../img/cover_technology.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.tezuka {
+	background: url(../../img/cover_tezuka.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.hanna {
+	background: url(../../img/cover_hanna.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.cover.miyazaki {
+	background: url(../../img/cover_miyazaki.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.quote-disney {
+	background: url(../../img/quote_disney.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+// UI slides
+.cover.z-axis {
+	background: url(../../img/cover_zaxis.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.skeuomorphism {
+	background: #fff url(../../img/cover_skeuomorphism.png) no-repeat center center;
+	background-size: cover;
+}
+
+.cover.cinematic {
+	background: url(../../img/cover_cinematic.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.modeling {
+	background: url(../../img/cover_model.png) no-repeat 0 0;
+	background-size: cover;
+}
+
+.cover.storyboard {
+	background: url(../../img/cover_storyboards.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+// Splashy slides
+
+.cover.timing-functions {
+	background: url(../../img/cover_easing.png) no-repeat 0 0;
+	background-size: cover;
+	color: $highlight; 
+}
+
+.cover.scene-transitions {
+	background: #000 url(../../img/cover_transitions.png) no-repeat center center;
+	background-size: auto 100%;
+}
+
+.cover.walk-cycle {
+	background: url(../../img/cover_walk-cycle.png) no-repeat center center;
+	background-size: cover;
+}
+
+.cover.cut-outs {
+	background: url(../../img/cover_cutouts.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.cover.parallax {
+	background: #000 url(../../img/cover_parallax.jpg) no-repeat center center;
+	background-size: auto 100%;
+}
+
+// For Horizon patch
+.deck-container:not(.deck-menu) .slide.deck-horizon {
+  display:none;
+}

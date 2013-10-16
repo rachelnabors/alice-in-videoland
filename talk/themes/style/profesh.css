@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'OstrichSansBlack';
+  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.svg#OstrichSansBlack") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OstrichSansMedium';
+  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot");
+  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.svg#OstrichSansMedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.deck-container .self-portrait figcaption {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+.deck-container {
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+  background: #cccccc url(../../img/bg_pinstripe.png); }
+  .deck-container .self-portrait, .deck-container .talk-title {
+    margin-top: 3em; }
+  .deck-container .self-portrait {
+    width: 33.33333%;
+    float: left; }
+    .deck-container .self-portrait img {
+      max-width: 100%;
+      margin: 0 auto; }
+    .deck-container .self-portrait figcaption {
+      background-image: url(../../img/logo.png);
+      margin: 0 auto;
+      width: 264px;
+      height: 117px; }
+  .deck-container .talk-title {
+    float: right;
+    width: 64.44444%; }
+    .deck-container .talk-title h1 {
+      font-size: 3em !important;
+      margin: 0; }
+    .deck-container .talk-title h2 {
+      border: 0;
+      padding: 0; }
+  .deck-container .slide {
+    color: #3C3C3C; }
+    .deck-container .slide h1, .deck-container .slide h2, .deck-container .slide h3, .deck-container .slide h4, .deck-container .slide h5, .deck-container .slide h6 {
+      font-weight: normal;
+      text-align: left; }
+    .deck-container .slide h1 {
+      font-family: "OstrichSansBlack", sans-serif;
+      font-size: 4em;
+      font-weight: normal;
+      margin-top: 1em;
+      position: relative;
+      top: auto;
+      padding: 0;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      transform: none; }
+      .deck-container .slide h1.vcenter {
+        margin: 0; }
+    .deck-container .slide .vtop .slide-title {
+      font-family: "OstrichSansMedium", sans-serif;
+      font-size: 4em;
+      font-weight: normal;
+      color: #dfeff6;
+      box-sizing: border-box;
+      background: rgba(20, 31, 49, 0.5);
+      border: 0;
+      margin: 0;
+      padding: .25em .25em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-shadow: 0px 1px 3px rgba(20, 31, 49, 0.6);
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      transform: none;
+      width: 100%; }
+    .deck-container .slide .vtop .slide-tagline {
+      color: #dfeff6;
+      background: rgba(20, 31, 49, 0.5);
+      box-sizing: border-box;
+      font-size: 2em;
+      text-shadow: 0px 1px 3px rgba(20, 31, 49, 0.6);
+      margin: 0;
+      left: 0;
+      position: absolute;
+      padding: 0 .5em;
+      bottom: 0;
+      width: 100%; }
+      .deck-container .slide .vtop .slide-tagline small {
+        font-size: .25em;
+        font-style: italic;
+        display: block; }
+    .deck-container .slide .vcenter h1, .deck-container .slide .vcenter h2, .deck-container .slide .vcenter .tagline {
+      margin: 0;
+      padding: 0; }
+    .deck-container .slide .vcenter h2, .deck-container .slide .vcenter .tagline {
+      border: 0;
+      border-top: 3px solid #888;
+      font-size: 3em;
+      padding-top: .25em;
+      text-align: left; }
+    .deck-container .slide .vcenter blockquote {
+      border: 0; }
+      .deck-container .slide .vcenter blockquote cite {
+        color: #fff; }
+    .deck-container .slide h2, .deck-container .slide .tagline {
+      font-family: "OstrichSansMedium", sans-serif;
+      border-bottom-color: #858585;
+      line-height: .8em; }
+    .deck-container .slide h2 {
+      font-size: 1.5em;
+      margin-bottom: .25em; }
+    .deck-container .slide h3 {
+      font-family: "OstrichSansBlack", sans-serif;
+      color: #888; }
+    .deck-container .slide h4 {
+      margin-top: 2em; }
+    .deck-container .slide pre {
+      border-color: #858585; }
+      .deck-container .slide pre em {
+        color: #e64988; }
+    .deck-container .slide code {
+      color: #888; }
+    .deck-container .slide figure {
+      margin-bottom: 1em;
+      text-align: center; }
+    .deck-container .slide figcaption {
+      font-style: italic; }
+    .deck-container .slide blockquote {
+      font-size: 2em;
+      font-style: italic;
+      padding: 1em 2em;
+      color: #000;
+      border-left: 5px solid #858585; }
+      .deck-container .slide blockquote p {
+        margin: 0; }
+      .deck-container .slide blockquote cite {
+        font-size: .5em;
+        font-style: normal;
+        font-weight: bold;
+        color: #888;
+        display: block;
+        text-align: right; }
+        .deck-container .slide blockquote cite:before {
+          content: "\2014"; }
+    .deck-container .slide ::-moz-selection {
+      background: #a52469;
+      color: #fff; }
+    .deck-container .slide ::selection {
+      background: #a52469;
+      color: #fff; }
+    .deck-container .slide a {
+      border-bottom: 1px dotted #1cceff;
+      padding: 1px 1px 0 1px;
+      text-decoration: none; }
+    .deck-container .slide a:link {
+      color: #1cceff; }
+    .deck-container .slide a:visited {
+      border-color: #0097c0;
+      color: #0097c0; }
+    .deck-container .slide a:hover, .deck-container .slide a:active {
+      color: #313b02;
+      background: #d6e549;
+      border: 0; }
+  .deck-container > .slide .deck-before, .deck-container > .slide .deck-previous {
+    opacity: 0.4; }
+    .deck-container > .slide .deck-before:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-before:not(.deck-child-current) .deck-previous, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-previous {
+      opacity: 1; }
+  .deck-container > .slide .deck-child-current {
+    opacity: 1; }
+  .deck-container .cover .vcenter {
+    color: #dfeff6;
+    background: rgba(20, 31, 49, 0.5);
+    box-sizing: border-box;
+    padding: .5em 48px 1em;
+    text-shadow: 0px 1px 3px rgba(20, 31, 49, 0.6);
+    line-height: 3em; }
+  .deck-container .cover .vcenter em, .deck-container .cover .vtop em {
+    font-style: normal;
+    display: block;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
+    font-size: .4em; }
+  .deck-container .cover .vtop em {
+    font-size: .3em;
+    line-height: 0; }
+  .deck-container .cover a:link, .deck-container .cover a:visited, .deck-container .cover a:hover, .deck-container .cover a:active {
+    color: #82e4ff; }
+  .deck-container .cover a:hover, .deck-container .cover a:active {
+    background: #141f31; }
+  .deck-container .deck-prev-link, .deck-container .deck-next-link {
+    background: #858585;
+    font-family: serif; }
+    .deck-container .deck-prev-link, .deck-container .deck-prev-link:hover, .deck-container .deck-prev-link:focus, .deck-container .deck-prev-link:active, .deck-container .deck-prev-link:visited, .deck-container .deck-next-link, .deck-container .deck-next-link:hover, .deck-container .deck-next-link:focus, .deck-container .deck-next-link:active, .deck-container .deck-next-link:visited {
+      color: #fff; }
+    .deck-container .deck-prev-link:hover, .deck-container .deck-prev-link:focus, .deck-container .deck-next-link:hover, .deck-container .deck-next-link:focus {
+      background: #e64988;
+      text-decoration: none; }
+  .deck-container .deck-status {
+    font-size: 0.6666em; }
+  .deck-container.deck-menu .slide {
+    background: #eee; }
+  .deck-container.deck-menu .deck-current, .no-touch .deck-container.deck-menu .slide:hover {
+    background: #ddf; }
+
+.cover.disney {
+  background: url(../../img/cover_disney.jpg) no-repeat 0 25%;
+  background-size: cover; }
+
+.cover.iwerks {
+  background: url(../../img/cover_iwerks.png) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.technology {
+  background: url(../../img/cover_technology.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.tezuka {
+  background: url(../../img/cover_tezuka.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.hanna {
+  background: url(../../img/cover_hanna.jpg) no-repeat center center;
+  background-size: cover; }
+
+.cover.miyazaki {
+  background: url(../../img/cover_miyazaki.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.quote-disney {
+  background: url(../../img/quote_disney.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.z-axis {
+  background: url(../../img/cover_zaxis.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.skeuomorphism {
+  background: white url(../../img/cover_skeuomorphism.png) no-repeat center center;
+  background-size: cover; }
+
+.cover.cinematic {
+  background: url(../../img/cover_cinematic.png) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.modeling {
+  background: url(../../img/cover_model.png) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.storyboard {
+  background: url(../../img/cover_storyboards.jpg) no-repeat 0 0;
+  background-size: cover; }
+
+.cover.timing-functions {
+  background: url(../../img/cover_easing.png) no-repeat 0 0;
+  background-size: cover;
+  color: #d6e549; }
+
+.cover.scene-transitions {
+  background: black url(../../img/cover_transitions.png) no-repeat center center;
+  background-size: auto 100%; }
+
+.cover.walk-cycle {
+  background: url(../../img/cover_walk-cycle.png) no-repeat center center;
+  background-size: cover; }
+
+.cover.cut-outs {
+  background: url(../../img/cover_cutouts.jpg) no-repeat center center;
+  background-size: cover; }
+
+.cover.parallax {
+  background: black url(../../img/cover_parallax.jpg) no-repeat center center;
+  background-size: auto 100%; }
+
+.deck-container:not(.deck-menu) .slide.deck-horizon {
+  display: none; }
