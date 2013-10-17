@@ -28,9 +28,10 @@
   
   <!-- Required Modernizr file -->
   <script src="modernizr.custom.js"></script>
-  <script type="text/javascript" src="http://use.typekit.com/ewk1gzp.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+  <!-- Fonts! -->
+  <script type="text/javascript" src="//use.typekit.net/pxo8qyc.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body class="deck-container">
 
@@ -51,23 +52,97 @@
 </section>
 
 <section class="slide slide_cover" id="cover_updating">
-  <div class="vcenter">
-    <h1>Updating Alice</h1>
+  <div class="vcenter title-card">
+    <h1 class="section-title">Updating Alice</h1>
   </div>
 </section>
 
-<section class="slide slide_topical">
-  <div class="vtop">
-    <h2 class="slide-title">Walt Disney</h2>
-    <p class="slide-tagline">The Steve Jobs of Animation</p>
+<div class="slide slide_topical" id="original-alice">
+  <div class="vbottom">
+    <p class="slide-tagline">This isn't Alice. <small>Illustration by John Tenniel</small></p>
+  </div>
+</div>
+<div class="slide slide_topical" id="blair-alice">
+  <div class="vbottom">
+    <p class="slide-tagline">Disney's Alice <small>Illustration by Mary Blair</small></p>
+  </div>
+</div>
+<div class="slide slide_topical" id="movie-alice">
+  <div class="vbottom">
+    <p class="slide-tagline">Burton's Alice</p>
+  </div>
+</div>
+<div class="slide slide_topical" id="game-alice">
+  <div class="vbottom">
+    <p class="slide-tagline">American McGee's Alice</p>
+  </div>
+</div>
+<div class="slide slide_topical" id="manga-alice">
+  <div class="vbottom">
+    <p class="slide-tagline">Quin Rose's Alice</p>
+  </div>
+</div>
+<div class="slide slide_topical" id="comic-alice">
+  <div class="vbottom">
+    <p class="slide-tagline">Sexy Times Alice <small>Illustration for Zenescope by J. Scott Campbell</small></p>
+  </div>
+</div>
+
+<section class="slide slide_interjection" id="no-blondes">
+  <div class="vcenter card">
+    <p class="statement">The world doesn't need another blonde and/or blue Alice.</p>
+    <p class="small-voice"><span>For reals.</span></p>
   </div>
 </section>
+
+<div class="slide slide_topical" id="real-alice">
+  <div class="vbottom">
+    <p class="slide-tagline">The Real <a href="http://www.retronaut.com/2012/09/the-real-alice-in-wonderland-c-1862/">Alice (Liddell) c. 1862</a></p>
+  </div>
+</div>
+
+<div class="slide slide_topical" id="setting-park">
+  <div class="vtop">
+    <p class="slide-tagline">The Park</p>
+  </div>
+</div>
+
+<div class="slide slide_topical" id="setting-hole">
+  <div class="vtop">
+    <p class="slide-tagline">The Hole</p>
+  </div>
+</div>
+
+<div class="slide slide_topical" id="chara-sister">
+  <div class="vbottom">
+    <p class="slide-tagline">Alice's Sister, Denise</p>
+  </div>
+</div>
+
+<div class="slide slide_topical" id="chara-rabbit">
+  <div class="vbottom">
+    <p class="slide-tagline">The whitest rabbit you know</p>
+  </div>
+</div>
+
+<div class="slide slide_topical" id="chara-alice">
+  <div class="vtop">
+    <p class="slide-tagline">Alice, just a curious little girl</p>
+  </div>
+</div>
 
 <section class="slide slide_cover" id="cover_ux">
-  <div class="vcenter">
-    <h1>Formulating the Experience</h1>
+  <div class="vcenter title-card">
+    <h1 class="section-title">Formulating the Experience</h1>
   </div>
 </section>
+
+<div class="slide slide_topical" id="storyboard">
+  <div class="vcenter slide">
+    <h2 class="slide-title">That's not a storyboard</h2>
+    <p class="slide-tagline slide">Now <em><a href="../storyboard" target="_blank">that's</a></em> a storyboard.</p>
+  </div>
+</div>
 
 <section class="slide slide_cover" id="cover_retina">
   <div class="vcenter">
@@ -81,9 +156,15 @@
   </div>
 </section>
 
+<section class="slide slide_interjection" id="apple">
+  <div class="vcenter">
+    <p class="title">Really, Apple?</p>
+  </div>
+</section>
+
 <section class="slide slide_cover" id="cover_rwd">
   <div class="vcenter">
-    <h1>Formulating the Experience</h1>
+    <h1>Dealing with a Shifty Viewport</h1>
   </div>
 </section>
 

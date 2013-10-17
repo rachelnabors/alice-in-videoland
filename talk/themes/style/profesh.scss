@@ -1,173 +1,183 @@
-@font-face {
-  font-family: 'OstrichSansBlack';
-  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot");
-  src: url("http://fonts.rachelnabors.com/ostrich-black-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-black-webfont.svg#OstrichSansBlack") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+$copy: "nueva-std-extended", sans-serif;
+    $copy-normal: 400;
+    $copy-bold: 700;
+$slab: "hellenic-wide", serif;
+$fancy: "blue-goblet-alt", fancy;
 
-@font-face {
-  font-family: 'OstrichSansMedium';
-  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot");
-  src: url("http://fonts.rachelnabors.com/ostrich-regular-webfont.eot?#iefix") format("embedded-opentype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.woff") format("woff"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.ttf") format("truetype"), url("http://fonts.rachelnabors.com/ostrich-regular-webfont.svg#OstrichSansMedium") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+$earth: #6c373f; //#a36f77;
+$wonderland-pink: #f090b1;
+$wonderland-purple: #431236;
+$wonderland-grape: #a22782;
+$wonderland-burgundy: #82002d;
+$pink-white: #ffeef4;
 
-$franklin: franklin-gothic-urw, sans-serif;
-    $bold: 700;
-    $normal: 400;
-$ostblk: 'OstrichSansBlack', sans-serif;
-$ostmed: 'OstrichSansMedium', sans-serif;
+$park-green: #20b3aa;
+$park-mint: #73ebc5;
 
-$black: #3f4752;
-$highlight: #d6e549; //green
-$highlightContrast: #313b02; //dark green
+$original-mint: #73ebc5;
+$original-teal: #20b3aa;
+
+$black: #00232b;
+$highlight: $original-teal; // dark green
+$highlightContrast: $original-mint; // light green
 $link: #1CCEFF; //turquoise
 $linkVisited: #0097C0; // dark turq
-$callout: #e64988; // pink
-$magenta: #a52469;
+$callout: #fc0082; // pink
+$magenta: #a22782; // plum
 
-$canvas: #dfeff6;
-$canvas_black: #141f31;
-$grey: #858585;
+$canvas: #dbf5f1;
+$canvas_black: $black;
+$grey: #4e6369;
 
 %ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
 
+::-moz-selection{ background:$magenta; color:#fff; }
+::selection { background:$magenta; color:#fff; }
+
 .deck-container {
-	font-family: $franklin;
-	font-weight: $normal;
+	background:#ccc url(../../img/bg_argyle.png);
+	color: $canvas_black;
+	font-family: $copy;
+	font-weight: $copy-normal;
 	font-size:1.75em;
-	background:#ccc url(../../img/bg_pinstripe.png);
 
-	.self-portrait, .talk-title {
-		margin-top: 3em;
-	}
-	.self-portrait{
-		width: 33.33333%;
-		float: left;
-		img {
-			max-width: 100%;
-			margin: 0 auto;
-		}
-		figcaption {
-			@extend %ir;
-			background-image: url(../../img/logo.png);
-			margin: 0 auto;
-			width: 264px; height: 117px;
-		}
-	}
+a {
+	border-bottom: 1px dotted $link;
+	padding: 1px 1px 0 1px;
+	text-decoration: none;
+}
+a:link {
+	color:  $link;
+}
 
-	.talk-title {
-		float: right;
-		width: 64.44444%;
-		h1 {
-			font-size: 3em !important;
-			margin: 0;
-		}
-		h2 { 
-			border: 0;
-			padding: 0;
-		}
+a:visited {
+	border-color: $linkVisited;
+	color: $linkVisited;
+}
+
+a:hover, a:active {
+	color: $highlightContrast;
+	background: $highlight;
+	border: 0;
+}
+
+.slide .slide {
+	.deck-before, .deck-previous {
+		opacity: .4;
+	}	
+
+	.deck-child-current {
+		opacity:1;
 	}
 
+	.deck-prev-link, .deck-next-link {
+		background:$grey;
+		font-family:serif; // sans-serif arrows x-browser fail
+	}
+}
+
+.deck-status {
+	font-size:0.6666em;
+}
+
+.deck-menu {
 	.slide {
-		color: #3C3C3C;
-		h1, h2, h3, h4, h5, h6 {
-			font-weight: normal;
-			text-align: left;
-		}
-		h1 {
-			font-family: $ostblk;
-			font-size: 4em;
-			font-weight: normal;
-			margin-top: 1em;
-			position:relative;
-			top:auto;
-			padding:0;
-			-webkit-transform:none;
-			-moz-transform:none;
-			-ms-transform:none;
-			-o-transform:none;
-			transform:none;
-			&.vcenter { margin: 0;}
-		}
-		.vtop {
-			.slide-title {
-				font-family: $ostmed;
-				font-size: 4em;
-				font-weight: normal;
-				color: $canvas;
-				box-sizing: border-box;
-				background: rgba($canvas_black,.5);
-				border: 0;
-				margin: 0;
-				padding: .25em .25em;
-				position: absolute;
-				top: 0; left: 0;
-				text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
-				-webkit-transform:none;
-				-moz-transform:none;
-				-ms-transform:none;
-				-o-transform:none;
-				transform:none;
-				width: 100%;
-			}
-			.slide-tagline {
-				color: $canvas;
-				background: rgba($canvas_black,.5);
-				box-sizing: border-box;
-				font-size: 2em;
-				text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
-				margin: 0;
-				left: 0;
-				position: absolute;
-				padding: 0 .5em;
-				bottom: 0;
-				width: 100%;
-				small { 
-					font-size: .25em;
-					font-style: italic;
-					display: block;
-				}
-			}
-		}
-		.vcenter {
-			h1, h2, .tagline { 
-				margin: 0;
-				padding: 0;
-			}
-			h2, .tagline { 
-				border: 0;
-				border-top: 3px solid #888;
-				font-size: 3em;
-				padding-top: .25em;
-				text-align: left;
-			}
-			blockquote {
-				border: 0;
-				cite {color:#fff}
-			}
+		background:#eee;
+	}
+
+	.deck-current, .no-touch & .slide:hover {
+		background:#ddf;
+	}
+
+	// For Horizon patch
+	.deck-container:not(.deck-menu) .slide.deck-horizon {
+	  display:none;
+	}
+}
+
+// Special Formulas
+.vtop {
+	color: $canvas;
+	box-sizing: border-box;
+	background: rgba($canvas_black,.5);
+	padding: 0 .5em;
+	position: absolute;
+	top: 0; left: 0;
+	text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+	width: 100%;
+}
+.vbottom {
+	color: $canvas;
+	background: rgba($canvas_black,.5);
+	box-sizing: border-box;
+	left: 0;
+	padding: 0 .5em;
+	position: absolute;
+	bottom: 0;
+	text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
+	width: 100%;
+}
+
+.vtop, .vbottom {
+	a {
+		&:hover, &:focus, &:active, &:visited {
+			color:#fff;
 		}
 
-		h2, .tagline {
-			font-family: $ostmed;
-			border-bottom-color:$grey;
-			line-height: .8em;
+		&:hover, &:focus {
+			background:$callout;
+			text-decoration:none;
 		}
+	}
+}
 
-		h2 { 
-			font-size: 1.5em;
-			margin-bottom: .25em;
-		}
+// Kinds of slides
 
-		h3 {
-			font-family: $ostblk;
-			color:#888;
+.slide_preso-title { // title page
+
+}
+
+.slide_goodbye { // final slide
+}
+
+.slide_cover { // Section covers 
+	.section-title {
+		border: $wonderland-pink 2px dashed; border-right: 0; border-left: 0;
+		font-family: $fancy;
+		font-size: 2.5em;
+		padding: .25em
+	}
+	.vcenter.title-card {
+		background: $wonderland-grape;
+		color: $pink-white;
+		padding: 3em;
+	}
+}
+
+.slide_interjection { // Section covers 
+	.statement {
+		font-family: $slab;
+		font-size: 2em;
+		padding: .25em;
+	}
+	.small-voice {
+		font-size: .75em;
+		font-style: italic;
+		margin-top: -1em;
+		span {
+			padding: 1em;
+			border-top: $wonderland-pink 2px dashed;
 		}
-		h4 {
-			margin-top: 2em;
-		}
+	}
+	.vcenter.card {
+		background: $wonderland-purple;
+		color: $pink-white;
+		padding: 3em;
+	}
+}
+
+.slide_texty { // text/code slide 
+	.slide-content {
 		pre {
 			border-color:$grey;
 			em { color: $callout;}
@@ -204,196 +214,97 @@ $grey: #858585;
 				&:before { content:"\2014";}	
 			}
 		}
-
-		::-moz-selection{ background:$magenta; color:#fff; }
-		::selection { background:$magenta; color:#fff; }
-
-		a {
-			border-bottom: 1px dotted $link;
-			padding: 1px 1px 0 1px;
-			text-decoration: none;
-		}
-		a:link {
-			color:  $link;
-		}
-
-		a:visited {
-			border-color: $linkVisited;
-			color: $linkVisited;
-		}
-
-		a:hover, a:active {
-			color: $highlightContrast;
-			background: $highlight;
-			border: 0;
-		}
-
 	}
-	
-	> .slide {
-		.deck-before, .deck-previous {
-			opacity:0.4;
-			
-			&:not(.deck-child-current) {
-				.deck-before, .deck-previous {
-					opacity:1;
-				}
-			}
-		}
-		
-		.deck-child-current {
-			opacity:1;
-		}
-	} 
-	
-	.cover {
-		.vcenter {
-			color: $canvas;
-			background: rgba($canvas_black,.5);
-			box-sizing: border-box;
-			padding: .5em 48px 1em;
-			text-shadow: 0px 1px 3px rgba($canvas_black, 0.6);
-			line-height: 3em;
-		}
-		.vcenter em, .vtop em {
-			font-style: normal;
+}
+
+.slide_topical { // Graphic/free speech slide 
+	.slide-tagline {
+		font-size: 2em;
+		font-weight: $copy-normal;
+		margin: 0;
+		small { 
+			font-size: .25em;
+			font-style: italic;
 			display: block;
-			font-family: $franklin;
-			font-weight: 400;
-			font-size: .4em;
-		}
-		.vtop em {
-			font-size: .3em;
-			line-height: 0;
-		}
-		a:link, a:visited, a:hover, a:active { 
-			color: lighten($link, 20%);
-		}
-		a:hover, a:active { 
-			background: $canvas_black;
 		}
 	}
 
-	.deck-prev-link, .deck-next-link {
-		background:$grey;
-		font-family:serif; // sans-serif arrows x-browser fail
-		
-		&, &:hover, &:focus, &:active, &:visited {
-			color:#fff;
-		}
-		
-		&:hover, &:focus {
-			background:$callout;
-			text-decoration:none;
-		}
-	}
-	
-	.deck-status {
-		font-size:0.6666em;
-	}
-	
-	&.deck-menu {
-		.slide {
-			background:#eee;
-		}
-		
-		.deck-current, .no-touch & .slide:hover {
-			background:#ddf;
-		}
-	}
 }
 
-//History slides
-.cover.disney {
-	background: url(../../img/cover_disney.jpg) no-repeat 0 25%;
-	background-size: cover;
+.slide-title {
+	font-family: $fancy;
+	font-size: 4em;
+	font-weight: normal;
+	-webkit-transform:none;
+	-moz-transform:none;
+	-ms-transform:none;
+	-o-transform:none;
+	transform:none;
 }
+} // closes .deck-container
 
-.cover.iwerks {
-	background: url(../../img/cover_iwerks.png) no-repeat 0 0;
-	background-size: cover;
-}
-
-.cover.technology {
-	background: url(../../img/cover_technology.jpg) no-repeat 0 0;
-	background-size: cover;
-}
-
-.cover.tezuka {
-	background: url(../../img/cover_tezuka.jpg) no-repeat 0 0;
-	background-size: cover;
-}
-
-.cover.hanna {
-	background: url(../../img/cover_hanna.jpg) no-repeat center center;
-	background-size: cover;
-}
-
-.cover.miyazaki {
-	background: url(../../img/cover_miyazaki.jpg) no-repeat 0 0;
-	background-size: cover;
-}
-
-.cover.quote-disney {
-	background: url(../../img/quote_disney.jpg) no-repeat 0 0;
-	background-size: cover;
-}
-
-// UI slides
-.cover.z-axis {
-	background: url(../../img/cover_zaxis.jpg) no-repeat 0 0;
-	background-size: cover;
-}
-
-.cover.skeuomorphism {
-	background: #fff url(../../img/cover_skeuomorphism.png) no-repeat center center;
-	background-size: cover;
-}
-
-.cover.cinematic {
-	background: url(../../img/cover_cinematic.png) no-repeat 0 0;
-	background-size: cover;
-}
-
-.cover.modeling {
-	background: url(../../img/cover_model.png) no-repeat 0 0;
-	background-size: cover;
-}
-
-.cover.storyboard {
-	background: url(../../img/cover_storyboards.jpg) no-repeat 0 0;
-	background-size: cover;
-}
-
-// Splashy slides
-
-.cover.timing-functions {
-	background: url(../../img/cover_easing.png) no-repeat 0 0;
-	background-size: cover;
-	color: $highlight; 
-}
-
-.cover.scene-transitions {
-	background: #000 url(../../img/cover_transitions.png) no-repeat center center;
+// Backgrounds for slides
+#original-alice {
+	background: #fff url(../../img/topic_alice-org.jpg) no-repeat center center;
 	background-size: auto 100%;
 }
 
-.cover.walk-cycle {
-	background: url(../../img/cover_walk-cycle.png) no-repeat center center;
+#blair-alice {
+	background: #fff url(../../img/topic_alice-blair.jpg) no-repeat center center;
 	background-size: cover;
 }
 
-.cover.cut-outs {
-	background: url(../../img/cover_cutouts.jpg) no-repeat center center;
+#movie-alice {
+	background: #fff url(../../img/topic_alice-movie.jpg) no-repeat center center;
 	background-size: cover;
 }
 
-.cover.parallax {
-	background: #000 url(../../img/cover_parallax.jpg) no-repeat center center;
-	background-size: auto 100%;
+#game-alice {
+	background: #fff url(../../img/topic_alice-game.jpg) no-repeat center center;
+	background-size: cover;
 }
 
-// For Horizon patch
-.deck-container:not(.deck-menu) .slide.deck-horizon {
-  display:none;
+#manga-alice {
+	background: #fff url(../../img/topic_alice-manga.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+#comic-alice {
+	background: #fff url(../../img/topic_alice-comics.jpg) no-repeat 0 25%;
+	background-size: cover;
+}
+
+#real-alice {
+	background: #fff url(../../img/topic_alice-real.jpg) no-repeat 100% 100%;
+	background-size: cover;
+}
+
+#setting-park {
+	background: url(../../img/topic_park.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#setting-hole {
+	background: url(../../img/topic_hole.png) no-repeat center center;
+	background-size: cover;
+}
+
+#chara-sister {
+	background: url(../../img/chara_denise.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#chara-rabbit {
+	background: url(../../img/chara_rabbit.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+#chara-alice {
+	background: url(../../img/chara_alice.jpg) no-repeat 0 0;
+	background-size: cover;
+}
+
+#storyboard {
+	background: url(../../img/topic_storyboard.jpg) no-repeat  0 25%;
+	background-size: cover;
 }
