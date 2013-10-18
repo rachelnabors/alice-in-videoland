@@ -65,6 +65,8 @@
   .deck-container .vtop a:hover, .deck-container .vtop a:focus, .deck-container .vbottom a:hover, .deck-container .vbottom a:focus {
     background: #fc0082;
     text-decoration: none; }
+  .deck-container h1, .deck-container h2 {
+    font-weight: normal; }
   .deck-container .slide_cover .section-title {
     border: #f090b1 2px dashed;
     border-right: 0;
@@ -76,49 +78,59 @@
     background: #a22782;
     color: #ffeef4;
     padding: 3em; }
-  .deck-container .slide_interjection .statement {
-    font-family: "hellenic-wide", serif;
-    font-size: 2em;
-    padding: .25em; }
-  .deck-container .slide_interjection .small-voice {
-    font-size: .75em;
-    font-style: italic;
-    margin-top: -1em; }
-    .deck-container .slide_interjection .small-voice span {
-      padding: 1em;
-      border-top: #f090b1 2px dashed; }
-  .deck-container .slide_interjection .vcenter.card {
+  .deck-container .slide_interjection {
     background: #431236;
-    color: #ffeef4;
-    padding: 3em; }
-  .deck-container .slide_texty .slide-content pre {
-    border-color: #4e6369; }
-    .deck-container .slide_texty .slide-content pre em {
-      color: #fc0082; }
-  .deck-container .slide_texty .slide-content code {
-    color: #888; }
-  .deck-container .slide_texty .slide-content figure {
-    margin-bottom: 1em;
-    text-align: center; }
-  .deck-container .slide_texty .slide-content figcaption {
-    font-style: italic; }
-  .deck-container .slide_texty .slide-content blockquote {
-    font-size: 2em;
-    font-style: italic;
-    padding: 1em 2em;
-    color: #000;
-    border-left: 5px solid #4e6369; }
-    .deck-container .slide_texty .slide-content blockquote p {
-      margin: 0; }
-    .deck-container .slide_texty .slide-content blockquote cite {
-      font-size: .5em;
-      font-style: normal;
-      font-weight: bold;
-      color: #888;
-      display: block;
-      text-align: right; }
-      .deck-container .slide_texty .slide-content blockquote cite:before {
-        content: "\2014"; }
+    color: #ffeef4; }
+    .deck-container .slide_interjection.alt {
+      background: #630033; }
+    .deck-container .slide_interjection .statement {
+      font-family: "hellenic-wide", serif;
+      font-size: 2em;
+      font-weight: normal;
+      padding: .25em; }
+    .deck-container .slide_interjection .small-voice {
+      font-size: .75em;
+      font-style: italic;
+      margin-top: -1em; }
+      .deck-container .slide_interjection .small-voice span {
+        padding: 1em;
+        border-top: #f090b1 2px dashed; }
+  .deck-container .slide_texty {
+    background: #dbf5f1; }
+    .deck-container .slide_texty .texty-title {
+      border-color: #20b3aa;
+      font-style: italic; }
+    .deck-container .slide_texty .texty-body .footnote {
+      font-size: .75em;
+      font-style: italic; }
+    .deck-container .slide_texty .texty-body pre {
+      border-color: #4e6369; }
+      .deck-container .slide_texty .texty-body pre em {
+        color: #fc0082; }
+    .deck-container .slide_texty .texty-body code {
+      color: #888; }
+    .deck-container .slide_texty .texty-body figure {
+      margin-bottom: 1em;
+      text-align: center; }
+    .deck-container .slide_texty .texty-body figcaption {
+      font-style: italic; }
+    .deck-container .slide_texty .texty-body blockquote {
+      font-size: 2em;
+      font-style: italic;
+      padding: 1em 2em;
+      color: #000;
+      border-left: 5px solid #4e6369; }
+      .deck-container .slide_texty .texty-body blockquote p {
+        margin: 0; }
+      .deck-container .slide_texty .texty-body blockquote cite {
+        font-size: .5em;
+        font-style: normal;
+        font-weight: bold;
+        color: #888;
+        display: block;
+        text-align: right; }
+        .deck-container .slide_texty .texty-body blockquote cite:before {
+          content: "\2014"; }
   .deck-container .slide_topical .slide-tagline {
     font-size: 2em;
     font-weight: 400;
@@ -127,15 +139,6 @@
       font-size: .25em;
       font-style: italic;
       display: block; }
-  .deck-container .slide-title {
-    font-family: "blue-goblet-alt", fancy;
-    font-size: 4em;
-    font-weight: normal;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none; }
 
 #original-alice {
   background: white url(../../img/topic_alice-org.jpg) no-repeat center center;
@@ -187,4 +190,8 @@
 
 #storyboard {
   background: url(../../img/topic_storyboard.jpg) no-repeat 0 25%;
+  background-size: cover; }
+
+#cover_retina {
+  background: url(../../img/cover_retina.png) no-repeat 0 0;
   background-size: cover; }

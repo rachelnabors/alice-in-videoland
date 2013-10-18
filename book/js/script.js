@@ -93,6 +93,7 @@
 		// reveal the tunnels w/ class
 		$tunnels.addClass("cue");
 
+		// TODO: These need to get recalculated on orientation change
 		// calculate the height of the tunnels
 		var tunnelTop = Math.round($tunnel.offset().top);
 		var tunnelTopData = "data-" + tunnelTop;

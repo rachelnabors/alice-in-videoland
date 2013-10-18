@@ -137,57 +137,409 @@
   </div>
 </section>
 
-<div class="slide slide_topical" id="storyboard">
-  <div class="vcenter slide">
-    <h2 class="slide-title">That's not a storyboard</h2>
-    <p class="slide-tagline slide">Now <em><a href="../storyboard" target="_blank">that's</a></em> a storyboard.</p>
+<div class="slide slide_texty" id="rewrite">
+  <h2 class="texty-title">Rewriting the Original</h2>
+  <div class="texty-body">
+    <p>Alice was beginning to get very bored, sitting by her sister in the park. Her sister was deeply engrossed in a technical book about web development.</p>
+
+    <p>&ldquo;How can she read a book with no pictures or dialog in it?&rdquo; Alice wondered to herself.</p>
+
+    <p>She was just about to nod off when suddenly a white rabbit wearing a vintage tweed porkpie hat dashed by&hellip; looking anxiously at his smartphone!</p>
+
+    <p class="footnote">And so on. To see the full copy, try printing <a href="../book" target="_blank">the page</a>.</p>
+  </div>
+</div>
+
+<div class="slide slide_topical" id="storyboard"></div>
+
+<div class="slide slide_interjection" id="prototype">
+  <div class="vcenter">
+    <p class="statement">Time for a <a href="../storyboard" target="_blank">prototype</a>.</p>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="constraints">
+  <h2 class="texty-title">Constraints</h2>
+  <div class="texty-body">
+    <ul>
+      <li class="slide"><strong>Must work on Chrome and iPad Retina.</strong><br>Favor speend and pageweight over compatibility</li>
+      <li class="slide"><strong>Interaction must be fairly one-to-one.</strong><br>
+        Don't create two different yet parallel experiences.</li>
+      <li class="slide"><strong>Prefer to use jQuery plugins.</strong><br> More accessible to designers, less scary.
+        .</li>
+      <li class="slide"><strong>Must. Meet. Deadline.</strong><br>Jetison the things that prevent meeting these goals.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="slide slide_interjection alt" id="book">
+  <div class="vcenter">
+    <p class="statement">The final <a href="../book" target="_blank">Alice in Videoland &ldquo;storybook&rdquo;</a>.</p>
   </div>
 </div>
 
 <section class="slide slide_cover" id="cover_retina">
-  <div class="vcenter">
-    <h1>Solving for Retina</h1>
+  <div class="vcenter title-card">
+    <h1 class="section-title">Solving for Retina</h1>
   </div>
 </section>
 
-<section class="slide slide_cover" id="cover_performance">
+<div class="slide slide_interjection" id="retina-approach">
   <div class="vcenter">
-    <h1>Performance Problems</h1>
+    <p class="statement">I took the <br>&ldquo;Big Graphics, <br>Big Compression&rdquo; approach.</p>
+    <p class="small-voice"><span>Because I know my use case.</span></p>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="retina-svg">
+  <h2 class="texty-title"><abbr title="Scalable Vector Graphics">SVG</abbr></h2>
+  <div class="texty-body">
+    <ul>
+      <li class="slide">Perfect for <strong>flat color images</strong></li>
+      <li class="slide"><a href="http://www.adobe.com/inspire/2013/09/exporting-svg-illustrator.html" target="_blank">Made in Illustrator</a>, even <a href="http://blog.jamesflorentino.com/2012/07/21/svg-spriting-in-css.html" target="_blank">the sprites</a>.</li>
+      <li class="slide">Optimize with <a href="http://petercollingridge.appspot.com/svg_optimiser" target="_blank"><abbr title="Scalable Vector Graphics">SVG</abbr> Optimizer</abbr></a> or automated <a href="http://qt-apps.org/content/show.php/SVG+Cleaner?content=147974" target="_blank"><abbr title="Scalable Vector Graphics">SVG</abbr> Cleaner</abbr></a></li>
+    </ul>
+    <figure class="slide">
+      <img src="img/fig_svg-ff.png" alt="Comparing SVG rendering in FireFox to Chrome: FireFox is noticeably blurred." />
+      <figcaption>FireFox scales small <abbr title="Scalable Vector Graphics">SVG</abbr>s up poorly.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="retina-jpg">
+  <h2 class="texty-title">JPG</h2>
+  <div class="texty-body">    
+    <img src="img/fig_ps-jpg.jpg" alt="Setting Compression to 0 in Photoshop's Save to Web Dialog" />
+    <ul>
+      <li class="slide">Perfect for images with mottled colors.</li>
+      <li class="slide"><a href="http://alidark.com/responsive-retina-image-mobile/" target="_blank">Compression is your friend again.</a></li>
+      <li class="slide">Compress with <a href="http://www.jpegmini.com/" target="_blank">JPEG mini</a>.</li>
+      <li class="slide"><strong>Caution:</strong> It looks terrible with red colors.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="retina-png">
+  <h2 class="texty-title">PNG</h2>
+  <div class="texty-body">
+    <ul>
+      <li class="slide">The <em>only</em> option for images with transparent portions.</li>
+      <li class="slide">Make the best of it with <a href="http://imageoptim.com/" target="_blank">ImageOptim</a> and <a href="http://pngmini.com/" target="_blank">ImageAlpha</a></li>
+      <li class="slide">Could have used multiple sizes as <a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank">my browsers only download query-matched background images</a>.
+      <p class="footnote slide">Time to test those fences, guys.</p></li> 
+    </ul>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="retina-png">
+  <h2 class="texty-title">Streamlining and Automation</h2>
+  <div class="texty-body">
+    <ul>
+      <li class="slide">Automate PNG and JPG compression with <a href="http://jamiemason.github.io/ImageOptim-CLI/" target="_blank">ImageOptim-CLI</a></li>
+      <li class="slide">Use <a href="https://github.com/Team-Sass/animation-studio" target="_blank">Sass Animation Studio</a> to build sprite animations.</li>
+    </ul>
+  </div>
+</div>
+
+<section class="slide slide_cover" id="cover_performance">
+  <div class="vcenter title-card">
+    <h1 class="section-title">Performance Problems</h1>
   </div>
 </section>
 
 <section class="slide slide_interjection" id="apple">
   <div class="vcenter">
-    <p class="title">Really, Apple?</p>
+    <p class="statement">Thanks, Apple.</p>
+    <p class="small-voice"><span>&lt;/sarcasm&gt;</span></p>
   </div>
 </section>
+
+<div class="slide slide_texty" id="retina-png">
+  <h2 class="texty-title">Maintaining 60 <abbr title="Frames Per Second"</abbr>FPS</abbr></h2>
+  <div class="texty-body">
+    <ul>
+      <li class="slide">Rachel, show them the paint rectangles.</li>
+      <li class="slide">Animating <code>translate</code> instead of <code>position</code>, we can kick those to the GPU.</li>
+    </ul>
+    <div class="slide">
+      <p>Bake backgrounds, don't just animate them.</p>
+      <p data-height="268" data-theme-id="0" data-slug-hash="qnEhd" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/qnEhd'>Down the Hipster Rabbit Hole</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
+      <script async src="//codepen.io/assets/embed/ei.js"></script>
+    </div>
+  </div>
+</div>
 
 <section class="slide slide_cover" id="cover_rwd">
-  <div class="vcenter">
-    <h1>Dealing with a Shifty Viewport</h1>
+  <div class="vcenter title-card">
+    <h1 class="section-title">Dealing with a Shifty Viewport</h1>
   </div>
 </section>
 
+<div class="slide slide_texty" id="rwd_aspect-ratio">
+  <h2 class="texty-title">Aspect Ratio</h2>
+  <div class="texty-body">
+    <ul>
+      <li class="slide">I used the <a href="https://github.com/Team-Sass/Singularity" target="_blank">Singularity extension for Sass</a> because it got out of my way.</li>
+      <li class="slide">Then combined <code>min-aspect-ratio</code> with <code>vh</code> units.</li>
+      <li class="slide">If you know something's height or width, you can calculate the other.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="rwd_aspect-ratio">
+  <h2 class="texty-title">Aspect Ratio</h2>
+  <div class="texty-body">
+<pre class="language-css">
+$breakpoint-wide: (min-aspect-ratio "4/3");
+
+.scene {
+  padding-top: 75%; // maintain a 3 to 4 ratio 
+  @include breakpoint($breakpoint-wide) { 
+    height: 100vh;
+    width: 133.3333vh;
+  }
+}
+</pre>
+  <ul>
+    <li class="slide">Aspect ratios are <code>$width/height</code>.</li>
+    <li class="slide">Padding is calculated based on width.</li>
+  </ul>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="rwd_resize">
+  <h2 class="texty-title">Dealing with Resizes</h2>
+  <div class="texty-body">
+    <p>There's a lot of math being done, and all of it relies on measuring <em>visible</em> elements. You'll have to take these measurements whenever:</p>
+    <ul>
+      <li class="slide">the browser window is <strong>resized</strong></li>
+      <li class="slide">content is <strong>revealed</strong></li>
+      <li class="slide">device <strong>orientation changes</strong></li>
+    </ul>
+    <p class="slide">We'll cover these as they come up.</p>
+  </div>
+</div>
+
 <section class="slide slide_cover" id="cover_load">
-  <div class="vcenter">
-    <h1>The Load Screen</h1>
+  <div class="vcenter title-card">
+    <h1 class="section-title">Loading</h1>
   </div>
 </section>
+
+<div class="slide slide_texty" id="load_opacity">
+  <h2 class="texty-title">Loading hidden scenes</h2>
+  <div class="texty-body">
+    <p>The load screen disappears after <code>$(window).load()</code>.</p>
+    <p class="slide">All the scenes must remain hidden while the page's images load and <abbr title="Document Object Model">DOM</abbr> renders.</p>
+    <p class="slide"><code>load()</code> will fire without <code>display: none</code>'s background images.</p>
+    <p class="slide">But <code>opacity: 0</code> elements background images must be downloaded to fire <code>load()</code>.</p>
+<pre class="language-css slide">
+.loading .scene {
+  @extend %shown;
+  opacity: 0;
+}
+</pre>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="load_screen">
+  <h2 class="texty-title">Animating the Load Screen</h2>
+  <div class="texty-body">
+    <p data-height="268" data-theme-id="0" data-slug-hash="modpi" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/modpi'>Alice in Videoland Load Screen</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
+    <ul>
+      <li class="slide">The height is animated to &ldquo;roll the screen up&rdquo;.</li>
+      <li class="slide">The cup and saucer use <a href="http://cubic-bezier.com/" target="_blank">custom cubic beziers</a> on their animations to add bounce.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- <div class="slide slide_cover" id="cover_modernizr">
+  <div class="vcenter title-card">
+    <h1 class="section-title">Modernizr</h1>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="modernizr_animation">
+  <h2 class="texty-title">Popup Animations</h2>
+  <div class="texty-body">
+  </div>
+</div>
+ -->
 
 <section class="slide slide_cover" id="cover_progress">
-  <div class="vcenter">
-    <h1>Tracking Reading Progress</h1>
+  <div class="vcenter title-card">
+    <h1 class="section-title">Tracking Reading Progress</h1>
   </div>
 </section>
 
-<section class="slide slide_cover" id="cover_load">
-  <div class="vcenter">
-    <h1>From &rdquo;Click and Scroll&ldquo; to &rdquo;Tap and Swipe&ldquo;</h1>
+<div class="slide slide_texty" id="progress_waypoints">
+  <h2 class="texty-title">Using jQuery Waypoints</h2>
+  <div class="texty-body">
+    <p><a href="https://twitter.com/KevinLozandier" target="_blank">Kevin Lozandier</a> reminded me about <a href="http://imakewebthings.com/jquery-waypoints/" target="_blank">jQuery Waypoints</a></p>
+<pre class="language-js slide">
+$(element).waypoint(function() {
+  doSomething();
+}, { offset: someNumber });  // of pixels from the top
+</pre>
+    <p class="slide"><em>Only</em> works with visible things.</p>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="progress_read">
+  <h2 class="texty-title">Calculating which page is being read</h2>
+  <div class="texty-body">
+    <p>It would be approximately centered, of equal distance from top as from bottom. </p>
+<pre class="language-js slide">
+var beingRead = function() {
+  var $screenHeight = $.waypoints('viewportHeight');
+  var $pageHeight = $(".page").height();
+  var offset = ($pageHeight - $screenHeight) / 2 * -1;
+
+  return offset;
+}
+</pre>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="progress_revealed">
+  <h2 class="texty-title">Using Waypoints when you reveal things</h2>
+  <div class="texty-body">
+<pre class="language-js">
+// fired when rabbit hole is clicked
+var downTheHole = function() { 
+  $tunnel.find(".page").waypoint(function() {
+    $(this).addClass("in-view");
+    // more stuff... 
+  }, {
+    offset: beingRead()
+  });
+};
+</pre>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="progress_extras">
+  <h2 class="texty-title">Additional Uses for Waypoints</h2>
+  <div class="texty-body">
+    <ul>
+      <li class="slide">Handy screen height calculator: <code>$.waypoints('viewportHeight')</code></li>
+      <li class="slide">Sweet <a href="http://imakewebthings.com/jquery-waypoints/shortcuts/sticky-elements/" target="_blank">sticky elements shortcut</a> (as used on Alice in the tunnel).</li>
+    </ul>    
+  </div>
+</div>
+
+<div class="slide slide_texty" id="progress_recalc">
+  <h2 class="texty-title">Recalculating Waypoints</h2>
+  <div class="texty-body">
+    <p>Assume someone turns their iPad. All that math for nothing!</p>
+    <div class="slide">
+      <p>Not so!</p>
+<pre class="language-js">
+var recalcWaypoints = function() {
+  $(".page").waypoint({
+    offset: beingRead()
+  });
+}
+
+window.addEventListener('orientationchange', recalcWaypoints);</pre>
+    </div>
+    </div>
+  </div>
+</div>
+
+<section class="slide slide_cover" id="cover_parallax">
+  <div class="vcenter title-card">
+    <h1 class="section-title">Parallaxin' Down the Rabbit Hole</h1>
   </div>
 </section>
+
+<div class="slide slide_texty" id="parallax_skrollr">
+  <h2 class="texty-title">Using Skrollr</h2>
+  <div class="texty-body">
+    <p>I used <a href="https://github.com/Prinzhorn/skrollr" target="_blank">skrollr.js</a>.</p>
+    <p data-height="268" data-theme-id="0" data-slug-hash="AeEHw" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/AeEHw'>Falling Down the Rabbit Hole</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="parallax_skrollr">
+  <h2 class="texty-title">Calculating the Fall</h2>
+  <div class="texty-body">
+    <p>I put the following into <code>downTheHole()</code>:</p>
+<pre class="language-js">
+// calculate the height of the tunnels
+var tunnelTop = Math.round($tunnel.offset().top);
+var tunnelTopData = "data-" + tunnelTop;
+var tunnelBottomData =  "data-" + (tunnelTop + Math.round($tunnel.height()));
+
+$alice.waypoint('sticky') // make her sticky!
+.attr(tunnelTopData, "top:0%").attr(tunnelBottomData, "top:80%");   // Give Falling Alice her skrollr measurements as data attributes
+</pre>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="parallax_mood">
+  <h2 class="texty-title">Changing Alice's Mood</h2>
+  <div class="texty-body">
+    <p>Remember calculating those waypoints?</p>
+<pre class="language-js">
+$tunnel.find(".page").waypoint(function() {
+  $(this).addClass("in-view");
+  var mood = $(this).data("mood");
+  $("body").removeClass().addClass(mood);   
+}, {
+  offset: beingRead()
+});
+</pre>    
+  <p class="slide">Tie those classes to different <code>background-position</code>s on Alice.</p>
+  </div>
+</div>
+
+<section class="slide slide_cover" id="cover_touch">
+  <div class="vcenter title-card">
+    <h1 class="section-title">From &ldquo;Click and Scroll&rdquo; <br>to &ldquo;Tap and Swipe&rdquo;</h1>
+  </div>
+</section>
+
+<div class="slide slide_interjection" id="touch_touch">
+  <div class="vcenter">
+    <p class="statement">It's not &ldquo;mobile.&rdquo; <br>It's &ldquo;touch.&rdquo;</p>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="touch_tap">
+  <h2 class="texty-title">Mapping Tap to Click</h2>
+  <div class="texty-body">
+  </div>
+</div>
+
+<div class="slide slide_texty" id="touch_parallax">
+  <h2 class="texty-title">The Perils of Parallax</h2>
+  <div class="texty-body">
+  </div>
+</div>
+
+<div class="slide slide_texty" id="touch_hammer">
+  <h2 class="texty-title">Gestures with Hammer.js</h2>
+  <div class="texty-body">
+  </div>
+</div>
+
+<div class="slide slide_texty" id="touch_progress">
+  <h2 class="texty-title">Tracking Progress on Touch</h2>
+  <div class="texty-body">
+  </div>
+</div>
+
+<div class="slide slide_interjection alt" id="thanks">
+  <div class="vcenter">
+    <p class="statement">Thank you!</p>
+    <p class="small-voice"><span>Seriously, so glad to be here!</span></p>
+  </div>
+</div>
 
 <section class="slide slide_goodbye">
-  <h2>Thank you!</h2>
+  <h2 class="">Enjoy the conference!</h2>
   <div class="slide">
     <p>These slides: <a href="http://share.RachelNabors.com/frontendmasters">share.RachelNabors.com/frontendmasters</a></p>
     <p><strong>Hire me</strong> to make wonderful things or make your things more wonderful.</p>
