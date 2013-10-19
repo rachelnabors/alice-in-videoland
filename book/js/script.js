@@ -141,7 +141,7 @@
 	var cutToWonderland = function() {
 		if(Modernizr.touch) {
 			cutFired = true;
-			currentPage = nextPage;					
+			currentPage = nextPage;
 			calcPrevNext(currentPage);
 		}
 		// Disable waypoint so people can scroll up if they want to.
