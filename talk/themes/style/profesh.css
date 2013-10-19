@@ -157,7 +157,8 @@
       bottom: -10%;
       overflow: hidden;
       width: 100vh;
-      padding-top: 100vh; }
+      padding-top: 100vh;
+      z-index: 1; }
       .deck-container #slide_goodbye .img-wrap img {
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);

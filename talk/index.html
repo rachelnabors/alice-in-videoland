@@ -39,7 +39,7 @@
   <div class="talk-title">
     <h1>Alice in Videoland</h1>
     <p class="tagline">Building an interactive storybook in HTML5</p>
-    <p class="author">with Rachel Nabors<br><a href="http://rachelnabors.com">RachelNabors.com</a><br><a href="http://twitter.com/rachelnabors" target="_blank">@RachelNabors</a></p>
+    <p class="author">with Rachel Nabors<br><a href="http://rachelnabors.com" target="_blank">RachelNabors.com</a><br><a href="http://twitter.com/rachelnabors" target="_blank">@RachelNabors</a></p>
     <img src="img/p_alice.png" alt=" ">
   </div>
 </section>
@@ -92,7 +92,7 @@
 
 <div class="slide slide_topical" id="real-alice">
   <div class="vbottom">
-    <p class="slide-tagline">The Real <a href="http://www.retronaut.com/2012/09/the-real-alice-in-wonderland-c-1862/">Alice (Liddell) c. 1862</a></p>
+    <p class="slide-tagline">The Real <a href="http://www.retronaut.com/2012/09/the-real-alice-in-wonderland-c-1862/" target="_blank">Alice (Liddell) c. 1862</a></p>
   </div>
 </div>
 
@@ -157,12 +157,11 @@
   <h2 class="texty-title">Constraints</h2>
   <div class="texty-body">
     <ul>
-      <li class="slide"><strong>Must work on Chrome and iPad Retina.</strong><br>Favor speend and pageweight over compatibility</li>
+      <li class="slide"><strong>Must work on Chrome and iPad Retina.</strong><br>Favor speed and pageweight over compatibility</li>
       <li class="slide"><strong>Interaction must be fairly one-to-one.</strong><br>
         Don't create two different yet parallel experiences.</li>
-      <li class="slide"><strong>Prefer to use jQuery plugins.</strong><br> More accessible to designers, less scary.
-        .</li>
-      <li class="slide"><strong>Must. Meet. Deadline.</strong><br>Jetison the things that prevent meeting these goals.</li>
+      <li class="slide"><strong>Prefer to use jQuery plugins.</strong><br> More accessible to designers, less scary.</li>
+      <li class="slide"><strong>Must. Meet. Deadline.</strong><br>Jettison the things that prevent meeting these goals.</li>
     </ul>
   </div>
 </div>
@@ -276,7 +275,7 @@
     <ul>
       <li class="slide">I used the <a href="https://github.com/Team-Sass/Singularity" target="_blank">Singularity extension for Sass</a> because it got out of my way.</li>
       <li class="slide">Then combined <code>min-aspect-ratio</code> with <code>vh</code> units.</li>
-      <li class="slide">If you know something's height or width, you can calculate the other.</li>
+      <li class="slide">In CSS, if you know something's height or width, you can define the other proportionally.</li>
     </ul>
   </div>
 </div>
@@ -518,12 +517,13 @@ $("#to-tunnels").activate(downTheHole);
   <h2 class="texty-title">The Perils of Parallax</h2>
   <div class="texty-body">
     <p><strong>Danger!</strong> In iOS Safari, <a href="http://www.youtube.com/watch?v=ELJrG7RTc6c" target="_blank">all animation and JavaScript pauses</a> while you touch the screen.</p>
+    <p class="slide">Skrollr has a <a href="http://www.youtube.com/watch?v=TuQGIyKkLjA" target="_blank">&ldquo;solution&rdquo;</a> for that.</p>
     <p class="slide">This leads to an intesting puzzle:</p>
     <ul>
       <li class="slide">Waypoints ties with scroll events</li>
       <li class="slide">The &ldquo;mobile friendly&rdquo; skrollr circumvents scroll by animating the CSS transformed page.</li>
     </ul>
-    <p class="slide">So you can't change Alice's mood <em>or</em> you <a href="http://www.youtube.com/watch?v=TuQGIyKkLjA" target="_blank">can't see her mood changing</a>.</p>
+    <p class="slide">So either you can change Alice's mood and everything jumps <em>or</em> her mood doesn't change but she parallaxes fine.</p>
   </div>
 </div>
 
@@ -547,7 +547,7 @@ $("#to-tunnels").activate(downTheHole);
     <p class="slide">In the land of touch, it was important to:</p>
     <ul>
       <li class="slide">keep track of what the previous and next <code>.page</code> is</li>
-      <li class="slide">fire some functions (like <code>downTheHole()</code>) on swipe instead of by waypoint.</li>
+      <li class="slide">fire some functions (like <code>cutToWonderland()</code>) on swipe instead of by waypoint.</li>
     </ul>
     <p class="slide">So I used counters.</p>
   </div>
@@ -588,17 +588,17 @@ var cutToWonderland = function() {
   <h2 class="texty-title">To the Drink and Draw!</h2>
   <div class="text-content">
     <div class="slide">
-      <p>These slides: <a href="http://share.rachelnabors.com/cssdevconf2013">share.RachelNabors.com/cssdevconf2013</a></p>
-      <p>Alice's source code: <a href="https://github.com/rachelnabors/alice-in-videoland">github.com/rachelnabors/alice-in-videoland</a></p>
+      <p>These slides: <a href="http://share.rachelnabors.com/cssdevconf2013" target="_blank">share.RachelNabors.com/cssdevconf2013</a></p>
+      <p>Alice's source code: <a href="https://github.com/rachelnabors/alice-in-videoland" target="_blank">github.com/rachelnabors/alice-in-videoland</a></p>
     </div>
     <div class="slide">
       <p><strong>Hire me</strong> to make wonderful things</p>
       <p><strong>Show me</strong> the wonderful things you are going to make</p>
       <p><strong>Find me</strong> in all the usual places:</p>
       <ul>
-        <li><a href="https://twitter.com/rachelnabors">@rachelnabors</a></li>
-        <li><a href="http://rachelnabors.com">rachelnabors.com</a></li>
-        <li><a href="https://github.com/rachelnabors">github.com/rachelnabors</a></li>
+        <li><a href="https://twitter.com/rachelnabors" target="_blank">@rachelnabors</a></li>
+        <li><a href="http://rachelnabors.com" target="_blank">rachelnabors.com</a></li>
+        <li><a href="https://github.com/rachelnabors" target="_blank">github.com/rachelnabors</a></li>
       </ul>
     </div>
   </div>

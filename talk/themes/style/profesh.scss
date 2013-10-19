@@ -249,6 +249,7 @@ $grey: #4e6369;
 		right: -10%; bottom: -10%;
 		overflow: hidden;
 		width: 100vh; padding-top: 100vh;
+		z-index: 1;
 		img {
 			-moz-transform: scaleX(-1);
 	        -o-transform: scaleX(-1);
