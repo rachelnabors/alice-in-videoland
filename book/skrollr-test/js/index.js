@@ -20,7 +20,11 @@ $(window).load(function() {
 
 		//Start up the skrollr object
 		skrollr.init({
-			forceHeight: false
+			forceHeight: false,
+			mobileCheck: function() {
+              //hack - forces mobile version to be off
+              return false;
+          }
 		});
 
 	$(".page").waypoint(function(direction) {
