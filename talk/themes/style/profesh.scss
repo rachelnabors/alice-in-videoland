@@ -79,6 +79,8 @@ a:hover, a:active {
 }
 
 .deck-status {
+	color: $canvas_black;
+	opacity: .5;
 	font-size:0.6666em;
 }
 
@@ -136,7 +138,18 @@ a:hover, a:active {
 // Kinds of slides
 
 .slide_preso-title { // title page
-
+	background: url(../../img/title_run.png) no-repeat center center;
+	background-size: cover;
+	h1{
+		-webkit-transform: translate(0, 0);
+		-moz-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0);
+		position: relative;
+		top: 0; left: 0;
+		font-family: $slab;
+	}
 }
 
 .slide_goodbye { // final slide
@@ -159,6 +172,11 @@ h1, h2 {
 		color: $pink-white;
 		padding: 3em;
 	}
+}
+
+.slide_about {
+	background: $pale-mint;
+	text-align: center;
 }
 
 .slide_interjection { // Section covers 

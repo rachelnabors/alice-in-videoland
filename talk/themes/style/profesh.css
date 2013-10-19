@@ -33,6 +33,8 @@
     background: #4e6369;
     font-family: serif; }
   .deck-container .deck-status {
+    color: #00232b;
+    opacity: .5;
     font-size: 0.6666em; }
   .deck-container .deck-menu .slide {
     background: #eee; }
@@ -65,6 +67,19 @@
   .deck-container .vtop a:hover, .deck-container .vtop a:focus, .deck-container .vbottom a:hover, .deck-container .vbottom a:focus {
     background: #fc0082;
     text-decoration: none; }
+  .deck-container .slide_preso-title {
+    background: url(../../img/title_run.png) no-repeat center center;
+    background-size: cover; }
+    .deck-container .slide_preso-title h1 {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0);
+      position: relative;
+      top: 0;
+      left: 0;
+      font-family: "hellenic-wide", serif; }
   .deck-container h1, .deck-container h2 {
     font-weight: normal; }
   .deck-container .slide_cover .section-title {
@@ -78,6 +93,9 @@
     background: #a22782;
     color: #ffeef4;
     padding: 3em; }
+  .deck-container .slide_about {
+    background: #dbf5f1;
+    text-align: center; }
   .deck-container .slide_interjection {
     background: #431236;
     color: #ffeef4; }

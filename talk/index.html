@@ -43,11 +43,10 @@
   </div>
 </section>
 
-<section class="slide">
-  <h2>This was me circa 2007</h2>
+<section class="slide slide_about">
   <figure>
     <img src="img/fig_rachel-tuna.png" alt="Rachel the Great and her talking cat Tuna, waving.">
-    <figcaption>You can still read the comic adventures of Rachel the Great and Tuna at <a href="http://www.rachelthegreat.com" target="_blank">RacheltheGreat.com</a></figcaption>
+    <figcaption>Me circa 2007, makin' it &ldquo;big&rdquo; in comics (<a href="http://www.rachelthegreat.com" target="_blank">RacheltheGreat.com</a>)</figcaption>
   </figure>
 </section>
 
@@ -510,24 +509,76 @@ $tunnel.find(".page").waypoint(function() {
 <div class="slide slide_texty" id="touch_tap">
   <h2 class="texty-title">Mapping Tap to Click</h2>
   <div class="texty-body">
+    <p>My <a href="https://coderwall.com/p/yzlqpq" target="_blank">original function</a> was good.</p>
+    <p class="slide"><a href="https://twitter.com/rodneyrehm" target="_blank">Rodney Rehm</a> offered up <a href="https://gist.github.com/rodneyrehm/6464641" target="_blank">a better solution</a>.</p>
+<pre class="language-js slide">
+// To get to #tunnels, activate #tunnels
+$("#to-tunnels").activate(downTheHole);
+</pre>
   </div>
 </div>
 
 <div class="slide slide_texty" id="touch_parallax">
   <h2 class="texty-title">The Perils of Parallax</h2>
   <div class="texty-body">
+    <p><strong>Danger!</strong> In iOS Safari, all animation and JavaScript pauses while you touch the screen.</p>
+    <p class="slide">This leads to an intesting puzzle:</p>
+    <ul>
+      <li class="slide">Waypoints ties with scroll events</li>
+      <li class="slide">The &ldquo;mobile friendly&rdquo; skrollr circumvents scroll by animating the CSS transformed page.</li>
+    </ul>
+    <p class="slide">So you can't change Alice's mood <em>or</em> you can't see her mood changing. (Demo! TODO)</p>
+
   </div>
 </div>
 
 <div class="slide slide_texty" id="touch_hammer">
   <h2 class="texty-title">Gestures with Hammer.js</h2>
   <div class="texty-body">
+    <p>An email conversation with <a href="http://johnpolacek.com/" target="_blank">John Polacek</a> convinced me to take another look at <a href="http://eightmedia.github.io/hammer.js/" target="_blank">hammer.js</a>.</p>
+    <ul>
+      <li class="slide">Small (3kb gzipped) and standalone.</li>
+      <li class="slide">jQuery plugin available.</li>
+      <li class="slide">Use any gesture, including <em>swipe</em>.</li>
+    </ul>
+    <p class="slide">Originally I attached it to all <code>.pages</code>, but&hellip;</p>
   </div>
 </div>
 
 <div class="slide slide_texty" id="touch_progress">
   <h2 class="texty-title">Tracking Progress on Touch</h2>
   <div class="texty-body">
+    <p>In the land of scrolling, Waypoints is enough.</p>
+    <p class="slide">In the land of touch, it was important to:</p>
+    <ul>
+      <li class="slide">keep track of what the previous and next <code>.page</code> is</li>
+      <li class="slide">fire some functions (like <code>downTheHole()</code>) on swipe instead of by waypoint.</li>
+    </ul>
+    <p class="slide">So I used counters.</p>
+  </div>
+</div>
+
+<div class="slide slide_texty" id="touch_modernizr">
+  <h2 class="texty-title">Wrapping it in modernizr</h2>
+  <div class="texty-body">
+    <p>I was already using Modernizr to test for CSS animations/transitions support.</p>
+<pre class="language-js slide">
+var cutToWonderland = function() {
+  if(Modernizr.touch) {
+    cutFired = true;
+    currentPage = nextPage;
+    calcPrevNext(currentPage);
+  }
+  // ...
+}
+</pre>
+  </div>
+</div>
+
+<div class="slide slide_interjection" id="touch_easy">
+  <div class="vcenter">
+    <p class="statement">I make this look easy.</p>
+    <p class="small-voice"><span>Don't be fooled. It was not.</span></p>
   </div>
 </div>
 
@@ -541,7 +592,8 @@ $tunnel.find(".page").waypoint(function() {
 <section class="slide slide_goodbye">
   <h2 class="">Enjoy the conference!</h2>
   <div class="slide">
-    <p>These slides: <a href="http://share.RachelNabors.com/frontendmasters">share.RachelNabors.com/frontendmasters</a></p>
+    <p>These slides: <a href="http://share.rachelnabors.com/cssdevconf2013">share.RachelNabors.com/cssdevconf2013</a></p>
+    <p>Alice's source code: <a href="https://github.com/rachelnabors/alice-in-videoland">github.com/rachelnabors/alice-in-videoland</a></p>
     <p><strong>Hire me</strong> to make wonderful things or make your things more wonderful.</p>
     <p><strong>Show me</strong> the wonderful things you are going to make.</p>
     <p><strong>Find me</strong> in all the usual places:</p>
