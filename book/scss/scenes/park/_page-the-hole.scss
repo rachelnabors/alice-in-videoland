@@ -1,14 +1,12 @@
 .page_the-hole {
-	@include background(image-url("bg_park5_1.png") no-repeat);
-		// radial-gradient(70% 60%, circle closest-side, #eb125d, #000));
-		// rad grad ref: http://www.css3files.com/gradient/
 	.foreground {
 		height: 100%;
 		@include background(image-url("bg_park5_2.png") no-repeat 100% 100%);
 		@include background-size(100% auto);
 		position: absolute;
 		bottom: 0;
-		width: 100%
+		width: 100%;
+		z-index: 4;
 	}
 	.rabbit {
 		@include background(image-url("park5_rabbit.png"));
@@ -17,11 +15,28 @@
 		top: 15%; left: 60%;
 		width: percentage(300/$max-width); padding-top: percentage(635/$max-width);
 		@include opacity(0);
-		z-index: -1;
+		z-index: 3;
 		.cssanimations & { @include opacity(1);}
 	}
+	.background {
+		@include background(image-url("bg_park5_1.png") no-repeat);
+		@include background-size(100% auto);
+		position: absolute;
+		width: 100%; height: 100%;
+		z-index: 2;
+	}
+	.bg-hole {
+		@include background(image-url("bg-hole.jpg") no-repeat);
+		@include background-size(100% auto);
+		position: absolute;
+		top: percentage(543/$max-height); left: percentage(996/$max-width);
+		width: percentage(757/$max-width); padding-top: percentage(227/$max-width);
+		z-index: 1;
+	}
 	&.in-view {
-		// @include animation(hole-glow 2s infinite alternate);
+		.bg-hole {
+			@include animation(hole-glow .35s steps(3) infinite alternate);
+		}
 		.rabbit {
 			@include animation(rabbit-down 3s forwards);
 		}
@@ -34,14 +49,15 @@
     }
 }
 
-@include keyframes(hole-glow) {
-    0% { background-size: 100% auto, 100% 100%; }
-    100% { background-size: 100% auto, 120% 120%; }
-}
-
 #to-tunnels {
 	@extend %imgreplace;
 	position: absolute;
 	top: 34%; left: 53%;
 	width: 29%; height: 16%;
+	z-index: 5;
+}
+
+@include keyframes(hole-glow) {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 150%; }
 }

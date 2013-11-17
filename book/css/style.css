@@ -830,11 +830,7 @@
     transform: translate(524.27984%, 0);
   }
 
-  /* line 1, ../scss/scenes/park/_page-the-hole.scss */
-  .page_the-hole {
-    background: url('../img/bg_park5_1.png?1377532988') no-repeat;
-  }
-  /* line 5, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 2, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole .foreground {
     height: 100%;
     background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
@@ -845,8 +841,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 4;
   }
-  /* line 13, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 11, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole .rabbit {
     background: url('../img/park5_rabbit.png?1377535949');
     -webkit-background-size: 100% 100%;
@@ -860,14 +857,47 @@
     padding-top: 31.00586%;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
-    z-index: -1;
+    z-index: 3;
   }
-  /* line 21, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 19, ../scss/scenes/park/_page-the-hole.scss */
   .cssanimations .page_the-hole .rabbit {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
-  /* line 25, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 21, ../scss/scenes/park/_page-the-hole.scss */
+  .page_the-hole .background {
+    background: url('../img/bg_park5_1.png?1377532988') no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  /* line 28, ../scss/scenes/park/_page-the-hole.scss */
+  .page_the-hole .bg-hole {
+    background: url('../img/bg-hole.jpg?1384664224') no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    position: absolute;
+    top: 35.35156%;
+    left: 48.63281%;
+    width: 36.96289%;
+    padding-top: 11.08398%;
+    z-index: 1;
+  }
+  /* line 37, ../scss/scenes/park/_page-the-hole.scss */
+  .page_the-hole.in-view .bg-hole {
+    -webkit-animation: hole-glow 0.35s steps(3) infinite alternate;
+    -moz-animation: hole-glow 0.35s steps(3) infinite alternate;
+    -o-animation: hole-glow 0.35s steps(3) infinite alternate;
+    animation: hole-glow 0.35s steps(3) infinite alternate;
+  }
+  /* line 40, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole.in-view .rabbit {
     -webkit-animation: rabbit-down 3s forwards;
     -moz-animation: rabbit-down 3s forwards;
@@ -876,7 +906,7 @@
   }
 
   @-moz-keyframes rabbit-down {
-    /* line 32, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 47, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -moz-transform: translate(0, 100%);
       transform: translate(0, 100%);
@@ -884,7 +914,7 @@
 }
 
   @-webkit-keyframes rabbit-down {
-    /* line 32, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 47, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -webkit-transform: translate(0, 100%);
       transform: translate(0, 100%);
@@ -892,7 +922,7 @@
 }
 
   @-o-keyframes rabbit-down {
-    /* line 32, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 47, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -o-transform: translate(0, 100%);
       transform: translate(0, 100%);
@@ -900,68 +930,69 @@
 }
 
   @keyframes rabbit-down {
-    /* line 32, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 47, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       transform: translate(0, 100%);
     }
 }
 
-  @-moz-keyframes hole-glow {
-    /* line 38, ../scss/scenes/park/_page-the-hole.scss */
-    0% {
-      background-size: 100% auto, 100% 100%;
-    }
-
-    /* line 39, ../scss/scenes/park/_page-the-hole.scss */
-    100% {
-      background-size: 100% auto, 120% 120%;
-    }
-}
-
-  @-webkit-keyframes hole-glow {
-    /* line 38, ../scss/scenes/park/_page-the-hole.scss */
-    0% {
-      background-size: 100% auto, 100% 100%;
-    }
-
-    /* line 39, ../scss/scenes/park/_page-the-hole.scss */
-    100% {
-      background-size: 100% auto, 120% 120%;
-    }
-}
-
-  @-o-keyframes hole-glow {
-    /* line 38, ../scss/scenes/park/_page-the-hole.scss */
-    0% {
-      background-size: 100% auto, 100% 100%;
-    }
-
-    /* line 39, ../scss/scenes/park/_page-the-hole.scss */
-    100% {
-      background-size: 100% auto, 120% 120%;
-    }
-}
-
-  @keyframes hole-glow {
-    /* line 38, ../scss/scenes/park/_page-the-hole.scss */
-    0% {
-      background-size: 100% auto, 100% 100%;
-    }
-
-    /* line 39, ../scss/scenes/park/_page-the-hole.scss */
-    100% {
-      background-size: 100% auto, 120% 120%;
-    }
-}
-
-  /* line 42, ../scss/scenes/park/_page-the-hole.scss */
+  /* line 52, ../scss/scenes/park/_page-the-hole.scss */
   #to-tunnels {
     position: absolute;
     top: 34%;
     left: 53%;
     width: 29%;
     height: 16%;
+    z-index: 5;
   }
+
+  @-moz-keyframes hole-glow {
+    /* line 61, ../scss/scenes/park/_page-the-hole.scss */
+    0% {
+      background-position: 0 0;
+    }
+
+    /* line 62, ../scss/scenes/park/_page-the-hole.scss */
+    100% {
+      background-position: 0 150%;
+    }
+}
+
+  @-webkit-keyframes hole-glow {
+    /* line 61, ../scss/scenes/park/_page-the-hole.scss */
+    0% {
+      background-position: 0 0;
+    }
+
+    /* line 62, ../scss/scenes/park/_page-the-hole.scss */
+    100% {
+      background-position: 0 150%;
+    }
+}
+
+  @-o-keyframes hole-glow {
+    /* line 61, ../scss/scenes/park/_page-the-hole.scss */
+    0% {
+      background-position: 0 0;
+    }
+
+    /* line 62, ../scss/scenes/park/_page-the-hole.scss */
+    100% {
+      background-position: 0 150%;
+    }
+}
+
+  @keyframes hole-glow {
+    /* line 61, ../scss/scenes/park/_page-the-hole.scss */
+    0% {
+      background-position: 0 0;
+    }
+
+    /* line 62, ../scss/scenes/park/_page-the-hole.scss */
+    100% {
+      background-position: 0 150%;
+    }
+}
 
   /* line 95, alice-fall/*.png */
   .alice-fall-sprite, .curious .alice-falling, .bored .alice-falling, .sleeping .alice-falling, .waking .alice-falling, .weird .alice-falling, .jolted .alice-falling, .alice-falling {
