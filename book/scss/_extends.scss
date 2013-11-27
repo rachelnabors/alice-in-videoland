@@ -30,3 +30,12 @@
 %clearfix:after {
     clear: both;
 }
+
+%disable-hover,
+%disable-hover * {
+  pointer-events: none !important;
+}
+
+%disable-scroll{
+  overflow: hidden;
+}

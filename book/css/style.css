@@ -106,6 +106,17 @@
     clear: both;
   }
 
+  /* line 35, ../scss/_extends.scss */
+  .scene-transitioning,
+  .scene-transitioning * {
+    pointer-events: none !important;
+  }
+
+  /* line 39, ../scss/_extends.scss */
+  .scene-transitioning {
+    overflow: hidden;
+  }
+
   /* line 1, ../scss/_foundation.scss */
   html, body {
     background: #000;

@@ -93,6 +93,9 @@
 		// reveal the tunnels w/ class
 		$tunnels.addClass("cue");
 
+		// use the transitioning class on html to present scrolling till we're done.
+		$("html").addClass("scene-transitioning");
+
 		// TODO: These need to get recalculated on orientation change
 		// calculate the height of the tunnels
 		var tunnelTop = Math.round($tunnel.offset().top);
@@ -135,6 +138,9 @@
 				  return false;
 				}
 			});
+
+			// remove the scene-transitioning class so people can scroll again.
+			$("html").removeClass("scene-transitioning");
 		});
 	}
 
@@ -144,6 +150,9 @@
 			currentPage = nextPage;
 			calcPrevNext(currentPage);
 		}
+		// disable scrolling
+		$("html").addClass("scene-transitioning");
+		
 		// Disable waypoint so people can scroll up if they want to.
 		$(".scene-hole").waypoint('disable');
 
@@ -164,6 +173,8 @@
 					scrollTop: $(".scene-wonderland").offset().top
 				}, 2500, function() {
 					$(".scene-cut").remove();
+					// allow folks to scroll again.
+					$("html").removeClass("scene-transitioning");
 				});
 	  	}, 2000);
 	}

@@ -6,3 +6,8 @@ html, body {
 .page > p {
 	@extend %visuallyhidden;
 }
+
+.scene-transitioning {
+	@extend %disable-hover;
+	@extend %disable-scroll;
+}
