@@ -148,7 +148,7 @@
 		$(".scene-hole").waypoint('disable');
 
 		// Give the .cut scene its cue
-	  	$(".scene-cut").addClass("cue").addClass("cue");
+	  	$(".scene-cut").addClass("cue");
 
 	  	// wait a little bit
 	  	window.setTimeout(function(){
