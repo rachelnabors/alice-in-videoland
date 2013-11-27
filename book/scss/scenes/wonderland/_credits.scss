@@ -155,7 +155,7 @@ $credits-use-percentages: true;
 			position: relative;
 			@include border-radius(.5em);
 			color: $pink-white;
-			background: darken(adjust-saturation($wonderland-pink, 10%), 10%);
+			background: $base-purple;
 			padding: rhythm(.5) 5.5742968%;
 			display: block;
 			text-decoration: none;
@@ -164,7 +164,6 @@ $credits-use-percentages: true;
 		}
 		a:hover, a:active, a:focus {
 			color: #fff;
-			background: darken(adjust-saturation($wonderland-pink, 15%), 15%);
 			@include transition(top .5s, left .5s);
 			top: .15em; left: .15em;
 		}

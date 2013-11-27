@@ -1454,7 +1454,7 @@
     -moz-border-radius: 0.5em;
     border-radius: 0.5em;
     color: #ffeef4;
-    background: #f35a8f;
+    background: #a22782;
     padding: 0.66667em 5.5743%;
     display: block;
     text-decoration: none;
@@ -1464,7 +1464,6 @@
   /* line 165, ../scss/scenes/wonderland/_credits.scss */
   .continued .newsletter a:hover, .continued .newsletter a:active, .continued .newsletter a:focus {
     color: #fff;
-    background: #f63d7d;
     -webkit-transition: top 0.5s, left 0.5s;
     -moz-transition: top 0.5s, left 0.5s;
     -o-transition: top 0.5s, left 0.5s;
@@ -1472,27 +1471,27 @@
     top: .15em;
     left: .15em;
   }
-  /* line 172, ../scss/scenes/wonderland/_credits.scss */
+  /* line 171, ../scss/scenes/wonderland/_credits.scss */
   .continued .author {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 1.33333em 14.5924%;
   }
-  /* line 182, ../scss/scenes/wonderland/_credits.scss */
+  /* line 181, ../scss/scenes/wonderland/_credits.scss */
   .continued .author a:link, .continued .author a:visited, .continued .author a:hover, .continued .author a:active {
     color: #64044b;
     padding: .1em .1em .05em;
     text-decoration: none;
     border-bottom: dotted 1px #82002d;
   }
-  /* line 188, ../scss/scenes/wonderland/_credits.scss */
+  /* line 187, ../scss/scenes/wonderland/_credits.scss */
   .continued .author a:hover, .continued .author a:active {
     color: #ffeef4;
     background: #ea6391;
     border: 0;
   }
-  /* line 194, ../scss/scenes/wonderland/_credits.scss */
+  /* line 193, ../scss/scenes/wonderland/_credits.scss */
   .continued .img-wrap {
     background: #a22782;
     -webkit-border-radius: 50%;
@@ -1506,7 +1505,7 @@
     width: 5em;
     height: 5em;
   }
-  /* line 204, ../scss/scenes/wonderland/_credits.scss */
+  /* line 203, ../scss/scenes/wonderland/_credits.scss */
   .continued img {
     margin: 0 auto;
     width: 4.5em;
@@ -1627,7 +1626,7 @@
   }
 }
 @media screen and (min-width: 32.8125em) {
-  /* line 172, ../scss/scenes/wonderland/_credits.scss */
+  /* line 171, ../scss/scenes/wonderland/_credits.scss */
   .continued .author {
     font-size: 0.77778em;
     line-height: 1.71429em;

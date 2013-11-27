@@ -17,10 +17,12 @@ $breakpoint-narrow: (max-width 525/16*1em);
 $saucer-sizer: 32em;
 
 // Colors
+$base-purple: #a22782;
+
 $earth: #6c373f; //#a36f77;
 $wonderland-pink: #f090b1;
 $wonderland-purple: #431236;
-$wonderland-grape: #a22782;
+$wonderland-grape: $base-purple;
 $wonderland-burgundy: #82002d;
 $pink-white: #ffeef4;
 
