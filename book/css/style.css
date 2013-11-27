@@ -75,7 +75,7 @@
   }
 
   /* line 10, ../scss/_extends.scss */
-  .scene:not(.loading) {
+  .scene {
     display: none !important;
   }
 
@@ -878,7 +878,7 @@
   }
   /* line 28, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole .bg-hole {
-    background: url('../img/bg-hole.jpg?1384664224') no-repeat;
+    background: url('../img/bg-hole.jpg?1384664398') no-repeat;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;

@@ -239,7 +239,10 @@
 
 	  setTimeout(function(){ 
 	    // change state to loaded
-	    $("html").addClass("loaded").removeClass("loading");
+    	$("html").addClass("loaded")
+	    setTimeout(function(){
+		    $("html").removeClass("loading");
+	    }, 3500);
 	    
 	    // Show park scene.
 	    $(".scene-park").addClass("cue");
