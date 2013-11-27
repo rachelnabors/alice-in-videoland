@@ -106,13 +106,13 @@
     clear: both;
   }
 
-  /* line 35, ../scss/_extends.scss */
+  /* line 36, ../scss/_extends.scss */
   .scene-transitioning,
   .scene-transitioning * {
     pointer-events: none !important;
   }
 
-  /* line 39, ../scss/_extends.scss */
+  /* line 40, ../scss/_extends.scss */
   .scene-transitioning {
     overflow: hidden;
   }

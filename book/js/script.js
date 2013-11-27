@@ -237,6 +237,9 @@
 					currentPage = nextPage;					
 					calcPrevNext(currentPage);
 				}
+
+				// Stops Hammer from detecting any further gestures, in the current detection session. Might be usefull to call after you did a succesfull swipe.
+				event.gesture.stopDetect();
 			});
 
 			//Swipe to previous page
@@ -244,6 +247,10 @@
 				scrollPageIntoCenter($(".page").get(prevPage));
 				currentPage = prevPage;
 				calcPrevNext(currentPage);
+
+				// Stops Hammer from detecting any further gestures, in the current detection session. Might be usefull to call after you did a succesfull swipe.
+				event.gesture.stopDetect();
+
 			});
 
 		}
