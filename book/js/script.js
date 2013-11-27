@@ -209,7 +209,7 @@
 
 			var visiblePages = [];
 			$('.page').filter(":visible").each(function(i) { 
-				if ($(this).visible(true)) {
+				if ($(this).visible() == true) {
 					visiblePages.push(i);
 				}
 			});
