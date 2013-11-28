@@ -255,6 +255,8 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 
 				});
 
+				$(".page_credits").hammer({prevent_default:false}).off("swipeup");
+
 			}
 
 			setTimeout(function(){ 
