@@ -1,5 +1,5 @@
 /* Alice in Videoland JS! */
-(function(window, document, $){ // Use an IIFE http://gregfranko.com/blog/i-love-my-iife/
+var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com/blog/i-love-my-iife/
 	var $tunnels = $("#tunnels"),
 		$tunnel = $("#tunnel"),
 	 	$screenHeight = $.waypoints('viewportHeight');
@@ -193,85 +193,88 @@
 		}
 	});
 
-	$(window).load(function() {
-		// if touch is enabled, let's use hammer.js to detect gestures!
-		if(Modernizr.touch) {
-			// set current page
-			// needs to infer the "current page" on position
-			// loop through all .pages and stop on the first one that returns true.
-			// will need to run post page load... so set timeout to like
-			var scrollPageIntoCenter = function(toPage) {
-				// Then animate that sucker.
-				$("html, body").animate({
+	return {
+		windowLoaded: function() {
+
+			// if touch is enabled, let's use hammer.js to detect gestures!
+			if(Modernizr.touch) {
+				// set current page
+				// needs to infer the "current page" on position
+				// loop through all .pages and stop on the first one that returns true.
+				// will need to run post page load... so set timeout to like
+				var scrollPageIntoCenter = function(toPage) {
+					// Then animate that sucker.
+					$("html, body").animate({
 						scrollTop: topOffset(toPage)
 					}, 500);
-			};
+				};
 
-			var visiblePages = [];
-			$('.page').filter(":visible").each(function(i) { 
-				if ($(this).visible() == true) {
-					visiblePages.push(i);
+				var visiblePages = [];
+				$('.page:visible').each(function(i) { 
+					if ($(this).visible(false, true)) {
+						visiblePages.push(i);
+					}
+				});
+				// if more than 2 pages are on the screen, use the second
+				if (visiblePages > 2) {
+					currentPage = visiblePages[1];
+					calcPrevNext(visiblePages[1]);
+				} else { // otherwise go for the first
+					currentPage = visiblePages[0];
+					calcPrevNext(visiblePages[0]);
 				}
-			});
-			// if more than 2 pages are on the screen, use the second
-			if (visiblePages > 2) {
-				currentPage = visiblePages[1];
-				calcPrevNext(visiblePages[1]);
-			} else { // otherwise go for the first
-				currentPage = visiblePages[0];
-				calcPrevNext(visiblePages[0]);
+
+				$(document).hammer({prevent_default:true}).on("swipeup", function(event) {
+					// using index() to get the index of our current page,
+					// we can eq() the next or previous .page in the set of matched elements.
+
+					// check if this is the last tunnel scene, and if so fire cutToWonderland 
+					if ($(".page").eq(currentPage).hasClass("page_the-hole")  && !downHole ) {
+						currentPage = currentPage;
+						calcPrevNext(currentPage);
+					} else if ($(".page").eq(currentPage).hasClass("falling_weird") && !cutFired) {
+						cutToWonderland();
+					} else {
+						scrollPageIntoCenter($(".page").get(nextPage));
+						currentPage = nextPage;					
+						calcPrevNext(currentPage);
+					}
+
+					// Stops Hammer from detecting any further gestures, in the current detection session. Might be usefull to call after you did a succesfull swipe.
+					event.gesture.stopDetect();
+				});
+
+				//Swipe to previous page
+				$(document).hammer({prevent_default:true}).on("swipedown", function(event) {
+					scrollPageIntoCenter($(".page").get(prevPage));
+					currentPage = prevPage;
+					calcPrevNext(currentPage);
+
+					// Stops Hammer from detecting any further gestures, in the current detection session. Might be usefull to call after you did a succesfull swipe.
+					event.gesture.stopDetect();
+
+				});
+
 			}
 
-			$(document).hammer({prevent_default:true}).on("swipeup", function(event) {
-				// using index() to get the index of our current page,
-				// we can eq() the next or previous .page in the set of matched elements.
-
-				// check if this is the last tunnel scene, and if so fire cutToWonderland 
-				if ($(".page").eq(currentPage).hasClass("page_the-hole")  && !downHole ) {
-					currentPage = currentPage;
-					calcPrevNext(currentPage);
-				} else if ($(".page").eq(currentPage).hasClass("falling_weird") && !cutFired) {
-					cutToWonderland();
-				} else {
-					scrollPageIntoCenter($(".page").get(nextPage));
-					currentPage = nextPage;					
-					calcPrevNext(currentPage);
-				}
-
-				// Stops Hammer from detecting any further gestures, in the current detection session. Might be usefull to call after you did a succesfull swipe.
-				event.gesture.stopDetect();
-			});
-
-			//Swipe to previous page
-			$(document).hammer({prevent_default:true}).on("swipedown", function(event) {
-				scrollPageIntoCenter($(".page").get(prevPage));
-				currentPage = prevPage;
-				calcPrevNext(currentPage);
-
-				// Stops Hammer from detecting any further gestures, in the current detection session. Might be usefull to call after you did a succesfull swipe.
-				event.gesture.stopDetect();
-
-			});
+			setTimeout(function(){ 
+			    // change state to loaded
+		    	$("html").addClass("loaded")
+			    setTimeout(function(){
+				    $("html").removeClass("loading");
+			    }, 3500);
+			    
+			    // Show park scene.
+			    $(".scene-park").addClass("cue");
+			    
+			    // all pages get in-view classes while they're centered in the viewport 
+					$(".scene-park .page").waypoint(function() {
+						$(this).addClass("in-view");
+					}, {
+					  offset: beingRead()
+					});
+			}, 4000); //gotta wait a lil' bit
 
 		}
-
-	  setTimeout(function(){ 
-	    // change state to loaded
-    	$("html").addClass("loaded")
-	    setTimeout(function(){
-		    $("html").removeClass("loading");
-	    }, 3500);
-	    
-	    // Show park scene.
-	    $(".scene-park").addClass("cue");
-	    
-	    // all pages get in-view classes while they're centered in the viewport 
-			$(".scene-park .page").waypoint(function() {
-				$(this).addClass("in-view");
-			}, {
-			  offset: beingRead()
-			});
-	  }, 4000); //gotta wait a lil' bit
-
-	});
+	};
 })(window, document, window.jQuery);
