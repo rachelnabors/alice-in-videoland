@@ -68,8 +68,6 @@ $frightened-alice: 'alice-frightened';
 .alice-falling {
 	@include alice-fall-sprite(frightened);
 	@include background-size( 100% auto);
-	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
-	height: 0;
 	left: 50%;
 	@include translate(-50%, 0);
 	position: absolute; 
@@ -80,8 +78,6 @@ $frightened-alice: 'alice-frightened';
 .frightened .alice-falling {
 	@include animation-sequence($frightened-alice, 1.5s, "freak-out");
 	@include background-size( 100% auto);
-	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
-	height: 0;
 }
 
 .sticky-wrapper {

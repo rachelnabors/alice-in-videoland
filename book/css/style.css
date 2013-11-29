@@ -1139,9 +1139,6 @@ h1 {
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
   background-size: 100% auto;
-  width: 31.25%;
-  padding-top: 48.73047%;
-  height: 0;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
@@ -1153,7 +1150,7 @@ h1 {
   z-index: 1;
 }
 
-/* line 80, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 78, ../scss/scenes/tunnels/_tunnels.scss */
 .frightened .alice-falling {
   height: 998px;
   width: 640px;
@@ -1165,18 +1162,15 @@ h1 {
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
   background-size: 100% auto;
-  width: 31.25%;
-  padding-top: 48.73047%;
-  height: 0;
 }
 
-/* line 87, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 83, ../scss/scenes/tunnels/_tunnels.scss */
 .sticky-wrapper {
   position: absolute;
   width: 100%;
 }
 
-/* line 92, ../scss/scenes/tunnels/_tunnels.scss */
+/* line 88, ../scss/scenes/tunnels/_tunnels.scss */
 .stuck.alice-falling {
   position: fixed;
   top: 0;

@@ -115,7 +115,20 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 			calcPrevNext(currentPage);
 		}
 		var $alice = $tunnel.find(".alice-falling");
-
+		// Need to explicitly set Alice's size, since position: fixed won't let us use .scene's dimensions to calculate her size.
+		// In a 1536 x 2048 setting, her width: 640, height: 998
+		// TODO Recalc these
+		if ($screenWidth/$screenHeight > 4/3) { // short and squat, depend on the height
+			$alice.css({
+				"width" : $screenHeight * (640/1536),
+				"height" : $screenHeight * (998/1536)
+			});
+		} else { // tall and narrow, depend on the width
+			$alice.css({
+				"width" : $screenHeight * (640/2048),
+				"height" : $screenHeight * (998/2048)
+			});
+		}
 		// reveal the tunnels w/ class
 		$tunnels.addClass("cue");
 
