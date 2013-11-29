@@ -1,6 +1,7 @@
 // all but the park start hidden. 
 .scene {
 	@extend %hidden;
+	margin: 0 auto;
 }
 
 // Scenes that get ".cue"-d are shown upon cue. 
@@ -18,12 +19,6 @@
 	z-index: 0;
 	@include background-size( 100% auto);
 	@include background-origin( padding-box);
-	@include breakpoint($breakpoint-short) {
-	    height: 100vh;
-		margin: 0 auto;
-	    padding: 0;
-    	width: 133.3333vh;
-  	}
 }
 
 .cue {	@extend %imgreplace;}

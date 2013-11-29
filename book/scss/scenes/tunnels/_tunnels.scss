@@ -1,13 +1,6 @@
 @import "alice-fall/*.png";
 $alice-fall-use-percentages: true;
 
-.scene-hole {
-	@include breakpoint($breakpoint-short) {
-		margin: 0 auto;
-    	width: 133.3333vh;
-  	}
-}
-
 .scene .page_tunnels { //.scene for specificity
 	@include background(
 		image-url("tunnels.svg") no-repeat,
@@ -17,10 +10,6 @@ $alice-fall-use-percentages: true;
 		100% auto, 
 		auto auto);
 	padding-top: percentage(1000/$max-width); // 1536
-	@include breakpoint($breakpoint-short) {
-	    height: 65.104167vh; 
-	    padding: 0;
-  	}
 }
 
 // The Tunnel
@@ -41,12 +30,6 @@ $alice-fall-use-percentages: true;
 			percentage(1800/$max-width) auto, 
 			auto auto);
 		padding-top: 161%;
-		@include breakpoint($breakpoint-short) {
-		    height: 214.843707vh; // 	244.444382  	  Xvh = 1650
-			margin: 0 auto;
-		    padding: 0;
-	    	width: 133.3333vh; // 133.3vh = 900
-	  	}
 	}
 }
 
@@ -88,16 +71,10 @@ $frightened-alice: 'alice-frightened';
 	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
 	height: 0;
 	left: 50%;
-	margin-left: (percentage(640/$max-width) * -.5 );
+	@include translate(-50%, 0);
 	position: absolute; 
 	top: 0; 
 	z-index: 1;
-	@include breakpoint($breakpoint-short) {
-		padding:0;
-	    height: 60.484848vh; // 	  	  Xvh = 998/1650
-    	width: 38.787879vh; // 133.3vh = 640/1650
-		margin-left: 38.787879vh * -.5 ;
-  	}
 }
 
 .frightened .alice-falling {
@@ -105,12 +82,6 @@ $frightened-alice: 'alice-frightened';
 	@include background-size( 100% auto);
 	width: percentage(640/$max-width); padding-top: percentage(998/$max-width);
 	height: 0;
-	@include breakpoint($breakpoint-short) {
-		padding:0;
-	    height: 60.484848vh; // 	  	  Xvh = 998/1650
-    	width: 38.787879vh; // 133.3vh = 640/1650
-		margin-left: 38.787879vh * -.5 ;
-  	}
 }
 
 .sticky-wrapper {

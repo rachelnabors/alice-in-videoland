@@ -2,8 +2,10 @@
 var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com/blog/i-love-my-iife/
 	var $tunnels = $("#tunnels"),
 		$tunnel = $("#tunnel"),
-	 	$screenHeight = $.waypoints('viewportHeight');
+		$screenHeight = $.waypoints("viewportHeight"),
+		$screenWidth = $( document ).width();
 	 	pagesNum = $(".page").length;
+	
 	if(Modernizr.touch) {
 		// variables only needed for touch context Hammer functions at bottom
 		var cutFired = false,
@@ -12,10 +14,32 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 			nextPage,
 			prevPage;
 	}
-	var recalcWaypoints = function() {
+	
+	var calcWaypoints = function() {
 		$(".page").waypoint({
 			offset: beingRead()
 		});
+	}
+
+	var calcAspectRatio = function() {
+		// calculate width as 133.3333333% of height
+		var properWidth = 1.333333333 * $screenHeight;
+		// var properHeight = 0.75 * $screenWidth;
+		// if we have a short and wide window, manually give all .pages the 4/3 width.
+		// we could have used vh to do this in the CSS, but iOS Safari is SHIT w/ vh :(
+		if ($screenWidth/$screenHeight > 4/3) {
+			$(".scene").width(properWidth);
+		} else {
+			$(".scene").width("auto");
+		}
+	}
+
+	var calcScreen = function() {
+		// you'll need to update the viewport height + width.
+		$screenHeight = $.waypoints("viewportHeight");
+		$screenWidth = $( document ).width();
+		calcAspectRatio();
+		calcWaypoints();
 	}
 	
 	// only for mobile swiping
@@ -32,8 +56,10 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 			nextPage = current + 1;
 		}
 	}
-		
-	window.addEventListener('orientationchange', recalcWaypoints);
+
+	// If the window's size changes, redo your maths.
+	window.addEventListener("orientationchange", calcScreen);
+	$(window).on("debouncedresize", calcScreen);
 
 	// First and foremost, get that loader in place.
 	var loadingSaucer= '<div id="loader"><div class="cup"><svg version="1.1" id="brew" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="266px" height="25px" viewBox="0 0 266 25" enable-background="new 0 0 266 25" xml:space="preserve"><ellipse fill="#903741" cx="133" cy="12.5" rx="133" ry="12.5"/></svg><p>Please wait while we load</p></div><div class="saucer"></div></div>';
@@ -93,7 +119,7 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 		// reveal the tunnels w/ class
 		$tunnels.addClass("cue");
 
-		// use the transitioning class on html to present scrolling till we're done.
+		// use the transitioning class on html to prevent scrolling till we're done.
 		$("html").addClass("scene-transitioning");
 
 		// TODO: These need to get recalculated on orientation change
@@ -195,6 +221,7 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 
 	return {
 		windowLoaded: function() {
+			calcAspectRatio();
 
 			// if touch is enabled, let's use hammer.js to detect gestures!
 			if(Modernizr.touch) {

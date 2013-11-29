@@ -1,4 +1,3 @@
-@media screen {
 	@import "compass/css3/"; // css3 helpers
 	// animation helpers w/ Animation Studio
 	@import "animation-studio"; 
@@ -22,6 +21,6 @@
 
 	// Scenes
 	@import "scenes/scenes";
-}
+
 // Print styles
 @import "print";

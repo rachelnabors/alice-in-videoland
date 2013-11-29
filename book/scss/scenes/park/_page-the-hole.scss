@@ -4,7 +4,7 @@
 		@include background(image-url("bg_park5_2.png") no-repeat 100% 100%);
 		@include background-size(100% auto);
 		position: absolute;
-		bottom: 0;
+		bottom: 0; left: 0;
 		width: 100%;
 		z-index: 4;
 	}
@@ -22,6 +22,7 @@
 		@include background(image-url("bg_park5_1.png") no-repeat);
 		@include background-size(100% auto);
 		position: absolute;
+		top: 0; left: 0;
 		width: 100%; height: 100%;
 		z-index: 2;
 	}
@@ -35,7 +36,7 @@
 	}
 	&.in-view {
 		.bg-hole {
-			@include animation(hole-glow .35s steps(3) infinite alternate);
+			@include animation(hole-glow .35s steps(4) infinite alternate);
 		}
 		.rabbit {
 			@include animation(rabbit-down 3s forwards);
@@ -59,5 +60,5 @@
 
 @include keyframes(hole-glow) {
     0% { background-position: 0 0; }
-    100% { background-position: 0 150%; }
+    100% { background-position: 0 133.333333%; }
 }
