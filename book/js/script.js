@@ -115,17 +115,20 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 			calcPrevNext(currentPage);
 		}
 		var $alice = $tunnel.find(".alice-falling");
+		var aliceHeight;
 		// Need to explicitly set Alice's size, since position: fixed won't let us use .scene's dimensions to calculate her size.
 		// In a 1536 x 2048 setting, her width: 640, height: 998
 		// TODO Recalc these
 		if ($screenWidth/$screenHeight > 4/3) { // short and squat, depend on the height
+			aliceHeight = $screenHeight * (640/1536);
 			$alice.css({
-				"width" : $screenHeight * (640/1536),
+				"width" : aliceHeight,
 				"height" : $screenHeight * (998/1536)
 			});
 		} else { // tall and narrow, depend on the width
+			aliceHeight = $screenHeight * (640/2048);
 			$alice.css({
-				"width" : $screenHeight * (640/2048),
+				"width" : aliceHeight,
 				"height" : $screenHeight * (998/2048)
 			});
 		}
@@ -140,9 +143,10 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 		var tunnelTop = Math.round($tunnel.offset().top);
 		var tunnelTopData = "data-" + tunnelTop;
 		var tunnelBottomData =  "data-" + (tunnelTop + Math.round($tunnel.height()));
+		var aliceTrajectory = $(".page").outerHeight() - aliceHeight;
 
 		$alice.waypoint('sticky') // make her sticky!
-		.attr(tunnelTopData, "top:0%").attr(tunnelBottomData, "top:80%");		// Give Falling Alice her skrollr measurements as data attributes
+		.attr(tunnelTopData, "transform: translate(-50%, 0px)").attr(tunnelBottomData, "transform: translate(-50%," + aliceTrajectory + "px)");		// Give Falling Alice her skrollr measurements as data attributes
 
 
 		// recalculate the new waypoints since this part was hidden
