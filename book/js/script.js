@@ -3,13 +3,16 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 	var $tunnels = $("#tunnels"),
 		$tunnel = $("#tunnel"),
 		$screenHeight = $.waypoints("viewportHeight"),
-		$screenWidth = $( document ).width();
-	 	pagesNum = $(".page").length;
+		$screenWidth = $( document ).width(),
+		$alice = $tunnel.find(".alice-falling"),
+	 	pagesNum = $(".page").length,
+		downHole = false,
+		tunnelTop, tunnelTopData, tunnelBottomData, aliceTrajectory;
+
 	
 	if(Modernizr.touch) {
 		// variables only needed for touch context Hammer functions at bottom
 		var cutFired = false,
-			downHole = false,
 			currentPage,
 			nextPage,
 			prevPage;
@@ -40,6 +43,7 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 		$screenWidth = $( document ).width();
 		calcAspectRatio();
 		calcWaypoints();
+		calcAlice();
 	}
 	
 	// only for mobile swiping
@@ -107,18 +111,10 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 		return offset;
 	}
 
-	// Reveal the rabbit tunnel and move the page down to #tunnel
-	var downTheHole = function() {
-		if(Modernizr.touch) {
-			currentPage = $(".falling_frightened").index(".page");
-			downHole = true;
-			calcPrevNext(currentPage);
-		}
-		var $alice = $tunnel.find(".alice-falling");
-		var aliceHeight;
+	var aliceHeight;
+	var calcAlice = function() {
 		// Need to explicitly set Alice's size, since position: fixed won't let us use .scene's dimensions to calculate her size.
 		// In a 1536 x 2048 setting, her width: 640, height: 998
-		// TODO Recalc these
 		if ($screenWidth/$screenHeight > 4/3) { // short and squat, depend on the height
 			aliceHeight = $screenHeight * (640/1536);
 			$alice.css({
@@ -132,22 +128,31 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 				"height" : $screenHeight * (998/2048)
 			});
 		}
+		// calculate the height of the tunnels
+		tunnelTop = Math.round($tunnel.offset().top),
+		tunnelTopData = "data-" + tunnelTop,
+		tunnelBottomData =  "data-" + (tunnelTop + Math.round($tunnel.height())),
+		aliceTrajectory = $(".page").outerHeight() - aliceHeight;
+		$alice.attr(tunnelTopData, "transform: translate(-50%, 0px)").attr(tunnelBottomData, "transform: translate(-50%," + aliceTrajectory + "px)");		// Give Falling Alice her skrollr measurements as data attributes
+	}
+
+	// Reveal the rabbit tunnel and move the page down to #tunnel
+	var downTheHole = function() {
+		downHole = true;
+
+		if(Modernizr.touch) {
+			currentPage = $(".falling_frightened").index(".page");
+			calcPrevNext(currentPage);
+		}
+
 		// reveal the tunnels w/ class
 		$tunnels.addClass("cue");
+		calcAlice();
 
 		// use the transitioning class on html to prevent scrolling till we're done.
 		$("html").addClass("scene-transitioning");
 
-		// TODO: These need to get recalculated on orientation change
-		// calculate the height of the tunnels
-		var tunnelTop = Math.round($tunnel.offset().top);
-		var tunnelTopData = "data-" + tunnelTop;
-		var tunnelBottomData =  "data-" + (tunnelTop + Math.round($tunnel.height()));
-		var aliceTrajectory = $(".page").outerHeight() - aliceHeight;
-
-		$alice.waypoint('sticky') // make her sticky!
-		.attr(tunnelTopData, "transform: translate(-50%, 0px)").attr(tunnelBottomData, "transform: translate(-50%," + aliceTrajectory + "px)");		// Give Falling Alice her skrollr measurements as data attributes
-
+		$alice.waypoint('sticky'); // make her sticky!
 
 		// recalculate the new waypoints since this part was hidden
 		$tunnel.find(".page").waypoint(function() {
@@ -314,11 +319,11 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 			    $(".scene-park").addClass("cue");
 			    
 			    // all pages get in-view classes while they're centered in the viewport 
-					$(".scene-park .page").waypoint(function() {
-						$(this).addClass("in-view");
-					}, {
-					  offset: beingRead()
-					});
+				$(".scene-park .page").waypoint(function() {
+					$(this).addClass("in-view");
+				}, {
+				  offset: beingRead()
+				});
 			}, 4000); //gotta wait a lil' bit
 
 		}
