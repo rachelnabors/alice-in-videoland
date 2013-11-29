@@ -1,11 +1,20 @@
 @import "alice-fall/*.png";
 $alice-fall-use-percentages: true;
 
+.scene-hole {
+	@include background(
+		image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
+		image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
+		$earth);
+	@include background-size(
+		percentage(100/$max-width) auto, 
+		percentage(100/$max-width) auto);
+}
+
 .scene .page_tunnels { //.scene for specificity
 	@include background(
 		image-url("tunnels.svg") no-repeat,
-		image-url("bg_tunnel-specks.png") repeat,
-		$earth);
+		image-url("bg_tunnel-specks.png") repeat);
 	@include background-size(
 		100% auto, 
 		auto auto);
