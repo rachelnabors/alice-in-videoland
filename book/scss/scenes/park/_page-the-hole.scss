@@ -52,10 +52,36 @@
 
 #to-tunnels {
 	@extend %imgreplace;
+	overflow: visible;
 	position: absolute;
 	top: 34%; left: 53%;
 	width: 29%; height: 16%;
 	z-index: 5;
+	// After the user sees the hole, we want an arrow to appear and indicate the tunnels are interactable after a wait.
+	.in-view &.unactivated:after {
+		content: " ";
+		@include opacity(0);
+		@include transition(opacity 1s 4s);
+		@extend %imgreplace;
+		@include background(image-url("g_arrow.svgz") no-repeat);
+		@include background-size(100% 100%);
+		@include animation(arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 5s);
+		@include rotate(-40deg);
+		position: absolute;
+		top: -70%; left: 80%;
+		width: 67%; padding-top: 21%;
+	}
+
+}
+
+@include keyframes(arrow-fade) {
+    50% { @include opacity(1); }
+    100% { @include opacity(0); }
+}
+
+@include keyframes(arrow-point) {
+    0% { @include simple-transform($scale: 1, $rotate: -40deg, $trans-x: 0, $trans-y: 0); }
+    100% { @include simple-transform($scale: .9, $rotate: -45deg, $trans-x: 10%, $trans-y: 10%); }
 }
 
 @include keyframes(hole-glow) {

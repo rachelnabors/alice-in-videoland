@@ -139,7 +139,7 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 	// Reveal the rabbit tunnel and move the page down to #tunnel
 	var downTheHole = function() {
 		downHole = true;
-
+		$("#to-tunnels").removeClass("unactivated").addClass("activated");
 		if(Modernizr.touch) {
 			currentPage = $(".falling_frightened").index(".page");
 			calcPrevNext(currentPage);
