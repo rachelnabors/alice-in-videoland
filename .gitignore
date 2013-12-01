@@ -1,5 +1,4 @@
 .DS_Store
 *sass
 *.sass-cache
-Gemfile.lock
 .ruby-version
