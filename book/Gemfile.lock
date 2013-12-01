@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    animation-studio (0.1.4)
+    animation-studio (0.1.6)
       compass (>= 0.13.alpha.4)
       sass (>= 3.2.3)
     breakpoint (2.2.0)
@@ -31,6 +31,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  animation-studio (~> 0.1.4)
+  animation-studio (~> 0.1.6)
   breakpoint (~> 2.2.0)
   rb-fsevent (~> 0.9)

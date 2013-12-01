@@ -1,5 +1,5 @@
-@import "alice-fall/*.png";
-$alice-fall-use-percentages: true;
+$alice-fall: 'alice-fall';
+@include animation-sequence-sprite-generator($alice-fall);
 
 .scene-hole {
 	@include background(
@@ -45,48 +45,37 @@ $alice-fall-use-percentages: true;
 //let Alice and Cheshire hover above
 .page_falling { z-index: -1;}
 
-.curious .alice-falling {
-	@include alice-fall-sprite(curious);
-}
-
-.bored .alice-falling {
-	@include alice-fall-sprite(sleepy);
-}
-
-.sleeping .alice-falling {
-	@include alice-fall-sprite(sleeping);
-}
-
-.waking .alice-falling {
-	@include alice-fall-sprite(waking);
-}
-
-.weird .alice-falling {
-	@include alice-fall-sprite(awake);
-}
-
-.jolted .alice-falling {
-	@include alice-fall-sprite(jolted);
-}
 // Characters
 
-$frightened-alice: 'alice-frightened';
-@include animation-sequence-sprite-generator($frightened-alice);
-@include animation-sequence-keyframes($frightened-alice, "freak-out");
-
 .alice-falling {
-	@include alice-fall-sprite(frightened);
-	@include background-size( 100% auto);
+	@include animation-still($alice-fall, 1);
 	left: 50%;
 	@include translate(-50%, 0);
 	position: absolute; 
 	top: 0; 
 	z-index: 1;
+	#tunnel & {
+		@include background-size( 100% auto);
+	}
 }
 
 .frightened .alice-falling {
-	@include animation-sequence($frightened-alice, 1.5s, "freak-out");
+	@include animation-sequence-span($alice-fall, 1.5s, "freak-out", "alice-frightened_1", "alice-frightened_2", infinite, false, false);
 	@include background-size( 100% auto);
+}
+
+@include animation-sequence-keyframes-span($alice-fall, "freak-out", "alice-frightened_1", "alice-frightened_2");
+
+.curious .alice-falling {
+	@include animation-still($alice-fall, 3, false);
+}
+
+.sleeping .alice-falling {
+	@include animation-still($alice-fall, 4, false);
+}
+
+.bored .alice-falling {
+	@include animation-still($alice-fall, 5, false);
 }
 
 .sticky-wrapper {

@@ -5,7 +5,7 @@ $sleepy-eyes: 'eyes';
 .page_alice-is-bored {
 	@include background(image-url("bg_park2.jpg") no-repeat);
 	.eyes {
-		@include animation-sequence($sleepy-eyes, 1.5s, "sleepz");
+		@include animation-sequence($sleepy-eyes, 1.5s, "sleepz", infinite, false, false);
 		@include animation-direction(alternate);
 		@include animation-play-state(paused);
 		position: absolute;

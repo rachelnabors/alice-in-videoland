@@ -506,40 +506,35 @@
     background: url('../img/bg_park1.jpg?1377318992') no-repeat;
   }
 
-  /* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-  .page_alice-is-bored .eyes {
-    background: url('../img/eyes-s087e210706.png') 0 0 no-repeat;
-  }
-
   @-moz-keyframes sleepz {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
+    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0;
     }
 
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
+    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 150%;
     }
   }
   @-webkit-keyframes sleepz {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
+    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0;
     }
 
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
+    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 150%;
     }
   }
   @keyframes sleepz {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
+    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0;
     }
 
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
+    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 150%;
     }
@@ -550,8 +545,7 @@
   }
   /* line 7, ../scss/scenes/park/_page-alice-is-bored.scss */
   .page_alice-is-bored .eyes {
-    height: 142px;
-    width: 310px;
+    background: url('../img/eyes-s087e210706.png') 0 0 no-repeat;
     -moz-animation: sleepz 1.5s steps(3) infinite;
     -webkit-animation: sleepz 1.5s steps(3) infinite;
     animation: sleepz 1.5s steps(3) infinite;
@@ -904,12 +898,6 @@
       background-position: 0 133.333333%;
     }
   }
-  /* line 96, alice-fall/*.png */
-  .alice-fall-sprite, .curious .alice-falling, .bored .alice-falling, .sleeping .alice-falling, .waking .alice-falling, .weird .alice-falling, .jolted .alice-falling, .alice-falling {
-    background-image: url('../img/alice-fall-s4db96ce9a4.png');
-    background-repeat: no-repeat;
-  }
-
   /* line 4, ../scss/scenes/tunnels/_tunnels.scss */
   .scene-hole {
     background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, #6c373f;
@@ -949,81 +937,11 @@
     z-index: -1;
   }
 
-  /* line 48, ../scss/scenes/tunnels/_tunnels.scss */
-  .curious .alice-falling {
-    background-position: 0 16.66667%;
-  }
-
-  /* line 52, ../scss/scenes/tunnels/_tunnels.scss */
-  .bored .alice-falling {
-    background-position: 0 83.33333%;
-  }
-
-  /* line 56, ../scss/scenes/tunnels/_tunnels.scss */
-  .sleeping .alice-falling {
-    background-position: 0 66.66667%;
-  }
-
-  /* line 60, ../scss/scenes/tunnels/_tunnels.scss */
-  .waking .alice-falling {
-    background-position: 0 100%;
-  }
-
-  /* line 64, ../scss/scenes/tunnels/_tunnels.scss */
-  .weird .alice-falling {
-    background-position: 0 0;
-  }
-
-  /* line 68, ../scss/scenes/tunnels/_tunnels.scss */
-  .jolted .alice-falling {
-    background-position: 0 50%;
-  }
-
-  /* line 12, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-  .frightened .alice-falling {
-    background: url('../img/alice-frightened-s41f9b8ddd1.png') 0 0 no-repeat;
-  }
-
-  @-moz-keyframes freak-out {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-    0% {
-      background-position: 0 0;
-    }
-
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-    100% {
-      background-position: 0 200%;
-    }
-  }
-  @-webkit-keyframes freak-out {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-    0% {
-      background-position: 0 0;
-    }
-
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-    100% {
-      background-position: 0 200%;
-    }
-  }
-  @keyframes freak-out {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-    0% {
-      background-position: 0 0;
-    }
-
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.4/stylesheets/animation-studio/_animation-sequence.scss */
-    100% {
-      background-position: 0 200%;
-    }
-  }
-  /* line 77, ../scss/scenes/tunnels/_tunnels.scss */
+  /* line 50, ../scss/scenes/tunnels/_tunnels.scss */
   .alice-falling {
-    background-position: 0 33.33333%;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
-    background-size: 100% auto;
+    background: url('../img/alice-fall-sce97bbc8d5.png') 0 0% no-repeat;
+    height: 998px;
+    width: 640px;
     left: 50%;
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
@@ -1034,11 +952,17 @@
     top: 0;
     z-index: 1;
   }
+  /* line 57, ../scss/scenes/tunnels/_tunnels.scss */
+  #tunnel .alice-falling {
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
 
-  /* line 87, ../scss/scenes/tunnels/_tunnels.scss */
+  /* line 62, ../scss/scenes/tunnels/_tunnels.scss */
   .frightened .alice-falling {
-    height: 998px;
-    width: 640px;
+    background: url('../img/alice-fall-sce97bbc8d5.png') 0 0 no-repeat;
     -moz-animation: freak-out 1.5s steps(2) infinite;
     -webkit-animation: freak-out 1.5s steps(2) infinite;
     animation: freak-out 1.5s steps(2) infinite;
@@ -1048,13 +972,61 @@
     background-size: 100% auto;
   }
 
-  /* line 92, ../scss/scenes/tunnels/_tunnels.scss */
+  @-moz-keyframes freak-out {
+    /* line 144, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
+    0% {
+      background-position: 0 0%;
+    }
+
+    /* line 147, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  @-webkit-keyframes freak-out {
+    /* line 144, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
+    0% {
+      background-position: 0 0%;
+    }
+
+    /* line 147, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  @keyframes freak-out {
+    /* line 144, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
+    0% {
+      background-position: 0 0%;
+    }
+
+    /* line 147, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  /* line 69, ../scss/scenes/tunnels/_tunnels.scss */
+  .curious .alice-falling {
+    background: url('../img/alice-fall-sce97bbc8d5.png') 0 50% no-repeat;
+  }
+
+  /* line 73, ../scss/scenes/tunnels/_tunnels.scss */
+  .sleeping .alice-falling {
+    background: url('../img/alice-fall-sce97bbc8d5.png') 0 75% no-repeat;
+  }
+
+  /* line 77, ../scss/scenes/tunnels/_tunnels.scss */
+  .bored .alice-falling {
+    background: url('../img/alice-fall-sce97bbc8d5.png') 0 100% no-repeat;
+  }
+
+  /* line 81, ../scss/scenes/tunnels/_tunnels.scss */
   .sticky-wrapper {
     position: absolute;
     width: 100%;
   }
 
-  /* line 97, ../scss/scenes/tunnels/_tunnels.scss */
+  /* line 86, ../scss/scenes/tunnels/_tunnels.scss */
   .stuck.alice-falling {
     position: fixed;
     top: 0;
