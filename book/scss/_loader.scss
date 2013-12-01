@@ -55,15 +55,13 @@ h1 {
 }
 
 .cup {
-	@include background(image-url("teacup.svg") 0 0 no-repeat);
+	@include background(inline-image("teacup.svg") no-repeat 0 0);
 	@include background-size(100% 100%);
 	position: absolute;
 	margin-left: 1.5em;
 	width: 100%; height: 100%;
 	p {
 		font-family: $font-fancy, fantasy;
-		// font-weight: $font-fancy-bold;
-		// font-style: italic;
 		@include adjust-font-size-to(24px, 1);
 		position: absolute;
 		top: 40%; left: 8%;
@@ -73,7 +71,7 @@ h1 {
 
 .saucer {
 	@include animation(saucer-drop 3s cubic-bezier(.11,1.06,.87,1.06) 2s forwards);
-	@include background(image-url("saucer.svg") 0 0 no-repeat);
+	@include background(inline-image("saucer.svg") no-repeat 0 0);
 	@include background-size(auto 100%);
 	width: 520em/$saucer-sizer*1em; padding-top: 140em/$saucer-sizer*1em;
 	position: absolute;

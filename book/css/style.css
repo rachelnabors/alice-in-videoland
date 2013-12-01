@@ -218,7 +218,7 @@
 
   /* line 57, ../scss/_loader.scss */
   .cup {
-    background: url('../img/teacup.svg?1378873015') 0 0 no-repeat;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDQwcHgiIGhlaWdodD0iMzI2cHgiIHZpZXdCb3g9IjAgMCA0NDAgMzI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NDAgMzI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGNUZCRkIiIGQ9Ik0zMTUuNSw4My40YzAuMy0xNi41LDUuNC0zMS4xLDE5LjctNDIuMkw5LjMsNDAuN0M1My44LDExNC4zLTQyLjUsMTY5LDI0LjYsMjQ3YzEzLjcsMTYsMzIuOSwyNy43LDU1LDM1LjgNCgljMi44LDIwLjctMTQuMywxOS0xNC4zLDE5Yzg0LjcsNTEuMywyMTYuMSw1LjEsMjE2LjEsNS4xYy0xNy0xMC40LTEzLjgtMjUtMTEtMzEuOWMyNi43LTExLjYsNDcuOC0yNy42LDU4LjUtNDcuMg0KCWM4LTE0LjcsNy45LTMyLjQsNC43LTUxLjJjMjYuOS0xLjUsNzQsOS42LDgwLjQtMkM0NzEuNCw2OS40LDQzMS41LDQsMzE1LjUsODMuNHogTTM5Mi44LDE1My40Yy0yNy44LDE1LjktNDUuNyw5LjctNjEuOSw5LjMNCgljLTQuMS0xOC4yLTkuOS0zNy0xMy4xLTU0LjdsMzguNC0yNi41QzQ0Mi45LDM4LjEsNDQwLjQsMTI2LjIsMzkyLjgsMTUzLjR6Ii8+DQo8ZWxsaXBzZSBmaWxsPSIjRERGMEVFIiBjeD0iMTcxLjkiIGN5PSIzMyIgcng9IjE2OC45IiByeT0iMzMiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K') no-repeat 0 0;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
@@ -239,12 +239,12 @@
     width: 60%;
   }
 
-  /* line 74, ../scss/_loader.scss */
+  /* line 72, ../scss/_loader.scss */
   .saucer {
     -moz-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
     -webkit-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
     animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
-    background: url('../img/saucer.svg?1378872308') 0 0 no-repeat;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTIwcHgiIGhlaWdodD0iMTQwcHgiIHZpZXdCb3g9IjAgMCA1MjAgMTQwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MjAgMTQwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJkaXNoIj4NCgk8ZWxsaXBzZSBmaWxsPSIjRjVGQkZCIiBjeD0iMjYwIiBjeT0iNzAiIHJ4PSIyNjAiIHJ5PSI3MCIvPg0KCTxlbGxpcHNlIGZpbGw9IiNEREYwRUUiIGN4PSIyNTcuOCIgY3k9IjUyLjYiIHJ4PSIxNTgiIHJ5PSIzMi4yIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==') no-repeat 0 0;
     -moz-background-size: auto 100%;
     -o-background-size: auto 100%;
     -webkit-background-size: auto 100%;
@@ -258,7 +258,7 @@
     z-index: -1;
   }
 
-  /* line 85, ../scss/_loader.scss */
+  /* line 83, ../scss/_loader.scss */
   .loaded .saucer {
     -moz-animation: saucer-done 1s 0.5s forwards;
     -webkit-animation: saucer-done 1s 0.5s forwards;
@@ -266,7 +266,7 @@
     top: 80%;
   }
 
-  /* line 90, ../scss/_loader.scss */
+  /* line 88, ../scss/_loader.scss */
   .loaded #loader {
     -moz-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
     -webkit-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
@@ -274,7 +274,7 @@
     top: 60%;
   }
 
-  /* line 95, ../scss/_loader.scss */
+  /* line 93, ../scss/_loader.scss */
   #brew {
     -moz-animation: pour-tea 5s 1 3s forwards;
     -webkit-animation: pour-tea 5s 1 3s forwards;
@@ -293,7 +293,7 @@
   }
 
   @-moz-keyframes pour-tea {
-    /* line 105, ../scss/_loader.scss */
+    /* line 103, ../scss/_loader.scss */
     100% {
       -moz-transform: scale(1.2, 1.5);
       transform: scale(1.2, 1.5);
@@ -301,7 +301,7 @@
     }
   }
   @-webkit-keyframes pour-tea {
-    /* line 105, ../scss/_loader.scss */
+    /* line 103, ../scss/_loader.scss */
     100% {
       -webkit-transform: scale(1.2, 1.5);
       transform: scale(1.2, 1.5);
@@ -309,7 +309,7 @@
     }
   }
   @keyframes pour-tea {
-    /* line 105, ../scss/_loader.scss */
+    /* line 103, ../scss/_loader.scss */
     100% {
       -moz-transform: scale(1.2, 1.5);
       -ms-transform: scale(1.2, 1.5);
@@ -320,25 +320,25 @@
     }
   }
   @-moz-keyframes cup-drop {
-    /* line 112, ../scss/_loader.scss */
+    /* line 110, ../scss/_loader.scss */
     100% {
       top: 60%;
     }
   }
   @-webkit-keyframes cup-drop {
-    /* line 112, ../scss/_loader.scss */
+    /* line 110, ../scss/_loader.scss */
     100% {
       top: 60%;
     }
   }
   @keyframes cup-drop {
-    /* line 112, ../scss/_loader.scss */
+    /* line 110, ../scss/_loader.scss */
     100% {
       top: 60%;
     }
   }
   @-moz-keyframes saucer-drop {
-    /* line 118, ../scss/_loader.scss */
+    /* line 116, ../scss/_loader.scss */
     100% {
       top: 80%;
       -moz-transform: rotate(360deg);
@@ -346,7 +346,7 @@
     }
   }
   @-webkit-keyframes saucer-drop {
-    /* line 118, ../scss/_loader.scss */
+    /* line 116, ../scss/_loader.scss */
     100% {
       top: 80%;
       -webkit-transform: rotate(360deg);
@@ -354,7 +354,7 @@
     }
   }
   @keyframes saucer-drop {
-    /* line 118, ../scss/_loader.scss */
+    /* line 116, ../scss/_loader.scss */
     100% {
       top: 80%;
       -moz-transform: rotate(360deg);
@@ -365,37 +365,37 @@
     }
   }
   @-moz-keyframes saucer-done {
-    /* line 125, ../scss/_loader.scss */
+    /* line 123, ../scss/_loader.scss */
     100% {
       top: 100%;
     }
   }
   @-webkit-keyframes saucer-done {
-    /* line 125, ../scss/_loader.scss */
+    /* line 123, ../scss/_loader.scss */
     100% {
       top: 100%;
     }
   }
   @keyframes saucer-done {
-    /* line 125, ../scss/_loader.scss */
+    /* line 123, ../scss/_loader.scss */
     100% {
       top: 100%;
     }
   }
   @-moz-keyframes cup-done {
-    /* line 131, ../scss/_loader.scss */
+    /* line 129, ../scss/_loader.scss */
     15% {
       -moz-transform: rotate(7deg) translate(-50%, 0);
       transform: rotate(7deg) translate(-50%, 0);
     }
 
-    /* line 134, ../scss/_loader.scss */
+    /* line 132, ../scss/_loader.scss */
     65% {
       -moz-transform: rotate(-11deg) translate(-50%, 0);
       transform: rotate(-11deg) translate(-50%, 0);
     }
 
-    /* line 137, ../scss/_loader.scss */
+    /* line 135, ../scss/_loader.scss */
     100% {
       -moz-transform: rotate(0deg) translate(-50%, 0);
       transform: rotate(0deg) translate(-50%, 0);
@@ -403,19 +403,19 @@
     }
   }
   @-webkit-keyframes cup-done {
-    /* line 131, ../scss/_loader.scss */
+    /* line 129, ../scss/_loader.scss */
     15% {
       -webkit-transform: rotate(7deg) translate(-50%, 0);
       transform: rotate(7deg) translate(-50%, 0);
     }
 
-    /* line 134, ../scss/_loader.scss */
+    /* line 132, ../scss/_loader.scss */
     65% {
       -webkit-transform: rotate(-11deg) translate(-50%, 0);
       transform: rotate(-11deg) translate(-50%, 0);
     }
 
-    /* line 137, ../scss/_loader.scss */
+    /* line 135, ../scss/_loader.scss */
     100% {
       -webkit-transform: rotate(0deg) translate(-50%, 0);
       transform: rotate(0deg) translate(-50%, 0);
@@ -423,7 +423,7 @@
     }
   }
   @keyframes cup-done {
-    /* line 131, ../scss/_loader.scss */
+    /* line 129, ../scss/_loader.scss */
     15% {
       -moz-transform: rotate(7deg) translate(-50%, 0);
       -ms-transform: rotate(7deg) translate(-50%, 0);
@@ -432,7 +432,7 @@
       transform: rotate(7deg) translate(-50%, 0);
     }
 
-    /* line 134, ../scss/_loader.scss */
+    /* line 132, ../scss/_loader.scss */
     65% {
       -moz-transform: rotate(-11deg) translate(-50%, 0);
       -ms-transform: rotate(-11deg) translate(-50%, 0);
@@ -441,7 +441,7 @@
       transform: rotate(-11deg) translate(-50%, 0);
     }
 
-    /* line 137, ../scss/_loader.scss */
+    /* line 135, ../scss/_loader.scss */
     100% {
       -moz-transform: rotate(0deg) translate(-50%, 0);
       -ms-transform: rotate(0deg) translate(-50%, 0);
@@ -451,12 +451,12 @@
       top: 200%;
     }
   }
-  /* line 143, ../scss/_loader.scss */
+  /* line 141, ../scss/_loader.scss */
   .loading .scene {
     opacity: 0;
   }
 
-  /* line 148, ../scss/_loader.scss */
+  /* line 146, ../scss/_loader.scss */
   .loading {
     overflow: hidden;
   }
@@ -870,19 +870,14 @@
     content: " ";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
-    -moz-transition: opacity 1s 4s;
-    -o-transition: opacity 1s 4s;
-    -webkit-transition: opacity 1s;
-    -webkit-transition-delay: 4s;
-    transition: opacity 1s 4s;
     background: url('../img/g_arrow.svgz?1385934699') no-repeat;
     -moz-background-size: 100% 100%;
     -o-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    -moz-animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 5s;
-    -webkit-animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 5s;
-    animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 5s;
+    -moz-animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 3.5s;
+    -webkit-animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 3.5s;
+    animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 3.5s;
     -moz-transform: rotate(-40deg);
     -ms-transform: rotate(-40deg);
     -o-transform: rotate(-40deg);
@@ -896,66 +891,66 @@
   }
 
   @-moz-keyframes arrow-fade {
-    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 77, ../scss/scenes/park/_page-the-hole.scss */
     50% {
       opacity: 1;
     }
 
-    /* line 79, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       opacity: 0;
     }
   }
   @-webkit-keyframes arrow-fade {
-    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 77, ../scss/scenes/park/_page-the-hole.scss */
     50% {
       opacity: 1;
     }
 
-    /* line 79, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       opacity: 0;
     }
   }
   @keyframes arrow-fade {
-    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 77, ../scss/scenes/park/_page-the-hole.scss */
     50% {
       opacity: 1;
     }
 
-    /* line 79, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       opacity: 0;
     }
   }
   @-moz-keyframes arrow-point {
-    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 82, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       -moz-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
     }
 
-    /* line 84, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -moz-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
     }
   }
   @-webkit-keyframes arrow-point {
-    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 82, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       -webkit-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
     }
 
-    /* line 84, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -webkit-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
     }
   }
   @keyframes arrow-point {
-    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 82, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       -moz-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       -ms-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
@@ -964,7 +959,7 @@
       transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
     }
 
-    /* line 84, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -moz-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       -ms-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
@@ -974,34 +969,34 @@
     }
   }
   @-moz-keyframes hole-glow {
-    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 87, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       background-position: 0 0;
     }
 
-    /* line 89, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       background-position: 0 133.333333%;
     }
   }
   @-webkit-keyframes hole-glow {
-    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 87, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       background-position: 0 0;
     }
 
-    /* line 89, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       background-position: 0 133.333333%;
     }
   }
   @keyframes hole-glow {
-    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 87, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       background-position: 0 0;
     }
 
-    /* line 89, ../scss/scenes/park/_page-the-hole.scss */
+    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       background-position: 0 133.333333%;
     }
