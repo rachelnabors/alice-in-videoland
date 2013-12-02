@@ -62,7 +62,7 @@
 		content: " ";
 		@include opacity(0);
 		@extend %imgreplace;
-		@include background(image-url("g_arrow.svgz") no-repeat);
+		@include background(image-url("g_arrow.svg") no-repeat);
 		@include background-size(100% 100%);
 		@include animation(arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 3.5s);
 		@include rotate(-40deg);
