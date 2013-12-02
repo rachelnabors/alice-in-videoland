@@ -47,108 +47,37 @@ $credits-use-percentages: true;
 	@include margin-leader(2);	
 	white-space: normal;
 	width: 80%;
-	@include breakpoint($breakpoint-not-narrow) {
-		.tbc {
-			@include box-sizing('border-box');
-			float: left;
-			width: 38.2%; // full width: 38.2
-		}
-	}
-	.action {
-		@include breakpoint($breakpoint-not-narrow) {
-			@include box-sizing('border-box');
-			float: right;
-			width: 61.5%;
-			padding: 0 5.5742968% 0 0;
-		}
-		@include breakpoint($breakpoint-narrow) {
-			border-bottom: dotted 1px $wonderland-burgundy;
-			margin: 0 14.5924% rhythm(1);
-		}
-		ul {
-			margin: 0 0 rhythm(.75);
-		}
-		li {
-			margin-bottom: rhythm(.25);
-			@include breakpoint($breakpoint-not-narrow) {
-				padding-left: 5.5742968%;
-			}
-			a {
-				@include border-radius(.5em);
-				@extend %clearfix;
-				display: block;
-				min-height: 3em;
-				padding-left: 5.5742968%;
-				padding-top: rhythm(.5);
-				padding-bottom: rhythm(.5);
-				position: relative;
-			}
-			span { 
-				display: block;
-				padding-left: 3.5em;
-			}
-			strong {
-				font-weight: 700;
-			}
-			em {
-				font-style: italic;
-			}
-			svg {
-				width: 3em;
-				height: 3em;
-				position: absolute;
-				top: rhythm(.5); left: 2.75%;
-			}
-			a:link, a:visited, a:hover, a:active {
-				color: $wonderland-burgundy;
-				text-decoration: none;
-			}
-			a:hover, a:active, a:focus {
-				color: $pink-white;
-				background-color: darken($wonderland-pink, 10%);
-				path { 
-					fill: $pink-white !important;
-				}
-			}
-		}
-		h3 {
-			@include breakpoint($breakpoint-not-narrow) {
-				padding-left: 8.25%;
-				@include rhythm(0, 1, .25, 0, 36px);
-			}
-			@include adjust-font-size-to(36px, 3/2);
-			@include padding-trailer(.25, 36px);
-			font-weight: $font-copy-bold;
-		}
-	}
-
 	h2 {
 		@include box-sizing('border-box');
-		background: #64044b;
-		color: $pink-white;
+		// background: #64044b;
+		// color: $pink-white;
 		font-family: $font-slab;
 		padding: rhythm(1, 48px) 14.5924%;
 		@include adjust-font-size-to(48px, 3/2);
 		@include margin-trailer(1, 48px);
+		text-transform: lowercase;
+		text-align: center;
 		strong {
-			@include adjust-font-size-to(24px, 1, 48px);
-			padding-top: rhythm(.25, 24px);
+			font-family: $font-fancy;
+			@include adjust-font-size-to(32px, 1, 48px);
 			display: block;
+			@include padding-trailer(.25, 32px);
 		}
-		span { display: inline-block}
+		span { 
+			display: inline-block;
+		}
 	}
-	.newsletter {
-		@include box-sizing('border-box');
-		margin: 0 14.5924% rhythm(1);
-		@include breakpoint($breakpoint-narrow) {
-			border-bottom: dotted 1px $wonderland-burgundy;
-		}
-		@include padding-trailer();
+	.action {
+		@include background(image-url("bg_plaque.svg") 0 0 no-repeat);
+		@include background-size(100% 100%);
+		color: $pink-white;
+		padding: rhythm(1) 8.25%;
+		margin: 0 14.5924%;
 		a:link, a:visited, a:hover, a:active {
 			position: relative;
 			@include border-radius(.5em);
 			color: $pink-white;
-			background: $base-purple;
+			background: $base-pink;
 			padding: rhythm(.5) 5.5742968%;
 			display: block;
 			text-decoration: none;
@@ -161,16 +90,79 @@ $credits-use-percentages: true;
 			top: .15em; left: .15em;
 		}
 	}
+	.learning {
+		padding: rhythm(2) 8.25% rhythm(1);
+		hr {
+			border : 0;
+			height : rhythm(1);
+			margin-left: 8.25%; margin-right: 8.25%;
+			@include background(image-url("hr.svg") 0 0 no-repeat);
+			@include background-size(100% 100%);
+		}
+		ul { @extend %clearfix; }
+		li {
+			@include adjust-font-size-to(18px, 1, 16px);
+			text-align: center;
+			margin: rhythm(.75) 0 rhythm(.25);
+			@include breakpoint($breakpoint-credits-pain) {
+				float: left;
+				margin-left: 5.5742968%;
+				width: 29.6171355%;
+			}
+			&:first-child { margin-left: 0;}
+			a {
+				@include border-radius(.5em);
+				display: block;
+				min-height: 3em;
+				padding: rhythm(.5) 5.5742968%;
+				position: relative;
+			}
+			strong {
+				display: block;
+				@include adjust-font-size-to(24px, 1, 18px);
+				font-weight: 700;
+				text-align: center;
+			}
+			em {
+				font-style: italic;
+			}
+			svg {
+				display: block;
+				margin: 0 auto;
+				width: 35%;
+				height: 35%;
+				@include margin-trailer(.5, 18px);
+			}
+			.source {
+				display: block;
+				@include adjust-font-size-to(14px, 1, 18px);
+				@include margin-leader(.25, 18px);
+				@include padding-leader(.25, 18px);
+				border-top: dotted 1px $wonderland-burgundy;
+			}
+			.at {
+				@include adjust-font-size-to(10px, 1, 14px);
+			}
+			a:link, a:visited, a:hover, a:active {
+				color: $wonderland-burgundy;
+				text-decoration: none;
+			}
+			a:hover, a:active, a:focus {
+				color: $pink-white;
+				background-color: darken($wonderland-pink, 10%);
+				path { 
+					fill: $pink-white !important;
+				}
+				.source {border-color: $pink-white;}
+			}
+		}
+	}
 	.author {
+		@include adjust-font-size-to(14px);
+		@include adjust-leading-to(1);
 		@include box-sizing('border-box');
 		@extend %clearfix;
-		@include breakpoint($breakpoint-not-narrow) {
-			@include adjust-font-size-to(14px);
-			clear: both;
-			padding: 0 5.5742968% rhythm(1, 14px);
-			@include adjust-leading-to(1);
-		}
-		padding: rhythm(1) 14.5924%;
+		padding-bottom: rhythm(1, 14px);
 		a:link, a:visited, a:hover, a:active {
 			color: #64044b;
 			padding: .1em .1em .05em;
@@ -197,5 +189,4 @@ $credits-use-percentages: true;
 		margin: 0 auto;
 		width: 4.5em;  height: auto;
 	}
-	
 }

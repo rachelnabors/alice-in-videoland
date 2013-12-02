@@ -12,19 +12,25 @@ $min-height: 600;
 $breakpoint-short: (min-aspect-ratio "4/3"), (orientation landscape);
 $breakpoint-not-narrow: (525/16*1em);
 $breakpoint-narrow: (max-width 525/16*1em);
+$breakpoint-credits-pain: (718/16*1em);
 
 // saucer ratios
 $saucer-sizer: 32em;
 
 // Colors
 $base-purple: #a22782;
+$base-pink: #fc0082;
+$base-green: #20b3aa;
+$base-mint: #73ebc5;
 
 $earth: #6c373f; //#a36f77;
 $wonderland-pink: #f090b1;
 $wonderland-purple: #431236;
-$wonderland-grape: $base-purple;
 $wonderland-burgundy: #82002d;
-$pink-white: #ffeef4;
 
-$park-green: #20b3aa;
-$park-mint: #73ebc5;
+$pink-white: #ffeef4;
+$wine: #64044b;
+
+$park-green: $base-green;
+$park-mint: $base-mint;
+$wonderland-grape: $base-purple;

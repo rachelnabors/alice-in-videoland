@@ -92,8 +92,8 @@
   }
 
   /* line 24, ../scss/_extends.scss */
-  .continued .action li a:before, .continued .author:before,
-  .continued .action li a:after,
+  .continued .learning ul:before, .continued .author:before,
+  .continued .learning ul:after,
   .continued .author:after {
     content: " ";
     /* 1 */
@@ -102,7 +102,7 @@
   }
 
   /* line 30, ../scss/_extends.scss */
-  .continued .action li a:after, .continued .author:after {
+  .continued .learning ul:after, .continued .author:after {
     clear: both;
   }
 
@@ -129,7 +129,7 @@
     line-height: 1.33333em;
   }
 
-  /* line 20, ../scss/_typography.scss */
+  /* line 19, ../scss/_typography.scss */
   body {
     color: #431236;
     font-family: "nueva-std-extended";
@@ -1300,116 +1300,58 @@
     white-space: normal;
     width: 80%;
   }
-  /* line 68, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action ul {
-    margin: 0 0 1em;
-  }
-  /* line 71, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li {
-    margin-bottom: 0.33333em;
-  }
-  /* line 76, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li a {
-    -moz-border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    border-radius: 0.5em;
-    display: block;
-    min-height: 3em;
-    padding-left: 5.5742968%;
-    padding-top: 0.66667em;
-    padding-bottom: 0.66667em;
-    position: relative;
-  }
-  /* line 86, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li span {
-    display: block;
-    padding-left: 3.5em;
-  }
-  /* line 90, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li strong {
-    font-weight: 700;
-  }
-  /* line 93, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li em {
-    font-style: italic;
-  }
-  /* line 96, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li svg {
-    width: 3em;
-    height: 3em;
-    position: absolute;
-    top: 0.66667em;
-    left: 2.75%;
-  }
-  /* line 102, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li a:link, .continued .action li a:visited, .continued .action li a:hover, .continued .action li a:active {
-    color: #82002d;
-    text-decoration: none;
-  }
-  /* line 106, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li a:hover, .continued .action li a:active, .continued .action li a:focus {
-    color: #ffeef4;
-    background-color: #ea6391;
-  }
-  /* line 109, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li a:hover path, .continued .action li a:active path, .continued .action li a:focus path {
-    fill: #ffeef4 !important;
-  }
-  /* line 114, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action h3 {
-    font-size: 2em;
-    line-height: 1em;
-    padding-bottom: 0.16667em;
-    font-weight: 700;
-  }
-  /* line 125, ../scss/scenes/wonderland/_credits.scss */
+  /* line 50, ../scss/scenes/wonderland/_credits.scss */
   .continued h2 {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: #64044b;
-    color: #ffeef4;
     font-family: "hellenic-wide";
     padding: 0.5em 14.5924%;
     font-size: 2.66667em;
     line-height: 0.75em;
     margin-bottom: 0.5em;
+    text-transform: lowercase;
+    text-align: center;
   }
-  /* line 133, ../scss/scenes/wonderland/_credits.scss */
+  /* line 60, ../scss/scenes/wonderland/_credits.scss */
   .continued h2 strong {
-    font-size: 0.5em;
-    line-height: 1em;
-    padding-top: 0.25em;
+    font-family: "blue-goblet-alt";
+    font-size: 0.66667em;
+    line-height: 0.75em;
     display: block;
+    padding-bottom: 0.1875em;
   }
-  /* line 138, ../scss/scenes/wonderland/_credits.scss */
+  /* line 66, ../scss/scenes/wonderland/_credits.scss */
   .continued h2 span {
     display: inline-block;
   }
-  /* line 140, ../scss/scenes/wonderland/_credits.scss */
-  .continued .newsletter {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0 14.5924% 1.33333em;
-    padding-bottom: 1.33333em;
+  /* line 70, ../scss/scenes/wonderland/_credits.scss */
+  .continued .action {
+    background: url('../img/bg_plaque.svg?1386011185') 0 0 no-repeat;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    color: #ffeef4;
+    padding: 1.33333em 8.25%;
+    margin: 0 14.5924%;
   }
-  /* line 147, ../scss/scenes/wonderland/_credits.scss */
-  .continued .newsletter a:link, .continued .newsletter a:visited, .continued .newsletter a:hover, .continued .newsletter a:active {
+  /* line 76, ../scss/scenes/wonderland/_credits.scss */
+  .continued .action a:link, .continued .action a:visited, .continued .action a:hover, .continued .action a:active {
     position: relative;
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     border-radius: 0.5em;
     color: #ffeef4;
-    background: #a22782;
+    background: #fc0082;
     padding: 0.66667em 5.5743%;
     display: block;
     text-decoration: none;
     text-align: center;
     margin-top: 0.66667em;
   }
-  /* line 158, ../scss/scenes/wonderland/_credits.scss */
-  .continued .newsletter a:hover, .continued .newsletter a:active, .continued .newsletter a:focus {
+  /* line 87, ../scss/scenes/wonderland/_credits.scss */
+  .continued .action a:hover, .continued .action a:active, .continued .action a:focus {
     color: #fff;
     -moz-transition: top 0.5s left 0.5s;
     -o-transition: top 0.5s left 0.5s;
@@ -1418,27 +1360,119 @@
     top: .15em;
     left: .15em;
   }
-  /* line 164, ../scss/scenes/wonderland/_credits.scss */
+  /* line 93, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning {
+    padding: 2.66667em 8.25% 1.33333em;
+  }
+  /* line 95, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning hr {
+    border: 0;
+    height: 1.33333em;
+    margin-left: 8.25%;
+    margin-right: 8.25%;
+    background: url('../img/hr.svg?1386011835') 0 0 no-repeat;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+  /* line 103, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    text-align: center;
+    margin: 1em 0 0.33333em;
+  }
+  /* line 112, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li:first-child {
+    margin-left: 0;
+  }
+  /* line 113, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li a {
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    display: block;
+    min-height: 3em;
+    padding: 0.66667em 5.5743%;
+    position: relative;
+  }
+  /* line 120, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li strong {
+    display: block;
+    font-size: 1.33333em;
+    line-height: 1em;
+    font-weight: 700;
+    text-align: center;
+  }
+  /* line 126, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li em {
+    font-style: italic;
+  }
+  /* line 129, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li svg {
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+    height: 35%;
+    margin-bottom: 0.66667em;
+  }
+  /* line 136, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li .source {
+    display: block;
+    font-size: 0.77778em;
+    line-height: 1.71429em;
+    margin-top: 0.33333em;
+    padding-top: 0.33333em;
+    border-top: dotted 1px #82002d;
+  }
+  /* line 143, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li .at {
+    font-size: 0.71429em;
+    line-height: 2.4em;
+  }
+  /* line 146, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li a:link, .continued .learning li a:visited, .continued .learning li a:hover, .continued .learning li a:active {
+    color: #82002d;
+    text-decoration: none;
+  }
+  /* line 150, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li a:hover, .continued .learning li a:active, .continued .learning li a:focus {
+    color: #ffeef4;
+    background-color: #ea6391;
+  }
+  /* line 153, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li a:hover path, .continued .learning li a:active path, .continued .learning li a:focus path {
+    fill: #ffeef4 !important;
+  }
+  /* line 156, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li a:hover .source, .continued .learning li a:active .source, .continued .learning li a:focus .source {
+    border-color: #ffeef4;
+  }
+  /* line 160, ../scss/scenes/wonderland/_credits.scss */
   .continued .author {
+    font-size: 0.77778em;
+    line-height: 1.71429em;
+    line-height: 1.33333em;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 1.33333em 14.5924%;
+    padding-bottom: 1.71429em;
   }
-  /* line 174, ../scss/scenes/wonderland/_credits.scss */
+  /* line 166, ../scss/scenes/wonderland/_credits.scss */
   .continued .author a:link, .continued .author a:visited, .continued .author a:hover, .continued .author a:active {
     color: #64044b;
     padding: .1em .1em .05em;
     text-decoration: none;
     border-bottom: dotted 1px #82002d;
   }
-  /* line 180, ../scss/scenes/wonderland/_credits.scss */
+  /* line 172, ../scss/scenes/wonderland/_credits.scss */
   .continued .author a:hover, .continued .author a:active {
     color: #ffeef4;
     background: #ea6391;
     border: 0;
   }
-  /* line 186, ../scss/scenes/wonderland/_credits.scss */
+  /* line 178, ../scss/scenes/wonderland/_credits.scss */
   .continued .img-wrap {
     background: #a22782;
     -moz-border-radius: 50%;
@@ -1452,71 +1486,19 @@
     width: 5em;
     height: 5em;
   }
-  /* line 196, ../scss/scenes/wonderland/_credits.scss */
+  /* line 188, ../scss/scenes/wonderland/_credits.scss */
   .continued img {
     margin: 0 auto;
     width: 4.5em;
     height: auto;
   }
 }
-@media screen and (min-width: 32.8125em) {
-  /* line 51, ../scss/scenes/wonderland/_credits.scss */
-  .continued .tbc {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+@media screen and (min-width: 44.875em) {
+  /* line 103, ../scss/scenes/wonderland/_credits.scss */
+  .continued .learning li {
     float: left;
-    width: 38.2%;
-  }
-}
-@media screen and (min-width: 32.8125em) {
-  /* line 57, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    float: right;
-    width: 61.5%;
-    padding: 0 5.5742968% 0 0;
-  }
-}
-@media screen and (max-width: 32.8125em) {
-  /* line 57, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action {
-    border-bottom: dotted 1px #82002d;
-    margin: 0 14.5924% 1.33333em;
-  }
-}
-@media screen and (min-width: 32.8125em) {
-  /* line 71, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action li {
-    padding-left: 5.5742968%;
-  }
-}
-@media screen and (min-width: 32.8125em) {
-  /* line 114, ../scss/scenes/wonderland/_credits.scss */
-  .continued .action h3 {
-    padding-left: 8.25%;
-    margin-top: 0em;
-    padding-top: 0.66667em;
-    padding-bottom: 0.16667em;
-    margin-bottom: 0em;
-  }
-}
-@media screen and (max-width: 32.8125em) {
-  /* line 140, ../scss/scenes/wonderland/_credits.scss */
-  .continued .newsletter {
-    border-bottom: dotted 1px #82002d;
-  }
-}
-@media screen and (min-width: 32.8125em) {
-  /* line 164, ../scss/scenes/wonderland/_credits.scss */
-  .continued .author {
-    font-size: 0.77778em;
-    line-height: 1.71429em;
-    clear: both;
-    padding: 0 5.5743% 1.71429em;
-    line-height: 1.33333em;
+    margin-left: 5.5742968%;
+    width: 29.6171355%;
   }
 }
 @media print {
