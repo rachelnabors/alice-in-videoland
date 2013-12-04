@@ -258,12 +258,14 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 					}, 500);
 				};
 
+				// TODO refresh this on window resize/orientation change.
 				var visiblePages = [];
 				$('.page:visible').each(function(i) { 
 					if ($(this).visible(false, true)) {
 						visiblePages.push(i);
 					}
 				});
+
 				// if more than 2 pages are on the screen, use the second
 				if (visiblePages > 2) {
 					currentPage = visiblePages[1];
@@ -287,6 +289,15 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 						scrollPageIntoCenter($(".page").get(nextPage));
 						currentPage = nextPage;					
 						calcPrevNext(currentPage);
+					}
+
+					// Sometimes, $(".page").get(nextPage) or $(".page").get(prevPage) === undefined.
+					// This throws TypeError: 'undefined' is not an object (evaluating '$(page).offset().top')
+					// and swiping stops working.
+					// Happened if people swiped super fast or tried to keep swiping past the bottom.
+					if (nextPage >= $(".page").length) {
+						// if you're on the last page
+						nextPage = currentPage;
 					}
 
 					// Stops Hammer from detecting any further gestures, in the current detection session. Might be usefull to call after you did a succesfull swipe.
