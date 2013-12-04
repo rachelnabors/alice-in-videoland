@@ -9,13 +9,16 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 		downHole = false,
 		tunnelTop, tunnelTopData, tunnelBottomData, aliceTrajectory;
 
+	// Variables used only by mobile.
+	var cutFired,
+		currentPage,
+		nextPage,
+		prevPage;
+
 	
 	if(Modernizr.touch) {
 		// variables only needed for touch context Hammer functions at bottom
-		var cutFired = false,
-			currentPage,
-			nextPage,
-			prevPage;
+		cutFired = false;
 	}
 	
 	var calcWaypoints = function() {
@@ -232,18 +235,19 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 
 	// play phone SFX when the rabbit appears in full view. 
 	$(".page_rabbit-appears").waypoint(function() {
-		if ($(this).hasClass("in-view")){
-			var phone = document.getElementById("rabbit-phone");
-			phone.volume = 0.1;
-			setTimeout(function(){
-				phone.play();
-			}, 2000);
-		}
+		var phone = document.getElementById("rabbit-phone");
+		phone.volume = 0.1;
+		setTimeout(function(){
+			phone.play();
+		}, 2000);
 	});
 
 	return {
 		windowLoaded: function() {
 			calcAspectRatio();
+
+			var scrollPageIntoCenter, 
+				visiblePages;
 
 			// if touch is enabled, let's use hammer.js to detect gestures!
 			if(Modernizr.touch) {
@@ -251,7 +255,7 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 				// needs to infer the "current page" on position
 				// loop through all .pages and stop on the first one that returns true.
 				// will need to run post page load... so set timeout to like
-				var scrollPageIntoCenter = function(toPage) {
+				scrollPageIntoCenter = function(toPage) {
 					// Then animate that sucker.
 					$("html, body").animate({
 						scrollTop: topOffset(toPage)
@@ -259,7 +263,7 @@ var alice = (function(window, document, $){ // Use an IIFE http://gregfranko.com
 				};
 
 				// TODO refresh this on window resize/orientation change.
-				var visiblePages = [];
+				visiblePages = [];
 				$('.page:visible').each(function(i) { 
 					if ($(this).visible(false, true)) {
 						visiblePages.push(i);
