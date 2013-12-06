@@ -12,7 +12,7 @@ $min-height: 600;
 $breakpoint-short: (min-aspect-ratio "4/3"), (orientation landscape);
 $breakpoint-not-narrow: (525/16*1em);
 $breakpoint-narrow: (max-width 525/16*1em);
-$breakpoint-credits-pain: (718/16*1em);
+$breakpoint-credits-pain: (min-aspect-ratio "4/3"), (orientation landscape), (718/16*1em);
 
 // saucer ratios
 $saucer-sizer: 32em;

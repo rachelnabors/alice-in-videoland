@@ -48,9 +48,6 @@ $credits-use-percentages: true;
 	white-space: normal;
 	width: 80%;
 	h2 {
-		@include box-sizing('border-box');
-		// background: #64044b;
-		// color: $pink-white;
 		font-family: $font-slab;
 		padding: rhythm(1, 48px) 14.5924%;
 		@include adjust-font-size-to(48px, 3/2);
@@ -66,6 +63,14 @@ $credits-use-percentages: true;
 		span { 
 			display: inline-block;
 		}
+	}
+	h3 {
+		font-family: $font-slab;
+		padding: rhythm(1, 48px) 14.5924%;
+		@include adjust-font-size-to(32px, 3/2);
+		@include margin-leader(1, 32px);
+		text-transform: lowercase;
+		text-align: center;
 	}
 	.action {
 		@include background(image-url("bg_plaque.svg") 0 0 no-repeat);
@@ -129,8 +134,8 @@ $credits-use-percentages: true;
 			svg {
 				display: block;
 				margin: 0 auto;
-				width: 35%;
-				height: 35%;
+				width: 4em;
+				height: 4em;
 				@include margin-trailer(.5, 18px);
 			}
 			.source {
