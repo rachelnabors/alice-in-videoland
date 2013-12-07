@@ -187,7 +187,10 @@
                 {
                     test: Modernizr.touch,
                     yep : ['js/hammer-1.0.6.min.js','js/jquery.hammer-1.0.0.min.js', 'js/jquery.visible.min.js'],
-                    load : ['js/jquery.waypoints.min.js', 'js/jquery.waypoints-sticky.min.js', 'js/skrollr.min.js', 'js/jquery.debouncedresize.js', 'js/script.js'],
+                    load : ['js/jquery.waypoints.min.js', 'js/jquery.waypoints-sticky.min.js', 'js/skrollr.min.js', 'js/jquery.debouncedresize.js']
+                },
+                {
+                    load : 'js/script.js',
                     complete : function() {
                         $(window).load(alice.windowLoaded());
                     }
