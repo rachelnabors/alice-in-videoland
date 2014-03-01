@@ -126,6 +126,12 @@
       width: 60.6666667%; }
   .deck-container .slide_about img {
     margin-top: 1em; }
+  .deck-container #thanks {
+    background: url(../../img/vienna.jpg) center center;
+    background-size: cover; }
+    .deck-container #thanks .vcenter {
+      background: rgba(67, 18, 54, 0.5);
+      text-shadow: 3px 1px 1px rgba(27, 7, 22, 0.5); }
   .deck-container #slide_goodbye {
     color: #4f001b;
     background: #ffeef4; }

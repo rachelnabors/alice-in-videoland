@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=1024, user-scalable=no">
 
   <title>Alice in Videoland: building an interactive storybook in HTML5 with Rachel Nabors</title>
-  
+
   <!-- Required stylesheet -->
   <link rel="stylesheet" href="core/deck.core.css">
-  
+
   <!-- Extension CSS files go here. Remove or add as needed. -->
   <link rel="stylesheet" href="extensions/goto/deck.goto.css">
   <link rel="stylesheet" href="extensions/menu/deck.menu.css">
@@ -22,10 +22,10 @@
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
   <link rel="stylesheet" href="themes/style/profesh.css">
-  
+
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <link rel="stylesheet" href="themes/transition/horizontal-slide.css">
-  
+
   <!-- Required Modernizr file -->
   <script src="modernizr.custom.js"></script>
 
@@ -60,36 +60,27 @@
 <div class="slide slide_texty" id="project_quest">
   <h2 class="texty-title">The Quest</h2>
   <div class="texty-body">
+    <p>Write an article for <a href="http://www.adobe.com/inspire/2013/12/interactive-html5-storybook.html?trackingid=KJGDU&amp;PID=7114730" target="_blank">Adobe's Inspire zine</a> that will:</p>
     <ul>
-      <li class="slide">Writing for <a href="http://www.adobe.com/inspire.html" target="_blank">Adobe's Inspire zine</a> (coming out this December!)</li>
-      <li class="slide"><strong>Inspire</strong> Adobe's creative community to make things with HTML and CSS</li>
+      <li class="slide"><strong>inspire</strong> Adobe's vast creative community to think about using the browser to tell stories.</li>
+      <li class="slide"><strong>explor</strong> popular techniques and find their weaknesses.</li>
+      <li class="slide"><strong>compare</strong> creating an iPad experience alongside desktop.</li>
     </ul>
+    <p class="slide">And get paid to tell a story. (Much harder than it seems.)</p>
   </div>
 </div>
 
-<div class="slide slide_texty" id="project_future">
-  <h2 class="texty-title">For the Future</h2>
-  <div class="texty-body">
-    <p>These techniques could lead to making more awesome:</p>
-    <ul>
-      <li class="slide">Web apps (for profit!)</li>
-      <li class="slide">Interactions (in your shopping cart!)</li>
-      <li class="slide">Designers (the browser is your canvas!)</li>
-    </ul>
-  </div>
-</div>
- 
 <div class="slide slide_texty" id="project_learn">
-  <h2 class="texty-title">What' you'll learn</h2>
+  <h2 class="texty-title">What we'll cover</h2>
   <div class="texty-body">
     <ul>
+      <li class="slide">Crafting a browser-first story</li>
       <li class="slide">Retina and images</li>
-      <li class="slide">Handling a shifting environment with <abbr title="Responsive Web Design">RWD</abbr> and modernizr</li>
+      <li class="slide">Handling a shifting environment with modernizr</li>
       <li class="slide">Loading assets</li>
       <li class="slide">Performance</li>
       <li class="slide">Parallax</li>
       <li class="slide">Reconciling touch with click</li>
-      <li class="slide">Crafting a kick-ass story in HTML and CSS!!</li>      
     </ul>
   </div>
 </div>
@@ -204,7 +195,7 @@
       <li class="slide"><strong>Must work on Chrome and iPad Retina.</strong><br>Favor speed and pageweight over compatibility</li>
       <li class="slide"><strong>Interaction must be fairly one-to-one.</strong><br>
         Don't create two different yet parallel experiences.</li>
-      <li class="slide"><strong>Prefer to use jQuery plugins.</strong><br> More accessible to designers, less scary.</li>
+      <li class="slide"><strong>Prefer to use jQuery plugins.</strong><br> More accessible to designers.</li>
       <li class="slide"><strong>Must. Meet. Deadline.</strong><br>Jettison the things that prevent meeting these goals.</li>
     </ul>
   </div>
@@ -246,7 +237,7 @@
 
 <div class="slide slide_texty" id="retina-jpg">
   <h2 class="texty-title">JPG</h2>
-  <div class="texty-body">    
+  <div class="texty-body">
     <img src="img/fig_ps-jpg.jpg" alt="Setting Compression to 0 in Photoshop's Save to Web Dialog" />
     <ul>
       <li class="slide">Perfect for images with mottled colors.</li>
@@ -263,8 +254,8 @@
     <ul>
       <li class="slide">The <em>only</em> option for images with transparent portions.</li>
       <li class="slide">Make the best of it with <a href="http://imageoptim.com/" target="_blank">ImageOptim</a> and <a href="http://pngmini.com/" target="_blank">ImageAlpha</a></li>
-      <li class="slide">Could have used multiple sizes as <a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank">my browsers only download query-matched background images</a>.
-      <p class="footnote slide">Time to test those fences, guys.</p></li> 
+      <li class="slide">Could have used multiple sizes as <a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank">my target browsers only download images referenced in CSS that match their media queries</a>.
+      <p class="footnote slide">Velociraptor wisdom: Always test those fences.</p></li>
     </ul>
   </div>
 </div>
@@ -285,70 +276,24 @@
   </div>
 </section>
 
-<section class="slide slide_interjection" id="apple">
-  <div class="vcenter">
-    <p class="statement">Thanks, Apple.</p>
-    <p class="small-voice"><span>&lt;/sarcasm&gt;</span></p>
-  </div>
-</section>
-
 <div class="slide slide_texty" id="retina-png">
   <h2 class="texty-title">Maintaining 60 <abbr title="Frames Per Second"</abbr>FPS</abbr></h2>
   <div class="texty-body">
-    <ul>
-      <li class="slide">Rachel, show them the paint rectangles.</li>
-      <li class="slide">Animating <code>translate</code> instead of <code>position</code>, we can kick those to the GPU.</li>
-    </ul>
+    <p class="slide">You can animate <code>background-position</code>, <a href="http://codepen.io/rachelnabors/full/rCost" target="_blank">as in this animation</a>.</p>
+    <p class="footnote slide">(Psst, look at the paint rectangles.)</p>
     <div class="slide">
-      <p>Bake backgrounds, don't just animate them.</p>
+      <p>Better to bake backgrounds, then animate moving them.</p>
       <p data-height="268" data-theme-id="0" data-slug-hash="qnEhd" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/qnEhd'>Down the Hipster Rabbit Hole</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
       <script async src="//codepen.io/assets/embed/ei.js"></script>
     </div>
-  </div>
-</div>
-
-<section class="slide slide_cover" id="cover_rwd">
-  <div class="vcenter title-card">
-    <h1 class="section-title">Dealing with a Shifty Viewport</h1>
-  </div>
-</section>
-
-<div class="slide slide_texty" id="rwd_aspect-ratio">
-  <h2 class="texty-title">Aspect Ratio</h2>
-  <div class="texty-body">
-    <ul>
-      <li class="slide">I used the <a href="http://breakpoint-sass.com/" target="_blank">Breakpoint extension for Sass</a> because it got out of my way.</li>
-      <li class="slide">Then combined <code>min-aspect-ratio</code> with <code>vh</code> units.</li>
-      <li class="slide">In CSS, if you know something's height or width, you can define the other proportionally.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="slide slide_texty" id="rwd_aspect-ratio">
-  <h2 class="texty-title">Aspect Ratio</h2>
-  <div class="texty-body">
-<pre class="language-css">
-$breakpoint-wide: (min-aspect-ratio "4/3");
-
-.scene {
-  padding-top: 75%; // maintain a 3 to 4 ratio 
-  @include breakpoint($breakpoint-wide) { 
-    height: 100vh;
-    width: 133.3333vh;
-  }
-}
-</pre>
-  <ul>
-    <li class="slide">Aspect ratios are <code>$width/height</code>.</li>
-    <li class="slide">Padding is calculated based on width.</li>
-  </ul>
+    <p class="slide">Animating <code>translate</code> instead of <code>position</code> will kick those bits to the GPU.</p>
   </div>
 </div>
 
 <div class="slide slide_texty" id="rwd_resize">
   <h2 class="texty-title">Dealing with Resizes</h2>
   <div class="texty-body">
-    <p>There's a lot of math being done, and all of it relies on measuring <em>visible</em> elements. You'll have to take these measurements whenever:</p>
+    <p>There's a lot of math being done, and all of it relies on measuring <em>visible</em> elements. You'll have to re/take these measurements whenever:</p>
     <ul>
       <li class="slide">the browser window is <strong>resized</strong></li>
       <li class="slide">content is <strong>revealed</strong></li>
@@ -373,7 +318,6 @@ $breakpoint-wide: (min-aspect-ratio "4/3");
     <p class="slide">But <code>opacity: 0</code> elements background images must be downloaded to fire <code>load()</code>.</p>
 <pre class="language-css slide">
 .loading .scene {
-  @extend %shown;
   opacity: 0;
 }
 </pre>
@@ -391,20 +335,6 @@ $breakpoint-wide: (min-aspect-ratio "4/3");
   </div>
 </div>
 
-
-<!-- <div class="slide slide_cover" id="cover_modernizr">
-  <div class="vcenter title-card">
-    <h1 class="section-title">Modernizr</h1>
-  </div>
-</div>
-
-<div class="slide slide_texty" id="modernizr_animation">
-  <h2 class="texty-title">Popup Animations</h2>
-  <div class="texty-body">
-  </div>
-</div>
- -->
-
 <section class="slide slide_cover" id="cover_progress">
   <div class="vcenter title-card">
     <h1 class="section-title">Tracking Reading Progress</h1>
@@ -414,7 +344,7 @@ $breakpoint-wide: (min-aspect-ratio "4/3");
 <div class="slide slide_texty" id="progress_waypoints">
   <h2 class="texty-title">Using jQuery Waypoints</h2>
   <div class="texty-body">
-    <p><a href="https://twitter.com/KevinLozandier" target="_blank">Kevin Lozandier</a> reminded me about <a href="http://imakewebthings.com/jquery-waypoints/" target="_blank">jQuery Waypoints</a></p>
+    <p class="slide">My Twitter friend <a href="https://twitter.com/KevinLozandier" target="_blank">Kevin Lozandier</a> reminded me about <a href="http://imakewebthings.com/jquery-waypoints/" target="_blank">jQuery Waypoints</a></p>
 <pre class="language-js slide">
 $(element).waypoint(function() {
   doSomething();
@@ -427,7 +357,7 @@ $(element).waypoint(function() {
 <div class="slide slide_texty" id="progress_read">
   <h2 class="texty-title">Calculating which page is being read</h2>
   <div class="texty-body">
-    <p>It would be approximately centered, of equal distance from top as from bottom. </p>
+    <p>We can assume that if a page is of equal distance from top as from bottom, it's being read.</p>
 <pre class="language-js slide">
 var beingRead = function() {
   var $screenHeight = $.waypoints('viewportHeight');
@@ -445,10 +375,10 @@ var beingRead = function() {
   <div class="texty-body">
 <pre class="language-js">
 // fired when rabbit hole is clicked
-var downTheHole = function() { 
+var downTheHole = function() {
   $tunnel.find(".page").waypoint(function() {
     $(this).addClass("in-view");
-    // more stuff... 
+    // more stuff...
   }, {
     offset: beingRead()
   });
@@ -463,7 +393,7 @@ var downTheHole = function() {
     <ul>
       <li class="slide">Handy screen height calculator: <code>$.waypoints('viewportHeight')</code></li>
       <li class="slide">Sweet <a href="http://imakewebthings.com/jquery-waypoints/shortcuts/sticky-elements/" target="_blank">sticky elements shortcut</a> (as used on Alice in the tunnel).</li>
-    </ul>    
+    </ul>
   </div>
 </div>
 
@@ -524,12 +454,12 @@ $alice.waypoint('sticky') // make her sticky!
 $tunnel.find(".page").waypoint(function() {
   $(this).addClass("in-view");
   var mood = $(this).data("mood");
-  $("body").removeClass().addClass(mood);   
+  $("body").removeClass().addClass(mood);
 }, {
   offset: beingRead()
 });
-</pre>    
-  <p class="slide">Tie those classes to different <code>background-position</code>s on Alice.</p>
+</pre>
+  <p class="slide">Tie those classes to different <code>background-position</code>s on Alice's sprite.</p>
   </div>
 </div>
 
@@ -616,33 +546,30 @@ var cutToWonderland = function() {
 
 <div class="slide slide_interjection" id="touch_easy">
   <div class="vcenter">
-    <p class="statement">I make this look easy.</p>
-    <p class="small-voice"><span>Don't be fooled. It was not.</span></p>
+    <p class="statement">This was not easy.</p>
+    <p class="small-voice"><span>iOS Safari != Safari</span></p>
   </div>
 </div>
 
 <div class="slide slide_interjection alt" id="thanks">
   <div class="vcenter">
     <p class="statement">Thank you!</p>
-    <p class="small-voice"><span>Seriously, so glad to be here!</span></p>
+    <p class="small-voice"><span>Squee, Vienna!</span></p>
   </div>
 </div>
 
 <section class="slide slide_texty" id="slide_goodbye">
-  <h2 class="texty-title">To the Drink and Draw!!</h2>
+  <h2 class="texty-title">Now go make something!!</h2>
   <div class="text-content">
     <div class="slide">
-      <p>These slides: <a href="http://share.rachelnabors.com/cssdevconf2013" target="_blank">share.RachelNabors.com/cssdevconf2013</a></p>
-      <p>Alice's source code: <a href="https://github.com/rachelnabors/alice-in-videoland" target="_blank">github.com/rachelnabors/alice-in-videoland</a></p>
+      <p>These slides: <a href="http://goo.gl/R4NRbx" target="_blank">http://goo.gl/R4NRbx</a></p>
+      <p>Source: <a href="https://github.com/rachelnabors/alice-in-videoland" target="_blank">github.com/rachelnabors/alice-in-videoland</a></p>
     </div>
     <div class="slide">
-      <p><strong>Hire me</strong> to make wonderful things</p>
-      <p><strong>Show me</strong> the wonderful things you are going to make</p>
-      <p><strong>Find me</strong> in all the usual places:</p>
       <ul>
-        <li><a href="https://twitter.com/rachelnabors" target="_blank">@rachelnabors</a></li>
-        <li><a href="http://rachelnabors.com" target="_blank">rachelnabors.com</a></li>
-        <li><a href="https://github.com/rachelnabors" target="_blank">github.com/rachelnabors</a></li>
+        <li><a href="http://tinmagpie.com" target="_blank">tinmagpie.com</a> : we tell stories with code</li>
+        <li><a href="https://twitter.com/rachelnabors" target="_blank">@rachelnabors</a> : show me what you make</li>
+        <li><a href="http://rachelnabors.com" target="_blank">rachelnabors.com</a> : more projects</li>
       </ul>
     </div>
   </div>
@@ -684,17 +611,17 @@ var cutToWonderland = function() {
   // A patch to keep it from crashing iPads/running slowly. Hopefully not forever.
   (function($, deck, undefined) {
     var $d = $(document),
-    
+
     toggleHorizon = function(base, fn) {
       var slides = $[deck]('getSlides'),
       opts = $[deck]('getOptions'),
       min = base - opts.horizon,
       max = base + opts.horizon,
       i;
-      
+
       min = min < 0 ? 0 : min;
       max = max > slides.length ? slides.length : max;
-      
+
       for (i = 0; i < min; i++) {
         slides[i][fn](opts.classes.horizon);
       }
@@ -702,25 +629,25 @@ var cutToWonderland = function() {
         slides[i][fn](opts.classes.horizon);
       }
     },
-    
+
     updateHorizon = function(e, from, to) {
       if (from || from === 0) {
         toggleHorizon(from, 'removeClass');
       }
-      
+
       if (to || to === 0) {
         toggleHorizon(to, 'addClass');
       }
     };
-    
+
     $.extend(true, $[deck].defaults, {
       classes: {
         horizon: 'deck-horizon'
       },
-      
+
       horizon: 10
     });
-    
+
     $d.bind('deck.init', function() {
       updateHorizon(null, null, 0);
     })

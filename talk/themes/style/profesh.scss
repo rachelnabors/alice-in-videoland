@@ -46,7 +46,7 @@ $grey: #4e6369;
 .slide .slide {
 	.deck-before, .deck-previous {
 		opacity: .4;
-	}	
+	}
 
 	.deck-child-current {
 		opacity:1;
@@ -210,6 +210,14 @@ $grey: #4e6369;
 .slide_about {
 	img { margin-top: 1em}
 }
+#thanks {
+	background: url(../../img/vienna.jpg) center center;
+	background-size: cover;
+	.vcenter {
+		background: rgba($wonderland-purple, .5);
+		text-shadow:3px 1px 1px rgba(darken($wonderland-purple, 10%), .5);
+	}
+}
 #slide_goodbye { // final slide
 	color: darken($wonderland-burgundy, 10%);
 	background: $pink-white;
@@ -237,10 +245,10 @@ $grey: #4e6369;
 		border: 0;
 	}
 	&.deck-current .img-wrap{
-		opacity: 1;			
+		opacity: 1;
 	}
 
-	.img-wrap { 
+	.img-wrap {
 		background: $wonderland-pink;
 		border-radius: 50%;
 		display: block;
@@ -268,7 +276,7 @@ h1, h2 {
 	font-weight: normal;
 }
 
-.slide_cover { // Section covers 
+.slide_cover { // Section covers
 	.section-title {
 		border: $wonderland-pink 2px dashed; border-right: 0; border-left: 0;
 		font-family: $fancy;
@@ -287,7 +295,7 @@ h1, h2 {
 	text-align: center;
 }
 
-.slide_interjection { // Section covers 
+.slide_interjection { // Section covers
 	background: $wonderland-purple;
 	color: $pink-white;
 	&.alt {
@@ -310,7 +318,7 @@ h1, h2 {
 	}
 }
 
-.slide_texty { // text/code slide 
+.slide_texty { // text/code slide
 	background: $pale-mint;
 	.texty-title {
 		border-color: $park-green;
@@ -354,18 +362,18 @@ h1, h2 {
 				color:#888;
 				display: block;
 				text-align: right;
-				&:before { content:"\2014";}	
+				&:before { content:"\2014";}
 			}
 		}
 	}
 }
 
-.slide_topical { // Graphic/free speech slide 
+.slide_topical { // Graphic/free speech slide
 	.slide-tagline {
 		font-size: 2em;
 		font-weight: $copy-normal;
 		margin: 0;
-		small { 
+		small {
 			font-size: .25em;
 			font-style: italic;
 			display: block;
