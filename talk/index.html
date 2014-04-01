@@ -44,13 +44,13 @@
   </div>
 </section>
 
-<section class="slide slide_about">
+<!-- <section class="slide slide_about">
   <figure>
     <img src="img/fig_rachel-tuna.png" alt="Rachel the Great and her talking cat Tuna, waving.">
     <figcaption>Me circa 2007, makin' it &ldquo;big&rdquo; in comics (<a href="http://www.rachelthegreat.com" target="_blank">RacheltheGreat.com</a>)</figcaption>
   </figure>
 </section>
-
+ -->
 <section class="slide slide_cover" id="cover_project">
   <div class="vcenter title-card">
     <h1 class="section-title">The Project</h1>
@@ -63,7 +63,7 @@
     <p>Write an article for <a href="http://www.adobe.com/inspire/2013/12/interactive-html5-storybook.html?trackingid=KJGDU&amp;PID=7114730" target="_blank">Adobe's Inspire zine</a> that will:</p>
     <ul>
       <li class="slide"><strong>inspire</strong> Adobe's vast creative community to think about using the browser to tell stories.</li>
-      <li class="slide"><strong>explor</strong> popular techniques and find their weaknesses.</li>
+      <li class="slide"><strong>explore</strong> popular techniques and find their weaknesses.</li>
       <li class="slide"><strong>compare</strong> creating an iPad experience alongside desktop.</li>
     </ul>
     <p class="slide">And get paid to tell a story. (Much harder than it seems.)</p>
@@ -183,7 +183,7 @@
 
 <div class="slide slide_interjection" id="prototype">
   <div class="vcenter">
-    <p class="statement">Time for a <a href="../storyboard" target="_blank">prototype</a>.</p>
+    <p class="statement">Time for a real <a href="../storyboard" target="_blank">storyboard</a>.</p>
   </div>
 </div>
 
@@ -255,7 +255,6 @@
       <li class="slide">The <em>only</em> option for images with transparent portions.</li>
       <li class="slide">Make the best of it with <a href="http://imageoptim.com/" target="_blank">ImageOptim</a> and <a href="http://pngmini.com/" target="_blank">ImageAlpha</a></li>
       <li class="slide">Could have used multiple sizes as <a href="http://timkadlec.com/2012/04/media-query-asset-downloading-results/" target="_blank">my target browsers only download images referenced in CSS that match their media queries</a>.
-      <p class="footnote slide">Velociraptor wisdom: Always test those fences.</p></li>
     </ul>
   </div>
 </div>
@@ -276,18 +275,21 @@
   </div>
 </section>
 
-<div class="slide slide_texty" id="retina-png">
+<div class="slide slide_texty">
   <h2 class="texty-title">Maintaining 60 <abbr title="Frames Per Second"</abbr>FPS</abbr></h2>
   <div class="texty-body">
     <p class="slide">You can animate <code>background-position</code>, <a href="http://codepen.io/rachelnabors/full/rCost" target="_blank">as in this animation</a>.</p>
+    <p class="slide">Let's see <a href="http://codepen.io/rachelnabors/pres/rCost" target="_blank">how that works</a>. (Follow along at <a href="http://codepen.io/rachelnabors/pres/rCost" target="_blank">cdpn.io/rCost</a>!)</p>
     <p class="footnote slide">(Psst, look at the paint rectangles.)</p>
-    <div class="slide">
-      <p>Better to bake backgrounds, then animate moving them.</p>
-      <p data-height="268" data-theme-id="0" data-slug-hash="qnEhd" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/qnEhd'>Down the Hipster Rabbit Hole</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
-      <script async src="//codepen.io/assets/embed/ei.js"></script>
-    </div>
-    <p class="slide">Animating <code>translate</code> instead of <code>position</code> will kick those bits to the GPU.</p>
   </div>
+</div>
+
+<div class="slide slide_texty">
+  <h2 class="texty-title">Kicking it to the GPU</h2>
+  <p>Better to bake backgrounds, then animate moving them.</p>
+  <p>Check out the code at <a href="http://codepen.io/rachelnabors/pres/qnEhd?editors=110" target="_blank">cdpn.io/qnEhd</a></p>
+  <p data-height="268" data-theme-id="0" data-slug-hash="qnEhd" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/qnEhd'>Down the Hipster Rabbit Hole</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
+  <script async src="http://codepen.io/assets/embed/ei.js"></script>
 </div>
 
 <div class="slide slide_texty" id="rwd_resize">
@@ -299,7 +301,6 @@
       <li class="slide">content is <strong>revealed</strong></li>
       <li class="slide">device <strong>orientation changes</strong></li>
     </ul>
-    <p class="slide">We'll cover these as they come up.</p>
   </div>
 </div>
 
@@ -327,6 +328,7 @@
 <div class="slide slide_texty" id="load_screen">
   <h2 class="texty-title">Animating the Load Screen</h2>
   <div class="texty-body">
+    <p>Follow along at <a href="http://codepen.io/rachelnabors/pres/modpi">cdpn.io/modpi</a></p>
     <p data-height="268" data-theme-id="0" data-slug-hash="modpi" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/modpi'>Alice in Videoland Load Screen</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
     <ul>
       <li class="slide">The height is animated to &ldquo;roll the screen up&rdquo;.</li>
@@ -426,6 +428,7 @@ window.addEventListener('orientationchange', recalcWaypoints);</pre>
   <h2 class="texty-title">Using Skrollr</h2>
   <div class="texty-body">
     <p>I used <a href="https://github.com/Prinzhorn/skrollr" target="_blank">skrollr.js</a>.</p>
+    <p>Follow along at <a target="_blank" href="http://codepen.io/rachelnabors/pres/AeEHw">cdpn.io/AeEHw</a></p>
     <p data-height="268" data-theme-id="0" data-slug-hash="AeEHw" data-user="rachelnabors" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/rachelnabors/pen/AeEHw'>Falling Down the Rabbit Hole</a> by Rachel Nabors (<a href='http://codepen.io/rachelnabors'>@rachelnabors</a>) on <a href='http://codepen.io'>CodePen</a></p>
   </div>
 </div>
@@ -547,17 +550,31 @@ var cutToWonderland = function() {
 <div class="slide slide_interjection" id="touch_easy">
   <div class="vcenter">
     <p class="statement">People tell stories. Plural.</p>
-    <p class="small-voice"><span>Premise. Advice. Code.</span></p>
+    <p class="small-voice"><span>In web development, every story has many authors.</span></p>
   </div>
 </div>
 
-<div class="slide slide_interjection alt" id="thanks">
+<section class="slide slide_cover" id="cover_touch">
+  <div class="vcenter title-card">
+    <h1 class="section-title">To be continued&hellip;</h1>
+  </div>
+</section>
+
+<div class="slide slide_interjection" id="touch_easy">
+  <div class="vcenter">
+    <p class="statement"><a href="http://eepurl.com/Gxv1j" target="_blank">eepurl.com/Gxv1j</a></p>
+    <p class="small-voice"><span>Part II comes out in fall, and I need your help.</span></p>
+  </div>
+</div>
+
+
+<!-- <div class="slide slide_interjection alt" id="thanks">
   <div class="vcenter">
     <p class="statement">Thank you!</p>
-    <p class="small-voice"><span>Squee, Vienna!</span></p>
+    <p class="small-voice"><span>Squee, Denmark!</span></p>
   </div>
 </div>
-
+ -->
 <section class="slide slide_texty" id="slide_goodbye">
   <h2 class="texty-title">Now tell the story!!</h2>
   <div class="text-content">
@@ -567,7 +584,9 @@ var cutToWonderland = function() {
     </div>
     <div class="slide">
       <ul>
-        <li><a href="http://tinmagpie.com" target="_blank">tinmagpie.com</a> : we tell stories with code</li>
+<!--         <li><a href="http://tinmagpie.com" target="_blank">tinmagpie.com</a> : we tell stories with code</li>
+ -->
+        <li><a href="http://theinfinitecanvas.com" target="_blank">theinfinitecanvas.com</a> : my screencast</li>
         <li><a href="https://twitter.com/rachelnabors" target="_blank">@rachelnabors</a> : show me what you make</li>
         <li><a href="http://rachelnabors.com" target="_blank">rachelnabors.com</a> : more projects</li>
       </ul>
@@ -658,7 +677,6 @@ var cutToWonderland = function() {
 </script>
 
 <!-- Extension JS files. Add or remove as needed. -->
-<script src="core/deck.core.js"></script>
 <script src="extensions/hash/deck.hash.js"></script>
 <script src="extensions/menu/deck.menu.js"></script>
 <script src="extensions/goto/deck.goto.js"></script>
