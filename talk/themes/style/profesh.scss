@@ -20,12 +20,12 @@ $original-mint: #73ebc5;
 $original-teal: #20b3aa;
 
 $black: #00232b;
+$magenta: #a22782; // plum
 $highlight: $original-teal; // dark green
 $highlightContrast: $black; // light green
-$link: #1CCEFF; //turquoise
-$linkVisited: #0097C0; // dark turq
+$link: $magenta; //turquoise
+$linkVisited: darken($magenta, 10%); // dark turq
 $callout: $wonderland-rouge; // pink
-$magenta: #a22782; // plum
 
 $canvas: $pale-mint;
 $canvas_black: $black;
@@ -60,9 +60,7 @@ $grey: #4e6369;
 
 .slide {
 	a {
-		border-bottom: 1px dotted $link;
-		padding: 1px 1px 0 1px;
-		text-decoration: none;
+		padding: 1px;
 	}
 	a:link {
 		color:  $link;
@@ -226,9 +224,7 @@ $grey: #4e6369;
 		border: 0;
 	}
 	a {
-		border-bottom: 2px dotted $magenta;
-		padding: 1px 1px 0 1px;
-		text-decoration: none;
+		padding: 1px;
 	}
 	a:link {
 		color: $magenta;

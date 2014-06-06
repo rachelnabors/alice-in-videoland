@@ -20,14 +20,12 @@
     background: rgba(78, 99, 105, 0.5) !important;
     font-family: serif; }
   .deck-container .slide a {
-    border-bottom: 1px dotted #1cceff;
-    padding: 1px 1px 0 1px;
-    text-decoration: none; }
+    padding: 1px; }
   .deck-container .slide a:link {
-    color: #1cceff; }
+    color: #a22782; }
   .deck-container .slide a:visited {
-    border-color: #0097c0;
-    color: #0097c0; }
+    border-color: #791d61;
+    color: #791d61; }
   .deck-container .slide a:hover, .deck-container .slide a:active {
     color: #00232b;
     background: #20b3aa;
@@ -139,9 +137,7 @@
       font-family: "blue-goblet-alt", fancy;
       border: 0; }
     .deck-container #slide_goodbye a {
-      border-bottom: 2px dotted #a22782;
-      padding: 1px 1px 0 1px;
-      text-decoration: none; }
+      padding: 1px; }
     .deck-container #slide_goodbye a:link {
       color: #a22782; }
     .deck-container #slide_goodbye a:visited {
