@@ -30,6 +30,15 @@
     color: #00232b;
     background: #20b3aa;
     border: 0; }
+  .deck-container .slide.alt a:link, .deck-container .slide.slide_interjection a:link {
+    color: #2dd9cf; }
+  .deck-container .slide.alt a:visited, .deck-container .slide.slide_interjection a:visited {
+    border-color: #24c9bf;
+    color: #24c9bf; }
+  .deck-container .slide.alt a:hover, .deck-container .slide.alt a:active, .deck-container .slide.slide_interjection a:hover, .deck-container .slide.slide_interjection a:active {
+    color: #051c1a;
+    background: #2dd9cf;
+    border: 0; }
   .deck-container .deck-status {
     color: #00232b;
     opacity: .5;
@@ -305,8 +314,4 @@
 
 #cover_retina {
   background: url(../../img/cover_retina.png) no-repeat 0 0;
-  background-size: cover; }
-
-#cat-gifs {
-  background: url(../../img/comic_gifs.jpg) no-repeat 0 0;
   background-size: cover; }

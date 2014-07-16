@@ -27,6 +27,10 @@ $link: $magenta; //turquoise
 $linkVisited: darken($magenta, 10%); // dark turq
 $callout: $wonderland-rouge; // pink
 
+$alt-link:  lighten($original-teal, 10%);
+$alt-linkVisited: lighten($original-teal, 5%); // dark turq
+$alt-callout: $wonderland-pink; // pink
+
 $canvas: $pale-mint;
 $canvas_black: $black;
 $grey: #4e6369;
@@ -65,7 +69,6 @@ $grey: #4e6369;
 	a:link {
 		color:  $link;
 	}
-
 	a:visited {
 		border-color: $linkVisited;
 		color: $linkVisited;
@@ -75,6 +78,20 @@ $grey: #4e6369;
 		color: $highlightContrast;
 		background: $highlight;
 		border: 0;
+	}
+	&.alt, &.slide_interjection {
+		a:link {
+			color:  $alt-link;
+		}
+		a:visited {
+			border-color: $alt-linkVisited;
+			color: $alt-linkVisited;
+		}
+		a:hover, a:active {
+			color: darken($alt-link, 45%);
+			background: $alt-link;
+			border: 0;
+		}
 	}
 }
 
@@ -448,10 +465,5 @@ h1, h2 {
 
 #cover_retina {
 	background: url(../../img/cover_retina.png) no-repeat  0 0;
-	background-size: cover;
-}
-
-#cat-gifs {
-	background: url(../../img/comic_gifs.jpg) no-repeat  0 0;
 	background-size: cover;
 }
