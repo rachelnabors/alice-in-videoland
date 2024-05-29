@@ -26,3 +26,15 @@ Here's what I'm using now, a decade later:
 - [The finished first chapter](book/)
 - [Talk](talk/)
 - [Original Storyboard](storyboard/)
+
+## License
+
+No, you may not use any of the images. I, Rachel Lee Nabors, drew them and they are mine. You may use the code, though. Enjoy!
+
+## Running Alice
+
+This is a very old project and it's using Compass and Ruby. So, if you want to run it...
+
+1. Install the gems from the `Gemfile`
+2. Run `compass watch` in the root directory (`book`)
+3. Open `index.html` in your browser

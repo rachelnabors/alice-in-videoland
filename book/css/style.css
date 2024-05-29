@@ -1,5 +1,4 @@
 @media screen {
-  /* line 5, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -21,50 +20,41 @@
     vertical-align: baseline;
   }
 
-  /* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   html {
     line-height: 1;
   }
 
-  /* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   ol, ul {
     list-style: none;
   }
 
-  /* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
 
-  /* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   caption, th, td {
     text-align: left;
     font-weight: normal;
     vertical-align: middle;
   }
 
-  /* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q, blockquote {
     quotes: none;
   }
-  /* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none;
   }
 
-  /* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   a img {
     border: none;
   }
 
-  /* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
   }
 
-  /* line 2, ../scss/_extends.scss */
   .page > p {
     position: absolute;
     overflow: hidden;
@@ -74,24 +64,20 @@
     margin: -1px;
   }
 
-  /* line 10, ../scss/_extends.scss */
   .scene {
     display: none !important;
   }
 
-  /* line 14, ../scss/_extends.scss */
   .loading .scene, .scene.cue {
     display: block !important;
   }
 
-  /* line 18, ../scss/_extends.scss */
   .loading-card, .scene .page, .cue, .page_rabbit-appears .rabbit, #to-tunnels, .in-view #to-tunnels.unactivated:after {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
   }
 
-  /* line 24, ../scss/_extends.scss */
   .continued .learning ul:before, .continued .author:before,
   .continued .learning ul:after,
   .continued .author:after {
@@ -101,43 +87,38 @@
     /* 2 */
   }
 
-  /* line 30, ../scss/_extends.scss */
   .continued .learning ul:after, .continued .author:after {
     clear: both;
   }
 
-  /* line 35, ../scss/_extends.scss */
   .scene-transitioning,
   .scene-transitioning * {
     pointer-events: none !important;
   }
 
-  /* line 40, ../scss/_extends.scss */
   .scene-transitioning {
     overflow: hidden;
   }
 
-  /* line 1, ../scss/_foundation.scss */
   html, body {
     background: #000;
     height: 100%;
   }
 
-  /* line 106, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.13.alpha.12/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
   html {
     font-size: 112.5%;
     line-height: 1.33333em;
   }
 
-  /* line 19, ../scss/_typography.scss */
   body {
     color: #431236;
     font-family: "nueva-std-extended";
     font-weight: 400;
   }
 
-  /* line 1, ../scss/_loader.scss */
   .loading-card {
+    background: #a22882 url('../img/pat_argyle.svg?1378830277') repeat;
+    background: #a22882 url('../img/pat_argyle.svg?1378830277') repeat;
     background: #a22882 url('../img/pat_argyle.svg?1378830277') repeat;
     background-size: 25% auto;
     height: 100%;
@@ -153,7 +134,6 @@
     white-space: normal;
   }
 
-  /* line 16, ../scss/_loader.scss */
   .loaded .loading-card {
     height: 0;
     -moz-transition: height 2s ease-in 1.5s;
@@ -163,7 +143,6 @@
     transition: height 2s ease-in 1.5s;
   }
 
-  /* line 21, ../scss/_loader.scss */
   h1 {
     background: #a22882;
     -moz-box-sizing: border-box;
@@ -181,7 +160,6 @@
     z-index: 1;
   }
 
-  /* line 34, ../scss/_loader.scss */
   .byline {
     background: #20b3aa;
     -moz-box-sizing: border-box;
@@ -197,7 +175,6 @@
     z-index: 3;
   }
 
-  /* line 47, ../scss/_loader.scss */
   #loader {
     -moz-animation: cup-drop 1.5s cubic-bezier(0.11, 1.06, 0.21, 0.99) 1.5s forwards;
     -webkit-animation: cup-drop 1.5s cubic-bezier(0.11, 1.06, 0.21, 0.99) 1.5s forwards;
@@ -209,26 +186,25 @@
     left: 50%;
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     margin-top: -5.09375em;
     z-index: 2;
   }
 
-  /* line 57, ../scss/_loader.scss */
   .cup {
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDQwcHgiIGhlaWdodD0iMzI2cHgiIHZpZXdCb3g9IjAgMCA0NDAgMzI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NDAgMzI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGNUZCRkIiIGQ9Ik0zMTUuNSw4My40YzAuMy0xNi41LDUuNC0zMS4xLDE5LjctNDIuMkw5LjMsNDAuN0M1My44LDExNC4zLTQyLjUsMTY5LDI0LjYsMjQ3YzEzLjcsMTYsMzIuOSwyNy43LDU1LDM1LjgNCgljMi44LDIwLjctMTQuMywxOS0xNC4zLDE5Yzg0LjcsNTEuMywyMTYuMSw1LjEsMjE2LjEsNS4xYy0xNy0xMC40LTEzLjgtMjUtMTEtMzEuOWMyNi43LTExLjYsNDcuOC0yNy42LDU4LjUtNDcuMg0KCWM4LTE0LjcsNy45LTMyLjQsNC43LTUxLjJjMjYuOS0xLjUsNzQsOS42LDgwLjQtMkM0NzEuNCw2OS40LDQzMS41LDQsMzE1LjUsODMuNHogTTM5Mi44LDE1My40Yy0yNy44LDE1LjktNDUuNyw5LjctNjEuOSw5LjMNCgljLTQuMS0xOC4yLTkuOS0zNy0xMy4xLTU0LjdsMzguNC0yNi41QzQ0Mi45LDM4LjEsNDQwLjQsMTI2LjIsMzkyLjgsMTUzLjR6Ii8+DQo8ZWxsaXBzZSBmaWxsPSIjRERGMEVFIiBjeD0iMTcxLjkiIGN5PSIzMyIgcng9IjE2OC45IiByeT0iMzMiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K') no-repeat 0 0;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDQwcHgiIGhlaWdodD0iMzI2cHgiIHZpZXdCb3g9IjAgMCA0NDAgMzI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NDAgMzI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGNUZCRkIiIGQ9Ik0zMTUuNSw4My40YzAuMy0xNi41LDUuNC0zMS4xLDE5LjctNDIuMkw5LjMsNDAuN0M1My44LDExNC4zLTQyLjUsMTY5LDI0LjYsMjQ3YzEzLjcsMTYsMzIuOSwyNy43LDU1LDM1LjgNCgljMi44LDIwLjctMTQuMywxOS0xNC4zLDE5Yzg0LjcsNTEuMywyMTYuMSw1LjEsMjE2LjEsNS4xYy0xNy0xMC40LTEzLjgtMjUtMTEtMzEuOWMyNi43LTExLjYsNDcuOC0yNy42LDU4LjUtNDcuMg0KCWM4LTE0LjcsNy45LTMyLjQsNC43LTUxLjJjMjYuOS0xLjUsNzQsOS42LDgwLjQtMkM0NzEuNCw2OS40LDQzMS41LDQsMzE1LjUsODMuNHogTTM5Mi44LDE1My40Yy0yNy44LDE1LjktNDUuNyw5LjctNjEuOSw5LjMNCgljLTQuMS0xOC4yLTkuOS0zNy0xMy4xLTU0LjdsMzguNC0yNi41QzQ0Mi45LDM4LjEsNDQwLjQsMTI2LjIsMzkyLjgsMTUzLjR6Ii8+DQo8ZWxsaXBzZSBmaWxsPSIjRERGMEVFIiBjeD0iMTcxLjkiIGN5PSIzMyIgcng9IjE2OC45IiByeT0iMzMiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K') no-repeat 0 0;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDQwcHgiIGhlaWdodD0iMzI2cHgiIHZpZXdCb3g9IjAgMCA0NDAgMzI2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NDAgMzI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGNUZCRkIiIGQ9Ik0zMTUuNSw4My40YzAuMy0xNi41LDUuNC0zMS4xLDE5LjctNDIuMkw5LjMsNDAuN0M1My44LDExNC4zLTQyLjUsMTY5LDI0LjYsMjQ3YzEzLjcsMTYsMzIuOSwyNy43LDU1LDM1LjgNCgljMi44LDIwLjctMTQuMywxOS0xNC4zLDE5Yzg0LjcsNTEuMywyMTYuMSw1LjEsMjE2LjEsNS4xYy0xNy0xMC40LTEzLjgtMjUtMTEtMzEuOWMyNi43LTExLjYsNDcuOC0yNy42LDU4LjUtNDcuMg0KCWM4LTE0LjcsNy45LTMyLjQsNC43LTUxLjJjMjYuOS0xLjUsNzQsOS42LDgwLjQtMkM0NzEuNCw2OS40LDQzMS41LDQsMzE1LjUsODMuNHogTTM5Mi44LDE1My40Yy0yNy44LDE1LjktNDUuNyw5LjctNjEuOSw5LjMNCgljLTQuMS0xOC4yLTkuOS0zNy0xMy4xLTU0LjdsMzguNC0yNi41QzQ0Mi45LDM4LjEsNDQwLjQsMTI2LjIsMzkyLjgsMTUzLjR6Ii8+DQo8ZWxsaXBzZSBmaWxsPSIjRERGMEVFIiBjeD0iMTcxLjkiIGN5PSIzMyIgcng9IjE2OC45IiByeT0iMzMiLz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K') no-repeat 0 0;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
     position: absolute;
     margin-left: 1.5em;
     width: 100%;
     height: 100%;
   }
-  /* line 63, ../scss/_loader.scss */
   .cup p {
     font-family: "blue-goblet-alt", fantasy;
     font-size: 1.33333em;
@@ -239,15 +215,16 @@
     width: 60%;
   }
 
-  /* line 72, ../scss/_loader.scss */
   .saucer {
     -moz-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
     -webkit-animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
     animation: saucer-drop 3s cubic-bezier(0.11, 1.06, 0.87, 1.06) 2s forwards;
     background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTIwcHgiIGhlaWdodD0iMTQwcHgiIHZpZXdCb3g9IjAgMCA1MjAgMTQwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MjAgMTQwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJkaXNoIj4NCgk8ZWxsaXBzZSBmaWxsPSIjRjVGQkZCIiBjeD0iMjYwIiBjeT0iNzAiIHJ4PSIyNjAiIHJ5PSI3MCIvPg0KCTxlbGxpcHNlIGZpbGw9IiNEREYwRUUiIGN4PSIyNTcuOCIgY3k9IjUyLjYiIHJ4PSIxNTgiIHJ5PSIzMi4yIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==') no-repeat 0 0;
-    -moz-background-size: auto 100%;
-    -o-background-size: auto 100%;
-    -webkit-background-size: auto 100%;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTIwcHgiIGhlaWdodD0iMTQwcHgiIHZpZXdCb3g9IjAgMCA1MjAgMTQwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MjAgMTQwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJkaXNoIj4NCgk8ZWxsaXBzZSBmaWxsPSIjRjVGQkZCIiBjeD0iMjYwIiBjeT0iNzAiIHJ4PSIyNjAiIHJ5PSI3MCIvPg0KCTxlbGxpcHNlIGZpbGw9IiNEREYwRUUiIGN4PSIyNTcuOCIgY3k9IjUyLjYiIHJ4PSIxNTgiIHJ5PSIzMi4yIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==') no-repeat 0 0;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTIwcHgiIGhlaWdodD0iMTQwcHgiIHZpZXdCb3g9IjAgMCA1MjAgMTQwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MjAgMTQwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJkaXNoIj4NCgk8ZWxsaXBzZSBmaWxsPSIjRjVGQkZCIiBjeD0iMjYwIiBjeT0iNzAiIHJ4PSIyNjAiIHJ5PSI3MCIvPg0KCTxlbGxpcHNlIGZpbGw9IiNEREYwRUUiIGN4PSIyNTcuOCIgY3k9IjUyLjYiIHJ4PSIxNTgiIHJ5PSIzMi4yIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==') no-repeat 0 0;
+    background-size: auto 100%;
+    background-size: auto 100%;
+    background-size: auto 100%;
     background-size: auto 100%;
     width: 16.25em;
     padding-top: 4.375em;
@@ -258,7 +235,6 @@
     z-index: -1;
   }
 
-  /* line 83, ../scss/_loader.scss */
   .loaded .saucer {
     -moz-animation: saucer-done 1s 0.5s forwards;
     -webkit-animation: saucer-done 1s 0.5s forwards;
@@ -266,7 +242,6 @@
     top: 80%;
   }
 
-  /* line 88, ../scss/_loader.scss */
   .loaded #loader {
     -moz-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
     -webkit-animation: cup-done 1s cubic-bezier(1, 1.18, 0.3, -0.19) 1s forwards;
@@ -274,7 +249,6 @@
     top: 60%;
   }
 
-  /* line 93, ../scss/_loader.scss */
   #brew {
     -moz-animation: pour-tea 5s 1 3s forwards;
     -webkit-animation: pour-tea 5s 1 3s forwards;
@@ -287,13 +261,11 @@
     height: 4.375em;
     -moz-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
   }
 
   @-moz-keyframes pour-tea {
-    /* line 103, ../scss/_loader.scss */
     100% {
       -moz-transform: scale(1.2, 1.5);
       transform: scale(1.2, 1.5);
@@ -301,7 +273,6 @@
     }
   }
   @-webkit-keyframes pour-tea {
-    /* line 103, ../scss/_loader.scss */
     100% {
       -webkit-transform: scale(1.2, 1.5);
       transform: scale(1.2, 1.5);
@@ -309,36 +280,30 @@
     }
   }
   @keyframes pour-tea {
-    /* line 103, ../scss/_loader.scss */
     100% {
       -moz-transform: scale(1.2, 1.5);
       -ms-transform: scale(1.2, 1.5);
-      -o-transform: scale(1.2, 1.5);
       -webkit-transform: scale(1.2, 1.5);
       transform: scale(1.2, 1.5);
       bottom: 6.6em;
     }
   }
   @-moz-keyframes cup-drop {
-    /* line 110, ../scss/_loader.scss */
     100% {
       top: 60%;
     }
   }
   @-webkit-keyframes cup-drop {
-    /* line 110, ../scss/_loader.scss */
     100% {
       top: 60%;
     }
   }
   @keyframes cup-drop {
-    /* line 110, ../scss/_loader.scss */
     100% {
       top: 60%;
     }
   }
   @-moz-keyframes saucer-drop {
-    /* line 116, ../scss/_loader.scss */
     100% {
       top: 80%;
       -moz-transform: rotate(360deg);
@@ -346,7 +311,6 @@
     }
   }
   @-webkit-keyframes saucer-drop {
-    /* line 116, ../scss/_loader.scss */
     100% {
       top: 80%;
       -webkit-transform: rotate(360deg);
@@ -354,48 +318,38 @@
     }
   }
   @keyframes saucer-drop {
-    /* line 116, ../scss/_loader.scss */
     100% {
       top: 80%;
       -moz-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
     }
   }
   @-moz-keyframes saucer-done {
-    /* line 123, ../scss/_loader.scss */
     100% {
       top: 100%;
     }
   }
   @-webkit-keyframes saucer-done {
-    /* line 123, ../scss/_loader.scss */
     100% {
       top: 100%;
     }
   }
   @keyframes saucer-done {
-    /* line 123, ../scss/_loader.scss */
     100% {
       top: 100%;
     }
   }
   @-moz-keyframes cup-done {
-    /* line 129, ../scss/_loader.scss */
     15% {
       -moz-transform: rotate(7deg) translate(-50%, 0);
       transform: rotate(7deg) translate(-50%, 0);
     }
-
-    /* line 132, ../scss/_loader.scss */
     65% {
       -moz-transform: rotate(-11deg) translate(-50%, 0);
       transform: rotate(-11deg) translate(-50%, 0);
     }
-
-    /* line 135, ../scss/_loader.scss */
     100% {
       -moz-transform: rotate(0deg) translate(-50%, 0);
       transform: rotate(0deg) translate(-50%, 0);
@@ -403,19 +357,14 @@
     }
   }
   @-webkit-keyframes cup-done {
-    /* line 129, ../scss/_loader.scss */
     15% {
       -webkit-transform: rotate(7deg) translate(-50%, 0);
       transform: rotate(7deg) translate(-50%, 0);
     }
-
-    /* line 132, ../scss/_loader.scss */
     65% {
       -webkit-transform: rotate(-11deg) translate(-50%, 0);
       transform: rotate(-11deg) translate(-50%, 0);
     }
-
-    /* line 135, ../scss/_loader.scss */
     100% {
       -webkit-transform: rotate(0deg) translate(-50%, 0);
       transform: rotate(0deg) translate(-50%, 0);
@@ -423,62 +372,50 @@
     }
   }
   @keyframes cup-done {
-    /* line 129, ../scss/_loader.scss */
     15% {
       -moz-transform: rotate(7deg) translate(-50%, 0);
       -ms-transform: rotate(7deg) translate(-50%, 0);
-      -o-transform: rotate(7deg) translate(-50%, 0);
       -webkit-transform: rotate(7deg) translate(-50%, 0);
       transform: rotate(7deg) translate(-50%, 0);
     }
-
-    /* line 132, ../scss/_loader.scss */
     65% {
       -moz-transform: rotate(-11deg) translate(-50%, 0);
       -ms-transform: rotate(-11deg) translate(-50%, 0);
-      -o-transform: rotate(-11deg) translate(-50%, 0);
       -webkit-transform: rotate(-11deg) translate(-50%, 0);
       transform: rotate(-11deg) translate(-50%, 0);
     }
-
-    /* line 135, ../scss/_loader.scss */
     100% {
       -moz-transform: rotate(0deg) translate(-50%, 0);
       -ms-transform: rotate(0deg) translate(-50%, 0);
-      -o-transform: rotate(0deg) translate(-50%, 0);
       -webkit-transform: rotate(0deg) translate(-50%, 0);
       transform: rotate(0deg) translate(-50%, 0);
       top: 200%;
     }
   }
-  /* line 141, ../scss/_loader.scss */
   .loading .scene {
     opacity: 0;
   }
 
-  /* line 146, ../scss/_loader.scss */
   .loading {
     overflow: hidden;
   }
 
-  /* line 2, ../scss/scenes/_common.scss */
   .scene {
     margin: 0 auto;
   }
 
-  /* line 14, ../scss/scenes/_common.scss */
   .scene .page {
     -moz-transform: scale3d(1, 1, 1);
     -ms-transform: scale3d(1, 1, 1);
-    -o-transform: scale3d(1, 1, 1);
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    padding-top: 75%;
+    /* padding-top: 75%; //maintain a 3 to 4 ratio  */
+    aspect-ratio: 4/3;
     position: relative;
     z-index: 0;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
     -moz-background-origin: padding;
     -o-background-origin: padding-box;
@@ -486,12 +423,10 @@
     background-origin: padding-box;
   }
 
-  /* line 4, ../scss/scenes/park/_scene-park.scss */
   .loaded .scene-park {
     opacity: 0;
   }
 
-  /* line 8, ../scss/scenes/park/_scene-park.scss */
   .scene-park.cue {
     opacity: 1;
     -moz-transition: opacity 2s 2s;
@@ -501,49 +436,41 @@
     transition: opacity 2s 2s;
   }
 
-  /* line 1, ../scss/scenes/park/_page-sitting-in-the-park.scss */
   .page_sitting-in-the-park {
+    background: url('../img/bg_park1.jpg?1377318992') no-repeat;
+    background: url('../img/bg_park1.jpg?1377318992') no-repeat;
     background: url('../img/bg_park1.jpg?1377318992') no-repeat;
   }
 
   @-moz-keyframes sleepz {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 150%;
     }
   }
   @-webkit-keyframes sleepz {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 150%;
     }
   }
   @keyframes sleepz {
-    /* line 56, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 150%;
     }
   }
-  /* line 5, ../scss/scenes/park/_page-alice-is-bored.scss */
   .page_alice-is-bored {
     background: url('../img/bg_park2.jpg?1377374754') no-repeat;
+    background: url('../img/bg_park2.jpg?1377374754') no-repeat;
+    background: url('../img/bg_park2.jpg?1377374754') no-repeat;
   }
-  /* line 7, ../scss/scenes/park/_page-alice-is-bored.scss */
   .page_alice-is-bored .eyes {
     background: url('../img/eyes-s087e210706.png') 0 0 no-repeat;
     -moz-animation: sleepz 1.5s steps(3) infinite;
@@ -561,28 +488,29 @@
     width: 15.5%;
     height: 0;
     padding-top: 7.125%;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
   }
-  /* line 17, ../scss/scenes/park/_page-alice-is-bored.scss */
   .page_alice-is-bored.in-view .eyes {
     -moz-animation-play-state: running;
     -webkit-animation-play-state: running;
     animation-play-state: running;
   }
 
-  /* line 1, ../scss/scenes/park/_page-rabbit-appears.scss */
   .page_rabbit-appears {
     background: url('../img/bg_park3.jpg?1377381587') no-repeat;
+    background: url('../img/bg_park3.jpg?1377381587') no-repeat;
+    background: url('../img/bg_park3.jpg?1377381587') no-repeat;
   }
-  /* line 3, ../scss/scenes/park/_page-rabbit-appears.scss */
   .page_rabbit-appears .blink {
     background: url('../img/blink.svg?1377386293') 0 100% no-repeat;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background: url('../img/blink.svg?1377386293') 0 100% no-repeat;
+    background: url('../img/blink.svg?1377386293') 0 100% no-repeat;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
     position: absolute;
     top: 0;
@@ -590,18 +518,18 @@
     height: 100%;
     z-index: 2;
   }
-  /* line 11, ../scss/scenes/park/_page-rabbit-appears.scss */
   .page_rabbit-appears.in-view .blink {
     -moz-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
     -webkit-animation: scene-blink 0.75s steps(5) 5 -1s alternate;
     animation: scene-blink 0.75s steps(5) 5 -1s alternate;
   }
-  /* line 14, ../scss/scenes/park/_page-rabbit-appears.scss */
   .page_rabbit-appears .rabbit {
     background: url('../img/rabbit_running.png?1379664786');
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background: url('../img/rabbit_running.png?1379664786');
+    background: url('../img/rabbit_running.png?1379664786');
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
     width: 55.41992%;
     padding-top: 61.23047%;
@@ -610,20 +538,16 @@
     left: 50%;
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
   }
-  /* line 24, ../scss/scenes/park/_page-rabbit-appears.scss */
   .cssanimations .page_rabbit-appears .rabbit {
     left: -50%;
   }
-  /* line 29, ../scss/scenes/park/_page-rabbit-appears.scss */
   .csstransitions .page_rabbit-appears.in-view .rabbit {
     -moz-transform: translate(280.44053%, -50%);
     -ms-transform: translate(280.44053%, -50%);
-    -o-transform: translate(280.44053%, -50%);
     -webkit-transform: translate(280.44053%, -50%);
     transform: translate(280.44053%, -50%);
     -moz-transition: -moz-transform 5s ease-in;
@@ -633,48 +557,41 @@
   }
 
   @-moz-keyframes scene-blink {
-    /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 38, ../scss/scenes/park/_page-rabbit-appears.scss */
     100% {
       background-position: 0 125%;
     }
   }
   @-webkit-keyframes scene-blink {
-    /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 38, ../scss/scenes/park/_page-rabbit-appears.scss */
     100% {
       background-position: 0 125%;
     }
   }
   @keyframes scene-blink {
-    /* line 37, ../scss/scenes/park/_page-rabbit-appears.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 38, ../scss/scenes/park/_page-rabbit-appears.scss */
     100% {
       background-position: 0 125%;
     }
   }
-  /* line 1, ../scss/scenes/park/_page-rabbit-chase.scss */
   .page_rabbit-chase {
     background: url('../img/bg_park4.jpg?1377489323') no-repeat;
+    background: url('../img/bg_park4.jpg?1377489323') no-repeat;
+    background: url('../img/bg_park4.jpg?1377489323') no-repeat;
   }
-  /* line 3, ../scss/scenes/park/_page-rabbit-chase.scss */
   .page_rabbit-chase .alice {
     background: url('../img/park4_alice.png?1377546135');
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('../img/park4_alice.png?1377546135');
+    background: url('../img/park4_alice.png?1377546135');
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
     position: absolute;
     bottom: 0;
@@ -682,16 +599,16 @@
     width: 23.73047%;
     padding-top: 19.33594%;
   }
-  /* line 8, ../scss/scenes/park/_page-rabbit-chase.scss */
   .csstransitions .page_rabbit-chase .alice {
     left: -23.73047%;
   }
-  /* line 11, ../scss/scenes/park/_page-rabbit-chase.scss */
   .page_rabbit-chase .rabbit1 {
     background: url('../img/park4_rabbit1.png?1377546166');
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('../img/park4_rabbit1.png?1377546166');
+    background: url('../img/park4_rabbit1.png?1377546166');
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
     position: absolute;
     top: 33%;
@@ -699,12 +616,13 @@
     width: 8.34961%;
     padding-top: 24.26758%;
   }
-  /* line 18, ../scss/scenes/park/_page-rabbit-chase.scss */
   .page_rabbit-chase .rabbit2 {
     background: url('../img/park4_rabbit2.png?1377546242');
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('../img/park4_rabbit2.png?1377546242');
+    background: url('../img/park4_rabbit2.png?1377546242');
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
     position: absolute;
     bottom: 0;
@@ -712,11 +630,9 @@
     width: 20.26367%;
     padding-top: 18.60352%;
   }
-  /* line 23, ../scss/scenes/park/_page-rabbit-chase.scss */
   .csstransitions .page_rabbit-chase .rabbit2 {
     left: -20.26367%;
   }
-  /* line 28, ../scss/scenes/park/_page-rabbit-chase.scss */
   .csstransitions .page_rabbit-chase.in-view .rabbit1 {
     -moz-transition: -moz-transform 2s ease-in;
     -o-transition: -o-transform 2s ease-in;
@@ -724,11 +640,9 @@
     transition: transform 2s ease-in;
     -moz-transform: perspective(0) scale(0.5, 0.5);
     -ms-transform: perspective(0) scale(0.5, 0.5);
-    -o-transform: perspective(0) scale(0.5, 0.5);
     -webkit-transform: perspective(0) scale(0.5, 0.5);
     transform: perspective(0) scale(0.5, 0.5);
   }
-  /* line 33, ../scss/scenes/park/_page-rabbit-chase.scss */
   .csstransitions .page_rabbit-chase.in-view .rabbit2 {
     -moz-transition: -moz-transform 3s ease-in 1.5s;
     -o-transition: -o-transform 3s ease-in 1.5s;
@@ -737,11 +651,9 @@
     transition: transform 3s ease-in 1.5s;
     -moz-transform: translate(601.92771%, 0);
     -ms-transform: translate(601.92771%, 0);
-    -o-transform: translate(601.92771%, 0);
     -webkit-transform: translate(601.92771%, 0);
     transform: translate(601.92771%, 0);
   }
-  /* line 37, ../scss/scenes/park/_page-rabbit-chase.scss */
   .csstransitions .page_rabbit-chase.in-view .alice {
     -moz-transition: -moz-transform 3s ease-in 3s;
     -o-transition: -o-transform 3s ease-in 3s;
@@ -750,18 +662,18 @@
     transition: transform 3s ease-in 3s;
     -moz-transform: translate(524.27984%, 0);
     -ms-transform: translate(524.27984%, 0);
-    -o-transform: translate(524.27984%, 0);
     -webkit-transform: translate(524.27984%, 0);
     transform: translate(524.27984%, 0);
   }
 
-  /* line 2, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole .foreground {
     height: 100%;
     background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
+    background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
     position: absolute;
     bottom: 0;
@@ -769,12 +681,13 @@
     width: 100%;
     z-index: 4;
   }
-  /* line 11, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole .rabbit {
     background: url('../img/park5_rabbit.png?1377535949');
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('../img/park5_rabbit.png?1377535949');
+    background: url('../img/park5_rabbit.png?1377535949');
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
     position: absolute;
     top: 15%;
@@ -785,17 +698,17 @@
     opacity: 0;
     z-index: 3;
   }
-  /* line 19, ../scss/scenes/park/_page-the-hole.scss */
   .cssanimations .page_the-hole .rabbit {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
-  /* line 21, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole .background {
     background: url('../img/bg_park5_1.png?1377532988') no-repeat;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background: url('../img/bg_park5_1.png?1377532988') no-repeat;
+    background: url('../img/bg_park5_1.png?1377532988') no-repeat;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
     position: absolute;
     top: 0;
@@ -804,12 +717,13 @@
     height: 100%;
     z-index: 2;
   }
-  /* line 29, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole .bg-hole {
     background: url('../img/bg-hole.jpg?1385662790') no-repeat;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background: url('../img/bg-hole.jpg?1385662790') no-repeat;
+    background: url('../img/bg-hole.jpg?1385662790') no-repeat;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
     position: absolute;
     top: 35.35156%;
@@ -818,13 +732,11 @@
     padding-top: 11.08398%;
     z-index: 1;
   }
-  /* line 38, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole.in-view .bg-hole {
     -moz-animation: hole-glow 0.35s steps(4) infinite alternate;
     -webkit-animation: hole-glow 0.35s steps(4) infinite alternate;
     animation: hole-glow 0.35s steps(4) infinite alternate;
   }
-  /* line 41, ../scss/scenes/park/_page-the-hole.scss */
   .page_the-hole.in-view .rabbit {
     -moz-animation: rabbit-down 3s forwards;
     -webkit-animation: rabbit-down 3s forwards;
@@ -832,30 +744,25 @@
   }
 
   @-moz-keyframes rabbit-down {
-    /* line 48, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -moz-transform: translate(0, 100%);
       transform: translate(0, 100%);
     }
   }
   @-webkit-keyframes rabbit-down {
-    /* line 48, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -webkit-transform: translate(0, 100%);
       transform: translate(0, 100%);
     }
   }
   @keyframes rabbit-down {
-    /* line 48, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -moz-transform: translate(0, 100%);
       -ms-transform: translate(0, 100%);
-      -o-transform: translate(0, 100%);
       -webkit-transform: translate(0, 100%);
       transform: translate(0, 100%);
     }
   }
-  /* line 53, ../scss/scenes/park/_page-the-hole.scss */
   #to-tunnels {
     overflow: visible;
     position: absolute;
@@ -865,22 +772,22 @@
     height: 16%;
     z-index: 5;
   }
-  /* line 61, ../scss/scenes/park/_page-the-hole.scss */
   .in-view #to-tunnels.unactivated:after {
     content: " ";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     background: url('../img/g_arrow.svg?1385934589') no-repeat;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('../img/g_arrow.svg?1385934589') no-repeat;
+    background: url('../img/g_arrow.svg?1385934589') no-repeat;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
     -moz-animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 3.5s;
     -webkit-animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 3.5s;
     animation: arrow-point 1.5s ease-out alternate infinite, arrow-fade 2s alternate infinite 3.5s;
     -moz-transform: rotate(-40deg);
     -ms-transform: rotate(-40deg);
-    -o-transform: rotate(-40deg);
     -webkit-transform: rotate(-40deg);
     transform: rotate(-40deg);
     position: absolute;
@@ -891,156 +798,126 @@
   }
 
   @-moz-keyframes arrow-fade {
-    /* line 77, ../scss/scenes/park/_page-the-hole.scss */
     50% {
       opacity: 1;
     }
-
-    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       opacity: 0;
     }
   }
   @-webkit-keyframes arrow-fade {
-    /* line 77, ../scss/scenes/park/_page-the-hole.scss */
     50% {
       opacity: 1;
     }
-
-    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       opacity: 0;
     }
   }
   @keyframes arrow-fade {
-    /* line 77, ../scss/scenes/park/_page-the-hole.scss */
     50% {
       opacity: 1;
     }
-
-    /* line 78, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       opacity: 0;
     }
   }
   @-moz-keyframes arrow-point {
-    /* line 82, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       -moz-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
     }
-
-    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -moz-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
     }
   }
   @-webkit-keyframes arrow-point {
-    /* line 82, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       -webkit-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
     }
-
-    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -webkit-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
     }
   }
   @keyframes arrow-point {
-    /* line 82, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       -moz-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       -ms-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
-      -o-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       -webkit-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
       transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
     }
-
-    /* line 83, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       -moz-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       -ms-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
-      -o-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       -webkit-transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
       transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
     }
   }
   @-moz-keyframes hole-glow {
-    /* line 87, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       background-position: 0 133.333333%;
     }
   }
   @-webkit-keyframes hole-glow {
-    /* line 87, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       background-position: 0 133.333333%;
     }
   }
   @keyframes hole-glow {
-    /* line 87, ../scss/scenes/park/_page-the-hole.scss */
     0% {
       background-position: 0 0;
     }
-
-    /* line 88, ../scss/scenes/park/_page-the-hole.scss */
     100% {
       background-position: 0 133.333333%;
     }
   }
-  /* line 4, ../scss/scenes/tunnels/_tunnels.scss */
   .scene-hole {
     background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, #6c373f;
-    -moz-background-size: 4.88281% auto, 4.88281% auto;
-    -o-background-size: 4.88281% auto, 4.88281% auto;
-    -webkit-background-size: 4.88281% auto, 4.88281% auto;
+    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, #6c373f;
+    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, #6c373f;
+    background-size: 4.88281% auto, 4.88281% auto;
+    background-size: 4.88281% auto, 4.88281% auto;
+    background-size: 4.88281% auto, 4.88281% auto;
     background-size: 4.88281% auto, 4.88281% auto;
   }
 
-  /* line 14, ../scss/scenes/tunnels/_tunnels.scss */
   .scene .page_tunnels {
     background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat;
-    -moz-background-size: 100% auto, auto auto;
-    -o-background-size: 100% auto, auto auto;
-    -webkit-background-size: 100% auto, auto auto;
+    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat;
+    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat;
     background-size: 100% auto, auto auto;
-    padding-top: 48.82813%;
+    background-size: 100% auto, auto auto;
+    background-size: 100% auto, auto auto;
+    background-size: 100% auto, auto auto;
+    aspect-ratio: 2048/1000;
   }
 
-  /* line 26, ../scss/scenes/tunnels/_tunnels.scss */
   #tunnel {
     position: relative;
     z-index: 0;
   }
-  /* line 29, ../scss/scenes/tunnels/_tunnels.scss */
   #tunnel .page {
     background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
-    -moz-background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
-    -o-background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
-    -webkit-background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
+    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
     background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
-    padding-top: 161%;
+    background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
+    background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
+    background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
   }
 
-  /* line 46, ../scss/scenes/tunnels/_tunnels.scss */
   .page_falling {
     z-index: -1;
   }
 
-  /* line 50, ../scss/scenes/tunnels/_tunnels.scss */
   .alice-falling {
     background: url('../img/alice-fall-sce97bbc8d5.png') 0 0% no-repeat;
     height: 998px;
@@ -1048,94 +925,76 @@
     left: 50%;
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     position: absolute;
     top: 0;
     z-index: 1;
   }
-  /* line 57, ../scss/scenes/tunnels/_tunnels.scss */
   #tunnel .alice-falling {
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
   }
 
-  /* line 62, ../scss/scenes/tunnels/_tunnels.scss */
   .frightened .alice-falling {
     background: url('../img/alice-fall-sce97bbc8d5.png') 0 0 no-repeat;
     -moz-animation: freak-out 1.5s steps(2) infinite;
     -webkit-animation: freak-out 1.5s steps(2) infinite;
     animation: freak-out 1.5s steps(2) infinite;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
   }
 
   @-moz-keyframes freak-out {
-    /* line 144, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0%;
     }
-
-    /* line 147, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 50%;
     }
   }
   @-webkit-keyframes freak-out {
-    /* line 144, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0%;
     }
-
-    /* line 147, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 50%;
     }
   }
   @keyframes freak-out {
-    /* line 144, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     0% {
       background-position: 0 0%;
     }
-
-    /* line 147, ../../../../../../../Library/Ruby/Gems/1.8/gems/animation-studio-0.1.6/stylesheets/animation-studio/_animation-sequence.scss */
     100% {
       background-position: 0 50%;
     }
   }
-  /* line 69, ../scss/scenes/tunnels/_tunnels.scss */
   .curious .alice-falling {
     background: url('../img/alice-fall-sce97bbc8d5.png') 0 50% no-repeat;
   }
 
-  /* line 73, ../scss/scenes/tunnels/_tunnels.scss */
   .sleeping .alice-falling {
     background: url('../img/alice-fall-sce97bbc8d5.png') 0 75% no-repeat;
   }
 
-  /* line 77, ../scss/scenes/tunnels/_tunnels.scss */
   .bored .alice-falling {
     background: url('../img/alice-fall-sce97bbc8d5.png') 0 100% no-repeat;
   }
 
-  /* line 81, ../scss/scenes/tunnels/_tunnels.scss */
   .sticky-wrapper {
     position: absolute;
     width: 100%;
   }
 
-  /* line 86, ../scss/scenes/tunnels/_tunnels.scss */
   .stuck.alice-falling {
     position: fixed;
     top: 0;
   }
 
-  /* line 2, ../scss/scenes/_cut.scss */
   .scene-cut {
     background: #000;
     height: 100%;
@@ -1150,7 +1009,6 @@
     transition: opacity 2s ease-out 2s;
     z-index: 10;
   }
-  /* line 9, ../scss/scenes/_cut.scss */
   .scene-cut.cue {
     -moz-animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
     -webkit-animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
@@ -1158,139 +1016,117 @@
   }
 
   @-moz-keyframes fadeToBlack {
-    /* line 17, ../scss/scenes/_cut.scss */
     0% {
       opacity: 0;
     }
-
-    /* line 18, ../scss/scenes/_cut.scss */
     100% {
       opacity: 1;
     }
   }
   @-webkit-keyframes fadeToBlack {
-    /* line 17, ../scss/scenes/_cut.scss */
     0% {
       opacity: 0;
     }
-
-    /* line 18, ../scss/scenes/_cut.scss */
     100% {
       opacity: 1;
     }
   }
   @keyframes fadeToBlack {
-    /* line 17, ../scss/scenes/_cut.scss */
     0% {
       opacity: 0;
     }
-
-    /* line 18, ../scss/scenes/_cut.scss */
     100% {
       opacity: 1;
     }
   }
   @-moz-keyframes fadeInFromBlack {
-    /* line 25, ../scss/scenes/_cut.scss */
     0% {
       opacity: 1;
     }
-
-    /* line 26, ../scss/scenes/_cut.scss */
     100% {
       opacity: 0;
     }
   }
   @-webkit-keyframes fadeInFromBlack {
-    /* line 25, ../scss/scenes/_cut.scss */
     0% {
       opacity: 1;
     }
-
-    /* line 26, ../scss/scenes/_cut.scss */
     100% {
       opacity: 0;
     }
   }
   @keyframes fadeInFromBlack {
-    /* line 25, ../scss/scenes/_cut.scss */
     0% {
       opacity: 1;
     }
-
-    /* line 26, ../scss/scenes/_cut.scss */
     100% {
       opacity: 0;
     }
   }
-  /* line 1, ../scss/scenes/wonderland/_crash.scss */
   .page_crash-landing {
+    background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
+    background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
     background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
   }
 
   /* Credits Page */
-  /* line 56, credits/*.png */
   .credits-sprite {
     background-image: url('../img/credits-s628fd48b8d.png');
     background-repeat: no-repeat;
   }
 
-  /* line 5, ../scss/scenes/wonderland/_credits.scss */
   .scene-wonderland .page_credits {
     opacity: 1;
     z-index: 20;
     padding-top: 0;
     background: #a22882 url('../img/pat_argyle.svg?1378830277');
-    -moz-background-size: 25%, auto;
-    -o-background-size: 25%, auto;
-    -webkit-background-size: 25%, auto;
+    background: #a22882 url('../img/pat_argyle.svg?1378830277');
+    background: #a22882 url('../img/pat_argyle.svg?1378830277');
+    background-size: 25%, auto;
+    background-size: 25%, auto;
+    background-size: 25%, auto;
     background-size: 25%, auto;
   }
-  /* line 13, ../scss/scenes/wonderland/_credits.scss */
   .scene-wonderland .page_credits .alice, .scene-wonderland .page_credits .rabbit {
     background: url('../img/sprite_credits.svg?1379666519') no-repeat;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    -webkit-background-size: 100% auto;
+    background: url('../img/sprite_credits.svg?1379666519') no-repeat;
+    background: url('../img/sprite_credits.svg?1379666519') no-repeat;
+    background-size: 100% auto;
+    background-size: 100% auto;
+    background-size: 100% auto;
     background-size: 100% auto;
     position: absolute;
     top: 20%;
     z-index: 1;
   }
-  /* line 20, ../scss/scenes/wonderland/_credits.scss */
   .scene-wonderland .page_credits .alice {
     width: 37.54883%;
     padding-top: 48.63281%;
     background-size: 106.11183%;
     left: -30%;
   }
-  /* line 25, ../scss/scenes/wonderland/_credits.scss */
   .scene-wonderland .page_credits .rabbit {
     width: 39.84375%;
     padding-top: 43.94531%;
     background-position: 0 100%;
     right: -9%;
   }
-  /* line 31, ../scss/scenes/wonderland/_credits.scss */
   .scene-wonderland .page_credits.in-view .alice {
-    -moz-transition: left ease-in 1.25s 0.25s;
-    -o-transition: left ease-in 1.25s 0.25s;
-    -webkit-transition: left ease-in 1.25s;
+    -moz-transition: left 1.25s ease-in 0.25s;
+    -o-transition: left 1.25s ease-in 0.25s;
+    -webkit-transition: left 1.25s ease-in;
     -webkit-transition-delay: 0.25s;
-    transition: left ease-in 1.25s 0.25s;
+    transition: left 1.25s ease-in 0.25s;
     left: -23%;
   }
-  /* line 35, ../scss/scenes/wonderland/_credits.scss */
   .scene-wonderland .page_credits.in-view .rabbit {
-    -moz-transition: right ease-in 1s;
-    -o-transition: right ease-in 1s;
-    -webkit-transition: right ease-in;
-    -webkit-transition-delay: 1s;
-    transition: right ease-in 1s;
+    -moz-transition: right 1s ease-in;
+    -o-transition: right 1s ease-in;
+    -webkit-transition: right 1s ease-in;
+    transition: right 1s ease-in;
     right: -20%;
   }
 
-  /* line 42, ../scss/scenes/wonderland/_credits.scss */
   .continued {
     background: #f090b1;
     text-indent: 0;
@@ -1300,7 +1136,6 @@
     white-space: normal;
     width: 80%;
   }
-  /* line 50, ../scss/scenes/wonderland/_credits.scss */
   .continued h2 {
     font-family: "hellenic-wide";
     padding: 0.5em 14.5924%;
@@ -1310,7 +1145,6 @@
     text-transform: lowercase;
     text-align: center;
   }
-  /* line 57, ../scss/scenes/wonderland/_credits.scss */
   .continued h2 strong {
     font-family: "blue-goblet-alt";
     font-size: 0.66667em;
@@ -1318,11 +1152,9 @@
     display: block;
     padding-bottom: 0.1875em;
   }
-  /* line 63, ../scss/scenes/wonderland/_credits.scss */
   .continued h2 span {
     display: inline-block;
   }
-  /* line 67, ../scss/scenes/wonderland/_credits.scss */
   .continued h3 {
     font-family: "hellenic-wide";
     padding: 0.5em 14.5924%;
@@ -1332,18 +1164,18 @@
     text-transform: lowercase;
     text-align: center;
   }
-  /* line 75, ../scss/scenes/wonderland/_credits.scss */
   .continued .action {
     background: url('../img/bg_plaque.svg?1386011185') 0 0 no-repeat;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('../img/bg_plaque.svg?1386011185') 0 0 no-repeat;
+    background: url('../img/bg_plaque.svg?1386011185') 0 0 no-repeat;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
     color: #ffeef4;
     padding: 1.33333em 8.25%;
     margin: 0 14.5924%;
   }
-  /* line 81, ../scss/scenes/wonderland/_credits.scss */
   .continued .action a:link, .continued .action a:visited, .continued .action a:hover, .continued .action a:active {
     position: relative;
     -moz-border-radius: 0.5em;
@@ -1357,44 +1189,49 @@
     text-align: center;
     margin-top: 0.66667em;
   }
-  /* line 92, ../scss/scenes/wonderland/_credits.scss */
   .continued .action a:hover, .continued .action a:active, .continued .action a:focus {
     color: #fff;
-    -moz-transition: top 0.5s left 0.5s;
-    -o-transition: top 0.5s left 0.5s;
-    -webkit-transition: top 0.5s left 0.5s;
-    transition: top 0.5s left 0.5s;
+    -moz-transition: top 0.5s, left 0.5s;
+    -o-transition: top 0.5s, left 0.5s;
+    -webkit-transition: top 0.5s, left 0.5s;
+    transition: top 0.5s, left 0.5s;
     top: .15em;
     left: .15em;
   }
-  /* line 98, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning {
     padding: 2.66667em 8.25% 1.33333em;
   }
-  /* line 100, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning hr {
     border: 0;
     height: 1.33333em;
     margin-left: 8.25%;
     margin-right: 8.25%;
     background: url('../img/hr.svg?1386011835') 0 0 no-repeat;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background: url('../img/hr.svg?1386011835') 0 0 no-repeat;
+    background: url('../img/hr.svg?1386011835') 0 0 no-repeat;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-size: 100% 100%;
     background-size: 100% 100%;
   }
-  /* line 108, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li {
     font-size: 1.125em;
     line-height: 1.33333em;
     text-align: center;
     margin: 1em 0 0.33333em;
   }
-  /* line 117, ../scss/scenes/wonderland/_credits.scss */
+}
+@media screen and (min-aspect-ratio: 4 / 3), screen and (orientation: landscape), screen and (min-width: 44.875em) {
+  .continued .learning li {
+    float: left;
+    margin-left: 5.5742968%;
+    width: 29.6171355%;
+  }
+}
+@media screen {
   .continued .learning li:first-child {
     margin-left: 0;
   }
-  /* line 118, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li a {
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
@@ -1404,7 +1241,6 @@
     padding: 0.66667em 5.5743%;
     position: relative;
   }
-  /* line 125, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li strong {
     display: block;
     font-size: 1.33333em;
@@ -1412,11 +1248,9 @@
     font-weight: 700;
     text-align: center;
   }
-  /* line 131, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li em {
     font-style: italic;
   }
-  /* line 134, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li svg {
     display: block;
     margin: 0 auto;
@@ -1424,7 +1258,6 @@
     height: 4em;
     margin-bottom: 0.66667em;
   }
-  /* line 141, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li .source {
     display: block;
     font-size: 0.77778em;
@@ -1433,30 +1266,24 @@
     padding-top: 0.33333em;
     border-top: dotted 1px #82002d;
   }
-  /* line 148, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li .at {
     font-size: 0.71429em;
     line-height: 2.4em;
   }
-  /* line 151, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li a:link, .continued .learning li a:visited, .continued .learning li a:hover, .continued .learning li a:active {
     color: #82002d;
     text-decoration: none;
   }
-  /* line 155, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li a:hover, .continued .learning li a:active, .continued .learning li a:focus {
     color: #ffeef4;
     background-color: #ea6391;
   }
-  /* line 158, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li a:hover path, .continued .learning li a:active path, .continued .learning li a:focus path {
     fill: #ffeef4 !important;
   }
-  /* line 161, ../scss/scenes/wonderland/_credits.scss */
   .continued .learning li a:hover .source, .continued .learning li a:active .source, .continued .learning li a:focus .source {
     border-color: #ffeef4;
   }
-  /* line 165, ../scss/scenes/wonderland/_credits.scss */
   .continued .author {
     font-size: 0.77778em;
     line-height: 1.71429em;
@@ -1466,20 +1293,17 @@
     box-sizing: border-box;
     padding-bottom: 1.71429em;
   }
-  /* line 171, ../scss/scenes/wonderland/_credits.scss */
   .continued .author a:link, .continued .author a:visited, .continued .author a:hover, .continued .author a:active {
     color: #64044b;
     padding: .1em .1em .05em;
     text-decoration: none;
     border-bottom: dotted 1px #82002d;
   }
-  /* line 177, ../scss/scenes/wonderland/_credits.scss */
   .continued .author a:hover, .continued .author a:active {
     color: #ffeef4;
     background: #ea6391;
     border: 0;
   }
-  /* line 183, ../scss/scenes/wonderland/_credits.scss */
   .continued .img-wrap {
     background: #a22782;
     -moz-border-radius: 50%;
@@ -1493,23 +1317,13 @@
     width: 5em;
     height: 5em;
   }
-  /* line 193, ../scss/scenes/wonderland/_credits.scss */
   .continued img {
     margin: 0 auto;
     width: 4.5em;
     height: auto;
   }
 }
-@media screen and (min-aspect-ratio: 4 / 3), screen and (orientation: landscape), screen and (min-width: 44.875em) {
-  /* line 108, ../scss/scenes/wonderland/_credits.scss */
-  .continued .learning li {
-    float: left;
-    margin-left: 5.5742968%;
-    width: 29.6171355%;
-  }
-}
 @media print {
-  /* line 2, ../scss/_print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1518,25 +1332,21 @@
     text-shadow: none !important;
   }
 
-  /* line 9, ../scss/_print.scss */
   body {
     background: #fff !important;
     color: #000 !important;
   }
 
-  /* line 13, ../scss/_print.scss */
   a,
   a:visited {
     text-decoration: none;
   }
 
-  /* line 18, ../scss/_print.scss */
   a[href]:after {
     content: " (" attr(href) ")";
     text-decoration: underline;
   }
 
-  /* line 23, ../scss/_print.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -1544,33 +1354,28 @@
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 31, ../scss/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 37, ../scss/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 43, ../scss/_print.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 47, ../scss/_print.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 52, ../scss/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -1578,7 +1383,6 @@
   @page {
     margin: 0.5cm;
   }
-  /* line 60, ../scss/_print.scss */
   p,
   h2,
   h3 {
@@ -1586,29 +1390,24 @@
     widows: 3;
   }
 
-  /* line 67, ../scss/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 73, ../scss/_print.scss */
   svg,
   #to-tunnels {
     display: none;
   }
 
-  /* line 75, ../scss/_print.scss */
   .author a:after {
     content: "";
   }
 
-  /* line 76, ../scss/_print.scss */
   .author {
     text-align: center;
   }
 
-  /* line 77, ../scss/_print.scss */
   img {
     border-top: .5mm grey solid;
     display: block;

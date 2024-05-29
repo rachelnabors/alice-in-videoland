@@ -1,89 +1,108 @@
-$alice-fall: 'alice-fall';
+$alice-fall: "alice-fall";
 @include animation-sequence-sprite-generator($alice-fall);
 
 .scene-hole {
-	@include background(
-		image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
-		image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
-		$earth);
-	@include background-size(
-		percentage(100/$max-width) auto, 
-		percentage(100/$max-width) auto);
+    @include background(
+        image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
+        image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
+        $earth
+    );
+    @include background-size(
+        percentage(100 / $max-width) auto,
+        percentage(100 / $max-width) auto
+    );
 }
 
-.scene .page_tunnels { //.scene for specificity
-	@include background(
-		image-url("tunnels.svg") no-repeat,
-		image-url("bg_tunnel-specks.png") repeat);
-	@include background-size(
-		100% auto, 
-		auto auto);
-	padding-top: percentage(1000/$max-width); // 1536
+.scene .page_tunnels {
+    //.scene for specificity
+    @include background(
+        image-url("tunnels.svg") no-repeat,
+        image-url("bg_tunnel-specks.png") repeat
+    );
+    @include background-size(100% auto, auto auto);
+    aspect-ratio: 2048/1000; //1536
 }
 
 // The Tunnel
 
 #tunnel {
-	position: relative;
-	z-index:0; //allows us to z-index alice locally.
-  	.page {
-		@include background(
-			image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
-			image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
-			image-url("bg_tunnel-furniture.svg") center 0 no-repeat,
-			image-url("bg_tunnel-specks.png") repeat,
-			$earth);
-		@include background-size(
-			percentage(100/$max-width) auto, 
-			percentage(100/$max-width) auto, 
-			percentage(1800/$max-width) auto, 
-			auto auto);
-		padding-top: 161%;
-	}
+    position: relative;
+    z-index: 0; //allows us to z-index alice locally.
+    .page {
+        @include background(
+            image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
+            image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
+            image-url("bg_tunnel-furniture.svg") center 0 no-repeat,
+            image-url("bg_tunnel-specks.png") repeat,
+            $earth
+        );
+        @include background-size(
+            percentage(100 / $max-width) auto,
+            percentage(100 / $max-width) auto,
+            percentage(1800 / $max-width) auto,
+            auto auto
+        );
+    }
 }
 
 //let Alice and Cheshire hover above
-.page_falling { z-index: -1;}
+.page_falling {
+    z-index: -1;
+}
 
 // Characters
 
 .alice-falling {
-	@include animation-still($alice-fall, 1);
-	left: 50%;
-	@include translate(-50%, 0);
-	position: absolute; 
-	top: 0; 
-	z-index: 1;
-	#tunnel & {
-		@include background-size( 100% auto);
-	}
+    @include animation-still($alice-fall, 1);
+    left: 50%;
+    @include translate(-50%, 0);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    #tunnel & {
+        @include background-size(100% auto);
+    }
 }
 
 .frightened .alice-falling {
-	@include animation-sequence-span($alice-fall, 1.5s, "freak-out", "alice-frightened_1", "alice-frightened_2", infinite, false, false);
-	@include background-size( 100% auto);
+    @include animation-sequence-span(
+        $alice-fall,
+        1.5s,
+        "freak-out",
+        "alice-frightened_1",
+        "alice-frightened_2",
+        infinite,
+        false,
+        false
+    );
+    @include background-size(100% auto);
 }
 
-@include animation-sequence-keyframes-span($alice-fall, "freak-out", "alice-frightened_1", "alice-frightened_2");
+@include animation-sequence-keyframes-span(
+    $alice-fall,
+    "freak-out",
+    "alice-frightened_1",
+    "alice-frightened_2"
+);
 
 .curious .alice-falling {
-	@include animation-still($alice-fall, 3, false);
+    @include animation-still($alice-fall, 3, false);
 }
 
 .sleeping .alice-falling {
-	@include animation-still($alice-fall, 4, false);
+    @include animation-still($alice-fall, 4, false);
 }
 
 .bored .alice-falling {
-	@include animation-still($alice-fall, 5, false);
+    @include animation-still($alice-fall, 5, false);
 }
 
 .sticky-wrapper {
-	position: absolute;// take wrapper out of flow.
-	width: 100%;
+    position: absolute; // take wrapper out of flow.
+    width: 100%;
 }
 
 .stuck.alice-falling {
-	position: fixed;
-	top: 0;
+    position: fixed;
+    top: 0;
 }

@@ -1,24 +1,28 @@
-// all but the park start hidden. 
+// all but the park start hidden.
 .scene {
-	@extend %hidden;
-	margin: 0 auto;
+    @extend %hidden;
+    margin: 0 auto;
 }
 
-// Scenes that get ".cue"-d are shown upon cue. 
+// Scenes that get ".cue"-d are shown upon cue.
 // Cue must actively be added with JS.
 .scene.cue {
-	@extend %shown;
+    @extend %shown;
 }
 
 // Common to All Pages
-.scene .page { // .scene for specificity
-	@include transform(scale3d(1,1,1));
-	@extend %imgreplace;
-	padding-top: 75%; //maintain a 3 to 4 ratio 
-	position: relative;
-	z-index: 0;
-	@include background-size( 100% auto);
-	@include background-origin( padding-box);
+.scene .page {
+    // .scene for specificity
+    @include transform(scale3d(1, 1, 1));
+    @extend %imgreplace;
+    /* padding-top: 75%; //maintain a 3 to 4 ratio  */
+    aspect-ratio: 4/3;
+    position: relative;
+    z-index: 0;
+    @include background-size(100% auto);
+    @include background-origin(padding-box);
 }
 
-.cue {	@extend %imgreplace;}
+.cue {
+    @extend %imgreplace;
+}
