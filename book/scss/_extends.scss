@@ -1,24 +1,27 @@
 // Extendables
-%visuallyhidden { // hidden from view, not from screen readers!
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; 
+%visuallyhidden {
+    // hidden from view, not from screen readers!
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    white-space: nowrap;
 }
 
 %hidden {
-	display: none !important;
+    display: none !important;
 }
 
 %shown {
-	display: block !important;
+    display: block !important;
 }
 
 %imgreplace {
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 %clearfix:before,
@@ -34,9 +37,9 @@
 // http://www.thecssninja.com/javascript/pointer-events-60fps
 %disable-hover,
 %disable-hover * {
-  pointer-events: none !important;
+    pointer-events: none !important;
 }
 
-%disable-scroll{
-  overflow: hidden;
+%disable-scroll {
+    overflow: hidden;
 }

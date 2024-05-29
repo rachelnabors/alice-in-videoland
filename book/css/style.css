@@ -55,13 +55,14 @@
     display: block;
   }
 
-  .page > p {
+  .page > p, #to-tunnels span {
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
+    clip-path: inset(50%);
     height: 1px;
     width: 1px;
-    margin: -1px;
+    white-space: nowrap;
   }
 
   .scene {
