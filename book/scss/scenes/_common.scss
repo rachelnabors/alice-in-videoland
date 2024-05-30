@@ -13,12 +13,14 @@
 // Common to All Pages
 .scene .page {
     // .scene for specificity
-    @include transform(scale3d(1, 1, 1));
+    // @include transform(scale3d(1, 1, 1));
     @extend %imgreplace;
     /* padding-top: 75%; //maintain a 3 to 4 ratio  */
     aspect-ratio: 4/3;
+    margin: 0 auto;
     position: relative;
     z-index: 0;
+    max-height: 100vh;
     @include background-size(100% auto);
     @include background-origin(padding-box);
 }
