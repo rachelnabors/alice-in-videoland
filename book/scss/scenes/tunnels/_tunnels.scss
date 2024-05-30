@@ -2,6 +2,7 @@ $alice-fall: "alice-fall";
 @include animation-sequence-sprite-generator($alice-fall);
 
 .scene-hole {
+    scroll-behavior: smooth;
     @include background(
         image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
         image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
