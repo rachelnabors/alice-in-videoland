@@ -12,6 +12,15 @@ Array.from(document.querySelectorAll(".page")).forEach((page) => {
   pageObserverHandler(page);
 });
 
+// Going down the tunnels
+
+// listen for click on the link #to-tunnels
+document.querySelector("#to-tunnels").addEventListener("click", function (e) {
+  e.currentTarget.classList.add("activated");
+  e.currentTarget.classList.remove("unactivated");
+  document.querySelector("#tunnels").classList.add("cue");
+});
+//
 // stop running animations when the page is not visible to the user
 
 // const box = document.querySelector(".box");
