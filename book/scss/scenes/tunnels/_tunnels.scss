@@ -15,18 +15,6 @@ html {
     }
 }
 
-/* .scene-hole {
-    @include background(
-        image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
-        image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
-        $earth
-    );
-    @include background-size(
-        percentage(100 / $max-width) auto,
-        percentage(100 / $max-width) auto
-    );
-} */
-
 .scene .page_tunnels {
     //.scene for specificity
     @include background(
@@ -74,6 +62,9 @@ html {
     position: absolute;
     top: 0;
     z-index: 1;
+    aspect-ratio: 640 / 998;
+    width: 38%;
+    height: auto;
     #tunnel & {
         @include background-size(100% auto);
     }

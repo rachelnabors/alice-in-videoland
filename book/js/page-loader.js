@@ -1,4 +1,4 @@
-export const loader = () => {
+export const loader = (devStat) => {
   const html = document.querySelector("html");
   // Create the loader div and set its inner HTML directly
   const loaderDiv = document.createElement("div");
@@ -16,14 +16,20 @@ export const loader = () => {
   // Append the loader div to the loading card
   document.querySelector(".loading-card").appendChild(loaderDiv);
 
-  setTimeout(function () {
-    // change state to loaded
-    html.classList.add("loaded");
+  if (devStat === "production") {
     setTimeout(function () {
-      html.classList.remove("loading");
-    }, 3500);
-
-    // Show park scene.
+      // change state to loaded
+      html.classList.add("loaded");
+      setTimeout(function () {
+        html.classList.remove("loading");
+      }, 3500);
+      // Show park scene.
+      document.querySelector(".scene-park").classList.add("cue");
+    }, 4000); //gotta wait a lil' bit
+  } else {
+    console.log("Development mode");
+    html.classList.add("loaded");
+    html.classList.remove("loading");
     document.querySelector(".scene-park").classList.add("cue");
-  }, 4000); //gotta wait a lil' bit
+  }
 };

@@ -405,10 +405,14 @@
     margin: 0 auto;
   }
 
+  .scene {
+    margin: 0 auto;
+    width: Min(100%, 133vh);
+  }
+
   .scene .page {
     /* padding-top: 75%; //maintain a 3 to 4 ratio  */
     aspect-ratio: 4/3;
-    margin: 0 auto;
     position: relative;
     z-index: 0;
     max-height: 100vh;
@@ -894,17 +898,6 @@
   }
 }
 @media screen {
-  /* .scene-hole {
-      @include background(
-          image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
-          image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
-          $earth
-      );
-      @include background-size(
-          percentage(100 / $max-width) auto,
-          percentage(100 / $max-width) auto
-      );
-  } */
   .scene .page_tunnels {
     background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
     background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
@@ -946,6 +939,9 @@
     position: absolute;
     top: 0;
     z-index: 1;
+    aspect-ratio: 640 / 998;
+    width: 38%;
+    height: auto;
   }
   #tunnel .alice-falling {
     background-size: 100% auto;
