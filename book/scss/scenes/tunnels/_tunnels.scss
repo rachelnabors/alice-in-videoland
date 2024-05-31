@@ -4,6 +4,16 @@ $alice-fall: "alice-fall";
 html {
     scroll-behavior: smooth !important;
 }
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+    *,
+    html {
+        scroll-behavior: auto !important;
+    }
+}
 .scene-hole {
     @include background(
         image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,

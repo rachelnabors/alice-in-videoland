@@ -20,7 +20,11 @@ document.querySelector("#to-tunnels").addEventListener("click", function (e) {
   e.currentTarget.classList.remove("unactivated");
   document.querySelector("#tunnels").classList.add("cue");
 });
-//
+
+// at end of tunnel,
+//  add .cue to .cut & remove it after its animation over
+//  then add .cue to .scene-wonderland/scroll it into view
+
 // stop running animations when the page is not visible to the user
 
 // const box = document.querySelector(".box");
