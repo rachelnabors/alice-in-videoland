@@ -670,10 +670,11 @@
   }
 
   .page_the-hole .foreground {
+    --gradient-height: 1.5;
     height: 100%;
-    background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
-    background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
-    background: url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
+    background: linear-gradient(0deg, #000000 Calc(0% / var(--gradient-height)), rgba(0, 0, 0, 0.738) Calc(19% / var(--gradient-height)), rgba(0, 0, 0, 0.541) Calc(34% / var(--gradient-height)), rgba(0, 0, 0, 0.382) Calc(47% / var(--gradient-height)), rgba(0, 0, 0, 0.278) Calc(56.5% / var(--gradient-height)), rgba(0, 0, 0, 0.194) Calc(65% / var(--gradient-height)), rgba(0, 0, 0, 0.126) Calc(73% / var(--gradient-height)), rgba(0, 0, 0, 0.075) Calc(80.2% / var(--gradient-height)), rgba(0, 0, 0, 0.042) Calc(86.1% / var(--gradient-height)), rgba(0, 0, 0, 0.021) Calc(91% / var(--gradient-height)), rgba(0, 0, 0, 0.008) Calc(95.2% / var(--gradient-height)), rgba(0, 0, 0, 0.002) Calc(98.2% / var(--gradient-height)), rgba(0, 0, 0, 0) Calc(100% / var(--gradient-height))), url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
+    background: linear-gradient(0deg, #000000 Calc(0% / var(--gradient-height)), rgba(0, 0, 0, 0.738) Calc(19% / var(--gradient-height)), rgba(0, 0, 0, 0.541) Calc(34% / var(--gradient-height)), rgba(0, 0, 0, 0.382) Calc(47% / var(--gradient-height)), rgba(0, 0, 0, 0.278) Calc(56.5% / var(--gradient-height)), rgba(0, 0, 0, 0.194) Calc(65% / var(--gradient-height)), rgba(0, 0, 0, 0.126) Calc(73% / var(--gradient-height)), rgba(0, 0, 0, 0.075) Calc(80.2% / var(--gradient-height)), rgba(0, 0, 0, 0.042) Calc(86.1% / var(--gradient-height)), rgba(0, 0, 0, 0.021) Calc(91% / var(--gradient-height)), rgba(0, 0, 0, 0.008) Calc(95.2% / var(--gradient-height)), rgba(0, 0, 0, 0.002) Calc(98.2% / var(--gradient-height)), rgba(0, 0, 0, 0) Calc(100% / var(--gradient-height))), url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
+    background: linear-gradient(0deg, #000000 Calc(0% / var(--gradient-height)), rgba(0, 0, 0, 0.738) Calc(19% / var(--gradient-height)), rgba(0, 0, 0, 0.541) Calc(34% / var(--gradient-height)), rgba(0, 0, 0, 0.382) Calc(47% / var(--gradient-height)), rgba(0, 0, 0, 0.278) Calc(56.5% / var(--gradient-height)), rgba(0, 0, 0, 0.194) Calc(65% / var(--gradient-height)), rgba(0, 0, 0, 0.126) Calc(73% / var(--gradient-height)), rgba(0, 0, 0, 0.075) Calc(80.2% / var(--gradient-height)), rgba(0, 0, 0, 0.042) Calc(86.1% / var(--gradient-height)), rgba(0, 0, 0, 0.021) Calc(91% / var(--gradient-height)), rgba(0, 0, 0, 0.008) Calc(95.2% / var(--gradient-height)), rgba(0, 0, 0, 0.002) Calc(98.2% / var(--gradient-height)), rgba(0, 0, 0, 0) Calc(100% / var(--gradient-height))), url('../img/bg_park5_2.png?1377533067') no-repeat 100% 100%;
     background-size: 100% auto;
     background-size: 100% auto;
     background-size: 100% auto;
@@ -899,13 +900,14 @@
 }
 @media screen {
   .scene .page_tunnels {
-    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
-    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
-    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
-    background-size: 100% auto, auto auto;
-    background-size: 100% auto, auto auto;
-    background-size: 100% auto, auto auto;
-    background-size: 100% auto, auto auto;
+    --gradient-height: 10;
+    background: linear-gradient(180deg, #000000 Calc(0% / var(--gradient-height)), rgba(0, 0, 0, 0.738) Calc(19% / var(--gradient-height)), rgba(0, 0, 0, 0.541) Calc(34% / var(--gradient-height)), rgba(0, 0, 0, 0.382) Calc(47% / var(--gradient-height)), rgba(0, 0, 0, 0.278) Calc(56.5% / var(--gradient-height)), rgba(0, 0, 0, 0.194) Calc(65% / var(--gradient-height)), rgba(0, 0, 0, 0.126) Calc(73% / var(--gradient-height)), rgba(0, 0, 0, 0.075) Calc(80.2% / var(--gradient-height)), rgba(0, 0, 0, 0.042) Calc(86.1% / var(--gradient-height)), rgba(0, 0, 0, 0.021) Calc(91% / var(--gradient-height)), rgba(0, 0, 0, 0.008) Calc(95.2% / var(--gradient-height)), rgba(0, 0, 0, 0.002) Calc(98.2% / var(--gradient-height)), rgba(0, 0, 0, 0) Calc(100% / var(--gradient-height))), url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: linear-gradient(180deg, #000000 Calc(0% / var(--gradient-height)), rgba(0, 0, 0, 0.738) Calc(19% / var(--gradient-height)), rgba(0, 0, 0, 0.541) Calc(34% / var(--gradient-height)), rgba(0, 0, 0, 0.382) Calc(47% / var(--gradient-height)), rgba(0, 0, 0, 0.278) Calc(56.5% / var(--gradient-height)), rgba(0, 0, 0, 0.194) Calc(65% / var(--gradient-height)), rgba(0, 0, 0, 0.126) Calc(73% / var(--gradient-height)), rgba(0, 0, 0, 0.075) Calc(80.2% / var(--gradient-height)), rgba(0, 0, 0, 0.042) Calc(86.1% / var(--gradient-height)), rgba(0, 0, 0, 0.021) Calc(91% / var(--gradient-height)), rgba(0, 0, 0, 0.008) Calc(95.2% / var(--gradient-height)), rgba(0, 0, 0, 0.002) Calc(98.2% / var(--gradient-height)), rgba(0, 0, 0, 0) Calc(100% / var(--gradient-height))), url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: linear-gradient(180deg, #000000 Calc(0% / var(--gradient-height)), rgba(0, 0, 0, 0.738) Calc(19% / var(--gradient-height)), rgba(0, 0, 0, 0.541) Calc(34% / var(--gradient-height)), rgba(0, 0, 0, 0.382) Calc(47% / var(--gradient-height)), rgba(0, 0, 0, 0.278) Calc(56.5% / var(--gradient-height)), rgba(0, 0, 0, 0.194) Calc(65% / var(--gradient-height)), rgba(0, 0, 0, 0.126) Calc(73% / var(--gradient-height)), rgba(0, 0, 0, 0.075) Calc(80.2% / var(--gradient-height)), rgba(0, 0, 0, 0.042) Calc(86.1% / var(--gradient-height)), rgba(0, 0, 0, 0.021) Calc(91% / var(--gradient-height)), rgba(0, 0, 0, 0.008) Calc(95.2% / var(--gradient-height)), rgba(0, 0, 0, 0.002) Calc(98.2% / var(--gradient-height)), rgba(0, 0, 0, 0) Calc(100% / var(--gradient-height))), url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background-size: auto auto, 100% auto, auto auto;
+    background-size: auto auto, 100% auto, auto auto;
+    background-size: auto auto, 100% auto, auto auto;
+    background-size: auto auto, 100% auto, auto auto;
     aspect-ratio: 2048/1000;
   }
 

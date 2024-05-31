@@ -17,12 +17,29 @@ html {
 
 .scene .page_tunnels {
     //.scene for specificity
+    --gradient-height: 10;
     @include background(
+        linear-gradient(
+            180deg,
+            hsl(0, 0%, 0%) Calc(0% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.738) Calc(19% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.541) Calc(34% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.382) Calc(47% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.278) Calc(56.5% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.194) Calc(65% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.126) Calc(73% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.075) Calc(80.2% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.042) Calc(86.1% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.021) Calc(91% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.008) Calc(95.2% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0.002) Calc(98.2% / var(--gradient-height)),
+            hsla(0, 0%, 0%, 0) Calc(100% / var(--gradient-height))
+        ),
         image-url("tunnels.svg") no-repeat,
         image-url("bg_tunnel-specks.png") repeat,
         $earth
     );
-    @include background-size(100% auto, auto auto);
+    @include background-size(auto auto, 100% auto, auto auto);
     aspect-ratio: 2048/1000; //1536
 }
 
