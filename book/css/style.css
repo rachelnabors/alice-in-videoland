@@ -914,11 +914,9 @@
   #tunnel {
     position: relative;
     z-index: 0;
-  }
-  #tunnel .page {
-    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
-    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
-    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 repeat-y, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 repeat-y, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, url('../img/bg_tunnel-furniture.svg?1379267001') center 0 repeat-y, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
     background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
     background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
     background-size: 4.88281% auto, 4.88281% auto, 87.89063% auto, auto auto;
