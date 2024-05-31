@@ -14,7 +14,8 @@ html {
         scroll-behavior: auto !important;
     }
 }
-.scene-hole {
+
+/* .scene-hole {
     @include background(
         image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
         image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
@@ -24,13 +25,14 @@ html {
         percentage(100 / $max-width) auto,
         percentage(100 / $max-width) auto
     );
-}
+} */
 
 .scene .page_tunnels {
     //.scene for specificity
     @include background(
         image-url("tunnels.svg") no-repeat,
-        image-url("bg_tunnel-specks.png") repeat
+        image-url("bg_tunnel-specks.png") repeat,
+        $earth
     );
     @include background-size(100% auto, auto auto);
     aspect-ratio: 2048/1000; //1536

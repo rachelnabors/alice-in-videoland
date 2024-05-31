@@ -894,20 +894,21 @@
   }
 }
 @media screen {
-  .scene-hole {
-    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, #6c373f;
-    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, #6c373f;
-    background: url('../img/bg-tunnel-border-left.svg?1378751783') 0 0 repeat-y, url('../img/bg-tunnel-border-right.svg?1378751720') 100% 0 repeat-y, #6c373f;
-    background-size: 4.88281% auto, 4.88281% auto;
-    background-size: 4.88281% auto, 4.88281% auto;
-    background-size: 4.88281% auto, 4.88281% auto;
-    background-size: 4.88281% auto, 4.88281% auto;
-  }
-
+  /* .scene-hole {
+      @include background(
+          image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
+          image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
+          $earth
+      );
+      @include background-size(
+          percentage(100 / $max-width) auto,
+          percentage(100 / $max-width) auto
+      );
+  } */
   .scene .page_tunnels {
-    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat;
-    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat;
-    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat;
+    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
+    background: url('../img/tunnels.svg?1379668445') no-repeat, url('../img/bg_tunnel-specks.png?1374696235') repeat, #6c373f;
     background-size: 100% auto, auto auto;
     background-size: 100% auto, auto auto;
     background-size: 100% auto, auto auto;
