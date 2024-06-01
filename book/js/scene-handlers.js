@@ -34,3 +34,21 @@ const pagesObserver = new IntersectionObserver(
 export let pageObserverHandler = (page) => {
   pagesObserver.observe(page);
 };
+
+// at bottom of tunnel, add .cue to .scene-cut as well as .scene-wonderland
+const tunnelEndObserver = new IntersectionObserver(
+  (page) => {
+    if (page[0].isIntersecting) {
+      document.querySelector(".scene-cut").classList.add("cue");
+      const wonderlandScene = document.querySelector(".scene-wonderland");
+      wonderlandScene.classList.add("cue");
+      wonderlandScene.focus();
+      tunnelEndObserver.unobserve(page[0].target);
+    }
+  },
+  { threshold: 1 },
+);
+
+export let tunnelEndObserverHandler = (page) => {
+  tunnelEndObserver.observe(page);
+};

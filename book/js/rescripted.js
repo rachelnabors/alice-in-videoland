@@ -1,5 +1,9 @@
 import { loader } from "./page-loader.js";
-import { sceneObserverHandler, pageObserverHandler } from "./scene-handlers.js";
+import {
+  sceneObserverHandler,
+  pageObserverHandler,
+  tunnelEndObserverHandler,
+} from "./scene-handlers.js";
 
 loader();
 
@@ -11,6 +15,8 @@ Array.from(document.querySelectorAll(".scene")).forEach((scene) => {
 Array.from(document.querySelectorAll(".page")).forEach((page) => {
   pageObserverHandler(page);
 });
+
+tunnelEndObserverHandler(document.querySelector(".falling_weird"));
 
 // Going down the tunnels
 
