@@ -1,27 +1,12 @@
 // Cut
-.scene-cut { 
-	background: #000;
-	height: 100%; width: 100% !important;
-	position: fixed;
-	top: 0; left: 0;
-	@include transition(opacity 2s ease-out 2s);
-	z-index: 10;
-	&.cue {
-		@include animation(fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards);
-	}
-}
-
-@include keyframes(fadeToBlack) {
-	// because transitioning from display: none doesn't work. 
-	//http://stackoverflow.com/questions/8449933/animation-css3-display-opacity
-    0% { opacity: 0;}
-    100% { opacity: 1; }
-}
-
-
-@include keyframes(fadeInFromBlack) {
-	// because transitioning from display: none doesn't work. 
-	//http://stackoverflow.com/questions/8449933/animation-css3-display-opacity
-    0% { opacity: 1;}
-    100% { opacity: 0; }
+#scene-cut {
+    background: #000;
+    height: 100%;
+    width: 100% !important;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
 }

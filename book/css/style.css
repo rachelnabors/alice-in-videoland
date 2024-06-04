@@ -1008,74 +1008,18 @@
     top: 0;
   }
 
-  .scene-cut {
+  #scene-cut {
     background: #000;
     height: 100%;
     width: 100% !important;
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
-    -moz-transition: opacity 2s ease-out 2s;
-    -o-transition: opacity 2s ease-out 2s;
-    -webkit-transition: opacity 2s ease-out;
-    -webkit-transition-delay: 2s;
-    transition: opacity 2s ease-out 2s;
     z-index: 10;
-  }
-  .scene-cut.cue {
-    -moz-animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
-    -webkit-animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
-    animation: fadeToBlack 2s forwards, fadeInFromBlack 2s 4s forwards;
+    pointer-events: none;
   }
 
-  @-moz-keyframes fadeToBlack {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes fadeToBlack {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeToBlack {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-moz-keyframes fadeInFromBlack {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes fadeInFromBlack {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes fadeInFromBlack {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
   .page_crash-landing {
     background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
     background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
@@ -1090,8 +1034,8 @@
 
   .scene-wonderland .page_credits {
     opacity: 1;
-    z-index: 20;
-    padding-top: 0;
+    /* z-index: 20; */
+    aspect-ratio: auto;
     background: #a22882 url('../img/pat_argyle.svg?1378830277');
     background: #a22882 url('../img/pat_argyle.svg?1378830277');
     background: #a22882 url('../img/pat_argyle.svg?1378830277');
@@ -1100,7 +1044,8 @@
     background-size: 25%, auto;
     background-size: 25%, auto;
   }
-  .scene-wonderland .page_credits .alice, .scene-wonderland .page_credits .rabbit {
+  .scene-wonderland .page_credits .alice,
+  .scene-wonderland .page_credits .rabbit {
     background: url('../img/sprite_credits.svg?1379666519') no-repeat;
     background: url('../img/sprite_credits.svg?1379666519') no-repeat;
     background: url('../img/sprite_credits.svg?1379666519') no-repeat;
@@ -1189,7 +1134,10 @@
     padding: 1.33333em 8.25%;
     margin: 0 14.5924%;
   }
-  .continued .action a:link, .continued .action a:visited, .continued .action a:hover, .continued .action a:active {
+  .continued .action a:link,
+  .continued .action a:visited,
+  .continued .action a:hover,
+  .continued .action a:active {
     position: relative;
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
@@ -1202,14 +1150,16 @@
     text-align: center;
     margin-top: 0.66667em;
   }
-  .continued .action a:hover, .continued .action a:active, .continued .action a:focus {
+  .continued .action a:hover,
+  .continued .action a:active,
+  .continued .action a:focus {
     color: #fff;
     -moz-transition: top 0.5s, left 0.5s;
     -o-transition: top 0.5s, left 0.5s;
     -webkit-transition: top 0.5s, left 0.5s;
     transition: top 0.5s, left 0.5s;
-    top: .15em;
-    left: .15em;
+    top: 0.15em;
+    left: 0.15em;
   }
   .continued .learning {
     padding: 2.66667em 8.25% 1.33333em;
@@ -1283,18 +1233,27 @@
     font-size: 0.71429em;
     line-height: 2.4em;
   }
-  .continued .learning li a:link, .continued .learning li a:visited, .continued .learning li a:hover, .continued .learning li a:active {
+  .continued .learning li a:link,
+  .continued .learning li a:visited,
+  .continued .learning li a:hover,
+  .continued .learning li a:active {
     color: #82002d;
     text-decoration: none;
   }
-  .continued .learning li a:hover, .continued .learning li a:active, .continued .learning li a:focus {
+  .continued .learning li a:hover,
+  .continued .learning li a:active,
+  .continued .learning li a:focus {
     color: #ffeef4;
     background-color: #ea6391;
   }
-  .continued .learning li a:hover path, .continued .learning li a:active path, .continued .learning li a:focus path {
+  .continued .learning li a:hover path,
+  .continued .learning li a:active path,
+  .continued .learning li a:focus path {
     fill: #ffeef4 !important;
   }
-  .continued .learning li a:hover .source, .continued .learning li a:active .source, .continued .learning li a:focus .source {
+  .continued .learning li a:hover .source,
+  .continued .learning li a:active .source,
+  .continued .learning li a:focus .source {
     border-color: #ffeef4;
   }
   .continued .author {
@@ -1306,13 +1265,17 @@
     box-sizing: border-box;
     padding-bottom: 1.71429em;
   }
-  .continued .author a:link, .continued .author a:visited, .continued .author a:hover, .continued .author a:active {
+  .continued .author a:link,
+  .continued .author a:visited,
+  .continued .author a:hover,
+  .continued .author a:active {
     color: #64044b;
-    padding: .1em .1em .05em;
+    padding: 0.1em 0.1em 0.05em;
     text-decoration: none;
     border-bottom: dotted 1px #82002d;
   }
-  .continued .author a:hover, .continued .author a:active {
+  .continued .author a:hover,
+  .continued .author a:active {
     color: #ffeef4;
     background: #ea6391;
     border: 0;

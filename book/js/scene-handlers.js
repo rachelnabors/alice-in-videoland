@@ -1,3 +1,6 @@
+import { jumpToAnchor } from "./utilities.js";
+
+const cutScene = document.getElementById("scene-cut");
 // Each SCENE gets a class of CUE when it's XX in the VIEWPORT?;
 const sceneObserver = new IntersectionObserver(
   (scenes) => {
@@ -38,11 +41,11 @@ export let pageObserverHandler = (page) => {
 // at bottom of tunnel, add .cue to .scene-cut as well as .scene-wonderland
 const tunnelEndObserver = new IntersectionObserver(
   (page) => {
+    const sceneWonderland = document.getElementById("scene_wonderland");
+
     if (page[0].isIntersecting) {
-      document.querySelector(".scene-cut").classList.add("cue");
-      const wonderlandScene = document.querySelector(".scene-wonderland");
-      wonderlandScene.classList.add("cue");
-      wonderlandScene.focus();
+      // At end of page, fade to black (on animationend)
+      cut(sceneWonderland);
       tunnelEndObserver.unobserve(page[0].target);
     }
   },
@@ -51,4 +54,34 @@ const tunnelEndObserver = new IntersectionObserver(
 
 export let tunnelEndObserverHandler = (page) => {
   tunnelEndObserver.observe(page);
+};
+
+const cut = (nextScene) => {
+  const fadeToBlackKeyframes = new KeyframeEffect(
+    cutScene,
+    [{ opacity: 0 }, { opacity: 1 }],
+    { duration: 2000, fill: "forwards" },
+  );
+  const fadeInFromBlackKeyframes = new KeyframeEffect(
+    cutScene,
+    [{ opacity: 1 }, { opacity: 0 }],
+    { duration: 2000, fill: "forwards" },
+  );
+  const fadeToBlack = new Animation(fadeToBlackKeyframes, document.timeline);
+  fadeToBlack.onfinish = () => {
+    // then fade back in (on scrollend)
+    // meanshile, cue the next scene
+    nextScene.classList.add("cue");
+    // scroll the page to next scene
+    jumpToAnchor(nextScene);
+    const endScroll = () => {
+      const fadeInFromBlack = new Animation(
+        fadeInFromBlackKeyframes,
+        document.timeline,
+      );
+      fadeInFromBlack.play();
+    };
+    document.addEventListener("scroll", endScroll, { once: true });
+  };
+  fadeToBlack.play();
 };

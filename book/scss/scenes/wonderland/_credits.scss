@@ -2,196 +2,224 @@
 @import "credits/*.png";
 $credits-use-percentages: true;
 
-.scene-wonderland .page_credits { // .scene for specificity
-	opacity: 1;
-	z-index: 20;
-	// let the credits grow as long as they need
-	padding-top: 0;
+.scene-wonderland .page_credits {
+    // .scene for specificity
+    opacity: 1;
+    /* z-index: 20; */
+    // let the credits grow as long as they need
+    aspect-ratio: auto;
 
-	@include background(#a22882 image-url("pat_argyle.svg"));
-	@include background-size(25%, auto);
-	.alice, .rabbit {
-		@include background(image-url("sprite_credits.svg") no-repeat);
-		@include background-size( 100% auto);
-		position: absolute;
-		top: 20%;
-		z-index: 1;
-	}
-	.alice {
-		width: percentage(769/$max-width); padding-top: percentage(996/$max-width);
-		background-size: percentage(816/769);
-		left: -30%;
-	}
-	.rabbit {
-		width: percentage(816/$max-width); padding-top: percentage(900/$max-width);
-		background-position: 0 100%;
-		right: -9%;
-	}
-	&.in-view {
-		.alice {
-			@include transition(left ease-in 1.25s .25s);
-			left: -23%;
-		}
-		.rabbit{
-			@include transition(right ease-in 1s);
-			right: -20%;
-		}
-	}
+    @include background(#a22882 image-url("pat_argyle.svg"));
+    @include background-size(25%, auto);
+    .alice,
+    .rabbit {
+        @include background(image-url("sprite_credits.svg") no-repeat);
+        @include background-size(100% auto);
+        position: absolute;
+        top: 20%;
+        z-index: 1;
+    }
+    .alice {
+        width: percentage(769 / $max-width);
+        padding-top: percentage(996 / $max-width);
+        background-size: percentage(816/769);
+        left: -30%;
+    }
+    .rabbit {
+        width: percentage(816 / $max-width);
+        padding-top: percentage(900 / $max-width);
+        background-position: 0 100%;
+        right: -9%;
+    }
+    &.in-view {
+        .alice {
+            @include transition(left ease-in 1.25s 0.25s);
+            left: -23%;
+        }
+        .rabbit {
+            @include transition(right ease-in 1s);
+            right: -20%;
+        }
+    }
 }
 
 .continued {
-	background: $wonderland-pink;
-	text-indent: 0;
-	margin: 0 auto;
-	@include margin-trailer(2);	
-	@include margin-leader(2);	
-	white-space: normal;
-	width: 80%;
-	h2 {
-		font-family: $font-slab;
-		padding: rhythm(1, 48px) 14.5924%;
-		@include adjust-font-size-to(48px, 3/2);
-		@include margin-trailer(1, 48px);
-		text-transform: lowercase;
-		text-align: center;
-		strong {
-			font-family: $font-fancy;
-			@include adjust-font-size-to(32px, 1, 48px);
-			display: block;
-			@include padding-trailer(.25, 32px);
-		}
-		span { 
-			display: inline-block;
-		}
-	}
-	h3 {
-		font-family: $font-slab;
-		padding: rhythm(1, 48px) 14.5924%;
-		@include adjust-font-size-to(32px, 3/2);
-		@include margin-leader(1, 32px);
-		text-transform: lowercase;
-		text-align: center;
-	}
-	.action {
-		@include background(image-url("bg_plaque.svg") 0 0 no-repeat);
-		@include background-size(100% 100%);
-		color: $pink-white;
-		padding: rhythm(1) 8.25%;
-		margin: 0 14.5924%;
-		a:link, a:visited, a:hover, a:active {
-			position: relative;
-			@include border-radius(.5em);
-			color: $pink-white;
-			background: $base-pink;
-			padding: rhythm(.5) 5.5742968%;
-			display: block;
-			text-decoration: none;
-			text-align: center;
-			@include margin-leader(.5);
-		}
-		a:hover, a:active, a:focus {
-			color: #fff;
-			@include transition(top .5s, left .5s);
-			top: .15em; left: .15em;
-		}
-	}
-	.learning {
-		padding: rhythm(2) 8.25% rhythm(1);
-		hr {
-			border : 0;
-			height : rhythm(1);
-			margin-left: 8.25%; margin-right: 8.25%;
-			@include background(image-url("hr.svg") 0 0 no-repeat);
-			@include background-size(100% 100%);
-		}
-		ul { @extend %clearfix; }
-		li {
-			@include adjust-font-size-to(18px, 1, 16px);
-			text-align: center;
-			margin: rhythm(.75) 0 rhythm(.25);
-			@include breakpoint($breakpoint-credits-pain) {
-				float: left;
-				margin-left: 5.5742968%;
-				width: 29.6171355%;
-			}
-			&:first-child { margin-left: 0;}
-			a {
-				@include border-radius(.5em);
-				display: block;
-				min-height: 3em;
-				padding: rhythm(.5) 5.5742968%;
-				position: relative;
-			}
-			strong {
-				display: block;
-				@include adjust-font-size-to(24px, 1, 18px);
-				font-weight: 700;
-				text-align: center;
-			}
-			em {
-				font-style: italic;
-			}
-			svg {
-				display: block;
-				margin: 0 auto;
-				width: 4em;
-				height: 4em;
-				@include margin-trailer(.5, 18px);
-			}
-			.source {
-				display: block;
-				@include adjust-font-size-to(14px, 1, 18px);
-				@include margin-leader(.25, 18px);
-				@include padding-leader(.25, 18px);
-				border-top: dotted 1px $wonderland-burgundy;
-			}
-			.at {
-				@include adjust-font-size-to(10px, 1, 14px);
-			}
-			a:link, a:visited, a:hover, a:active {
-				color: $wonderland-burgundy;
-				text-decoration: none;
-			}
-			a:hover, a:active, a:focus {
-				color: $pink-white;
-				background-color: darken($wonderland-pink, 10%);
-				path { 
-					fill: $pink-white !important;
-				}
-				.source {border-color: $pink-white;}
-			}
-		}
-	}
-	.author {
-		@include adjust-font-size-to(14px);
-		@include adjust-leading-to(1);
-		@include box-sizing('border-box');
-		@extend %clearfix;
-		padding-bottom: rhythm(1, 14px);
-		a:link, a:visited, a:hover, a:active {
-			color: #64044b;
-			padding: .1em .1em .05em;
-			text-decoration: none;
-			border-bottom: dotted 1px $wonderland-burgundy;
-		}
-		a:hover, a:active {
-			color: #ffeef4;
-			background: darken($wonderland-pink, 10%);
-			border: 0;
-		}
-	}
-	.img-wrap {
-		background: $wonderland-grape;
-		@include border-radius(50%);
-		display: block;
-		float: left;
-		margin-right: 1em;
-		margin-top: -(rhythm(1));
-		overflow: hidden;
-		width: 5em; height: 5em;
-	}
-	img {
-		margin: 0 auto;
-		width: 4.5em;  height: auto;
-	}
+    background: $wonderland-pink;
+    text-indent: 0;
+    margin: 0 auto;
+    @include margin-trailer(2);
+    @include margin-leader(2);
+    white-space: normal;
+    width: 80%;
+    h2 {
+        font-family: $font-slab;
+        padding: rhythm(1, 48px) 14.5924%;
+        @include adjust-font-size-to(48px, 3/2);
+        @include margin-trailer(1, 48px);
+        text-transform: lowercase;
+        text-align: center;
+        strong {
+            font-family: $font-fancy;
+            @include adjust-font-size-to(32px, 1, 48px);
+            display: block;
+            @include padding-trailer(0.25, 32px);
+        }
+        span {
+            display: inline-block;
+        }
+    }
+    h3 {
+        font-family: $font-slab;
+        padding: rhythm(1, 48px) 14.5924%;
+        @include adjust-font-size-to(32px, 3/2);
+        @include margin-leader(1, 32px);
+        text-transform: lowercase;
+        text-align: center;
+    }
+    .action {
+        @include background(image-url("bg_plaque.svg") 0 0 no-repeat);
+        @include background-size(100% 100%);
+        color: $pink-white;
+        padding: rhythm(1) 8.25%;
+        margin: 0 14.5924%;
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            position: relative;
+            @include border-radius(0.5em);
+            color: $pink-white;
+            background: $base-pink;
+            padding: rhythm(0.5) 5.5742968%;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            @include margin-leader(0.5);
+        }
+        a:hover,
+        a:active,
+        a:focus {
+            color: #fff;
+            @include transition(top 0.5s, left 0.5s);
+            top: 0.15em;
+            left: 0.15em;
+        }
+    }
+    .learning {
+        padding: rhythm(2) 8.25% rhythm(1);
+        hr {
+            border: 0;
+            height: rhythm(1);
+            margin-left: 8.25%;
+            margin-right: 8.25%;
+            @include background(image-url("hr.svg") 0 0 no-repeat);
+            @include background-size(100% 100%);
+        }
+        ul {
+            @extend %clearfix;
+        }
+        li {
+            @include adjust-font-size-to(18px, 1, 16px);
+            text-align: center;
+            margin: rhythm(0.75) 0 rhythm(0.25);
+            @include breakpoint($breakpoint-credits-pain) {
+                float: left;
+                margin-left: 5.5742968%;
+                width: 29.6171355%;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            a {
+                @include border-radius(0.5em);
+                display: block;
+                min-height: 3em;
+                padding: rhythm(0.5) 5.5742968%;
+                position: relative;
+            }
+            strong {
+                display: block;
+                @include adjust-font-size-to(24px, 1, 18px);
+                font-weight: 700;
+                text-align: center;
+            }
+            em {
+                font-style: italic;
+            }
+            svg {
+                display: block;
+                margin: 0 auto;
+                width: 4em;
+                height: 4em;
+                @include margin-trailer(0.5, 18px);
+            }
+            .source {
+                display: block;
+                @include adjust-font-size-to(14px, 1, 18px);
+                @include margin-leader(0.25, 18px);
+                @include padding-leader(0.25, 18px);
+                border-top: dotted 1px $wonderland-burgundy;
+            }
+            .at {
+                @include adjust-font-size-to(10px, 1, 14px);
+            }
+            a:link,
+            a:visited,
+            a:hover,
+            a:active {
+                color: $wonderland-burgundy;
+                text-decoration: none;
+            }
+            a:hover,
+            a:active,
+            a:focus {
+                color: $pink-white;
+                background-color: darken($wonderland-pink, 10%);
+                path {
+                    fill: $pink-white !important;
+                }
+                .source {
+                    border-color: $pink-white;
+                }
+            }
+        }
+    }
+    .author {
+        @include adjust-font-size-to(14px);
+        @include adjust-leading-to(1);
+        @include box-sizing("border-box");
+        @extend %clearfix;
+        padding-bottom: rhythm(1, 14px);
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: #64044b;
+            padding: 0.1em 0.1em 0.05em;
+            text-decoration: none;
+            border-bottom: dotted 1px $wonderland-burgundy;
+        }
+        a:hover,
+        a:active {
+            color: #ffeef4;
+            background: darken($wonderland-pink, 10%);
+            border: 0;
+        }
+    }
+    .img-wrap {
+        background: $wonderland-grape;
+        @include border-radius(50%);
+        display: block;
+        float: left;
+        margin-right: 1em;
+        margin-top: -(rhythm(1));
+        overflow: hidden;
+        width: 5em;
+        height: 5em;
+    }
+    img {
+        margin: 0 auto;
+        width: 4.5em;
+        height: auto;
+    }
 }
