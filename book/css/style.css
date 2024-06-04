@@ -1076,6 +1076,12 @@
     background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
     background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
     background: url('../img/bg_wonderland1.jpg?1378781619') no-repeat;
+    overflow: visible !important;
+  }
+
+  .scene-wonderland {
+    overflow: visible !important;
+    transform-origin: center center;
   }
 
   /* Credits Page */
