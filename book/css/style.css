@@ -1036,6 +1036,7 @@
     opacity: 1;
     /* z-index: 20; */
     aspect-ratio: auto;
+    max-height: none;
     background: #a22882 url('../img/pat_argyle.svg?1378830277');
     background: #a22882 url('../img/pat_argyle.svg?1378830277');
     background: #a22882 url('../img/pat_argyle.svg?1378830277');

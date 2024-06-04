@@ -8,6 +8,7 @@ $credits-use-percentages: true;
     /* z-index: 20; */
     // let the credits grow as long as they need
     aspect-ratio: auto;
+    max-height: none;
 
     @include background(#a22882 image-url("pat_argyle.svg"));
     @include background-size(25%, auto);
