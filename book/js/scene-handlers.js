@@ -26,8 +26,9 @@ const pagesObserver = new IntersectionObserver(
     pages.forEach((page) => {
       if (page.isIntersecting) {
         page.target.classList.add("in-view");
-      } else {
+      } else if (page.target.classList.contains("in-view")) {
         page.target.classList.remove("in-view");
+        page.target.classList.add("viewed");
       }
     });
   },

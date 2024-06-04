@@ -548,17 +548,22 @@
   .cssanimations .page_rabbit-appears .rabbit {
     left: -50%;
   }
-  .csstransitions .page_rabbit-appears.in-view .rabbit {
-    -moz-transform: translate(280.44053%, -50%);
-    -ms-transform: translate(280.44053%, -50%);
-    -webkit-transform: translate(280.44053%, -50%);
-    transform: translate(280.44053%, -50%);
-    -moz-transition: -moz-transform 5s ease-in;
-    -o-transition: -o-transform 5s ease-in;
-    -webkit-transition: -webkit-transform 5s ease-in;
-    transition: transform 5s ease-in;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .page_rabbit-appears .rabbit {
+    -moz-transform: translate(-280.44053%, -50%);
+    -ms-transform: translate(-280.44053%, -50%);
+    -webkit-transform: translate(-280.44053%, -50%);
+    transform: translate(-280.44053%, -50%);
   }
 
+  .page_rabbit-appears.in-view .rabbit {
+    -moz-animation: scene-rabbit-run 5s ease-in both;
+    -webkit-animation: scene-rabbit-run 5s ease-in both;
+    animation: scene-rabbit-run 5s ease-in both;
+  }
+}
+@media screen {
   @-moz-keyframes scene-blink {
     0% {
       background-position: 0 0;
@@ -581,6 +586,40 @@
     }
     100% {
       background-position: 0 125%;
+    }
+  }
+  @-moz-keyframes scene-rabbit-run {
+    0% {
+      -moz-transform: translate(-280.44053%, -50%);
+      transform: translate(-280.44053%, -50%);
+    }
+    100% {
+      -moz-transform: translate(280.44053%, -50%);
+      transform: translate(280.44053%, -50%);
+    }
+  }
+  @-webkit-keyframes scene-rabbit-run {
+    0% {
+      -webkit-transform: translate(-280.44053%, -50%);
+      transform: translate(-280.44053%, -50%);
+    }
+    100% {
+      -webkit-transform: translate(280.44053%, -50%);
+      transform: translate(280.44053%, -50%);
+    }
+  }
+  @keyframes scene-rabbit-run {
+    0% {
+      -moz-transform: translate(-280.44053%, -50%);
+      -ms-transform: translate(-280.44053%, -50%);
+      -webkit-transform: translate(-280.44053%, -50%);
+      transform: translate(-280.44053%, -50%);
+    }
+    100% {
+      -moz-transform: translate(280.44053%, -50%);
+      -ms-transform: translate(280.44053%, -50%);
+      -webkit-transform: translate(280.44053%, -50%);
+      transform: translate(280.44053%, -50%);
     }
   }
   .page_rabbit-chase {
@@ -636,7 +675,10 @@
   .csstransitions .page_rabbit-chase .rabbit2 {
     left: -20.26367%;
   }
-  .csstransitions .page_rabbit-chase.in-view .rabbit1 {
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .page_rabbit-chase.in-view .rabbit1,
+  .page_rabbit-chase.viewed .rabbit1 {
     -moz-transition: -moz-transform 2s ease-in;
     -o-transition: -o-transform 2s ease-in;
     -webkit-transition: -webkit-transform 2s ease-in;
@@ -646,7 +688,9 @@
     -webkit-transform: perspective(0) scale(0.5, 0.5);
     transform: perspective(0) scale(0.5, 0.5);
   }
-  .csstransitions .page_rabbit-chase.in-view .rabbit2 {
+
+  .page_rabbit-chase.in-view .rabbit2,
+  .page_rabbit-chase.viewed .rabbit2 {
     -moz-transition: -moz-transform 3s ease-in 1.5s;
     -o-transition: -o-transform 3s ease-in 1.5s;
     -webkit-transition: -webkit-transform 3s ease-in;
@@ -657,7 +701,9 @@
     -webkit-transform: translate(601.92771%, 0);
     transform: translate(601.92771%, 0);
   }
-  .csstransitions .page_rabbit-chase.in-view .alice {
+
+  .page_rabbit-chase.in-view .alice,
+  .page_rabbit-chase.viewed .alice {
     -moz-transition: -moz-transform 3s ease-in 3s;
     -o-transition: -o-transform 3s ease-in 3s;
     -webkit-transition: -webkit-transform 3s ease-in;
@@ -668,7 +714,8 @@
     -webkit-transform: translate(524.27984%, 0);
     transform: translate(524.27984%, 0);
   }
-
+}
+@media screen {
   .page_the-hole .foreground {
     --gradient-height: 1.5;
     height: 100%;
@@ -702,10 +749,6 @@
     opacity: 0;
     z-index: 3;
   }
-  .cssanimations .page_the-hole .rabbit {
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
-  }
   .page_the-hole .background {
     background: url('../img/bg_park5_1.png?1377532988') no-repeat;
     background: url('../img/bg_park5_1.png?1377532988') no-repeat;
@@ -736,12 +779,12 @@
     padding-top: 11.08398%;
     z-index: 1;
   }
-  .page_the-hole.in-view .bg-hole {
+  .page_the-hole.in-view .bg-hole, .page_the-hole.viewed .bg-hole {
     -moz-animation: hole-glow 0.35s steps(4) infinite alternate;
     -webkit-animation: hole-glow 0.35s steps(4) infinite alternate;
     animation: hole-glow 0.35s steps(4) infinite alternate;
   }
-  .page_the-hole.in-view .rabbit {
+  .page_the-hole.in-view .rabbit, .page_the-hole.viewed .rabbit {
     -moz-animation: rabbit-down 3s forwards;
     -webkit-animation: rabbit-down 3s forwards;
     animation: rabbit-down 3s forwards;
@@ -825,6 +868,37 @@
       opacity: 0;
     }
   }
+  @-moz-keyframes hole-glow {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 133.333333%;
+    }
+  }
+  @-webkit-keyframes hole-glow {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 133.333333%;
+    }
+  }
+  @keyframes hole-glow {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 133.333333%;
+    }
+  }
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  .page_the-hole .rabbit {
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+  }
+
   @-moz-keyframes arrow-point {
     0% {
       -moz-transform:  scale(1, 1) rotateZ(-40deg) translate(0, 0);
@@ -859,30 +933,8 @@
       transform:  scale(0.9, 0.9) rotateZ(-45deg) translate(10%, 10%);
     }
   }
-  @-moz-keyframes hole-glow {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 133.333333%;
-    }
-  }
-  @-webkit-keyframes hole-glow {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 133.333333%;
-    }
-  }
-  @keyframes hole-glow {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 0 133.333333%;
-    }
-  }
+}
+@media screen {
   *,
   html {
     scroll-behavior: smooth !important;

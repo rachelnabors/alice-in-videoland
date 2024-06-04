@@ -38,9 +38,6 @@
         padding-top: percentage(635 / $max-width);
         @include opacity(0);
         z-index: 3;
-        .cssanimations & {
-            @include opacity(1);
-        }
     }
     .background {
         @include background(image-url("bg_park5_1.png") no-repeat);
@@ -62,7 +59,8 @@
         padding-top: percentage(227 / $max-width);
         z-index: 1;
     }
-    &.in-view {
+    &.in-view,
+    &.viewed {
         .bg-hole {
             @include animation(hole-glow 0.35s steps(4) infinite alternate);
         }
@@ -119,30 +117,35 @@
     }
 }
 
-@include keyframes(arrow-point) {
-    0% {
-        @include simple-transform(
-            $scale: 1,
-            $rotate: -40deg,
-            $trans-x: 0,
-            $trans-y: 0
-        );
-    }
-    100% {
-        @include simple-transform(
-            $scale: 0.9,
-            $rotate: -45deg,
-            $trans-x: 10%,
-            $trans-y: 10%
-        );
-    }
-}
-
 @include keyframes(hole-glow) {
     0% {
         background-position: 0 0;
     }
     100% {
         background-position: 0 133.333333%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .page_the-hole .rabbit {
+        @include opacity(1);
+    }
+    @include keyframes(arrow-point) {
+        0% {
+            @include simple-transform(
+                $scale: 1,
+                $rotate: -40deg,
+                $trans-x: 0,
+                $trans-y: 0
+            );
+        }
+        100% {
+            @include simple-transform(
+                $scale: 0.9,
+                $rotate: -45deg,
+                $trans-x: 10%,
+                $trans-y: 10%
+            );
+        }
     }
 }
