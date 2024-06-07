@@ -1,9 +1,16 @@
 import { loader } from "./page-loader.js";
+import { isReduced } from "./utilities.js";
 import {
   sceneObserverHandler,
   pageObserverHandler,
-  tunnelEndObserverHandler,
+  cut,
 } from "./scene-handlers.js";
+import {
+  aliceFrightenedAnimation,
+  aliceFallAnimation,
+  aliceEmotionsAnimation,
+  jiggle,
+} from "./tunnel-animation.js";
 
 loader();
 
@@ -16,20 +23,27 @@ Array.from(document.querySelectorAll(".page")).forEach((page) => {
   pageObserverHandler(page);
 });
 
-tunnelEndObserverHandler(document.querySelector(".falling_weird"));
-
 // Going down the tunnels
 
 // listen for click on the link #to-tunnels
 document.querySelector("#to-tunnels").addEventListener("click", function (e) {
   e.currentTarget.classList.add("activated");
   e.currentTarget.classList.remove("unactivated");
-  document.querySelector("#tunnels").classList.add("cue");
+  document.getElementById("tunnels").classList.add("cue");
+  aliceEmotionsAnimation.onfinish = () => {
+    cut(document.getElementById("scene_wonderland"), jiggle);
+  };
+  if (isReduced) {
+    aliceEmotionsAnimation.play();
+  } else {
+    aliceFallAnimation.play();
+    aliceFrightenedAnimation.onfinish = () => {
+      console.log("frightened animation finished");
+      aliceEmotionsAnimation.play();
+    };
+    aliceFrightenedAnimation.play();
+  }
 });
-
-// at end of tunnel,
-//  add .cue to .cut & remove it after its animation over
-//  then add .cue to .scene-wonderland/scroll it into view
 
 // stop running animations when the page is not visible to the user
 

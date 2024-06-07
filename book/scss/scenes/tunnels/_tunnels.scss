@@ -15,6 +15,10 @@ html {
     }
 }
 
+.scene-hole {
+    position: relative !important;
+    overflow: unset !important;
+}
 .scene .page_tunnels {
     //.scene for specificity
     --gradient-height: 10;
@@ -46,8 +50,10 @@ html {
 // The Tunnel
 
 #tunnel {
-    position: relative;
-    z-index: 0; //allows us to z-index alice locally.
+    max-height: none;
+    aspect-ratio: auto;
+    height: 500vh;
+    overflow: unset;
     --gradient-height: 10;
     @include background(
         linear-gradient(
@@ -81,67 +87,48 @@ html {
     );
 }
 
-//let Alice and Cheshire hover above
-.page_falling {
-    z-index: -1;
-}
+// let Alice and Cheshire hover above
 
 // Characters
 
 .alice-falling {
     @include animation-still($alice-fall, 1);
-    left: 50%;
-    @include translate(-50%, 0);
-    position: absolute;
+    transform: translate(-50%, -30%);
+    position: sticky;
     top: 0;
-    z-index: 1;
+    left: 50%;
     aspect-ratio: 640 / 998;
     width: 38%;
     height: auto;
-    #tunnel & {
-        @include background-size(100% auto);
+    @include background-size(100% auto);
+}
+/*
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+        .alice-falling {
+            animation:
+                fall linear both,
+                emotions steps(4) both;
+            animation-timeline: scroll(), view(20% -100%);
+            animation-range: contain, contain;
+        }
     }
 }
 
-.frightened .alice-falling {
-    @include animation-sequence-span(
-        $alice-fall,
-        1.5s,
-        "freak-out",
-        "alice-frightened_1",
-        "alice-frightened_2",
-        infinite,
-        false,
-        false
-    );
-    @include background-size(100% auto);
+@keyframes fall {
+    from {
+        transform: translate(-50%, -200%);
+    }
+    to {
+        transform: translate(-50%, 100%);
+    }
 }
 
-@include animation-sequence-keyframes-span(
-    $alice-fall,
-    "freak-out",
-    "alice-frightened_1",
-    "alice-frightened_2"
-);
-
-.curious .alice-falling {
-    @include animation-still($alice-fall, 3, false);
-}
-
-.sleeping .alice-falling {
-    @include animation-still($alice-fall, 4, false);
-}
-
-.bored .alice-falling {
-    @include animation-still($alice-fall, 5, false);
-}
-
-.sticky-wrapper {
-    position: absolute; // take wrapper out of flow.
-    width: 100%;
-}
-
-.stuck.alice-falling {
-    position: fixed;
-    top: 0;
-}
+@keyframes emotions {
+    0% {
+        background-position: 0 25%;
+    }
+    100% {
+        background-position: 0 125%;
+    }
+} */
