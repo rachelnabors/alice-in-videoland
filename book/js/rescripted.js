@@ -30,37 +30,17 @@ document.querySelector("#to-tunnels").addEventListener("click", function (e) {
   e.currentTarget.classList.add("activated");
   e.currentTarget.classList.remove("unactivated");
   document.getElementById("tunnels").classList.add("cue");
-  aliceEmotionsAnimation.onfinish = () => {
-    cut(document.getElementById("scene_wonderland"), jiggle);
-  };
   if (isReduced) {
-    aliceEmotionsAnimation.play();
+    cut(document.getElementById("scene_wonderland"), jiggle);
   } else {
+    aliceFallAnimation.onfinish = () => {
+      cut(document.getElementById("scene_wonderland"), jiggle);
+      aliceFallAnimation.onfinish = null;
+    };
     aliceFallAnimation.play();
     aliceFrightenedAnimation.onfinish = () => {
-      console.log("frightened animation finished");
       aliceEmotionsAnimation.play();
     };
     aliceFrightenedAnimation.play();
   }
 });
-
-// stop running animations when the page is not visible to the user
-
-// const box = document.querySelector(".box");
-// const output = document.querySelector(".output");
-
-// const timeline = new ScrollTimeline({
-//   source: document.documentElement,
-//   axis: "block",
-// });
-
-// box.animate(
-//   {
-//     rotate: ["0deg", "720deg"],
-//     left: ["0%", "100%"],
-//   },
-//   {
-//     timeline,
-//   },
-// );

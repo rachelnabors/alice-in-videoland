@@ -54,7 +54,7 @@ export const cut = (nextScene, postCutFunc) => {
   const fadeToBlack = new Animation(fadeToBlackKeyframes, document.timeline);
   fadeToBlack.onfinish = () => {
     // then fade back in (on scrollend)
-    // meanshile, cue the next scene
+    // meanwhile, cue the next scene
     nextScene.classList.add("cue");
     // scroll the page to next scene
     jumpToAnchor(nextScene);
