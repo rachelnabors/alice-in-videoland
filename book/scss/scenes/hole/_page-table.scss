@@ -1,0 +1,411 @@
+.page_table {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_hall.jpg)
+        no-repeat 0 0 / cover !important;
+    text-indent: 0;
+}
+
+* {
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+.table-set {
+    line-height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-indent: 0;
+}
+.table {
+    width: 100%;
+    height: auto;
+    transform: translate(0, 44px);
+}
+
+#alice {
+    transform: translate(-50%, -50%);
+    transform-origin: center bottom;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 20%;
+    text-indent: 0;
+}
+
+#ponytail {
+    transform-origin: center top;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+}
+
+.alice_lines {
+    position: relative;
+    z-index: 1;
+}
+
+#eat-me {
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 302px; /*height: 226px*/
+    width: 40%;
+    position: absolute;
+    bottom: 6%;
+    left: 0%;
+    transform-origin: 65% 100%;
+}
+
+#eat-me:before {
+    content: " ";
+    display: block;
+    padding-top: 74.83%;
+}
+
+#eat-me img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.drink-me {
+    max-width: 117px;
+    width: 15%;
+    position: absolute;
+    bottom: 6%;
+    right: 10%;
+}
+
+#bottle {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom center;
+}
+
+.drink-me:before {
+    content: " ";
+    display: block;
+    padding-top: 304.3%;
+}
+
+.fg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#liquid {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/drink-me_liquid_small.png)
+        no-repeat 100% 100%/100% auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.doily {
+    width: 157.2%;
+    position: absolute;
+    bottom: -12%;
+    left: -32%;
+}
+
+/* Endings */
+#endings {
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-indent: 0;
+}
+
+.frame {
+    background:
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/corner_lb.svg")
+            no-repeat left bottom,
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/corner_rb.svg")
+            right bottom no-repeat,
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/corner_lt.svg")
+            left top no-repeat,
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/corner_rt.svg")
+            right top no-repeat,
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg-tunnel-border-top.svg")
+            repeat-x 0 -90px,
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg-tunnel-border-bottom.svg")
+            repeat-x 100% calc(100% + 90px),
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg-tunnel-border-left.svg")
+            repeat-y -90px 0,
+        url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg-tunnel-border-right.svg")
+            repeat-y calc(100% + 90px) 100%;
+    box-sizing: border-box;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.ending {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_tunnel-specks.png"),
+        #6c373f;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ending,
+.frame {
+    width: calc(100% - 4em);
+    height: calc(100% - 4em);
+    margin: 2em;
+}
+
+/* Tearful Ending */
+#pool {
+    position: absolute;
+    bottom: -2.5%;
+    right: 10%;
+    width: 80%;
+}
+
+.alice_breakdown {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: calc(96.36vh - 2em);
+}
+
+.alice_crying {
+    width: 100%;
+    transform: translateY(-6%);
+}
+
+.tear {
+    position: absolute;
+    top: 28%;
+    left: 64%;
+    width: 0.75%;
+    z-index: 1;
+}
+
+.tear:nth-child(odd) {
+    top: 30%;
+    left: 60%;
+}
+
+/* Small Ending */
+#alice_too-small {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* Alice's width is 48.43% of her height. */
+    /*   max-height: calc(50vh - 2em); */
+    transform-origin: bottom center;
+    transform: translateX(-50%);
+    width: calc(50vh * 0.48 - 2em);
+}
+
+#alice_too-small:before {
+    content: " ";
+    display: block;
+    /* Alice's height is 206.48% of her width. */
+    padding-top: 206.48%;
+}
+
+.alice_small {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#alice_arm {
+    width: 66.13%;
+    position: absolute;
+    top: 46.5%;
+    left: 0;
+    transform-origin: right center;
+}
+
+#exclaim {
+    width: 11.17%;
+    position: absolute;
+    top: 29%;
+    left: 80%;
+}
+
+.door {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    height: calc(50vh * 0.48 * 1.5 - 2em);
+    transform-origin: bottom center;
+}
+
+.table-with-key {
+    position: absolute;
+    bottom: -2em;
+    right: 0;
+    height: 100%;
+    transform: translateX(50%);
+}
+
+/* so long as view port is taller than square */
+@media screen and (max-aspect-ratio: 768/1100) {
+    #alice_too-small {
+        width: 30%;
+    }
+
+    .door {
+        width: 30%;
+        height: auto;
+    }
+
+    .table-with-key {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Ending UI */
+a:link {
+    color: #73ebc5;
+}
+
+a:visited {
+    color: #8dd1c7;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #b1eaff;
+}
+
+#ending-ui {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/641/bg_plaque.svg")
+        no-repeat 0 0 / 100% 100%;
+    box-sizing: border-box;
+    color: #ffeef4;
+    text-align: center;
+    width: calc(100% - 8em);
+    height: calc(100% - 8em);
+    margin: 4em;
+    padding: 2em;
+    position: relative;
+    z-index: 3;
+}
+
+.ending-ui_wrapper {
+    overflow: hidden;
+    width: 100%;
+    text-indent: 0;
+}
+
+#ending-ui_panels {
+    overflow: hidden;
+    width: 300%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    transform-origin: left center;
+}
+
+p {
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+
+.author {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.author img {
+    width: 102px;
+}
+
+.text_poor-alice {
+    height: 5em;
+    min-height: 20vh;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.hr {
+    height: 2em;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.button {
+    cursor: pointer;
+    margin: 0.5em 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    line-height: 0;
+    background: #3eacb0;
+    text-decoration: none;
+    display: inline-block;
+    height: 2.5em;
+    width: 10em;
+    pointer-events: auto;
+    transition:
+        color 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    background: #3e91af;
+    transform: translate(0.1em, 0.1em);
+}
+
+.what-now {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.ending-ui_back,
+.ending-ui_front {
+    width: 33.33%;
+}
+
+/* Hide the surprises by default. */
+#ending-ui,
+#endings,
+.ending {
+    opacity: 0;
+    pointer-events: none;
+}

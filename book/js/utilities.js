@@ -1,4 +1,4 @@
-export const jumpToAnchor = (anchorElem) => {
+export const jumpToAnchor = (anchorElem, callback) => {
   // update the URL to reflect the anchor
   // strip out any hash and keep the rest of the URL
   const url = location.href.split("#")[0] + "#" + anchorElem.id;
@@ -8,6 +8,7 @@ export const jumpToAnchor = (anchorElem) => {
     behavior: isReduced ? "instant" : "smooth",
     block: "start",
   });
+  callback ? callback() : null;
 };
 
 export const isReduced =

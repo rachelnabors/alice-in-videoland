@@ -9,7 +9,6 @@ import {
   aliceFrightenedAnimation,
   aliceFallAnimation,
   aliceEmotionsAnimation,
-  jiggle,
 } from "./tunnel-animation.js";
 
 loader();
@@ -31,10 +30,10 @@ document.querySelector("#to-tunnels").addEventListener("click", function (e) {
   e.currentTarget.classList.remove("unactivated");
   document.getElementById("tunnels").classList.add("cue");
   if (isReduced) {
-    cut(document.getElementById("scene_wonderland"), jiggle);
+    cut(document.getElementById("scene_wonderland"));
   } else {
     aliceFallAnimation.onfinish = () => {
-      cut(document.getElementById("scene_wonderland"), jiggle);
+      cut(document.getElementById("scene_wonderland"));
       aliceFallAnimation.onfinish = null;
     };
     aliceFallAnimation.play();

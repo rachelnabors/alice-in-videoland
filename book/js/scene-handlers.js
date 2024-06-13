@@ -1,5 +1,4 @@
-import { jumpToAnchor, isReduced } from "./utilities.js";
-import { jiggle } from "./tunnel-animation.js";
+import { jumpToAnchor } from "./utilities.js";
 
 // Each SCENE gets a class of CUE when it's fully in viewport
 const cutScene = document.getElementById("scene-cut");
@@ -64,7 +63,7 @@ export const cut = (nextScene, postCutFunc) => {
         document.timeline,
       );
       fadeInFromBlack.play();
-      postCutFunc();
+      postCutFunc ? postCutFunc() : null;
     };
     document.addEventListener("scroll", endScroll, { once: true });
   };

@@ -1,0 +1,58 @@
+#spinner_alice-falling {
+    animation: aliceTumbling infinite 3s linear paused;
+    color: #431236;
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: rotate(0) translate(-50%, -50%);
+    text-indent: 0;
+}
+
+path {
+    fill: currentColor;
+}
+
+@keyframes aliceTumbling {
+    0% {
+        color: #000;
+        transform: rotate(0) translate(-50%, -50%);
+    }
+    30% {
+        color: #431236;
+    }
+    100% {
+        color: #000;
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
+
+/* This stuff might be interesting. */
+.tunnel {
+    animation: tunnelFly 1s linear infinite paused;
+    background:
+        image-url("bg-tunnel-border-left.svg") 0 0 repeat-y,
+        image-url("bg-tunnel-border-right.svg") 100% 0 repeat-y,
+        image-url("bg_tunnel-specks.png") repeat,
+        $earth;
+    width: 100%;
+    height: calc(100vh + 300px);
+    @include background-size(
+        percentage(100 / $max-width) auto,
+        percentage(100 / $max-width) auto,
+        auto auto,
+        auto auto
+    );
+}
+
+.in-view .tunnel,
+.in-view #spinner_alice-falling {
+    animation-play-state: running;
+}
+
+@keyframes tunnelFly {
+    100% {
+        transform: translate(0, -300px);
+    }
+}
