@@ -22,6 +22,17 @@ Array.from(document.querySelectorAll(".page")).forEach((page) => {
   pageObserverHandler(page);
 });
 
+// set up page transitions
+window.addEventListener("pagereveal", async (e) => {
+  if (e.viewTransition) {
+    const transitionType = determineTransitionType(
+      navigation.activation.from,
+      navigation.activation.entry,
+    );
+    e.viewTransition.types.add(transitionType);
+  }
+});
+
 // Going down the tunnels
 
 // listen for click on the link #to-tunnels
@@ -33,7 +44,8 @@ document.querySelector("#to-tunnels").addEventListener("click", function (e) {
     cut(document.getElementById("scene_wonderland"));
   } else {
     aliceFallAnimation.onfinish = () => {
-      cut(document.getElementById("scene_wonderland"));
+      window.location.href = "rabbit-hole.html";
+      // cut(document.getElementById("scene_wonderland"));
       aliceFallAnimation.onfinish = null;
     };
     aliceFallAnimation.play();

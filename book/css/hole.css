@@ -193,6 +193,36 @@
     background-origin: padding-box;
   }
 
+  @view-transition {
+    navigation: auto;
+  }
+  @keyframes fade {
+    from {
+      filter: opacity(100%);
+    }
+    to {
+      filter: opacity(0);
+    }
+  }
+  @keyframes slide {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(0, 20%);
+    }
+  }
+  /* Animation styles for reload type only */
+  html::view-transition-old(*) {
+    --view-transition-duration: 300ms;
+    animation: fade var(--view-transition-duration) linear both, slide var(--view-transition-duration) linear both;
+  }
+
+  html::view-transition-new(*) {
+    --view-transition-duration: 300ms;
+    animation: fade var(--view-transition-duration) linear both reverse, slide var(--view-transition-duration) linear both reverse;
+  }
+
   #scene-cut {
     background: #000;
     height: 100%;
